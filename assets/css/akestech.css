@@ -705,3 +705,37 @@ a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2
   .ak-modal__body{padding:22px}
   .ak-modal__head h2{font-size:22px}
 }
+
+/* ==========================================================================
+   GUIDE LAYOUT — sticky contents + long-form body
+   ========================================================================== */
+.ak-guide{display:grid;grid-template-columns:250px 1fr;gap:46px;align-items:start}
+.ak-guide__nav{position:sticky;top:24px}
+.ak-guide__navtitle{
+  font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:1.6px;
+  color:#8d8d88;margin-bottom:14px;
+}
+.ak-guide__nav nav{display:flex;flex-direction:column;gap:2px}
+.ak-guide__nav a{
+  display:block;padding:9px 12px;border-radius:10px;font-size:14px;color:#666;
+  transition:.22s var(--ease);
+}
+.ak-guide__nav a:hover{background:#ecece7;color:var(--ink)}
+.ak-guide__body{min-width:0}
+
+.ak-tablewrap{
+  margin-top:26px;border:1px solid var(--line);border-radius:var(--radius-sm);
+  background:var(--card);overflow-x:auto;
+}
+.ak-tablewrap table{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+.ak-tablewrap th,.ak-tablewrap td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.ak-tablewrap th{background:#efefec;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#666;font-weight:800}
+.ak-tablewrap tbody tr:last-child td{border-bottom:0}
+.ak-tablewrap td{color:#555;line-height:1.55}
+.ak-tablewrap td strong{color:var(--ink)}
+
+@media (max-width:1000px){
+  .ak-guide{grid-template-columns:1fr;gap:28px}
+  .ak-guide__nav{position:static;order:2}
+  .ak-guide__body{order:1}
+}
