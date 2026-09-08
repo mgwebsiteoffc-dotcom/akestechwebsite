@@ -54,13 +54,11 @@ ob_start();
                 </div>
             </div>
             <div class="ak-reveal">
-                <div class="bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border border-gray-200">
-                    <div class="text-center p-8">
-                        <span class="text-5xl block mb-3"><?= ak_icon('smartphone', 18) ?></span>
-                        <p class="text-sm text-gray-500">App Screenshot Placeholder</p>
-                        <p class="text-xs text-gray-400 mt-1">Dashboard Preview</p>
-                    </div>
-                </div>
+                <figure class="ak-figure ak-reveal">
+                    <img src="<?= asset('images/hero-whatsapp-commerce.jpg') ?>"
+                         alt="AKESTECH WhatsApp commerce dashboard inside a Shopify store"
+                         width="1408" height="768">
+                </figure>
             </div>
         </div>
     </div>

@@ -4,6 +4,8 @@
  */
 $sp = [
     'slug'  => 'automation',
+    'heroImage' => 'hero-ai-commerce.jpg',
+    'heroImageAlt' => 'AI-driven commerce automation dashboard built by AKESTECH',
     'route' => 'services/automation',
     'eyebrow' => 'AI & Automation',
     'h1' => 'Put your business on autopilot.',

@@ -95,6 +95,17 @@ ob_start();
       <?php endforeach; ?>
     </div>
     <?php endif; ?>
+
+    <?php if (!empty($sp['heroImage'])): ?>
+    <figure class="ak-figure ak-reveal" style="margin-top:52px">
+      <img src="<?= asset('images/' . $sp['heroImage']) ?>"
+           alt="<?= htmlspecialchars($sp['heroImageAlt'] ?? $sp['eyebrow'] ?? '') ?>"
+           width="1408" height="768" loading="lazy">
+      <?php if (!empty($sp['heroImageCaption'])): ?>
+      <figcaption><?= htmlspecialchars($sp['heroImageCaption']) ?></figcaption>
+      <?php endif; ?>
+    </figure>
+    <?php endif; ?>
   </div>
 </section>
 
