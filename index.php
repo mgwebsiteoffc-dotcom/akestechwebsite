@@ -117,6 +117,24 @@ $routes = [
     'data-deletion'                 => 'pages/data-deletion.php',
 ];
 
+/**
+ * Merge local (city x service) pages into the route map.
+ *
+ * Cities and service types created in /admin/?page=local-pages are stored in
+ * data/local-pages.json and resolved here, so new landing pages go live
+ * without editing this file. Built-in slugs are never overridden.
+ */
+require_once __DIR__ . '/includes/local-pages.php';
+foreach (array_keys(lp_slugs()) as $localSlug) {
+    if (!isset($routes[$localSlug])) {
+        $routes[$localSlug] = 'pages/local-service.php';
+    }
+}
+// Slugs switched off in the admin go back to 404
+foreach (lp_disabled() as $offSlug) {
+    unset($routes[$offSlug]);
+}
+
 // Check exact route match
 if (array_key_exists($route, $routes)) {
     require_once __DIR__ . '/' . $routes[$route];

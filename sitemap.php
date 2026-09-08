@@ -60,6 +60,21 @@ $routes = [
     'data-deletion',
     'resources/download-shopify-growth-playbook'
 ];
+
+/* =========================
+   LOCAL PAGES CREATED IN THE ADMIN
+   (/admin/?page=local-pages) — picked up automatically
+   so new city/service pages are indexed without editing this file.
+========================= */
+require_once __DIR__ . '/includes/local-pages.php';
+foreach (array_keys(lp_slugs()) as $localSlug) {
+    if (!in_array($localSlug, $routes, true)) {
+        $routes[] = $localSlug;
+    }
+}
+// switched-off pages are removed from the sitemap
+$routes = array_values(array_diff($routes, lp_disabled()));
+
 /* =========================
    START XML
 ========================= */
