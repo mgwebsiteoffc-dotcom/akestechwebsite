@@ -1,9 +1,26 @@
 <?php
 /**
  * Footer — AKESTECH design system
- * Full sitemap footer: every legacy slug is preserved exactly, plus the
- * new industry / location / product pages.
+ * Every legacy slug is preserved. Location pages moved out of the columns and
+ * into a horizontal chip row below the footer bar.
  */
+
+$footerLocations = [
+    'Digital Marketing — Lucknow'      => 'digital-marketing-company-in-lucknow',
+    'Shopify Development — Lucknow'    => 'shopify-development-company-in-lucknow',
+    'Performance Marketing — Lucknow'  => 'performance-marketing-company-in-lucknow',
+    'Meta Ads — Lucknow'               => 'meta-ads-management-in-lucknow',
+    'Lead Generation — Lucknow'        => 'lead-generation-service-in-lucknow',
+    'AI Automation — Lucknow'          => 'ai-automation-company-in-lucknow',
+    'Ecommerce Consultant — Lucknow'   => 'ecommerce-consultant-in-lucknow',
+    'Digital Marketing — Delhi NCR'     => 'digital-marketing-company-in-delhi-ncr',
+    'Shopify Development — Delhi NCR'   => 'shopify-development-company-in-delhi-ncr',
+    'Performance Marketing — Delhi NCR' => 'performance-marketing-company-in-delhi-ncr',
+    'Meta Ads — Delhi NCR'              => 'meta-ads-management-in-delhi-ncr',
+    'Lead Generation — Delhi NCR'       => 'lead-generation-service-in-delhi-ncr',
+    'AI Automation — Delhi NCR'         => 'ai-automation-company-in-delhi-ncr',
+    'Ecommerce Consultant — Delhi NCR'  => 'ecommerce-consultant-in-delhi-ncr',
+];
 ?>
 <div class="ak-container">
   <div class="ak-footcols">
@@ -27,21 +44,6 @@
       <a href="<?= url('industries/saas-and-startups') ?>">SaaS &amp; Startups</a>
       <a href="<?= url('industries/real-estate') ?>">Real Estate</a>
       <a href="<?= url('industries/retail-and-consumer-brands') ?>">Retail &amp; Consumer Brands</a>
-    </div>
-
-    <div>
-      <h5>Locations</h5>
-      <a href="<?= url('digital-marketing-company-in-lucknow') ?>">Digital Marketing — Lucknow</a>
-      <a href="<?= url('shopify-development-company-in-lucknow') ?>">Shopify Development — Lucknow</a>
-      <a href="<?= url('performance-marketing-company-in-lucknow') ?>">Performance Marketing — Lucknow</a>
-      <a href="<?= url('meta-ads-management-in-lucknow') ?>">Meta Ads — Lucknow</a>
-      <a href="<?= url('lead-generation-service-in-lucknow') ?>">Lead Generation — Lucknow</a>
-      <a href="<?= url('ai-automation-company-in-lucknow') ?>">AI Automation — Lucknow</a>
-      <a href="<?= url('ecommerce-consultant-in-lucknow') ?>">Ecommerce Consultant — Lucknow</a>
-      <a href="<?= url('digital-marketing-company-in-delhi-ncr') ?>">Digital Marketing — Delhi NCR</a>
-      <a href="<?= url('shopify-development-company-in-delhi-ncr') ?>">Shopify Development — Delhi NCR</a>
-      <a href="<?= url('performance-marketing-company-in-delhi-ncr') ?>">Performance Marketing — Delhi NCR</a>
-      <a href="<?= url('ecommerce-consultant-in-delhi-ncr') ?>">Ecommerce Consultant — Delhi NCR</a>
     </div>
 
     <div>
@@ -81,4 +83,14 @@
     </span>
     <span>AI · Commerce · Product · Growth · <a href="tel:<?= SITE_PHONE ?>"><?= SITE_PHONE ?></a> · <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a></span>
   </footer>
+
+  <!-- Location pages as a horizontal chip row below the footer -->
+  <div class="ak-footlocs">
+    <p class="ak-footlocs__label">Locations we serve</p>
+    <div class="ak-tags">
+      <?php foreach ($footerLocations as $label => $slug): ?>
+        <a class="ak-tag" href="<?= url($slug) ?>"><?= htmlspecialchars($label) ?></a>
+      <?php endforeach; ?>
+    </div>
+  </div>
 </div>
