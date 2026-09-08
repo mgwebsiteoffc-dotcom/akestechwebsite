@@ -506,3 +506,40 @@ a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2
   .ak-quote{padding:24px}
   .ak-quote p{font-size:17px}
 }
+
+/* ==========================================================================
+   CONTACT PAGE — tabs, split layout, contact list
+   ========================================================================== */
+.ak-contact{display:grid;grid-template-columns:1.6fr 1fr;gap:34px;align-items:start}
+.ak-contact__side{display:flex;flex-direction:column;gap:18px}
+
+.ak-tabs{display:flex;gap:6px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.ak-tab{
+  padding:12px 18px;font-size:14px;font-weight:650;color:#777;
+  border-bottom:2px solid transparent;margin-bottom:-1px;transition:.25s var(--ease);
+}
+.ak-tab:hover{color:var(--ink)}
+.ak-tab.is-on{color:var(--ink);border-bottom-color:var(--ink)}
+
+.ak-contact__list{display:flex;flex-direction:column;gap:4px}
+.ak-contact__list a,.ak-contact__list span{
+  display:flex;align-items:center;gap:14px;padding:11px 0;
+  font-size:15px;color:#333;border-bottom:1px solid rgba(0,0,0,.05);
+}
+.ak-contact__list a:last-child,.ak-contact__list span:last-child{border-bottom:0}
+.ak-contact__list a:hover{color:var(--ink)}
+.ak-contact__ic{
+  flex:none;width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  background:var(--bg);border:1px solid var(--line);color:#666;
+}
+.ak-contact__faqs > div{padding:13px 0;border-bottom:1px solid rgba(0,0,0,.05)}
+.ak-contact__faqs > div:last-child{border-bottom:0;padding-bottom:0}
+.ak-contact__faqs p{font-size:14.5px;color:#666;line-height:1.6}
+.ak-contact__q{color:var(--ink)!important;font-weight:650;margin-bottom:5px}
+
+.ak-list--onDark li{color:#d7d7d3}
+.ak-list--onDark li::before{color:#7dd3a8}
+
+@media (max-width:900px){
+  .ak-contact{grid-template-columns:1fr;gap:26px}
+}
