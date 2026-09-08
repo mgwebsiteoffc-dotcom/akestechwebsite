@@ -18,12 +18,12 @@ $sp = [
         ['value' => '25+', 'label' => 'Plus-grade features shipped'],
     ],
     'deliverables' => [
-        ['title' => 'Shopify Store Setup', 'copy' => 'New stores with themes, collections, navigation, payments, shipping and launch support.', 'url' => url('services/shopify-store-setup')],
-        ['title' => 'Custom Theme Development', 'copy' => 'Bespoke sections, product page layouts, cart improvements and brand-consistent UI.', 'url' => url('services/custom-shopify-theme-development')],
-        ['title' => 'Speed Optimisation', 'copy' => 'Image cleanup, script review, app audits and mobile load-time fixes that protect conversion.'],
-        ['title' => 'App & API Integration', 'copy' => 'WhatsApp, CRM, reviews, logistics, analytics and payment tools wired into your store.', 'url' => url('services/custom-shopify-development')],
-        ['title' => 'Tracking Setup', 'copy' => 'Meta Pixel, Google Ads tags, GA4, events, conversion tracking and UTMs done properly.', 'url' => url('services/tracking-attribution')],
-        ['title' => 'CRO & Store Optimisation', 'copy' => 'Trust signals, product page flow, checkout support, offers and AOV improvements.', 'url' => url('services/shopify-cro-optimization')],
+        ['title' => 'Shopify Store Setup', 'copy' => 'New stores launched ready to sell: theme, catalogue, payments, shipping, apps, tracking and launch QA.', 'url' => url('services/shopify-store-setup')],
+        ['title' => 'Custom Theme Development', 'copy' => 'Bespoke Online Store 2.0 themes: sections, metafields and Liquid built around how your buyers shop.', 'url' => url('services/custom-theme-development')],
+        ['title' => 'Custom Shopify Development', 'copy' => 'Custom apps, checkout extensions, ERP/CRM integrations and middleware for what apps cannot do.', 'url' => url('services/custom-shopify-development')],
+        ['title' => 'Shopify Plus', 'copy' => 'Plus migration and builds: checkout extensibility, Functions, Flow, Markets and B2B wholesale.', 'url' => url('services/shopify-plus')],
+        ['title' => 'Migration & Integrations', 'copy' => 'Replatforming to Shopify with redirect mapping, data migration and SEO continuity built in.', 'url' => url('services/migration-integrations')],
+        ['title' => 'CRO & Store Optimization', 'copy' => 'Funnel diagnosis, A/B testing, checkout fixes and speed work that turn traffic into orders.', 'url' => url('services/cro-store-optimization')],
     ],
     'process' => [
         ['title' => 'Audit', 'copy' => 'Technical, UX and conversion review of your store against a scored checklist.'],

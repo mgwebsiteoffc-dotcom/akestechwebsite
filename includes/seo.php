@@ -192,96 +192,98 @@ class SEO {
                 'meta_title' => 'Retail & Consumer Brand Growth | AKESTECH',
                 'meta_description' => 'Retail and consumer brand growth: ecommerce, marketplace management, retail media, retention automation and AI creative.',
             ],
-        /* ---------- sub-service pages (auto-registered) ---------- */
+        /* ---------- sub-service pages: Shopify ---------- */
             'shopify-store-setup' => [
-                'meta_title' => 'Shopify Store Setup Services | AKESTECH',
-                'meta_description' => 'Complete Shopify store setup for new and growing brands: theme configuration, catalogue and collections, payments and shipping, apps, tracking and.',
-                'meta_keywords' => 'shopify store setup, shopify & commerce, akestech, india',
+                'meta_title' => 'Shopify Store Setup Services in India | AKESTECH',
+                'meta_description' => 'End-to-end Shopify store setup: theme, catalogue, payments, shipping, apps, tracking & launch QA. Live in 21 days, ready to sell from day one.',
+                'meta_keywords' => 'shopify store setup, shopify store setup india, shopify development company, akestech',
             ],
-            'custom-shopify-theme-development' => [
-                'meta_title' => 'Custom Theme Development Services | AKESTECH',
-                'meta_description' => 'Bespoke Shopify theme design and development using Online Store 2.0 — sections, metafields and Liquid built for your catalogue, your merchandising and.',
-                'meta_keywords' => 'custom theme development, shopify & commerce, akestech, india',
+            'custom-theme-development' => [
+                'meta_title' => 'Custom Shopify Theme Development | AKESTECH',
+                'meta_description' => 'Bespoke Shopify themes on Online Store 2.0 — custom sections, metafields & 90+ Lighthouse scores. Designed for buyers, editable by your team.',
+                'meta_keywords' => 'custom shopify theme development, shopify theme developer india, online store 2.0, akestech',
             ],
             'custom-shopify-development' => [
-                'meta_title' => 'Custom Shopify Development Services | AKESTECH',
-                'meta_description' => 'Custom Shopify development for the things no app store listing does properly: bespoke apps, checkout and cart extensions, ERP and CRM integrations.',
-                'meta_keywords' => 'custom shopify development, shopify & commerce, akestech, india',
+                'meta_title' => 'Custom Shopify Development: Apps & Integrations | AKESTECH',
+                'meta_description' => 'Custom Shopify apps, checkout extensions, ERP/CRM integrations & middleware. Scoped, built, documented & maintained by one senior team.',
+                'meta_keywords' => 'custom shopify development, shopify app development, shopify api integration, akestech',
             ],
             'shopify-plus' => [
-                'meta_title' => 'Shopify Plus Services | AKESTECH',
-                'meta_description' => 'Shopify Plus migration, build and optimisation for high-volume brands: checkout extensibility, Shopify Functions, automation with Flow, multi-store and.',
-                'meta_keywords' => 'shopify plus, shopify & commerce, akestech, india',
+                'meta_title' => 'Shopify Plus Development & Migration Experts | AKESTECH',
+                'meta_description' => 'Shopify Plus migration, checkout extensibility, Shopify Functions, Flow automation, Markets & B2B — moved without losing revenue.',
+                'meta_keywords' => 'shopify plus development, shopify plus migration, shopify plus agency india, akestech',
             ],
-            'shopify-migration-integrations' => [
-                'meta_title' => 'Migration & Integrations Services | AKESTECH',
-                'meta_description' => 'Replatforming to Shopify from WooCommerce, Magento, Wix, BigCommerce or a custom build — with redirect mapping, catalogue and customer migration, Order.',
-                'meta_keywords' => 'migration & integrations, shopify & commerce, akestech, india',
+            'migration-integrations' => [
+                'meta_title' => 'Shopify Migration Services | WooCommerce, Magento | AKESTECH',
+                'meta_description' => 'Migrate to Shopify with 301 redirect mapping, catalogue & customer migration and SEO continuity planned before launch — not patched after.',
+                'meta_keywords' => 'shopify migration services, migrate to shopify, woocommerce to shopify, akestech',
             ],
-            'shopify-cro-optimization' => [
-                'meta_title' => 'CRO & Store Optimization Services | AKESTECH',
-                'meta_description' => 'Conversion rate optimisation for Shopify stores: funnel and analytics diagnosis, heatmaps and session review, structured A/B testing, checkout and cart.',
-                'meta_keywords' => 'cro & store optimization, shopify & commerce, akestech, india',
+            'cro-store-optimization' => [
+                'meta_title' => 'Shopify CRO & Store Optimization Services | AKESTECH',
+                'meta_description' => 'Shopify conversion rate optimisation: funnel diagnosis, A/B testing, checkout fixes & speed work. Typical 20–40% conversion lift in 6–12 months.',
+                'meta_keywords' => 'shopify cro, shopify conversion rate optimisation, store optimisation, akestech',
             ],
+        /* ---------- sub-service pages: Performance Marketing ---------- */
             'meta-google-ads' => [
-                'meta_title' => 'Meta & Google Ads Services | AKESTECH',
-                'meta_description' => 'Full-funnel paid media management across Meta, Google Search, Shopping, YouTube and Display — structured by intent stage, with verified server-side.',
-                'meta_keywords' => 'meta & google ads, performance marketing, akestech, india',
+                'meta_title' => 'Meta & Google Ads Management for D2C | AKESTECH',
+                'meta_description' => 'Full-funnel Meta & Google Ads with server-side tracking, creative testing & margin-based reporting. ₹50Cr+ ad spend managed for 200+ brands.',
+                'meta_keywords' => 'meta ads management, google ads agency india, performance marketing, akestech',
             ],
             'creative-ai-ugc-strategy' => [
-                'meta_title' => 'Creative & AI UGC Strategy Services | AKESTECH',
-                'meta_description' => 'Ad creative strategy and production at testing velocity: hooks, scripts, AI-generated UGC and video, static variations and multilingual versions —.',
-                'meta_keywords' => 'creative & ai ugc strategy, performance marketing, akestech, india',
+                'meta_title' => 'Creative & AI UGC Strategy for Paid Social | AKESTECH',
+                'meta_description' => 'High-volume ad creative: hooks, scripts, AI UGC video & multilingual variants on schedule. 50+ assets a month that keep ROAS climbing.',
+                'meta_keywords' => 'ai ugc, ad creative strategy, ugc video ads india, akestech',
             ],
             'landing-pages-funnels' => [
-                'meta_title' => 'Landing Pages & Funnels Services | AKESTECH',
-                'meta_description' => 'High-converting landing pages and funnels for paid traffic and lead generation: message-match pages, multi-step forms, quiz and calculator funnels.',
-                'meta_keywords' => 'landing pages & funnels, performance marketing, akestech, india',
+                'meta_title' => 'Landing Page Design & Funnel Development | AKESTECH',
+                'meta_description' => 'High-converting landing pages & funnels: message-match copy, mobile-first builds, quiz funnels & CRM plumbing. Under 2s load, tested to convert.',
+                'meta_keywords' => 'landing page design, funnel development, lead generation pages, akestech',
             ],
             'tracking-attribution' => [
-                'meta_title' => 'Tracking & Attribution Services | AKESTECH',
-                'meta_description' => 'Server-side conversion tracking, consent-mode configuration, GA4 and CRM reconciliation, call and WhatsApp tracking, and attribution modelling — so.',
-                'meta_keywords' => 'tracking & attribution, performance marketing, akestech, india',
+                'meta_title' => 'Marketing Tracking & Attribution Setup | AKESTECH',
+                'meta_description' => 'Server-side tracking, GA4, Consent Mode, call & WhatsApp attribution and CRM reconciliation. Know which channel produced the sale.',
+                'meta_keywords' => 'server side tracking, marketing attribution, ga4 setup, conversions api, akestech',
             ],
             'retargeting-retention' => [
-                'meta_title' => 'Retargeting & Retention Services | AKESTECH',
-                'meta_description' => 'Retargeting and lifecycle retention systems: segmented remarketing, abandoned cart and browse recovery, email and WhatsApp lifecycle flows, win-back.',
-                'meta_keywords' => 'retargeting & retention, performance marketing, akestech, india',
+                'meta_title' => 'Retargeting & Retention Marketing Services | AKESTECH',
+                'meta_description' => 'Segmented remarketing, cart recovery, email & WhatsApp lifecycle flows, win-backs and loyalty. Lift repeat revenue 25–40%.',
+                'meta_keywords' => 'retargeting services, retention marketing, whatsapp lifecycle, email automation, akestech',
             ],
             'cro-experimentation' => [
-                'meta_title' => 'CRO & Experimentation Services | AKESTECH',
-                'meta_description' => 'Full-funnel conversion rate optimisation and structured experimentation: hypothesis backlog, A/B and multivariate testing, landing page and form.',
-                'meta_keywords' => 'cro & experimentation, performance marketing, akestech, india',
+                'meta_title' => 'CRO & Experimentation Programmes That Compound | AKESTECH',
+                'meta_description' => 'Structured A/B testing programmes: hypothesis backlog, statistical rigour, offer tests and a results library. Real compounding, month after month.',
+                'meta_keywords' => 'conversion rate optimisation, ab testing service, experimentation programme, akestech',
             ],
+        /* ---------- sub-service pages: Marketplace & Operations ---------- */
             'amazon-account-management' => [
-                'meta_title' => 'Amazon Account Management Services | AKESTECH',
-                'meta_description' => 'End-to-end Amazon seller account management: catalogue and listing quality, advertising, Buy Box and pricing, inventory planning, account health and.',
-                'meta_keywords' => 'amazon account management, marketplace management, akestech, india',
+                'meta_title' => 'Amazon Account Management Services India | AKESTECH',
+                'meta_description' => 'End-to-end Amazon management: listings, A+ content, ads, Buy Box, FBA planning & account health — reconciled against every channel.',
+                'meta_keywords' => 'amazon account management, amazon seller services india, amazon ppc, akestech',
             ],
             'flipkart-marketplace-ads' => [
-                'meta_title' => 'Flipkart & Marketplace Ads Services | AKESTECH',
-                'meta_description' => 'Paid advertising across Flipkart, Amazon, Myntra, Nykaa, Ajio and Meesho — campaign structure, keyword and product targeting, bid and budget control.',
-                'meta_keywords' => 'flipkart & marketplace ads, marketplace management, akestech, india',
+                'meta_title' => 'Flipkart & Marketplace Ads Management | AKESTECH',
+                'meta_description' => 'Marketplace advertising on Flipkart, Amazon, Myntra & more — managed to target ACOS and contribution margin, with sale-event playbooks.',
+                'meta_keywords' => 'flipkart ads management, marketplace advertising, amazon flipkart ppc, akestech',
             ],
             'listing-seo-catalogue' => [
-                'meta_title' => 'Listing SEO & Catalogue Services | AKESTECH',
-                'meta_description' => 'Marketplace listing and catalogue optimisation: keyword research, titles and bullets, backend search terms, images and A+ content, variation structure.',
-                'meta_keywords' => 'listing seo & catalogue, marketplace management, akestech, india',
+                'meta_title' => 'Marketplace Listing SEO & Catalogue Services | AKESTECH',
+                'meta_description' => 'Listing SEO & catalogue management: keywords, backend terms, A+ content, variations & suppression rescue across 6+ marketplaces.',
+                'meta_keywords' => 'marketplace listing seo, catalogue management, amazon listing optimisation, akestech',
             ],
             'inventory-fulfilment' => [
-                'meta_title' => 'Inventory & Fulfilment Services | AKESTECH',
-                'meta_description' => 'Unified inventory and fulfilment operations across marketplaces, D2C and retail: single stock view with per-channel buffers, demand forecasting, FBA.',
-                'meta_keywords' => 'inventory & fulfilment, marketplace management, akestech, india',
+                'meta_title' => 'Ecommerce Inventory & Fulfilment Management | AKESTECH',
+                'meta_description' => 'Unified inventory across marketplaces, D2C & retail: forecasting, FBA/3PL coordination, smart routing & 99% accuracy. Zero oversells.',
+                'meta_keywords' => 'inventory management ecommerce, fulfilment services india, fba planning, akestech',
             ],
             'rto-returns-control' => [
-                'meta_title' => 'RTO & Returns Control Services | AKESTECH',
-                'meta_description' => 'Return-to-origin and returns reduction for Indian ecommerce: COD verification, address validation, pre-dispatch confirmation, delivery exception.',
-                'meta_keywords' => 'rto & returns control, marketplace management, akestech, india',
+                'meta_title' => 'RTO & Returns Reduction for Ecommerce | AKESTECH',
+                'meta_description' => 'Cut RTO by ~40% with COD verification, address validation, risk scoring & delivery exception management. Built for Indian ecommerce.',
+                'meta_keywords' => 'rto reduction, cod verification, ecommerce returns management, akestech',
             ],
             'ops-automation' => [
-                'meta_title' => 'Ops Automation Services | AKESTECH',
-                'meta_description' => 'Operations automation for commerce businesses: order and inventory workflows, catalogue synchronisation, reconciliation, reporting and exception.',
-                'meta_keywords' => 'ops automation, marketplace management, akestech, india',
+                'meta_title' => 'Ecommerce Operations Automation Services | AKESTECH',
+                'meta_description' => 'Ops automation: order routing, inventory sync, reconciliation, dashboards & alerts. Save 20+ hours a week and stop manual errors.',
+                'meta_keywords' => 'ecommerce operations automation, order workflow automation, akestech',
             ],
 
         ];
@@ -296,7 +298,12 @@ class SEO {
         if ($key === null) return [];
 
         $seo = $map[$key];
-        $seo['canonical_url'] = url($slug === $key ? $slug : $slug);
+        // Canonical uses the matched route key (full path), never the short
+        // slug the caller passed — e.g. load('shopify-growth') must
+        // canonicalise to /services/shopify-growth, not /shopify-growth.
+        // Pages rendered by the shared service renderer get their canonical
+        // pinned to their route there as well (single source of truth).
+        $seo['canonical_url'] = ($key === 'home') ? url('/') : url($key);
         $seo['og_title'] = $seo['meta_title'];
         $seo['og_description'] = $seo['meta_description'];
         $seo['robots'] = 'index, follow';
@@ -557,29 +564,107 @@ class SEO {
 
     /**
      * Service Schema (for individual services)
+     *
+     * $offers is an optional list of ['title' => ..., 'copy' => ...] (the
+     * page's deliverables), exposed as an OfferCatalog so search and answer
+     * engines can enumerate exactly what the service includes. $pageUrl pins
+     * the node identity so graphs merge on the canonical URL.
      */
-    public static function serviceSchema($serviceName, $description, $priceMin = null, $priceMax = null) {
+    public static function serviceSchema($serviceName, $description, $priceMin = null, $priceMax = null, $offers = [], $pageUrl = '') {
         $schema = [
             "@context" => "https://schema.org",
             "@type" => "Service",
+            "serviceType" => $serviceName,
             "name" => $serviceName,
             "description" => $description,
             "provider" => [
-                "@type" => "LocalBusiness",
+                "@type" => "Organization",
                 "name" => SITE_NAME,
-                "url" => SITE_URL
+                "url" => SITE_URL,
+                "logo" => url('assets/images/akestech-transparent-logo.png'),
+                "slogan" => "Build. Automate. Grow."
             ],
             "areaServed" => [
-                "@type" => "Country",
-                "name" => "India"
+                ["@type" => "Country", "name" => "India"],
+                ["@type" => "Place", "name" => "Worldwide"]
+            ],
+            "audience" => [
+                "@type" => "BusinessAudience",
+                "audienceType" => "D2C brands, ecommerce businesses and growth-stage companies"
             ]
         ];
+
+        if ($pageUrl !== '') {
+            $schema["@id"] = rtrim($pageUrl, '/') . '#service';
+            $schema["url"] = $pageUrl;
+        }
 
         if ($priceMin && $priceMax) {
             $schema["priceRange"] = "₹{$priceMin}-{$priceMax}";
         }
 
+        if (is_array($offers) && !empty($offers)) {
+            $items = [];
+            foreach ($offers as $o) {
+                $title = is_array($o) ? ($o['title'] ?? '') : (string) $o;
+                $copy  = is_array($o) ? ($o['copy'] ?? '') : '';
+                if ($title === '') continue;
+                $items[] = [
+                    "@type" => "Offer",
+                    "itemOffered" => [
+                        "@type" => "Service",
+                        "name" => $title,
+                        "description" => $copy
+                    ]
+                ];
+            }
+            if (!empty($items)) {
+                $schema["hasOfferCatalog"] = [
+                    "@type" => "OfferCatalog",
+                    "name" => $serviceName . " — what's included",
+                    "itemListElement" => $items
+                ];
+            }
+        }
+
         return json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    }
+
+    /**
+     * WebPage Schema with SpeakableSpecification (AEO).
+     *
+     * Emitted on service pages so assistants and answer engines can lift the
+     * direct-answer block (.ak-answer) for spoken answers and AI Overviews.
+     */
+    public static function webPageSchema($name, $description, $pageUrl) {
+        return json_encode([
+            "@context" => "https://schema.org",
+            "@type" => "WebPage",
+            "@id" => rtrim($pageUrl, '/') . '#webpage',
+            "url" => $pageUrl,
+            "name" => $name,
+            "description" => $description,
+            "inLanguage" => "en-IN",
+            "isPartOf" => [
+                "@type" => "WebSite",
+                "@id" => rtrim(SITE_URL, '/') . '#website',
+                "url" => SITE_URL,
+                "name" => SITE_NAME
+            ],
+            "publisher" => [
+                "@type" => "Organization",
+                "name" => SITE_NAME,
+                "url" => SITE_URL,
+                "logo" => [
+                    "@type" => "ImageObject",
+                    "url" => url('assets/images/akestech-transparent-logo.png')
+                ]
+            ],
+            "speakable" => [
+                "@type" => "SpeakableSpecification",
+                "cssSelector" => [".ak-answer"]
+            ]
+        ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
     }
 
     /**

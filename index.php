@@ -71,11 +71,11 @@ $routes = [
 
     /* ---- Sub-services: specific capabilities (additive) ---- */
     'services/shopify-store-setup'             => 'pages/sub-service.php',
-    'services/custom-shopify-theme-development'=> 'pages/sub-service.php',
+    'services/custom-theme-development'        => 'pages/sub-service.php',
     'services/custom-shopify-development'      => 'pages/sub-service.php',
     'services/shopify-plus'                    => 'pages/sub-service.php',
-    'services/shopify-migration-integrations'  => 'pages/sub-service.php',
-    'services/shopify-cro-optimization'        => 'pages/sub-service.php',
+    'services/migration-integrations'          => 'pages/sub-service.php',
+    'services/cro-store-optimization'          => 'pages/sub-service.php',
     'services/meta-google-ads'                 => 'pages/sub-service.php',
     'services/creative-ai-ugc-strategy'        => 'pages/sub-service.php',
     'services/landing-pages-funnels'           => 'pages/sub-service.php',
@@ -153,6 +153,21 @@ foreach (array_keys(lp_slugs()) as $localSlug) {
 // Slugs switched off in the admin go back to 404
 foreach (lp_disabled() as $offSlug) {
     unset($routes[$offSlug]);
+}
+
+/**
+ * Permanent redirects for renamed sub-service slugs.
+ * Canonical slugs now match their headings exactly; old URLs 301 so
+ * backlinks, bookmarks and any indexed pages keep their equity.
+ */
+$redirects301 = [
+    'services/custom-shopify-theme-development' => 'services/custom-theme-development',
+    'services/shopify-migration-integrations'   => 'services/migration-integrations',
+    'services/shopify-cro-optimization'         => 'services/cro-store-optimization',
+];
+if (isset($redirects301[$route])) {
+    header('Location: ' . url($redirects301[$route]), true, 301);
+    exit;
 }
 
 // Check exact route match

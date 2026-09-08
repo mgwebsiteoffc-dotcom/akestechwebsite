@@ -19,7 +19,7 @@ $sp = [
     ],
     'deliverables' => [
         ['title' => 'Meta & Google Ads', 'copy' => 'Account structure, audience strategy, bidding and budget management built for profitable scale.', 'url' => url('services/meta-google-ads')],
-        ['title' => 'Creative & AI UGC', 'copy' => 'High-volume creative testing and AI video production so winning angles never go stale.', 'url' => url('services/creative-ai-ugc-strategy')],
+        ['title' => 'Creative & AI UGC Strategy', 'copy' => 'High-volume creative testing and AI video production so winning angles never go stale.', 'url' => url('services/creative-ai-ugc-strategy')],
         ['title' => 'Landing Pages & Funnels', 'copy' => 'Fast, mobile-first pages with clear offers, proof and enquiry paths that convert.', 'url' => url('services/landing-pages-funnels')],
         ['title' => 'Tracking & Attribution', 'copy' => 'GA4, pixels, server-side events, UTMs and clean reporting you can actually trust.', 'url' => url('services/tracking-attribution')],
         ['title' => 'Retargeting & Retention', 'copy' => 'Lifecycle campaigns across ads, email and WhatsApp that lift repeat purchase rate.', 'url' => url('services/retargeting-retention')],

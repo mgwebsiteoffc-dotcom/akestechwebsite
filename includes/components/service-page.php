@@ -23,6 +23,13 @@
  * Optional:
  *   related       array of ['title' => ..., 'copy' => ..., 'url' => ...]
  *   schemaName    string (Service schema name)
+ *   breadcrumbs   array of ['name' => ..., 'url' => ...] (visible + JSON-LD trail)
+ *   sections      array of ['kicker' => ..., 'h2' => ..., 'paras' => [...],
+ *                   'bullets' => [['title' => ..., 'copy' => ...], ...]]
+ *                   (long-form SEO/AEO detail blocks between deliverables & process)
+ *   faqs          array of ['question' => ..., 'answer' => ...] (static fallback)
+ *   heroImage     string (filename under assets/images/)
+ *   howTo         bool (set false to suppress the HowTo schema)
  */
 
 $sp = $sp ?? [];
@@ -31,17 +38,41 @@ $route = $sp['route'] ?? '';
 /* ---------- SEO / AEO ---------- */
 SEO::load($sp['slug'] ?? $route);
 
-$schemas = [];
+// Canonical is always the page's own route URL — never the short-slug form
+// (e.g. /services/shopify-growth, not /shopify-growth).
+if ($route !== '') {
+    $canon = SEO::get('canonical_url', '');
+    if ($canon === '' || strpos($canon, '/' . $route) === false) {
+        SEO::set('canonical_url', url($route));
+    }
+}
+$pageUrl = $route !== '' ? url($route) : SEO::get('canonical_url', '');
+
 // Pages may supply their own trail (sub-services nest under a parent service);
-// otherwise fall back to the standard two-level trail.
-$schemas[] = SEO::breadcrumbSchema($sp['breadcrumbs'] ?? [
+// otherwise fall back to the standard two-level trail. The same trail drives
+// both the visible breadcrumb and the BreadcrumbList JSON-LD.
+$crumbs = $sp['breadcrumbs'] ?? [
     ['name' => 'Home', 'url' => url('/')],
     ['name' => 'Services', 'url' => url('services/automation')],
     ['name' => $sp['eyebrow'] ?? 'Service', 'url' => url($route)],
-]);
+];
+
+$schemas = [];
+$schemas[] = SEO::breadcrumbSchema($crumbs);
+if ($pageUrl !== '') {
+    $schemas[] = SEO::webPageSchema(
+        SEO::get('meta_title', $sp['h1'] ?? ''),
+        SEO::get('meta_description', $sp['intro'] ?? ''),
+        $pageUrl
+    );
+}
 $schemas[] = SEO::serviceSchema(
     $sp['schemaName'] ?? ($sp['eyebrow'] ?? 'Service'),
-    $sp['intro'] ?? ''
+    $sp['intro'] ?? '',
+    null,
+    null,
+    $sp['deliverables'] ?? [],
+    $pageUrl
 );
 
 /* HowTo schema — exposes the delivery process as ordered steps for AI answer engines.
@@ -83,9 +114,13 @@ ob_start();
 
   <div class="ak-container ak-pagehero__inner">
     <nav class="ak-crumbs" aria-label="Breadcrumb">
-      <a href="<?= url('/') ?>">Home</a> <span>/</span>
-      <a href="<?= url('services/automation') ?>">Services</a> <span>/</span>
-      <span><?= htmlspecialchars($sp['eyebrow'] ?? '') ?></span>
+      <?php $ci = 0; $cn = count($crumbs); foreach ($crumbs as $c): $ci++; ?>
+        <?php if ($ci < $cn): ?>
+          <a href="<?= htmlspecialchars($c['url']) ?>"><?= htmlspecialchars($c['name']) ?></a> <span>/</span>
+        <?php else: ?>
+          <span aria-current="page"><?= htmlspecialchars($c['name']) ?></span>
+        <?php endif; ?>
+      <?php endforeach; ?>
     </nav>
 
     <p class="ak-kicker"><?= htmlspecialchars($sp['eyebrow'] ?? '') ?></p>
@@ -154,6 +189,32 @@ ob_start();
     </div>
   </div>
 </section>
+<?php endif; ?>
+
+<!-- ============ IN DETAIL (SEO/AEO long-form) ============ -->
+<?php if (!empty($sp['sections'])): ?>
+<?php foreach ($sp['sections'] as $sec): ?>
+<section class="ak-section ak-section--tight"<?= !empty($sec['id']) ? ' id="' . htmlspecialchars($sec['id']) . '"' : '' ?>>
+  <div class="ak-container">
+    <div class="ak-head ak-reveal">
+      <div class="ak-kicker"><?= htmlspecialchars($sec['kicker'] ?? 'In detail') ?></div>
+      <div><h2 class="ak-h2"><?= htmlspecialchars($sec['h2'] ?? '') ?></h2></div>
+    </div>
+    <div class="ak-detail ak-reveal">
+      <?php foreach ($sec['paras'] ?? [] as $para): ?>
+      <p><?= htmlspecialchars($para) ?></p>
+      <?php endforeach; ?>
+      <?php if (!empty($sec['bullets'])): ?>
+      <ul class="ak-ticks">
+        <?php foreach ($sec['bullets'] as $b): ?>
+        <li><strong><?= htmlspecialchars(is_array($b) ? ($b['title'] ?? '') : (string) $b) ?></strong><?php if (is_array($b) && !empty($b['copy'])): ?> — <?= htmlspecialchars($b['copy']) ?><?php endif; ?></li>
+        <?php endforeach; ?>
+      </ul>
+      <?php endif; ?>
+    </div>
+  </div>
+</section>
+<?php endforeach; ?>
 <?php endif; ?>
 
 <!-- ============ PROCESS ============ -->
