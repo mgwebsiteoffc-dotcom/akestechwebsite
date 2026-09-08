@@ -1,1539 +1,1002 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akestech Infotech — AI Automation, Product Development & Growth Marketing Agency</title>
-<meta name="description" content="Akestech is an AI-first growth partner: AI automation, product & tech development, performance marketing, ecommerce consulting, marketplace management and AI video production. 200+ brands, ₹50Cr+ ad spend, 3X+ ROAS.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://akestech.com/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AKESTECH — AI, Commerce & Growth Technology Company. Shopify development, AI automation, product development, performance marketing, marketplace management and AI video production." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f5f5f2" />
+  <title>AKESTECH — Build. Automate. Grow.</title>
+  <link rel="canonical" href="https://akestech.com/" />
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Akestech Infotech — AI-First Growth Partner">
-<meta property="og:description" content="AI Automation · Product Development · Performance Marketing · Ecommerce Consulting · Marketplace Management · AI Videos">
-<meta property="og:url" content="https://akestech.com/">
-<meta property="og:image" content="https://akestech.com/assets/images/akestech-transparent-logo.png">
-<meta name="twitter:card" content="summary_large_image">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AKESTECH — Build. Automate. Grow." />
+  <meta property="og:description" content="AI · Commerce · Product · Growth. Shopify stores, AI automation, product development, performance marketing, marketplace management and AI videos." />
+  <meta property="og:url" content="https://akestech.com/" />
+  <meta property="og:image" content="https://akestech.com/assets/images/akestech-transparent-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="icon" type="image/png" href="https://akestech.com/assets/images/akestech-transparent-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://akestech.com/assets/images/akestech-transparent-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3MCEF58PD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J3MCEF58PD');
-  gtag('config', 'G-GQQ630YX04');
-</script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e);s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','2372900976550510'); fbq('track','PageView');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3MCEF58PD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J3MCEF58PD');
+    gtag('config', 'G-GQQ630YX04');
+  </script>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e);s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','2372900976550510'); fbq('track','PageView');
+  </script>
 
-<style>
-/* ============================================================
-   AKESTECH — LANDING PAGE STYLES
-   Brand palette taken from Akestech brand assets:
-   indigo #4F6EF7 · teal #00E5A0 · orange #FF6B35 · amber #FFB800
-   NOTE: page links below use the EXISTING live slugs so no URL
-   changes when this replaces pages/home.php.
-   ============================================================ */
+  <style>
+    :root {
+      --bg: #f5f5f2;
+      --ink: #101010;
+      --muted: #666;
+      --line: #d9d9d4;
+      --card: #fff;
+      --dark: #111;
+      --radius: 24px;
+      --max: 1240px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, input, select, textarea { font-family: inherit; }
+    ::selection { background: var(--ink); color: var(--bg); }
 
-:root{
-  --bg:#07070B;
-  --bg-2:#0B0B12;
-  --surface:#111119;
-  --surface-2:#171722;
-  --border:#23232F;
-  --border-soft:rgba(255,255,255,.08);
-  --indigo:#4F6EF7;
-  --indigo-soft:rgba(79,110,247,.12);
-  --teal:#00E5A0;
-  --orange:#FF6B35;
-  --amber:#FFB800;
-  --violet:#8B5CF6;
-  --text:#EDEEF3;
-  --muted:#9BA0B5;
-  --muted-2:#6B7186;
-  --radius:20px;
-  --maxw:1200px;
-}
+    .container { width: min(var(--max), calc(100% - 48px)); margin: auto; }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-  font-size:16px;line-height:1.65;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-ul{list-style:none}
-::selection{background:var(--indigo);color:#fff}
+    /* ---------------- NAV ---------------- */
+    nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+    .logo { display: flex; align-items: center; gap: 9px; font-size: 22px; font-weight: 850; letter-spacing: -1px; }
+    .logo img { height: 34px; width: auto; object-fit: contain; }
+    .navlinks { display: flex; gap: 30px; font-size: 14px; }
+    .navlinks a { color: #333; transition: color .2s ease; }
+    .navlinks a:hover { color: var(--ink); }
+    .nav-cta {
+      padding: 12px 18px; border: 1px solid var(--ink); border-radius: 999px;
+      font-size: 14px; font-weight: 700; transition: .2s ease;
+    }
+    .nav-cta:hover { background: var(--ink); color: #fff; }
+    .burger { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 999px; align-items: center; justify-content: center; background: transparent; }
+    .burger i { display: block; width: 16px; height: 1.5px; background: var(--ink); position: relative; transition: .25s; }
+    .burger i::before, .burger i::after { content: ""; position: absolute; left: 0; width: 16px; height: 1.5px; background: var(--ink); transition: .25s; }
+    .burger i::before { top: -5px; } .burger i::after { top: 5px; }
+    .burger.open i { background: transparent; }
+    .burger.open i::before { top: 0; transform: rotate(45deg); }
+    .burger.open i::after { top: 0; transform: rotate(-45deg); }
+    .mobile-nav { display: none; padding: 8px 0 28px; border-bottom: 1px solid var(--line); }
+    .mobile-nav.open { display: block; }
+    .mobile-nav a { display: block; padding: 14px 0; font-size: 17px; font-weight: 600; border-bottom: 1px solid var(--line); }
+    .mobile-nav a:last-of-type { border-bottom: 0; }
 
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.font-display{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em}
+    /* ---------------- HERO ---------------- */
+    .hero {
+      min-height: 690px;
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 40px;
+      align-items: end;
+      padding: 90px 0 70px;
+    }
+    .eyebrow {
+      text-transform: uppercase; letter-spacing: 2px; font-size: 12px;
+      font-weight: 750; color: #555; margin-bottom: 24px;
+    }
+    h1 {
+      font-size: clamp(64px, 9vw, 132px);
+      line-height: .87;
+      letter-spacing: -7px;
+      max-width: 900px;
+      font-weight: 850;
+    }
+    .hero-copy {
+      max-width: 430px;
+      padding-bottom: 7px;
+      font-size: 19px;
+      color: #444;
+    }
+    .hero-copy strong { color: var(--ink); }
+    .buttons { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 20px; border-radius: 999px; font-weight: 750; font-size: 14px;
+      border: 1px solid transparent; cursor: pointer; transition: .22s ease;
+    }
+    .btn-dark { background: var(--dark); color: #fff; }
+    .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 12px 26px -12px rgba(0,0,0,.6); }
+    .btn-light { border: 1px solid var(--ink); }
+    .btn-light:hover { background: var(--ink); color: #fff; }
+    .btn[disabled] { opacity: .6; cursor: default; transform: none; box-shadow: none; }
 
-/* ---------- gradients & helpers ---------- */
-.grad-text{
-  background:linear-gradient(100deg,#fff 0%,#C7D2FE 40%,var(--teal) 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.grad-text-2{
-  background:linear-gradient(100deg,var(--indigo) 0%,var(--violet) 50%,var(--teal) 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--teal);
-}
-.eyebrow::before{content:"";width:24px;height:1px;background:var(--teal);opacity:.6}
+    /* ---------------- STATEMENT ---------------- */
+    .statement {
+      background: var(--dark); color: #fff; border-radius: var(--radius);
+      padding: 34px; margin-bottom: 100px;
+      display: flex; justify-content: space-between; gap: 40px; align-items: end;
+    }
+    .statement p { font-size: clamp(28px, 4vw, 52px); line-height: 1.02; letter-spacing: -2px; max-width: 850px; font-weight: 700; }
+    .statement p strong { font-weight: 700; }
+    .statement span { font-size: 13px; color: #aaa; max-width: 180px; line-height: 1.5; }
+    .statement .kicker { color: #999; }
 
-h2.section-title{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(28px,4vw,46px);font-weight:700;line-height:1.12;
-  letter-spacing:-.03em;margin:14px 0 16px;
-}
-.section-sub{color:var(--muted);font-size:clamp(15px,1.6vw,18px);max-width:680px}
-.section-head{margin-bottom:56px}
-.section-head.center{text-align:center}
-.section-head.center .section-sub{margin:0 auto}
+    /* ---------------- SECTIONS ---------------- */
+    section { padding: 105px 0; border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: .45fr 1fr; gap: 40px; margin-bottom: 55px; }
+    .kicker { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; color: #777; }
+    h2 { font-size: clamp(42px, 6vw, 76px); line-height: .94; letter-spacing: -4px; max-width: 850px; font-weight: 800; }
+    .lead { color: var(--muted); font-size: 18px; max-width: 560px; margin-top: 22px; line-height: 1.5; }
 
-/* ---------- buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  padding:15px 28px;border-radius:999px;font-size:15px;font-weight:600;
-  transition:.25s cubic-bezier(.4,0,.2,1);white-space:nowrap;
-}
-.btn-primary{
-  background:linear-gradient(100deg,var(--indigo),var(--violet));
-  color:#fff;box-shadow:0 10px 30px -8px rgba(79,110,247,.6);
-}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -10px rgba(79,110,247,.8)}
-.btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border:1px solid var(--border-soft);backdrop-filter:blur(8px)}
-.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.18);transform:translateY(-2px)}
-.btn-light{background:#fff;color:#0A0B0F}
-.btn-light:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px rgba(255,255,255,.4)}
-.btn .arw{transition:transform .25s}
-.btn:hover .arw{transform:translateX(4px)}
+    /* ---------------- CARDS ---------------- */
+    .grid4 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+      padding: 28px; min-height: 330px; display: flex; flex-direction: column; justify-content: space-between;
+      transition: .25s ease;
+    }
+    a.card:hover { transform: translateY(-5px); border-color: #999; }
+    .number { font-size: 12px; color: #888; letter-spacing: .04em; }
+    .card h3 { font-size: 26px; letter-spacing: -1px; margin-bottom: 12px; font-weight: 750; }
+    .card p { color: #666; font-size: 15px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 22px; }
+    .tag { border: 1px solid var(--line); border-radius: 999px; padding: 7px 10px; font-size: 11px; color: #555; }
+    .card .arrow { font-size: 18px; color: #999; margin-top: 18px; display: inline-block; transition: transform .25s ease; }
+    a.card:hover .arrow { transform: translate(3px, -3px); color: var(--ink); }
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
-.nav-wrap{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  transition:background .3s,border-color .3s,backdrop-filter .3s;
-  border-bottom:1px solid transparent;
-}
-.nav-wrap.scrolled{
-  background:rgba(7,7,11,.82);backdrop-filter:blur(18px) saturate(150%);
-  border-bottom:1px solid var(--border-soft);
-}
-.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-.logo img{height:44px;width:auto;object-fit:contain}
-.nav-links{display:flex;align-items:center;gap:4px}
-.nav-links > a,.nav-links > .nav-dd > button{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:9px 14px;border-radius:12px;font-size:14.5px;font-weight:500;color:var(--muted);
-  transition:.2s;
-}
-.nav-links > a:hover,.nav-links > .nav-dd > button:hover{color:#fff;background:rgba(255,255,255,.05)}
-.nav-dd{position:relative}
-.nav-dd > button svg{transition:transform .25s}
-.nav-dd:hover > button svg{transform:rotate(180deg)}
-.mega{
-  position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(8px);
-  width:660px;background:var(--surface);border:1px solid var(--border);
-  border-radius:22px;padding:14px;box-shadow:0 40px 80px -20px rgba(0,0,0,.9);
-  display:grid;grid-template-columns:1fr 1fr;gap:4px;
-  opacity:0;visibility:hidden;transition:.22s ease;
-}
-.nav-dd:hover .mega{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.mega a{display:flex;gap:13px;padding:13px;border-radius:14px;transition:.2s}
-.mega a:hover{background:var(--surface-2)}
-.mega .ico{
-  width:40px;height:40px;border-radius:12px;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;font-size:18px;
-}
-.mega strong{display:block;font-size:14px;font-weight:600;color:#fff}
-.mega span{font-size:12.5px;color:var(--muted-2);line-height:1.45}
-.nav-cta{display:flex;align-items:center;gap:12px}
-.nav-cta .btn{padding:11px 20px;font-size:14px}
-.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--border);align-items:center;justify-content:center}
-.burger span{display:block;width:18px;height:1.5px;background:#fff;position:relative;transition:.25s}
-.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:#fff;transition:.25s}
-.burger span::before{top:-6px}.burger span::after{top:6px}
-.burger.open span{background:transparent}
-.burger.open span::before{top:0;transform:rotate(45deg)}
-.burger.open span::after{top:0;transform:rotate(-45deg)}
+    /* ---------------- SPLIT / SERVICE ROWS ---------------- */
+    .shopify { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+    .shopify-copy p { color: #555; font-size: 18px; max-width: 560px; margin-top: 24px; line-height: 1.5; }
+    .services { border-top: 1px solid var(--line); }
+    .service {
+      display: grid; grid-template-columns: 60px 1fr 30px; gap: 20px; align-items: center;
+      padding: 22px 0; border-bottom: 1px solid var(--line); font-size: 18px;
+      width: 100%; text-align: left; background: none; border-left: 0; border-right: 0; border-top: 0;
+      transition: padding-left .25s ease, color .2s ease;
+    }
+    a.service:hover { padding-left: 10px; }
+    .service small { color: #999; font-size: 13px; }
+    .service b { font-size: 20px; font-weight: 650; letter-spacing: -.4px; }
+    .service span { color: #999; font-size: 15px; text-align: right; }
+    .service { color: var(--ink); }
+    .service .plus { display: inline-block; transition: transform .25s ease; }
+    .service.open .plus { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-a p { color: var(--muted); font-size: 16px; max-width: 780px; padding: 0 0 24px 80px; line-height: 1.6; }
 
-.mobile-menu{
-  position:fixed;inset:76px 0 auto 0;z-index:99;background:var(--bg-2);
-  border-bottom:1px solid var(--border);padding:20px 24px 32px;
-  max-height:calc(100vh - 76px);overflow-y:auto;
-  display:none;
-}
-.mobile-menu.open{display:block}
-.mobile-menu .m-label{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);margin:18px 0 8px}
-.mobile-menu a{display:flex;align-items:center;gap:12px;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.05);font-size:15px;font-weight:500}
-.mobile-menu .m-ico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+    /* ---------------- PRODUCTS ---------------- */
+    .products { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .product {
+      background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 34px;
+      min-height: 280px; display: flex; flex-direction: column; justify-content: space-between;
+      transition: .25s ease;
+    }
+    .product:hover { border-color: #999; }
+    .product-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #777; }
+    .product h3 { font-size: 38px; letter-spacing: -2px; font-weight: 800; }
+    .product p { color: #666; max-width: 450px; margin-top: 10px; }
 
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero{position:relative;padding:150px 0 90px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
-.orb-1{width:600px;height:600px;top:-220px;left:-120px;background:radial-gradient(circle,rgba(79,110,247,.55),transparent 65%)}
-.orb-2{width:520px;height:520px;top:-60px;right:-140px;background:radial-gradient(circle,rgba(0,229,160,.30),transparent 65%)}
-.orb-3{width:460px;height:460px;bottom:-260px;left:38%;background:radial-gradient(circle,rgba(139,92,246,.32),transparent 65%)}
-.grid-lines{
-  position:absolute;inset:0;
-  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px),
-                   linear-gradient(to bottom,rgba(255,255,255,.045) 1px,transparent 1px);
-  background-size:64px 64px;
-  mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 40%,transparent 100%);
-  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 40%,transparent 100%);
-}
-.hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+    /* ---------------- PROCESS ---------------- */
+    .process { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--line); }
+    .step { padding: 25px 22px 0 0; margin-right: 22px; border-right: 1px solid var(--line); }
+    .step:last-child { border: 0; }
+    .step span { font-size: 12px; color: #888; letter-spacing: .04em; }
+    .step h3 { margin: 25px 0 10px; font-size: 24px; letter-spacing: -1px; font-weight: 750; }
+    .step p { color: #666; font-size: 14px; }
 
-.pill{
-  display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 8px;
-  background:rgba(255,255,255,.05);border:1px solid var(--border-soft);
-  border-radius:999px;font-size:13px;color:var(--muted);margin-bottom:26px;
-}
-.pill b{color:#fff;font-weight:600}
-.dot-live{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(0,229,160,.7);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(0,229,160,0)}100%{box-shadow:0 0 0 0 rgba(0,229,160,0)}}
+    /* ---------------- METRICS ---------------- */
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .metric { padding: 34px 24px; border-right: 1px solid var(--line); }
+    .metric:last-child { border-right: 0; }
+    .metric b { display: block; font-size: clamp(38px, 4.4vw, 58px); letter-spacing: -3px; font-weight: 850; line-height: 1; }
+    .metric span { display: block; font-size: 13px; color: #777; margin-top: 10px; }
 
-h1.hero-title{
-  font-family:'Space Grotesk',sans-serif;font-weight:700;
-  font-size:clamp(38px,5.6vw,68px);line-height:1.05;letter-spacing:-.035em;margin-bottom:24px;
-}
-.hero-sub{font-size:clamp(16px,1.7vw,19px);color:var(--muted);max-width:560px;margin-bottom:34px}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
-.hero-proof{display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center}
-.hp-item{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--muted)}
-.hp-item svg{color:var(--teal);flex-shrink:0}
+    /* ---------------- LOGOS ---------------- */
+    .logos { display: flex; flex-wrap: wrap; gap: 46px; align-items: center; padding: 40px 0; }
+    .logos img { height: 40px; width: auto; object-fit: contain; opacity: .55; filter: grayscale(1); transition: .25s ease; }
+    .logos img:hover { opacity: 1; filter: none; }
 
-/* hero visual — AI console mock */
-.console{
-  position:relative;background:linear-gradient(160deg,var(--surface) 0%,#0D0D15 100%);
-  border:1px solid var(--border);border-radius:24px;padding:20px;
-  box-shadow:0 50px 100px -30px rgba(0,0,0,.9);
-}
-.console::before{
-  content:"";position:absolute;inset:-1px;border-radius:24px;padding:1px;
-  background:linear-gradient(140deg,rgba(79,110,247,.5),transparent 40%,rgba(0,229,160,.35));
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
-}
-.console-bar{display:flex;align-items:center;gap:7px;padding:2px 4px 16px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:16px}
-.console-bar i{width:9px;height:9px;border-radius:50%;background:#2A2A38;display:block}
-.console-bar i:nth-child(1){background:#FF5F57}.console-bar i:nth-child(2){background:#FEBC2E}.console-bar i:nth-child(3){background:#28C840}
-.console-bar span{margin-left:8px;font-size:11.5px;color:var(--muted-2);font-family:'Space Grotesk',sans-serif}
-.console-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.c-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px}
-.c-card .lbl{font-size:11px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.08em}
-.c-card .val{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#fff;margin-top:4px}
-.c-card .delta{font-size:11.5px;font-weight:600;color:var(--teal);margin-top:2px}
-.c-card .delta.down{color:var(--orange)}
-.spark{display:flex;align-items:flex-end;gap:4px;height:46px;margin-top:10px}
-.spark i{flex:1;background:linear-gradient(180deg,var(--indigo),rgba(79,110,247,.15));border-radius:3px 3px 0 0;animation:grow 1.6s ease-out both}
-@keyframes grow{from{height:4px;opacity:.3}to{opacity:1}}
-.c-bot{grid-column:1/-1;background:rgba(79,110,247,.07);border:1px solid rgba(79,110,247,.2);border-radius:14px;padding:14px}
-.chat-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
-.chat-row:last-child{margin-bottom:0}
-.bub{background:rgba(255,255,255,.06);border-radius:12px;padding:8px 12px;font-size:12.5px;color:#D8DAE6;max-width:88%}
-.bub.ai{background:linear-gradient(100deg,rgba(79,110,247,.28),rgba(139,92,246,.2));border:1px solid rgba(79,110,247,.3);color:#fff}
-.chat-row .av{width:26px;height:26px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:rgba(255,255,255,.08)}
-.chat-row .av.ai{background:linear-gradient(135deg,var(--indigo),var(--violet))}
-.float-badge{
-  position:absolute;background:var(--surface-2);border:1px solid var(--border);
-  border-radius:14px;padding:11px 15px;font-size:12.5px;box-shadow:0 20px 40px -12px rgba(0,0,0,.8);
-  display:flex;align-items:center;gap:9px;animation:float 5s ease-in-out infinite;
-}
-.float-badge b{color:#fff;font-size:13px}
-.fb-1{bottom:-22px;left:-26px}
-.fb-2{top:-24px;right:-20px;animation-delay:1.6s}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    /* ---------------- CTA ---------------- */
+    .cta {
+      background: var(--dark); color: #fff; border-radius: var(--radius);
+      padding: 70px 45px; display: flex; justify-content: space-between; align-items: end; gap: 40px;
+    }
+    .cta h2 { max-width: 750px; color: #fff; }
+    .cta p { color: #aaa; max-width: 350px; margin-bottom: 20px; font-size: 15px; line-height: 1.55; }
 
-/* ---------- logo marquee ---------- */
-.marquee-sec{padding:20px 0 54px;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.012)}
-.marquee-sec p{text-align:center;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);margin-bottom:26px}
-.marquee{overflow:hidden;position:relative;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.marquee-track{display:flex;align-items:center;gap:64px;width:max-content;animation:scroll 32s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
-.marquee-track img{height:52px;width:auto;object-fit:contain;filter:grayscale(1) brightness(1.9) contrast(.7);opacity:.55;transition:.3s}
-.marquee-track img:hover{filter:none;opacity:1}
-@keyframes scroll{to{transform:translateX(-50%)}}
+    /* ---------------- CONTACT FORM ---------------- */
+    .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; align-items: start; }
+    .form { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 30px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { margin-bottom: 14px; }
+    .field label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #777; margin-bottom: 8px; font-weight: 700; }
+    .field input, .field select, .field textarea {
+      width: 100%; background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
+      padding: 14px 16px; font-size: 15px; color: var(--ink); outline: none; transition: .2s ease;
+    }
+    .field textarea { min-height: 96px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--ink); background: #fff; }
+    .field select { appearance: none; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+    .form-note { font-size: 12px; color: #888; margin-top: 14px; line-height: 1.55; }
+    .form-note a { text-decoration: underline; }
+    .form-msg { display: none; margin-top: 14px; padding: 13px 16px; border-radius: 12px; font-size: 14px; }
+    .form-msg.ok { display: block; background: #eef7f1; border: 1px solid #cfe6d8; color: #1a6b45; }
+    .form-msg.err { display: block; background: #fdf0ec; border: 1px solid #f3d4c7; color: #a3461f; }
+    .contact-links { display: flex; flex-direction: column; gap: 12px; margin-top: 26px; }
+    .contact-links a { width: max-content; }
 
-/* ---------- stats ---------- */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
-.stat{background:var(--bg-2);padding:34px 20px;text-align:center}
-.stat .num{font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,3.6vw,44px);font-weight:700;color:#fff;letter-spacing:-.03em}
-.stat .num em{font-style:normal;color:var(--teal)}
-.stat .cap{font-size:13px;color:var(--muted-2);margin-top:6px}
+    /* ---------------- FOOTER ---------------- */
+    footer { padding: 35px 0; display: flex; justify-content: space-between; color: #777; font-size: 13px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 22px; padding: 30px 0; border-top: 1px solid var(--line); }
+    .footer-links a { font-size: 13px; color: #777; }
+    .footer-links a:hover { color: var(--ink); }
+    .footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 44px 0 26px; border-top: 1px solid var(--line); }
+    .footer-cols h5 { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #999; margin-bottom: 14px; font-weight: 800; }
+    .footer-cols a { display: block; font-size: 14px; color: #555; padding: 5px 0; }
+    .footer-cols a:hover { color: var(--ink); }
 
-/* ---------- services ---------- */
-.services{padding:110px 0}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.svc{
-  position:relative;background:var(--bg-2);border:1px solid var(--border);
-  border-radius:var(--radius);padding:32px 28px 28px;overflow:hidden;
-  display:flex;flex-direction:column;transition:.35s cubic-bezier(.4,0,.2,1);
-}
-.svc::after{
-  content:"";position:absolute;inset:0;border-radius:var(--radius);pointer-events:none;opacity:0;transition:.35s;
-  background:radial-gradient(560px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.06),transparent 45%);
-}
-.svc:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.16);box-shadow:0 30px 60px -25px rgba(0,0,0,.9)}
-.svc:hover::after{opacity:1}
-.svc .ico{
-  width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;
-  margin-bottom:22px;transition:.3s;
-}
-.svc:hover .ico{transform:scale(1.06) rotate(-3deg)}
-.svc h3{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;margin-bottom:10px;color:#fff}
-.svc > p{font-size:14.5px;color:var(--muted);margin-bottom:20px;line-height:1.6}
-.svc ul{display:flex;flex-direction:column;gap:9px;margin-bottom:26px;flex:1}
-.svc li{display:flex;gap:10px;font-size:13.5px;color:var(--muted)}
-.svc li svg{flex-shrink:0;margin-top:4px}
-.svc .more{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#fff}
-.svc .more svg{transition:transform .25s}
-.svc:hover .more svg{transform:translateX(5px)}
-.svc .tag{
-  position:absolute;top:20px;right:20px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  padding:5px 10px;border-radius:999px;
-}
+    /* ---------------- FLOATERS ---------------- */
+    .wa-float {
+      position: fixed; right: 22px; bottom: 22px; z-index: 90;
+      width: 54px; height: 54px; border-radius: 999px; background: #111; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 14px 30px -10px rgba(0,0,0,.5); transition: .25s ease;
+    }
+    .wa-float:hover { transform: translateY(-3px); }
 
-/* ---------- pivot band ---------- */
-.pivot{padding:100px 0;background:linear-gradient(180deg,transparent,rgba(79,110,247,.06),transparent)}
-.pivot-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.pivot-list{display:flex;flex-direction:column;gap:14px;margin-top:28px}
-.pivot-list li{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;background:var(--bg-2);border:1px solid var(--border);border-radius:14px}
-.pivot-list .n{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--indigo);background:var(--indigo-soft);width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.pivot-list b{display:block;font-size:15px;color:#fff;font-weight:600}
-.pivot-list span{font-size:13.5px;color:var(--muted)}
-.stacked{display:flex;flex-direction:column;gap:16px}
-.stack-card{background:var(--bg-2);border:1px solid var(--border);border-radius:18px;padding:26px}
-.stack-card .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.stack-card h4{font-size:15.5px;font-weight:600;color:#fff}
-.stack-card .chip{font-size:11px;font-weight:700;padding:5px 11px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase}
-.chip.now{background:rgba(0,229,160,.12);color:var(--teal)}
-.chip.then{background:rgba(255,255,255,.06);color:var(--muted-2)}
-.stack-card p{font-size:13.5px;color:var(--muted-2);line-height:1.7}
+    /* ---------------- REVEAL ---------------- */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; }
+      * { transition-duration: .01ms !important; }
+    }
 
-/* ---------- AI video band ---------- */
-.video-band{padding:110px 0;background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.vid-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.vid-showcase{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.vid-tile{
-  position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--border);
-  aspect-ratio:9/16;background:linear-gradient(160deg,#15151F,#0C0C13);
-  display:flex;align-items:flex-end;padding:16px;transition:.35s;
-}
-.vid-tile:nth-child(2){transform:translateY(28px)}
-.vid-tile:hover{transform:translateY(-4px) scale(1.02);border-color:rgba(255,255,255,.18)}
-.vid-tile:nth-child(2):hover{transform:translateY(24px) scale(1.02)}
-.vid-tile .play{
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);backdrop-filter:blur(6px);
-  border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;
-}
-.vid-tile .meta{position:relative;z-index:2}
-.vid-tile .meta b{display:block;font-size:13.5px;color:#fff}
-.vid-tile .meta span{font-size:11.5px;color:var(--muted-2)}
-.vid-tile .glow{position:absolute;inset:0;opacity:.55}
-.vid-tile:nth-child(1) .glow{background:radial-gradient(circle at 30% 20%,rgba(79,110,247,.5),transparent 60%)}
-.vid-tile:nth-child(2) .glow{background:radial-gradient(circle at 70% 30%,rgba(255,107,53,.4),transparent 60%)}
-.vid-list{display:flex;flex-direction:column;gap:12px;margin:26px 0 32px}
-.vid-list li{display:flex;gap:12px;align-items:center;font-size:14.5px;color:var(--muted)}
-.vid-list .t{width:22px;height:22px;border-radius:7px;background:rgba(255,184,0,.12);color:var(--amber);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px}
-
-/* ---------- process ---------- */
-.process{padding:110px 0}
-.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
-.proc{position:relative;padding-top:34px}
-.proc::before{content:"";position:absolute;top:16px;left:0;right:0;height:1px;background:var(--border)}
-.proc::after{
-  content:"";position:absolute;top:12px;left:0;width:9px;height:9px;border-radius:50%;
-  background:var(--indigo);box-shadow:0 0 0 4px rgba(79,110,247,.15);
-}
-.proc .step{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--indigo);letter-spacing:.1em;margin-bottom:12px}
-.proc h4{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;color:#fff;margin-bottom:10px}
-.proc p{font-size:14px;color:var(--muted);line-height:1.65}
-.proc .out{margin-top:14px;font-size:12.5px;color:var(--teal);font-weight:600}
-
-/* ---------- results ---------- */
-.results{padding:110px 0;background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.res{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:30px;transition:.3s}
-.res:hover{border-color:rgba(255,255,255,.16);transform:translateY(-4px)}
-.res .cat{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--indigo);margin-bottom:14px}
-.res .big{font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1}
-.res .big em{font-style:normal;color:var(--teal)}
-.res .lbl{font-size:13.5px;color:var(--muted-2);margin-top:8px;margin-bottom:18px}
-.res .txt{font-size:14px;color:var(--muted);line-height:1.7;padding-top:18px;border-top:1px solid var(--border)}
-
-/* ---------- testimonials ---------- */
-.testi{padding:110px 0}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.t-card{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;transition:.3s}
-.t-card:hover{border-color:rgba(255,255,255,.16);transform:translateY(-4px)}
-.stars{display:flex;gap:3px;color:var(--amber);margin-bottom:18px}
-.t-card blockquote{font-size:15px;line-height:1.7;color:#D8DAE6;flex:1;margin-bottom:24px}
-.t-foot{display:flex;align-items:center;justify-content:space-between;padding-top:20px;border-top:1px solid var(--border)}
-.t-person{display:flex;align-items:center;gap:12px}
-.t-person .av{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--indigo),var(--violet));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff}
-.t-person b{display:block;font-size:14.5px;color:#fff;font-weight:600}
-.t-person span{font-size:12.5px;color:var(--muted-2)}
-.t-metric{text-align:right;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:var(--teal)}
-
-/* ---------- industries ---------- */
-.industries{padding:100px 0;background:var(--bg-2);border-top:1px solid var(--border)}
-.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.ind{
-  background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:26px;
-  transition:.3s;
-}
-.ind:hover{border-color:rgba(79,110,247,.4);background:linear-gradient(160deg,rgba(79,110,247,.06),transparent)}
-.ind .e{font-size:24px;margin-bottom:14px}
-.ind h4{font-size:16px;font-weight:600;color:#fff;margin-bottom:8px}
-.ind p{font-size:13.5px;color:var(--muted-2);line-height:1.6}
-
-/* ---------- lead form ---------- */
-.lead{padding:110px 0}
-.lead-box{
-  display:grid;grid-template-columns:1fr 1fr;gap:0;
-  background:linear-gradient(140deg,rgba(79,110,247,.12),rgba(0,229,160,.05));
-  border:1px solid var(--border);border-radius:28px;overflow:hidden;
-}
-.lead-copy{padding:52px 48px}
-.lead-copy h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:700;line-height:1.15;letter-spacing:-.03em;margin:14px 0 18px}
-.lead-copy p{color:var(--muted);font-size:15.5px;margin-bottom:28px}
-.lead-points{display:flex;flex-direction:column;gap:14px}
-.lead-points li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:#D8DAE6}
-.lead-points .ck{width:22px;height:22px;border-radius:50%;background:rgba(0,229,160,.14);color:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.lead-form{background:var(--bg);padding:52px 48px}
-.field{margin-bottom:18px}
-.field label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:8px;letter-spacing:.02em}
-.field input,.field select,.field textarea{
-  width:100%;background:var(--surface);border:1px solid var(--border);border-radius:12px;
-  padding:14px 16px;color:#fff;font-size:14.5px;font-family:inherit;transition:.2s;outline:none;
-}
-.field textarea{resize:vertical;min-height:92px}
-.field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--indigo);box-shadow:0 0 0 4px rgba(79,110,247,.12)}
-.field select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%239BA0B5' stroke-width='2'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:42px}
-.field select option{background:var(--surface)}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.form-note{font-size:12px;color:var(--muted-2);margin-top:14px;line-height:1.6}
-.form-msg{margin-top:16px;padding:14px 16px;border-radius:12px;font-size:14px;display:none}
-.form-msg.ok{display:block;background:rgba(0,229,160,.1);border:1px solid rgba(0,229,160,.3);color:var(--teal)}
-.form-msg.err{display:block;background:rgba(255,107,53,.1);border:1px solid rgba(255,107,53,.3);color:var(--orange)}
-
-/* ---------- FAQ ---------- */
-.faq{padding:110px 0;background:var(--bg-2);border-top:1px solid var(--border)}
-.faq-wrap{max-width:820px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-q{
-  width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;
-  padding:24px 0;text-align:left;font-size:16.5px;font-weight:600;color:#fff;transition:.2s;
-}
-.faq-q:hover{color:var(--teal)}
-.faq-q .ic{
-  width:32px;height:32px;border-radius:10px;border:1px solid var(--border);flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;transition:.3s;position:relative;
-}
-.faq-q .ic::before,.faq-q .ic::after{content:"";position:absolute;background:currentColor;transition:.3s}
-.faq-q .ic::before{width:12px;height:1.5px}
-.faq-q .ic::after{width:1.5px;height:12px}
-.faq-item.open .faq-q .ic{background:var(--indigo);border-color:var(--indigo);color:#fff;transform:rotate(180deg)}
-.faq-item.open .faq-q .ic::after{opacity:0}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.faq-a p{padding:0 0 24px;font-size:15px;color:var(--muted);line-height:1.75;max-width:720px}
-
-/* ---------- final CTA ---------- */
-.final{padding:110px 0;position:relative;overflow:hidden;text-align:center}
-.final .orb{opacity:.35}
-.final-inner{position:relative}
-.final h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,4.4vw,54px);font-weight:700;line-height:1.1;letter-spacing:-.035em;margin:16px 0 20px}
-.final p{color:var(--muted);font-size:17px;max-width:620px;margin:0 auto 34px}
-.final-ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-
-/* ---------- footer ---------- */
-.footer{background:var(--bg-2);border-top:1px solid var(--border);padding:72px 0 32px}
-.f-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid var(--border)}
-.f-brand img{height:44px;margin-bottom:20px}
-.f-brand p{font-size:14px;color:var(--muted-2);max-width:300px;line-height:1.7;margin-bottom:22px}
-.f-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.f-badges span{font-size:11.5px;padding:6px 11px;border:1px solid var(--border);border-radius:8px;color:var(--muted);background:rgba(255,255,255,.02)}
-.f-social{display:flex;gap:10px}
-.f-social a{
-  width:38px;height:38px;border-radius:11px;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;color:var(--muted-2);transition:.25s;
-}
-.f-social a:hover{color:#fff;border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.05);transform:translateY(-2px)}
-.f-col h5{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:18px}
-.f-col a{display:block;font-size:14px;color:var(--muted-2);padding:6px 0;transition:.2s}
-.f-col a:hover{color:var(--teal);transform:translateX(3px)}
-.f-bot{padding-top:28px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted-2)}
-.f-bot nav{display:flex;flex-wrap:wrap;gap:20px}
-.f-bot a:hover{color:var(--muted)}
-
-/* ---------- floating ---------- */
-.wa-float{
-  position:fixed;bottom:26px;right:26px;z-index:90;
-  width:56px;height:56px;border-radius:50%;background:#25D366;
-  display:flex;align-items:center;justify-content:center;color:#fff;
-  box-shadow:0 12px 30px -6px rgba(37,211,102,.55);transition:.3s;
-}
-.wa-float:hover{transform:scale(1.08) translateY(-2px)}
-.wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:ring 2.4s ease-out infinite}
-@keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.5);opacity:0}}
-.mobile-bar{
-  position:fixed;bottom:0;left:0;right:0;z-index:88;display:none;
-  background:rgba(7,7,11,.94);backdrop-filter:blur(14px);border-top:1px solid var(--border);
-  padding:12px 16px;gap:10px;
-}
-.mobile-bar a{flex:1;justify-content:center;padding:13px;border-radius:999px;font-size:14px}
-.mobile-bar .btn{padding:13px}
-
-/* ---------- reveal ---------- */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
-.reveal.in{opacity:1;transform:none}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
-.reveal.d4{transition-delay:.32s}.reveal.d5{transition-delay:.4s}
-
-@media (prefers-reduced-motion:reduce){
-  *{animation-duration:.01ms !important;transition-duration:.01ms !important}
-  .reveal{opacity:1;transform:none}
-}
-
-/* ---------- responsive ---------- */
-@media (max-width:1080px){
-  .hero-inner{grid-template-columns:1fr;gap:56px}
-  .hero-inner .console{max-width:520px;margin:0 auto;width:100%}
-  .svc-grid,.res-grid,.testi-grid,.ind-grid{grid-template-columns:1fr 1fr}
-  .proc-grid{grid-template-columns:1fr 1fr;gap:32px 20px}
-  .pivot-grid,.vid-grid{grid-template-columns:1fr;gap:44px}
-  .vid-showcase{max-width:420px}
-  .f-top{grid-template-columns:1fr 1fr 1fr}
-  .f-brand{grid-column:1/-1}
-}
-@media (max-width:900px){
-  .nav-links,.nav-cta{display:none}
-  .burger{display:flex}
-  .mega{display:none}
-  .stats{grid-template-columns:1fr 1fr}
-  .lead-box{grid-template-columns:1fr}
-  .lead-copy,.lead-form{padding:38px 28px}
-  .mobile-bar{display:flex}
-  .wa-float{bottom:84px}
-  body{padding-bottom:0}
-}
-@media (max-width:640px){
-  .wrap{padding:0 18px}
-  .hero{padding:120px 0 70px}
-  .services,.process,.results,.testi,.lead,.faq,.final,.video-band,.pivot{padding:72px 0}
-  .svc-grid,.res-grid,.testi-grid,.ind-grid,.proc-grid,.f-top{grid-template-columns:1fr}
-  .field-row{grid-template-columns:1fr}
-  .hero-ctas .btn{width:100%}
-  .final-ctas .btn{width:100%}
-  .float-badge{display:none}
-  .marquee-track{gap:44px}
-  .marquee-track img{height:40px}
-  .f-bot{flex-direction:column;align-items:flex-start}
-}
-</style>
+    /* ---------------- RESPONSIVE ---------------- */
+    @media(max-width:1000px) {
+      .grid4, .grid3 { grid-template-columns: repeat(2, 1fr); }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .step { margin-right: 0; border-right: 0; border-bottom: 1px solid var(--line); padding-bottom: 25px; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(1), .metric:nth-child(2) { border-bottom: 1px solid var(--line); }
+      .footer-cols { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media(max-width:900px) {
+      .navlinks, .nav-cta { display: none; }
+      .burger { display: flex; }
+      .hero, .shopify, .section-head, .contact-grid { grid-template-columns: 1fr; }
+      .hero { min-height: auto; padding: 70px 0; }
+      .hero-copy { margin-top: 10px; }
+      h1 { letter-spacing: -4px; }
+      .statement, .cta { flex-direction: column; align-items: flex-start; }
+      .products { grid-template-columns: 1fr; }
+    }
+    @media(max-width:600px) {
+      .container { width: min(var(--max), calc(100% - 28px)); }
+      nav { height: 70px; }
+      .hero { padding: 55px 0; }
+      h1 { font-size: 62px; letter-spacing: -4px; }
+      section { padding: 75px 0; }
+      .grid4, .grid3, .process { grid-template-columns: 1fr; }
+      .card { min-height: 260px; }
+      .statement, .cta { padding: 30px 24px; }
+      footer { flex-direction: column; gap: 10px; }
+      .form-row { grid-template-columns: 1fr; }
+      .faq-a p { padding-left: 0; }
+      .logos { gap: 28px; }
+      .logos img { height: 30px; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ============================================================
-     NAVBAR — all links use existing live slugs
-     ============================================================ -->
-<div class="nav-wrap" id="navWrap">
-  <div class="wrap">
-    <div class="nav">
-      <a href="https://akestech.com/" class="logo" aria-label="Akestech Infotech home">
-        <img src="https://akestech.com/assets/images/akestech-transparent-logo.png" alt="Akestech Infotech">
+  <div class="container">
+    <nav>
+      <a href="https://akestech.com/" class="logo" aria-label="AKESTECH home">
+        <img src="https://akestech.com/assets/images/akestech-logo-black.png" alt="AKESTECH" />
       </a>
+      <div class="navlinks">
+        <a href="#solutions">Solutions</a>
+        <a href="#shopify">Shopify</a>
+        <a href="#performance">Performance</a>
+        <a href="#ai">AI</a>
+        <a href="#products">Products</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+      </div>
+      <a href="#contact" class="nav-cta">Start a project →</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i></button>
+    </nav>
 
-      <nav class="nav-links">
-        <div class="nav-dd">
-          <button aria-haspopup="true">Services
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="mega">
-            <a href="https://akestech.com/services/automation">
-              <span class="ico" style="background:rgba(139,92,246,.12);color:#8B5CF6">⚡</span>
-              <span><strong>AI Automation</strong><span>AI agents, WhatsApp & workflow automation</span></span>
-            </a>
-            <a href="https://akestech.com/services/technology">
-              <span class="ico" style="background:rgba(34,211,238,.12);color:#22D3EE">&lt;/&gt;</span>
-              <span><strong>Product Development</strong><span>Web apps, mobile apps &amp; AI products</span></span>
-            </a>
-            <a href="https://akestech.com/services/performance-marketing">
-              <span class="ico" style="background:rgba(255,107,53,.12);color:#FF6B35">📈</span>
-              <span><strong>Performance Marketing</strong><span>Meta, Google &amp; full-funnel growth</span></span>
-            </a>
-            <a href="https://akestech.com/services/shopify-growth">
-              <span class="ico" style="background:rgba(79,110,247,.12);color:#4F6EF7">🛍️</span>
-              <span><strong>Ecommerce Consulting</strong><span>Store strategy, CRO &amp; tech stack</span></span>
-            </a>
-            <a href="https://akestech.com/services/shopify-operations">
-              <span class="ico" style="background:rgba(0,229,160,.12);color:#00E5A0">🏬</span>
-              <span><strong>Marketplace Management</strong><span>Amazon, Flipkart &amp; D2C ops</span></span>
-            </a>
-            <a href="https://akestech.com/contact?type=ai-videos">
-              <span class="ico" style="background:rgba(255,184,0,.12);color:#FFB800">🎬</span>
-              <span><strong>AI Videos</strong><span>AI ad films, UGC &amp; product reels</span></span>
-            </a>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#solutions">Solutions</a>
+      <a href="#shopify">Shopify</a>
+      <a href="#performance">Performance</a>
+      <a href="#ai">AI</a>
+      <a href="#products">Products</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="https://akestech.com/case-studies">Case Studies</a>
+      <a href="https://akestech.com/blog">Blog</a>
+      <a href="#contact">Start a project →</a>
+    </div>
+
+    <main>
+      <section class="hero" style="border-top:0;">
+        <div>
+          <div class="eyebrow">AI · Commerce · Growth Technology</div>
+          <h1>Build.<br />Automate.<br />Grow.</h1>
+        </div>
+        <div class="hero-copy">
+          <strong>Technology for the next generation of commerce.</strong>
+          <p style="margin-top:14px;">We build Shopify stores, digital products, AI systems and growth engines that help ambitious businesses launch, sell and scale.</p>
+          <div class="buttons">
+            <a href="#contact" class="btn btn-dark">Build with AKESTECH ↗</a>
+            <a href="#solutions" class="btn btn-light">Explore capabilities</a>
           </div>
         </div>
-        <a href="https://akestech.com/case-studies">Case Studies</a>
-        <a href="https://akestech.com/products/whatsapp-shopify">Product</a>
-        <a href="https://akestech.com/resources">Resources</a>
-        <a href="https://akestech.com/blog">Blog</a>
-        <a href="https://akestech.com/about">About</a>
-      </nav>
+      </section>
 
-      <div class="nav-cta">
-        <a href="https://akestech.com/contact" class="btn btn-ghost">Let's Talk</a>
-        <a href="https://akestech.com/contact?type=audit" class="btn btn-primary">Free Growth Audit</a>
+      <div class="statement reveal">
+        <p>From your first Shopify store to an AI-native growth engine — <strong>we build the technology behind modern businesses.</strong></p>
+        <span>One technology partner across commerce, AI, product, marketplace and growth.</span>
       </div>
 
-      <button class="burger" id="burger" aria-label="Open menu"><span></span></button>
-    </div>
-  </div>
-</div>
-
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <p class="m-label">Services</p>
-  <a href="https://akestech.com/services/automation"><span class="m-ico" style="background:rgba(139,92,246,.12);color:#8B5CF6">⚡</span> AI Automation</a>
-  <a href="https://akestech.com/services/technology"><span class="m-ico" style="background:rgba(34,211,238,.12);color:#22D3EE">&lt;/&gt;</span> Product Development</a>
-  <a href="https://akestech.com/services/performance-marketing"><span class="m-ico" style="background:rgba(255,107,53,.12);color:#FF6B35">📈</span> Performance Marketing</a>
-  <a href="https://akestech.com/services/shopify-growth"><span class="m-ico" style="background:rgba(79,110,247,.12);color:#4F6EF7">🛍️</span> Ecommerce Consulting</a>
-  <a href="https://akestech.com/services/shopify-operations"><span class="m-ico" style="background:rgba(0,229,160,.12);color:#00E5A0">🏬</span> Marketplace Management</a>
-  <a href="https://akestech.com/contact?type=ai-videos"><span class="m-ico" style="background:rgba(255,184,0,.12);color:#FFB800">🎬</span> AI Videos</a>
-
-  <p class="m-label">Explore</p>
-  <a href="https://akestech.com/case-studies">Case Studies</a>
-  <a href="https://akestech.com/products/whatsapp-shopify">WhatsApp Automation App</a>
-  <a href="https://akestech.com/resources">Resources</a>
-  <a href="https://akestech.com/blog">Blog</a>
-  <a href="https://akestech.com/about">About Us</a>
-  <a href="https://akestech.com/contact">Contact</a>
-
-  <div style="display:flex;gap:10px;margin-top:22px">
-    <a href="https://akestech.com/contact?type=audit" class="btn btn-primary" style="flex:1">Free Audit</a>
-    <a href="https://wa.me/917275013628" target="_blank" rel="noopener" class="btn btn-ghost" style="flex:1">WhatsApp</a>
-  </div>
-</div>
-
-<!-- ============================================================
-     HERO
-     ============================================================ -->
-<section class="hero">
-  <div class="hero-bg">
-    <div class="grid-lines"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-
-  <div class="wrap hero-inner">
-    <div class="hero-copy">
-      <div class="pill">
-        <span class="dot-live"></span>
-        <span>Now an <b>AI-first growth partner</b> — not just Shopify</span>
-      </div>
-
-      <h1 class="hero-title">
-        We Build <span class="grad-text">AI Systems</span><br>
-        That Grow Your<br>
-        <span class="grad-text-2">Business End-to-End</span>
-      </h1>
-
-      <p class="hero-sub">
-        AI automation, product development, performance marketing, ecommerce consulting,
-        marketplace management and AI video production — one team that builds the tech
-        <em>and</em> drives the revenue.
-      </p>
-
-      <div class="hero-ctas">
-        <a href="https://akestech.com/contact?type=audit" class="btn btn-primary">
-          Get a Free Growth Audit
-          <svg class="arw" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#services" class="btn btn-ghost">Explore Services</a>
-      </div>
-
-      <div class="hero-proof">
-        <span class="hp-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 200+ brands scaled</span>
-        <span class="hp-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> ₹50Cr+ ad spend managed</span>
-        <span class="hp-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 3X+ average ROAS</span>
-      </div>
-    </div>
-
-    <!-- AI console mock -->
-    <div class="console">
-      <div class="console-bar">
-        <i></i><i></i><i></i>
-        <span>akestech · growth console</span>
-      </div>
-
-      <div class="console-grid">
-        <div class="c-card">
-          <p class="lbl">Revenue / mo</p>
-          <p class="val">₹45.2L</p>
-          <p class="delta">▲ 198% vs last quarter</p>
-          <div class="spark">
-            <i style="height:30%;animation-delay:.05s"></i><i style="height:45%;animation-delay:.15s"></i>
-            <i style="height:38%;animation-delay:.25s"></i><i style="height:62%;animation-delay:.35s"></i>
-            <i style="height:55%;animation-delay:.45s"></i><i style="height:78%;animation-delay:.55s"></i>
-            <i style="height:92%;animation-delay:.65s"></i>
+      <!-- ===================== SOLUTIONS ===================== -->
+      <section id="solutions">
+        <div class="section-head">
+          <div class="kicker">01 / Capabilities</div>
+          <div>
+            <h2>An end-to-end growth system — from technology to customer acquisition.</h2>
+            <p class="lead">Six connected capabilities. One team, one roadmap, one number that matters.</p>
           </div>
         </div>
 
-        <div class="c-card">
-          <p class="lbl">Blended ROAS</p>
-          <p class="val">3.8X</p>
-          <p class="delta">▲ from 1.2X in 60 days</p>
-          <div class="spark">
-            <i style="height:24%;animation-delay:.1s"></i><i style="height:32%;animation-delay:.2s"></i>
-            <i style="height:48%;animation-delay:.3s"></i><i style="height:44%;animation-delay:.4s"></i>
-            <i style="height:66%;animation-delay:.5s"></i><i style="height:74%;animation-delay:.6s"></i>
-            <i style="height:88%;animation-delay:.7s"></i>
+        <div class="grid3">
+          <a class="card reveal" href="https://akestech.com/services/shopify-growth">
+            <div class="number">01 — COMMERCE</div>
+            <div>
+              <h3>Shopify &amp; Commerce</h3>
+              <p>From store setup to complex custom commerce infrastructure and conversion optimization.</p>
+              <div class="tags">
+                <span class="tag">Store Setup</span><span class="tag">Development</span><span class="tag">Shopify Plus</span><span class="tag">CRO</span>
+              </div>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+          <a class="card reveal" href="https://akestech.com/services/automation">
+            <div class="number">02 — INTELLIGENCE</div>
+            <div>
+              <h3>AI &amp; Automation</h3>
+              <p>Turn repetitive sales, support and operations into intelligent automated workflows.</p>
+              <div class="tags">
+                <span class="tag">AI Agents</span><span class="tag">WhatsApp</span><span class="tag">CRM</span><span class="tag">Workflows</span>
+              </div>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+          <a class="card reveal" href="https://akestech.com/services/technology">
+            <div class="number">03 — PRODUCT</div>
+            <div>
+              <h3>Product Development</h3>
+              <p>Build SaaS, AI products, apps and custom digital platforms from idea to production.</p>
+              <div class="tags">
+                <span class="tag">SaaS</span><span class="tag">AI Products</span><span class="tag">Web Apps</span><span class="tag">Mobile</span>
+              </div>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+          <a class="card reveal" href="https://akestech.com/services/performance-marketing">
+            <div class="number">04 — GROWTH</div>
+            <div>
+              <h3>Performance Marketing</h3>
+              <p>End-to-end acquisition across paid media, creative, landing pages, tracking, CRO and retention.</p>
+              <div class="tags">
+                <span class="tag">Meta Ads</span><span class="tag">Google Ads</span><span class="tag">Creative</span><span class="tag">Analytics</span>
+              </div>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+          <a class="card reveal" href="https://akestech.com/services/shopify-operations">
+            <div class="number">05 — MARKETPLACE</div>
+            <div>
+              <h3>Marketplace Management</h3>
+              <p>Amazon, Flipkart and D2C operations — listings, ads, inventory, fulfilment and RTO control.</p>
+              <div class="tags">
+                <span class="tag">Amazon</span><span class="tag">Flipkart</span><span class="tag">Catalogue</span><span class="tag">RTO</span>
+              </div>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+          <a class="card reveal" href="https://akestech.com/contact?type=ai-videos">
+            <div class="number">06 — CREATIVE</div>
+            <div>
+              <h3>AI Videos</h3>
+              <p>Studio-quality ad films, UGC and product reels generated with AI — at 10X the volume.</p>
+              <div class="tags">
+                <span class="tag">Ad Films</span><span class="tag">AI UGC</span><span class="tag">Reels</span><span class="tag">Dubbing</span>
+              </div>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ===================== END TO END ===================== -->
+      <section id="end-to-end">
+        <div class="statement reveal" style="margin-bottom:0;">
+          <div>
+            <div class="kicker" style="color:#999; margin-bottom:20px;">02 / End-to-end solution</div>
+            <p>One partner from <strong>idea → technology → traffic → conversion → scale.</strong></p>
+          </div>
+          <span>We connect commerce, AI, product development, marketplace and performance marketing into one growth engine.</span>
+        </div>
+      </section>
+
+      <!-- ===================== PROOF ===================== -->
+      <section id="proof" style="padding-top:0;">
+        <div class="metrics reveal">
+          <div class="metric"><b>₹50Cr+</b><span>Ad spend managed</span></div>
+          <div class="metric"><b>200+</b><span>Brands and businesses scaled</span></div>
+          <div class="metric"><b>3X+</b><span>Average ROAS delivered</span></div>
+          <div class="metric"><b>40%</b><span>Average RTO reduction</span></div>
+        </div>
+        <div style="padding-top:34px;">
+          <p class="kicker" style="margin-bottom:18px;">Trusted by teams across</p>
+          <div class="logos">
+            <img src="https://akestech.com/assets/images/oi-logo.png" alt="OI" />
+            <img src="https://akestech.com/assets/images/barsana-logo.png" alt="Barsana" />
+            <img src="https://akestech.com/assets/images/sanjeevni-logo.png" alt="Sanjeevni" />
+            <img src="https://akestech.com/assets/images/hov-logo.png" alt="HOV" />
+            <img src="https://akestech.com/assets/images/la-americana-logo.png" alt="La Americana" />
+            <img src="https://akestech.com/assets/images/share-chat-logo.png" alt="ShareChat" />
+            <img src="https://akestech.com/assets/images/midorii-logo.png" alt="Midorii" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SHOPIFY ===================== -->
+      <section id="shopify">
+        <div class="shopify">
+          <div class="shopify-copy">
+            <div class="kicker">03 / Shopify &amp; Commerce</div>
+            <h2 style="margin-top:18px;">Commerce is still at our core.</h2>
+            <p>We don't hide our Shopify expertise. We expand it. From launching your first store to building sophisticated commerce systems and marketplace operations for growing brands.</p>
+            <div class="buttons"><a class="btn btn-dark" href="https://akestech.com/services/shopify-growth">Talk Shopify ↗</a></div>
+          </div>
+          <div class="services">
+            <a class="service" href="https://akestech.com/services/shopify-growth"><small>01</small><b>Shopify Store Setup</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/shopify-growth"><small>02</small><b>Custom Theme Development</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/technology"><small>03</small><b>Custom Shopify Development</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/shopify-growth"><small>04</small><b>Shopify Plus</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/technology"><small>05</small><b>Migration &amp; Integrations</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/shopify-growth"><small>06</small><b>CRO &amp; Store Optimization</b><span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PERFORMANCE ===================== -->
+      <section id="performance">
+        <div class="shopify">
+          <div class="shopify-copy">
+            <div class="kicker">04 / Performance Marketing</div>
+            <h2 style="margin-top:18px;">Traffic is easy. Profitable growth is the job.</h2>
+            <p>Media buying, creative, landing pages, tracking, CRO and retention — connected into one measurable acquisition system.</p>
+            <div class="buttons"><a class="btn btn-dark" href="https://akestech.com/services/performance-marketing">Grow with us ↗</a></div>
+          </div>
+          <div class="services">
+            <a class="service" href="https://akestech.com/services/performance-marketing"><small>01</small><b>Meta &amp; Google Ads</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/contact?type=ai-videos"><small>02</small><b>Creative &amp; AI UGC Strategy</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/performance-marketing"><small>03</small><b>Landing Pages &amp; Funnels</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/performance-marketing"><small>04</small><b>Tracking &amp; Attribution</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/automation"><small>05</small><b>Retargeting &amp; Retention</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/shopify-growth"><small>06</small><b>CRO &amp; Experimentation</b><span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== AI ===================== -->
+      <section id="ai">
+        <div class="section-head">
+          <div class="kicker">05 / AI-native business</div>
+          <div>
+            <h2>Put AI inside the business — not just on the website.</h2>
+            <p class="lead">Automation designed at the architecture level, then wired into the systems your team already uses.</p>
+          </div>
+        </div>
+        <div class="grid4">
+          <article class="card reveal"><div class="number">01</div><div><h3>AI Sales Agents</h3><p>Qualify enquiries, answer questions and move prospects toward purchase.</p></div></article>
+          <article class="card reveal"><div class="number">02</div><div><h3>WhatsApp Automation</h3><p>Conversational journeys for enquiries, sales, support, payments and follow-ups.</p></div></article>
+          <article class="card reveal"><div class="number">03</div><div><h3>CRM Intelligence</h3><p>Connect lead sources, teams, customer data and automated next actions.</p></div></article>
+          <article class="card reveal"><div class="number">04</div><div><h3>Operations</h3><p>Automate repetitive workflows across teams and business processes.</p></div></article>
+          <a class="card reveal" href="https://akestech.com/services/automation"><div class="number">05</div><div><h3>AI Video Studio</h3><p>Generate ad films, UGC and product reels with AI at production speed.</p><span class="arrow">↗</span></div></a>
+        </div>
+      </section>
+
+      <!-- ===================== AI VIDEOS ===================== -->
+      <section id="ai-videos">
+        <div class="section-head">
+          <div class="kicker">06 / AI Videos</div>
+          <div>
+            <h2>Ship 50 creatives before lunch.</h2>
+            <p class="lead">Creative goes stale, performance drops. Our AI video studio keeps your media team fed with fresh, on-brand video every week.</p>
+          </div>
+        </div>
+        <div class="grid4">
+          <article class="card reveal"><div class="number">01</div><div><h3>AI Ad Films</h3><p>30–60 second performance films without a production crew or studio day.</p></div></article>
+          <article class="card reveal"><div class="number">02</div><div><h3>AI UGC Creators</h3><p>Avatar-led, testimonial-style content that looks native to the feed.</p></div></article>
+          <article class="card reveal"><div class="number">03</div><div><h3>Product Reels</h3><p>Catalogue-scale video for every SKU, variant and marketplace listing.</p></div></article>
+          <article class="card reveal"><div class="number">04</div><div><h3>Multi-language</h3><p>Voiceovers and dubbing so one creative works across every market.</p></div></article>
+          <a class="card reveal" href="https://akestech.com/contact?type=ai-videos"><div class="number">05</div><div><h3>Paired with media</h3><p>Creative testing loops connected directly to your Meta and Google accounts.</p><span class="arrow">↗</span></div></a>
+        </div>
+      </section>
+
+      <!-- ===================== PRODUCTS ===================== -->
+      <section id="products">
+        <div class="section-head">
+          <div class="kicker">07 / Built by AKESTECH</div>
+          <h2>We don't just implement technology. We build it.</h2>
+        </div>
+        <div class="products">
+          <article class="product reveal">
+            <div class="product-label">AKESTECH PRODUCT / 01</div>
+            <div>
+              <h3>Lead365</h3>
+              <p>Lead management and automation infrastructure connecting channels, teams and customer journeys.</p>
+            </div>
+            <a href="https://akestech.com/services/automation" class="btn btn-light" style="width:max-content;">Explore product ↗</a>
+          </article>
+          <article class="product reveal">
+            <div class="product-label">AKESTECH PRODUCT / 02</div>
+            <div>
+              <h3>Whatify</h3>
+              <p>AI-powered WhatsApp commerce and customer engagement designed to turn conversations into business outcomes.</p>
+            </div>
+            <a href="https://akestech.com/products/whatsapp-shopify" class="btn btn-light" style="width:max-content;">Explore product ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================== PRODUCT DEV ===================== -->
+      <section id="product-dev">
+        <div class="section-head">
+          <div class="kicker">08 / Product Development</div>
+          <h2>Have an idea? We turn it into a working product.</h2>
+        </div>
+        <div class="grid4">
+          <article class="card reveal"><div class="number">01</div><div><h3>SaaS</h3><p>Architecture, dashboards, subscriptions, roles, billing and integrations.</p></div></article>
+          <article class="card reveal"><div class="number">02</div><div><h3>AI Products</h3><p>AI-powered applications, agents, knowledge systems and workflow products.</p></div></article>
+          <article class="card reveal"><div class="number">03</div><div><h3>Web &amp; Mobile</h3><p>Customer-facing applications and internal platforms designed for real use.</p></div></article>
+          <article class="card reveal"><div class="number">04</div><div><h3>Integrations</h3><p>APIs, payments, CRM, WhatsApp, Shopify and existing business systems.</p></div></article>
+          <a class="card reveal" href="https://akestech.com/services/technology"><div class="number">05</div><div><h3>Shopify Apps</h3><p>Public and private apps built, submitted and maintained on the Shopify platform.</p><span class="arrow">↗</span></div></a>
+        </div>
+      </section>
+
+      <!-- ===================== MARKETPLACE ===================== -->
+      <section id="marketplace">
+        <div class="shopify">
+          <div class="shopify-copy">
+            <div class="kicker">09 / Marketplace Management</div>
+            <h2 style="margin-top:18px;">Sell everywhere, operate from one place.</h2>
+            <p>Amazon, Flipkart and your own store — managed as one business with one view of inventory, margin and customer data.</p>
+            <div class="buttons"><a class="btn btn-dark" href="https://akestech.com/services/shopify-operations">Talk marketplace ops ↗</a></div>
+          </div>
+          <div class="services">
+            <a class="service" href="https://akestech.com/services/shopify-operations"><small>01</small><b>Amazon Account Management</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/shopify-operations"><small>02</small><b>Flipkart &amp; Marketplace Ads</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/shopify-operations"><small>03</small><b>Listing SEO &amp; Catalogue</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/shopify-operations"><small>04</small><b>Inventory &amp; Fulfilment</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/shopify-operations"><small>05</small><b>RTO &amp; Returns Control</b><span>↗</span></a>
+            <a class="service" href="https://akestech.com/services/automation"><small>06</small><b>Ops Automation</b><span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== INDUSTRIES ===================== -->
+      <section id="industries">
+        <div class="section-head">
+          <div class="kicker">10 / Industries</div>
+          <h2>Built around the way your business actually grows.</h2>
+        </div>
+        <div class="tags" style="gap:10px;">
+          <span class="tag" style="font-size:16px;padding:14px 18px;">D2C &amp; E-commerce</span>
+          <span class="tag" style="font-size:16px;padding:14px 18px;">SaaS &amp; Startups</span>
+          <span class="tag" style="font-size:16px;padding:14px 18px;">Automotive</span>
+          <span class="tag" style="font-size:16px;padding:14px 18px;">Healthcare</span>
+          <span class="tag" style="font-size:16px;padding:14px 18px;">Education</span>
+          <a class="tag" style="font-size:16px;padding:14px 18px;" href="https://akestech.com/real-estate-marketing-agency">Real Estate ↗</a>
+          <span class="tag" style="font-size:16px;padding:14px 18px;">Consumer Brands</span>
+          <span class="tag" style="font-size:16px;padding:14px 18px;">SMEs</span>
+        </div>
+      </section>
+
+      <!-- ===================== WORK / PROCESS ===================== -->
+      <section id="work">
+        <div class="section-head">
+          <div class="kicker">11 / How we work</div>
+          <h2>One connected system. Not four disconnected agencies.</h2>
+        </div>
+        <div class="process">
+          <div class="step reveal"><span>01</span><h3>Understand</h3><p>Business goals, customer journey, technology and growth constraints.</p></div>
+          <div class="step reveal"><span>02</span><h3>Build</h3><p>Commerce infrastructure, products, integrations and AI systems.</p></div>
+          <div class="step reveal"><span>03</span><h3>Launch</h3><p>Acquire customers with performance marketing and conversion-focused experiences.</p></div>
+          <div class="step reveal"><span>04</span><h3>Scale</h3><p>Automate, measure, experiment and continuously improve the growth engine.</p></div>
+          <div class="step reveal"><span>05</span><h3>Operate</h3><p>We stay close to the numbers after launch — marketplace ops, retention and reporting.</p></div>
+        </div>
+      </section>
+
+      <!-- ===================== ABOUT / CTA ===================== -->
+      <section id="about">
+        <div class="cta reveal">
+          <div>
+            <div class="kicker" style="color:#999; margin-bottom:20px;">12 / The next era</div>
+            <h2>Build for the AI-native era.</h2>
+          </div>
+          <div>
+            <p>Whether you're launching a Shopify brand, building a product or transforming an existing business — let's build what's next.</p>
+            <a href="#contact" class="btn" style="background:#fff;color:#111;">Start a conversation ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== WHY ===================== -->
+      <section id="why">
+        <div class="section-head">
+          <div class="kicker">13 / Why AKESTECH</div>
+          <h2>One team instead of five disconnected vendors.</h2>
+        </div>
+        <div class="grid4">
+          <article class="card reveal"><div class="number">01</div><div><h3>Technology + Growth</h3><p>Product, commerce and acquisition strategy under one roof.</p></div></article>
+          <article class="card reveal"><div class="number">02</div><div><h3>Build + Operate</h3><p>We build the system and stay close to the numbers after launch.</p></div></article>
+          <article class="card reveal"><div class="number">03</div><div><h3>AI-native by design</h3><p>Automation is considered at the architecture level, not bolted on later.</p></div></article>
+          <article class="card reveal"><div class="number">04</div><div><h3>Outcome focused</h3><p>Every project targets launch, acquire, convert or scale.</p></div></article>
+          <article class="card reveal"><div class="number">05</div><div><h3>Commerce depth</h3><p>Years of Shopify, marketplace and D2C operations behind every decision.</p></div></article>
+        </div>
+      </section>
+
+      <!-- ===================== ENGAGEMENT ===================== -->
+      <section id="engagement">
+        <div class="section-head">
+          <div class="kicker">14 / Ways to work together</div>
+          <h2>Start where you need us. Scale when you're ready.</h2>
+        </div>
+        <div class="grid4">
+          <article class="card reveal"><div class="number">BUILD</div><div><h3>Project</h3><p>Launch a Shopify store, product, website, app or automation system.</p></div></article>
+          <article class="card reveal"><div class="number">GROW</div><div><h3>Growth Partner</h3><p>Performance marketing, CRO, creative and ongoing optimization.</p></div></article>
+          <article class="card reveal"><div class="number">AUTOMATE</div><div><h3>AI Transformation</h3><p>Identify and implement the highest-value automation opportunities.</p></div></article>
+          <article class="card reveal"><div class="number">OPERATE</div><div><h3>Marketplace Ops</h3><p>Listings, ads, inventory, fulfilment and returns run end to end.</p></div></article>
+          <article class="card reveal"><div class="number">BUILD + GROW</div><div><h3>Long-term Partner</h3><p>Technology, automation and growth under one relationship.</p></div></article>
+        </div>
+      </section>
+
+      <!-- ===================== FAQ ===================== -->
+      <section id="faq">
+        <div class="section-head">
+          <div class="kicker">15 / FAQ</div>
+          <h2>Questions founders usually ask.</h2>
+        </div>
+        <div class="services">
+          <div>
+            <button class="service" type="button"><small>01</small><b>Do you still build Shopify stores?</b><span class="plus">+</span></button>
+            <div class="faq-a"><p>Yes. Shopify and commerce remain at our core — we've simply expanded around it. We now also build AI automation, custom products, marketplace operations and AI video, so the same partner can take you from store to scale. Every existing Shopify page and resource stays at the same URL.</p></div>
+          </div>
+          <div>
+            <button class="service" type="button"><small>02</small><b>Can you manage performance marketing after launch?</b><span class="plus">+</span></button>
+            <div class="faq-a"><p>Yes. Most clients launch with us and then stay for growth — Meta and Google Ads, creative, landing pages, tracking, CRO and retention, reported against one set of numbers.</p></div>
+          </div>
+          <div>
+            <button class="service" type="button"><small>03</small><b>Can you build custom AI or SaaS products?</b><span class="plus">+</span></button>
+            <div class="faq-a"><p>Yes. Our in-house engineering team ships SaaS platforms, AI agents and LLM products, web and mobile apps, Shopify apps and the integrations that connect them to your existing stack.</p></div>
+          </div>
+          <div>
+            <button class="service" type="button"><small>04</small><b>Can you connect our CRM, WhatsApp and marketing stack?</b><span class="plus">+</span></button>
+            <div class="faq-a"><p>Yes. That's most of our automation work — connecting lead sources, CRM, WhatsApp, email, payments and reporting so data and follow-ups move automatically between them.</p></div>
+          </div>
+          <div>
+            <button class="service" type="button"><small>05</small><b>What is AI video and when does it make sense?</b><span class="plus">+</span></button>
+            <div class="faq-a"><p>It makes sense whenever your creative is the bottleneck. We generate ad films, UGC-style content and product reels with AI in days instead of weeks, so you can test far more variations and keep winning angles fresh.</p></div>
+          </div>
+          <div>
+            <button class="service" type="button"><small>06</small><b>Will changing the website affect our existing URLs or rankings?</b><span class="plus">+</span></button>
+            <div class="faq-a"><p>No. Every existing slug — services, resources, blog posts, case studies and local landing pages — stays exactly the same. We're changing the design and the positioning, not the URL structure.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CONTACT ===================== -->
+      <section id="contact">
+        <div class="section-head">
+          <div class="kicker">16 / Contact</div>
+          <div>
+            <h2>Have a business to build or scale?</h2>
+            <p class="lead">Tell us where you are. We'll come back within one business day with the three biggest opportunities we can see.</p>
           </div>
         </div>
 
-        <div class="c-card" style="grid-column:1/-1">
-          <p class="lbl">AI agents running</p>
-          <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
-            <span style="font-size:12.5px;padding:7px 12px;border-radius:9px;background:rgba(0,229,160,.1);color:#00E5A0;border:1px solid rgba(0,229,160,.22)">● Cart Recovery</span>
-            <span style="font-size:12.5px;padding:7px 12px;border-radius:9px;background:rgba(79,110,247,.1);color:#8FA6FF;border:1px solid rgba(79,110,247,.22)">● COD Verify</span>
-            <span style="font-size:12.5px;padding:7px 12px;border-radius:9px;background:rgba(139,92,246,.1);color:#B79BFF;border:1px solid rgba(139,92,246,.22)">● Support Bot</span>
-            <span style="font-size:12.5px;padding:7px 12px;border-radius:9px;background:rgba(255,184,0,.1);color:#FFCB47;border:1px solid rgba(255,184,0,.22)">● Creative Gen</span>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-links">
+              <a class="btn btn-dark" href="mailto:contact@akestech.com">contact@akestech.com ↗</a>
+              <a class="btn btn-light" href="https://wa.me/917275013628?text=Hi%20AKESTECH%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp us ↗</a>
+              <a class="btn btn-light" href="tel:+917275013628">+91 72750 13628 ↗</a>
+            </div>
+            <p style="margin-top:26px;color:#777;font-size:14px;max-width:340px;line-height:1.6;">
+              Prefer to read first? Browse our
+              <a href="https://akestech.com/case-studies" style="text-decoration:underline;">case studies</a>,
+              <a href="https://akestech.com/resources" style="text-decoration:underline;">free resources</a> or
+              <a href="https://akestech.com/blog" style="text-decoration:underline;">blog</a>.
+            </p>
           </div>
-        </div>
 
-        <div class="c-bot">
-          <div class="chat-row">
-            <span class="av ai">AI</span>
-            <p class="bub ai">Cart abandoned — ₹2,490. Sending WhatsApp + email in 12 min. Want me to add a 10% nudge?</p>
-          </div>
-          <div class="chat-row">
-            <span class="av">You</span>
-            <p class="bub">Yes, but cap discount at 10% and only for first-time buyers.</p>
-          </div>
-          <div class="chat-row">
-            <span class="av ai">AI</span>
-            <p class="bub ai">Done. Running now — I'll report recovered revenue at 9 PM.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="float-badge fb-1">
-        <span style="width:8px;height:8px;border-radius:50%;background:#00E5A0"></span>
-        <span><b>₹4.1L</b> recovered / month</span>
-      </div>
-      <div class="float-badge fb-2">
-        <span style="width:8px;height:8px;border-radius:50%;background:#FFB800"></span>
-        <span><b>25 hrs</b> saved weekly</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     CLIENT MARQUEE
-     ============================================================ -->
-<section class="marquee-sec">
-  <div class="wrap">
-    <p>Trusted by brands across D2C, retail, healthcare, food &amp; media</p>
-  </div>
-  <div class="marquee">
-    <div class="marquee-track" id="marqueeTrack">
-      <img src="https://akestech.com/assets/images/oi-logo.png" alt="OI">
-      <img src="https://akestech.com/assets/images/barsana-logo.png" alt="Barsana">
-      <img src="https://akestech.com/assets/images/sanjeevni-logo.png" alt="Sanjeevni">
-      <img src="https://akestech.com/assets/images/hov-logo.png" alt="HOV">
-      <img src="https://akestech.com/assets/images/la-americana-logo.png" alt="La Americana">
-      <img src="https://akestech.com/assets/images/share-chat-logo.png" alt="ShareChat">
-      <img src="https://akestech.com/assets/images/midorii-logo.png" alt="Midorii">
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     STATS
-     ============================================================ -->
-<section class="wrap" style="padding-top:80px">
-  <div class="stats reveal">
-    <div class="stat"><p class="num" data-count="50" data-suffix="Cr+" data-prefix="₹">₹0Cr+</p><p class="cap">Ad Spend Managed</p></div>
-    <div class="stat"><p class="num" data-count="200" data-suffix="+">0+</p><p class="cap">Brands Scaled</p></div>
-    <div class="stat"><p class="num" data-count="3" data-suffix="X+">0X+</p><p class="cap">Average ROAS</p></div>
-    <div class="stat"><p class="num" data-count="40" data-suffix="%">0%</p><p class="cap">Avg. RTO Reduction</p></div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SERVICES
-     ============================================================ -->
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">What We Do</span>
-      <h2 class="section-title">Six Engines. <span class="grad-text-2">One Growth Team.</span></h2>
-      <p class="section-sub">
-        We stopped being a single-channel Shopify shop. Today we build the product,
-        automate the busywork, produce the creative and drive the demand — under one roof.
-      </p>
-    </div>
-
-    <div class="svc-grid">
-      <!-- 1. AI Automation -->
-      <a href="https://akestech.com/services/automation" class="svc reveal d1">
-        <span class="tag" style="background:rgba(139,92,246,.14);color:#A78BFA">AI</span>
-        <span class="ico" style="background:rgba(139,92,246,.12);color:#8B5CF6">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        </span>
-        <h3>AI Automation</h3>
-        <p>AI agents and workflows that do the repetitive work — so your team only does the work that matters.</p>
-        <ul>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> AI agents for sales &amp; support</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> WhatsApp &amp; email automation</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> n8n / Make / custom workflows</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> CRM, ERP &amp; data integrations</li>
-        </ul>
-        <span class="more">Explore AI Automation <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <!-- 2. Product Development -->
-      <a href="https://akestech.com/services/technology" class="svc reveal d2">
-        <span class="tag" style="background:rgba(34,211,238,.14);color:#22D3EE">Build</span>
-        <span class="ico" style="background:rgba(34,211,238,.12);color:#22D3EE">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg>
-        </span>
-        <h3>Product Development</h3>
-        <p>From idea to shipped product — web apps, mobile apps, SaaS and AI-native products built by an in-house team.</p>
-        <ul>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Web &amp; mobile app development</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> AI/LLM product engineering</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Shopify apps &amp; integrations</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Dashboards &amp; internal tools</li>
-        </ul>
-        <span class="more">Explore Product Development <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <!-- 3. Performance Marketing -->
-      <a href="https://akestech.com/services/performance-marketing" class="svc reveal d3">
-        <span class="tag" style="background:rgba(255,107,53,.14);color:#FF8A5C">Growth</span>
-        <span class="ico" style="background:rgba(255,107,53,.12);color:#FF6B35">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-        </span>
-        <h3>Performance Marketing</h3>
-        <p>Full-funnel paid acquisition built for profit, not vanity metrics. ₹50Cr+ managed at 3X+ average ROAS.</p>
-        <ul>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Meta &amp; Google Ads management</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Creative strategy &amp; testing</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Tracking &amp; attribution setup</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Retention, email &amp; WhatsApp CRM</li>
-        </ul>
-        <span class="more">Explore Performance Marketing <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <!-- 4. Ecommerce Consulting -->
-      <a href="https://akestech.com/services/shopify-growth" class="svc reveal d1">
-        <span class="tag" style="background:rgba(79,110,247,.14);color:#8FA6FF">Strategy</span>
-        <span class="ico" style="background:rgba(79,110,247,.12);color:#4F6EF7">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </span>
-        <h3>Ecommerce Consulting</h3>
-        <p>Store audits, CRO, tech stack and unit-economics strategy — the plan before you spend another rupee on ads.</p>
-        <ul>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Store &amp; funnel audit</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> CRO roadmap &amp; A/B testing</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Platform &amp; stack selection</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Unit economics &amp; pricing</li>
-        </ul>
-        <span class="more">Explore Ecommerce Consulting <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <!-- 5. Marketplace Management -->
-      <a href="https://akestech.com/services/shopify-operations" class="svc reveal d2">
-        <span class="tag" style="background:rgba(0,229,160,.14);color:#00E5A0">Ops</span>
-        <span class="ico" style="background:rgba(0,229,160,.12);color:#00E5A0">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l1.5-5h15L21 9M3 9h18v10a1 1 0 01-1 1H4a1 1 0 01-1-1V9zM9 13h6"/></svg>
-        </span>
-        <h3>Marketplace Management</h3>
-        <p>End-to-end marketplace and D2C operations — listings, ads, inventory, fulfilment and RTO control.</p>
-        <ul>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Amazon &amp; Flipkart account mgmt</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Listing SEO &amp; catalogue ops</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Inventory &amp; fulfilment control</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> RTO &amp; return reduction</li>
-        </ul>
-        <span class="more">Explore Marketplace Management <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <!-- 6. AI Videos -->
-      <a href="https://akestech.com/contact?type=ai-videos" class="svc reveal d3">
-        <span class="tag" style="background:rgba(255,184,0,.14);color:#FFB800">Creative</span>
-        <span class="ico" style="background:rgba(255,184,0,.12);color:#FFB800">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="14" height="16" rx="3"/><path d="M16 10l6-3v10l-6-3z"/></svg>
-        </span>
-        <h3>AI Videos</h3>
-        <p>Studio-quality ad films, UGC and product reels generated with AI — 10X the volume at a fraction of the cost.</p>
-        <ul>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> AI ad films &amp; performance creatives</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> AI UGC &amp; avatar-led content</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Product reels &amp; catalogue video</li>
-          <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00E5A0" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Multi-language voiceovers &amp; dubbing</li>
-        </ul>
-        <span class="more">Explore AI Videos <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     PIVOT / POSITIONING
-     ============================================================ -->
-<section class="pivot">
-  <div class="wrap pivot-grid">
-    <div class="reveal">
-      <span class="eyebrow">Why We Changed</span>
-      <h2 class="section-title">Shopify was the start.<br><span class="grad-text-2">AI is the engine now.</span></h2>
-      <p class="section-sub">
-        We spent years scaling D2C brands and learned the same lesson everywhere:
-        growth breaks when the tech, the creative and the operations don't talk to each other.
-        So we built a team that owns all three.
-      </p>
-      <ul class="pivot-list">
-        <li><span class="n">1</span><span><b>We build, not just advise</b><span>In-house engineers ship the automation and the product — no vendor ping-pong.</span></span></li>
-        <li><span class="n">2</span><span><b>One P&amp;L, one team</b><span>Media, creative, ops and tech work to the same revenue target every week.</span></span></li>
-        <li><span class="n">3</span><span><b>AI where it pays</b><span>We automate what actually moves margin — recovery, support, reporting, content.</span></span></li>
-        <li><span class="n">4</span><span><b>Outcomes, not retainers</b><span>Every engagement has a number attached: ROAS, RTO, hours saved or revenue added.</span></span></li>
-      </ul>
-    </div>
-
-    <div class="stacked reveal d2">
-      <div class="stack-card">
-        <div class="top"><h4>Then: a Shopify service shop</h4><span class="chip then">2021 – 2024</span></div>
-        <p>Store setup, theme tweaks, ad campaigns and marketplace ops — delivered as separate, scoped projects for D2C brands.</p>
-      </div>
-      <div class="stack-card" style="border-color:rgba(79,110,247,.35);background:linear-gradient(160deg,rgba(79,110,247,.08),transparent)">
-        <div class="top"><h4>Now: an AI-first growth partner</h4><span class="chip now">Today</span></div>
-        <p>AI automation, product &amp; AI engineering, performance marketing, ecommerce consulting, marketplace management and AI video — one integrated team building and running your growth stack.</p>
-      </div>
-      <div class="stack-card">
-        <div class="top"><h4>What didn't change</h4><span class="chip now">Same URLs</span></div>
-        <p>Every page, slug and resource you already rank for stays exactly where it is. We're widening the story — not breaking the site.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     AI VIDEO BAND
-     ============================================================ -->
-<section class="video-band">
-  <div class="wrap vid-grid">
-    <div class="vid-showcase reveal">
-      <div class="vid-tile">
-        <div class="glow"></div>
-        <span class="play"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="meta"><b>AI Ad Film</b><span>30s · ₹ vs ₹ lakhs</span></div>
-      </div>
-      <div class="vid-tile">
-        <div class="glow"></div>
-        <span class="play"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
-        <div class="meta"><b>AI UGC Creator</b><span>Avatar-led · 8 languages</span></div>
-      </div>
-    </div>
-
-    <div class="reveal d2">
-      <span class="eyebrow">AI Video Studio</span>
-      <h2 class="section-title">Ship 50 creatives<br>before lunch.</h2>
-      <p class="section-sub">
-        Your ads stop performing when creative goes stale. Our AI video studio produces
-        ad films, UGC-style content and product reels at the speed your media team actually needs.
-      </p>
-      <ul class="vid-list">
-        <li><span class="t">✓</span> 10X more creative variations per campaign</li>
-        <li><span class="t">✓</span> Up to 80% lower cost than traditional shoots</li>
-        <li><span class="t">✓</span> 48-hour turnaround on standard deliverables</li>
-        <li><span class="t">✓</span> Consistent brand voice across languages</li>
-      </ul>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="https://akestech.com/contact?type=ai-videos" class="btn btn-primary">Request AI Video Demo <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="https://akestech.com/services/performance-marketing" class="btn btn-ghost">Pair with Performance</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     PROCESS
-     ============================================================ -->
-<section class="process">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">How We Work</span>
-      <h2 class="section-title">From audit to autopilot<br>in <span class="grad-text-2">90 days.</span></h2>
-    </div>
-
-    <div class="proc-grid">
-      <div class="proc reveal d1">
-        <p class="step">STEP 01</p>
-        <h4>Audit &amp; Map</h4>
-        <p>We audit your stack, funnels, data and unit economics, then map every leak worth fixing and rank it by revenue impact.</p>
-        <p class="out">→ Growth roadmap in 7 days</p>
-      </div>
-      <div class="proc reveal d2">
-        <p class="step">STEP 02</p>
-        <h4>Build &amp; Automate</h4>
-        <p>Engineers ship the automation, integrations, dashboards and landing experiences while creative and media prep in parallel.</p>
-        <p class="out">→ First systems live in 30 days</p>
-      </div>
-      <div class="proc reveal d3">
-        <p class="step">STEP 03</p>
-        <h4>Launch &amp; Acquire</h4>
-        <p>Campaigns go live across Meta, Google and marketplaces with the tracking, creative volume and offers to scale profitably.</p>
-        <p class="out">→ Signals inside 2 weeks</p>
-      </div>
-      <div class="proc reveal d4">
-        <p class="step">STEP 04</p>
-        <h4>Optimise &amp; Scale</h4>
-        <p>Weekly experiments on creative, funnel and ops. What wins gets scaled; what doesn't gets killed — reported on one dashboard.</p>
-        <p class="out">→ Compounding month on month</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     RESULTS
-     ============================================================ -->
-<section class="results">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Proof</span>
-      <h2 class="section-title">Numbers our clients<br>actually care about.</h2>
-      <p class="section-sub">A snapshot of recent work across D2C, healthcare and food &amp; beverage.</p>
-    </div>
-
-    <div class="res-grid">
-      <div class="res reveal d1">
-        <p class="cat">Fashion D2C</p>
-        <p class="big">3.8<em>X</em></p>
-        <p class="lbl">ROAS — up from 1.2X</p>
-        <p class="txt">Rebuilt the full funnel, introduced AI-generated creative testing and WhatsApp recovery. Scaled from ₹15L to ₹45L monthly in two quarters.</p>
-      </div>
-      <div class="res reveal d2">
-        <p class="cat">Beauty &amp; Personal Care</p>
-        <p class="big">₹4.1<em>L</em></p>
-        <p class="lbl">Revenue recovered per month</p>
-        <p class="txt">AI cart-recovery and COD-confirmation agents running across WhatsApp and email, integrated with their existing Shopify stack.</p>
-      </div>
-      <div class="res reveal d3">
-        <p class="cat">Health &amp; Wellness</p>
-        <p class="big">35<em>%</em></p>
-        <p class="lbl">Reduction in RTO</p>
-        <p class="txt">Marketplace operations overhaul: address verification, prepaid nudges and fulfilment SOPs — plus 25 hours a week given back to the team.</p>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:44px">
-      <a href="https://akestech.com/case-studies" class="btn btn-ghost">See all case studies <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     TESTIMONIALS
-     ============================================================ -->
-<section class="testi">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Testimonials</span>
-      <h2 class="section-title">What founders say<br>after 90 days.</h2>
-    </div>
-
-    <div class="testi-grid">
-      <div class="t-card reveal d1">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Akestech rebuilt our growth engine end to end. We went from 1.2X to 3.8X ROAS in 60 days — and the automation they built now runs our recovery on its own."</blockquote>
-        <div class="t-foot">
-          <div class="t-person"><span class="av">AS</span><span><b>Ankit Sharma</b><span>Founder, Fashion D2C Brand</span></span></div>
-          <p class="t-metric">3.8X ROAS</p>
-        </div>
-      </div>
-      <div class="t-card reveal d2">
-        <div class="stars">★★★★★</div>
-        <blockquote>"The AI automation alone recovered ₹4L in the first month. Combined with their performance marketing, we scaled from ₹15L to ₹45L monthly revenue."</blockquote>
-        <div class="t-foot">
-          <div class="t-person"><span class="av">PM</span><span><b>Priya Mehta</b><span>Co-founder, Beauty Brand</span></span></div>
-          <p class="t-metric">3X Revenue</p>
-        </div>
-      </div>
-      <div class="t-card reveal d3">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Finally a partner that understands operations. They cut our RTO by 35% and set up automations that save us 25 hours every single week."</blockquote>
-        <div class="t-foot">
-          <div class="t-person"><span class="av">RV</span><span><b>Rahul Verma</b><span>CEO, Health &amp; Wellness</span></span></div>
-          <p class="t-metric">35% RTO ↓</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     INDUSTRIES
-     ============================================================ -->
-<section class="industries">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Who We Work With</span>
-      <h2 class="section-title">Built for teams<br>that need to move fast.</h2>
-    </div>
-
-    <div class="ind-grid">
-      <div class="ind reveal d1"><p class="e">🛍️</p><h4>D2C &amp; Ecommerce</h4><p>Fashion, beauty, health, electronics, home and food brands from ₹5L to ₹5Cr monthly revenue.</p></div>
-      <div class="ind reveal d2"><p class="e">🏬</p><h4>Marketplace Sellers</h4><p>Amazon and Flipkart sellers who need listing, ads and operations handled like a business, not a side project.</p></div>
-      <div class="ind reveal d3"><p class="e">🏥</p><h4>Healthcare &amp; Wellness</h4><p>Clinics, diagnostics and wellness brands that need compliant funnels and automated patient follow-up.</p></div>
-      <div class="ind reveal d1"><p class="e">🏗️</p><h4>Real Estate</h4><p>Developers and brokers who need qualified site-visit leads, not raw enquiry volume.</p></div>
-      <div class="ind reveal d2"><p class="e">🍽️</p><h4>Food &amp; Beverage</h4><p>QSR, cloud kitchens and packaged food brands scaling online orders and repeat purchase.</p></div>
-      <div class="ind reveal d3"><p class="e">🚀</p><h4>Startups &amp; SaaS</h4><p>Teams that need an AI product built, shipped and taken to market without hiring a full in-house team.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     LEAD FORM
-     ============================================================ -->
-<section class="lead" id="audit">
-  <div class="wrap">
-    <div class="lead-box reveal">
-      <div class="lead-copy">
-        <span class="eyebrow">Free · No Obligation</span>
-        <h2>Get a growth audit<br>worth ₹25,000 — free.</h2>
-        <p>Tell us where you are. We'll come back with the three biggest leaks in your funnel and exactly how we'd fix them.</p>
-        <ul class="lead-points">
-          <li><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> 45-minute teardown of your funnel, ads and ops</li>
-          <li><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Automation opportunities ranked by ROI</li>
-          <li><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> A 90-day roadmap you can execute with or without us</li>
-          <li><span class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Response within 1 business day</li>
-        </ul>
-      </div>
-
-      <div class="lead-form">
-        <form id="auditForm" action="https://akestech.com/save-enquiry.php" method="post" novalidate>
-          <div class="field-row">
-            <div class="field">
-              <label for="name">Your name *</label>
-              <input type="text" id="name" name="name" placeholder="Rahul Sharma" required>
+          <form class="form" id="enquiryForm" action="https://akestech.com/save-enquiry.php" method="post" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Your name *</label>
+                <input type="text" id="name" name="name" placeholder="Rahul Sharma" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone / WhatsApp *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required />
+              </div>
             </div>
             <div class="field">
-              <label for="phone">Phone / WhatsApp *</label>
-              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+              <label for="email">Work email *</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required />
             </div>
-          </div>
-
-          <div class="field">
-            <label for="email">Work email *</label>
-            <input type="email" id="email" name="email" placeholder="you@company.com" required>
-          </div>
-
-          <div class="field">
-            <label for="business">What do you need help with? *</label>
-            <select id="business" name="business" required>
-              <option value="">Select a service</option>
-              <option value="AI Automation">AI Automation</option>
-              <option value="Product Development">Product Development</option>
-              <option value="Performance Marketing">Performance Marketing</option>
-              <option value="Ecommerce Consulting">Ecommerce Consulting</option>
-              <option value="Marketplace Management">Marketplace Management</option>
-              <option value="AI Videos">AI Videos</option>
-              <option value="Multiple / Not sure yet">Multiple / Not sure yet</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="plan">Monthly revenue</label>
-            <select id="plan" name="plan">
-              <option value="Pre-revenue">Pre-revenue / just starting</option>
-              <option value="Under 5L">Under ₹5L</option>
-              <option value="5L - 25L">₹5L – ₹25L</option>
-              <option value="25L - 1Cr">₹25L – ₹1Cr</option>
-              <option value="1Cr+">₹1Cr+</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Anything else?</label>
-            <textarea id="message" name="message" placeholder="Current challenges, timelines, platforms you use…"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width:100%">
-            Get My Free Audit
-            <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </button>
-          <p class="form-note">By submitting you agree to our <a href="https://akestech.com/privacy-policy" style="text-decoration:underline">Privacy Policy</a>. No spam — ever.</p>
-          <div class="form-msg" id="formMsg"></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     FAQ
-     ============================================================ -->
-<section class="faq">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">FAQ</span>
-      <h2 class="section-title">Questions, answered.</h2>
-    </div>
-
-    <div class="faq-wrap reveal">
-      <div class="faq-item">
-        <button class="faq-q">Are you still a Shopify agency?<span class="ic"></span></button>
-        <div class="faq-a"><p>Shopify and ecommerce are still a big part of what we do — but they're no longer all we do. We're now an AI-first growth partner covering AI automation, product development, performance marketing, ecommerce consulting, marketplace management and AI video production. Every Shopify page and resource you already use stays live at the same URL.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What does "AI automation" actually mean in practice?<span class="ic"></span></button>
-        <div class="faq-a"><p>We identify repetitive, high-volume work in your business — cart recovery, COD confirmation, customer support, lead qualification, reporting — and build AI agents and workflows that handle it. That usually means WhatsApp and email flows, n8n/Make automations, LLM-powered support, and integrations with your CRM, ERP or store.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do you build products, or only advise?<span class="ic"></span></button>
-        <div class="faq-a"><p>We build. Our in-house engineering team ships web apps, mobile apps, Shopify apps, AI/LLM products, dashboards and internal tools. You get a working product, not a deck.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How is AI video different from a normal shoot?<span class="ic"></span></button>
-        <div class="faq-a"><p>Traditional shoots are slow and expensive, so creative goes stale and performance drops. Our AI video studio produces ad films, UGC-style content and product reels in days instead of weeks, at a fraction of the cost — so you can test 10X the variations and keep winning angles fresh.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What's the minimum engagement?<span class="ic"></span></button>
-        <div class="faq-a"><p>Projects start at ₹50,000. Growth retainers typically start at ₹75,000/month with a three-month commitment, because that's the minimum window for compounding results. We'll tell you honestly if we're not the right fit.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How fast will we see results?<span class="ic"></span></button>
-        <div class="faq-a"><p>Audit and roadmap within 7 days. First automation and campaign changes live inside 30 days. Meaningful, compounding revenue impact typically shows up between day 60 and day 90.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do you work with non-ecommerce businesses?<span class="ic"></span></button>
-        <div class="faq-a"><p>Yes. Alongside D2C and marketplace brands, we work with healthcare, real estate, food &amp; beverage, SaaS and startup clients on automation, product development, paid acquisition and AI content.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Will changing the site affect my existing URLs or rankings?<span class="ic"></span></button>
-        <div class="faq-a"><p>No. Every existing slug — services, resources, blog posts, case studies, local landing pages — stays exactly the same. We're changing the design and the positioning, not the URL structure.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     FINAL CTA
-     ============================================================ -->
-<section class="final">
-  <div class="hero-bg">
-    <div class="orb orb-1" style="top:0;left:20%"></div>
-    <div class="orb orb-2" style="top:20%;right:5%"></div>
-  </div>
-  <div class="wrap final-inner reveal">
-    <span class="eyebrow" style="justify-content:center">Ready when you are</span>
-    <h2>Let's build your<br><span class="grad-text-2">growth engine.</span></h2>
-    <p>Book a free audit and get a 90-day roadmap for AI automation, product, marketing and marketplace growth.</p>
-    <div class="final-ctas">
-      <a href="https://akestech.com/contact?type=audit" class="btn btn-primary">Get a Free Growth Audit <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a href="https://wa.me/917275013628?text=Hi%20Akestech%2C%20I%20want%20to%20discuss%20a%20growth%20audit." target="_blank" rel="noopener" class="btn btn-ghost">Chat on WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     FOOTER — full sitemap, existing slugs preserved
-     ============================================================ -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="f-top">
-      <div class="f-brand">
-        <img src="https://akestech.com/assets/images/akestech-transparent-logo.png" alt="Akestech Infotech">
-        <p>An AI-first growth partner: AI automation, product development, performance marketing, ecommerce consulting, marketplace management and AI video production.</p>
-        <div class="f-badges">
-          <span>200+ Brands</span><span>₹50Cr+ Ad Spend</span><span>3X+ ROAS</span><span>ISO-ready Processes</span>
+            <div class="form-row">
+              <div class="field">
+                <label for="business">What do you need? *</label>
+                <select id="business" name="business" required>
+                  <option value="">Select a capability</option>
+                  <option value="Shopify & Commerce">Shopify &amp; Commerce</option>
+                  <option value="AI & Automation">AI &amp; Automation</option>
+                  <option value="Product Development">Product Development</option>
+                  <option value="Performance Marketing">Performance Marketing</option>
+                  <option value="Marketplace Management">Marketplace Management</option>
+                  <option value="AI Videos">AI Videos</option>
+                  <option value="Multiple / Not sure yet">Multiple / Not sure yet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="plan">Stage</label>
+                <select id="plan" name="plan">
+                  <option value="Just starting">Just starting</option>
+                  <option value="Under 5L">Under ₹5L / month</option>
+                  <option value="5L - 25L">₹5L – ₹25L / month</option>
+                  <option value="25L - 1Cr">₹25L – ₹1Cr / month</option>
+                  <option value="1Cr+">₹1Cr+ / month</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Tell us more</label>
+              <textarea id="message" name="message" placeholder="Current challenges, platforms you use, timelines…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark" style="width:100%;">Start a project ↗</button>
+            <p class="form-note">By submitting you agree to our <a href="https://akestech.com/privacy-policy">Privacy Policy</a>. No spam — ever.</p>
+            <div class="form-msg" id="formMsg"></div>
+          </form>
         </div>
-        <div class="f-social">
-          <a href="https://x.com/akestechinfotec" target="_blank" rel="noopener" aria-label="X / Twitter"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-          <a href="https://www.linkedin.com/company/akestech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a href="https://www.instagram.com/akestechinfotech/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          <a href="https://wa.me/917275013628" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 01-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23s8.25 3.69 8.25 8.23-3.7 8.24-8.25 8.24z"/></svg></a>
-        </div>
-      </div>
+      </section>
+    </main>
 
-      <div class="f-col">
-        <h5>Services</h5>
-        <a href="https://akestech.com/services/automation">AI Automation</a>
+    <!-- ===================== FOOTER ===================== -->
+    <div class="footer-cols">
+      <div>
+        <h5>Capabilities</h5>
+        <a href="https://akestech.com/services/shopify-growth">Shopify &amp; Commerce</a>
+        <a href="https://akestech.com/services/automation">AI &amp; Automation</a>
         <a href="https://akestech.com/services/technology">Product Development</a>
         <a href="https://akestech.com/services/performance-marketing">Performance Marketing</a>
-        <a href="https://akestech.com/services/shopify-growth">Ecommerce Consulting</a>
         <a href="https://akestech.com/services/shopify-operations">Marketplace Management</a>
         <a href="https://akestech.com/contact?type=ai-videos">AI Videos</a>
       </div>
-
-      <div class="f-col">
-        <h5>Product</h5>
-        <a href="https://akestech.com/products/whatsapp-shopify">WhatsApp Automation</a>
-        <a href="https://akestech.com/resources">Free Resources</a>
+      <div>
+        <h5>Products &amp; Work</h5>
+        <a href="https://akestech.com/products/whatsapp-shopify">Whatify — WhatsApp Commerce</a>
+        <a href="https://akestech.com/services/automation">Lead365 — Lead Automation</a>
         <a href="https://akestech.com/case-studies">Case Studies</a>
+        <a href="https://akestech.com/resources">Free Resources</a>
         <a href="https://akestech.com/blog">Blog</a>
-        <a href="https://akestech.com/about">About Us</a>
-        <a href="https://akestech.com/contact">Contact</a>
+        <a href="https://akestech.com/about">About</a>
       </div>
-
-      <div class="f-col">
-        <h5>Industries</h5>
-        <a href="https://akestech.com/real-estate-marketing-agency">Real Estate</a>
+      <div>
+        <h5>Local</h5>
         <a href="https://akestech.com/digital-marketing-company-in-lucknow">Digital Marketing — Lucknow</a>
         <a href="https://akestech.com/shopify-development-company-in-lucknow">Shopify Development — Lucknow</a>
         <a href="https://akestech.com/performance-marketing-company-in-lucknow">Performance Marketing — Lucknow</a>
         <a href="https://akestech.com/meta-ads-management-in-lucknow">Meta Ads — Lucknow</a>
         <a href="https://akestech.com/lead-generation-service-in-lucknow">Lead Generation — Lucknow</a>
+        <a href="https://akestech.com/real-estate-marketing-agency">Real Estate Marketing</a>
       </div>
-
-      <div class="f-col">
+      <div>
         <h5>Company</h5>
+        <a href="tel:+917275013628">+91 72750 13628</a>
+        <a href="mailto:contact@akestech.com">contact@akestech.com</a>
         <a href="https://akestech.com/privacy-policy">Privacy Policy</a>
         <a href="https://akestech.com/terms">Terms &amp; Conditions</a>
         <a href="https://akestech.com/data-deletion">Data Deletion</a>
-        <a href="tel:+917275013628">+91 72750 13628</a>
-        <a href="mailto:contact@akestech.com">contact@akestech.com</a>
+        <a href="https://akestech.com/sitemap.xml">Sitemap</a>
       </div>
     </div>
 
-    <div class="f-bot">
-      <p>© <span id="yr"></span> Akestech Infotech. All rights reserved.</p>
-      <nav>
-        <a href="https://akestech.com/privacy-policy">Privacy</a>
-        <a href="https://akestech.com/terms">Terms</a>
-        <a href="https://akestech.com/data-deletion">Data Deletion</a>
-        <a href="https://akestech.com/sitemap.xml">Sitemap</a>
-      </nav>
-    </div>
+    <footer>
+      <span>© <span id="yr">2026</span> AKESTECH. All rights reserved.</span>
+      <span>AI · Commerce · Product · Growth</span>
+    </footer>
   </div>
-</footer>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/917275013628?text=Hi%20Akestech%2C%20I%20found%20you%20on%20the%20website." target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
-  <svg width="27" height="27" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 01-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23s8.25 3.69 8.25 8.23-3.7 8.24-8.25 8.24z"/></svg>
-</a>
+  <a href="https://wa.me/917275013628?text=Hi%20AKESTECH%2C%20I%20found%20you%20on%20the%20website." target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 01-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23s8.25 3.69 8.25 8.23-3.7 8.24-8.25 8.24z"/></svg>
+  </a>
 
-<!-- Mobile sticky bar -->
-<div class="mobile-bar">
-  <a href="tel:+917275013628" class="btn btn-ghost">Call</a>
-  <a href="https://akestech.com/contact?type=audit" class="btn btn-primary">Free Audit</a>
-</div>
+  <script>
+    /* ---------- year ---------- */
+    document.getElementById('yr').textContent = new Date().getFullYear();
 
-<script>
-/* ---------- year ---------- */
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-/* ---------- nav scroll state ---------- */
-const navWrap = document.getElementById('navWrap');
-const onScroll = () => navWrap.classList.toggle('scrolled', window.scrollY > 20);
-onScroll(); addEventListener('scroll', onScroll, {passive:true});
-
-/* ---------- mobile menu ---------- */
-const burger = document.getElementById('burger');
-const mMenu  = document.getElementById('mobileMenu');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  mMenu.classList.toggle('open');
-  document.body.style.overflow = mMenu.classList.contains('open') ? 'hidden' : '';
-});
-mMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  burger.classList.remove('open'); mMenu.classList.remove('open'); document.body.style.overflow = '';
-}));
-
-/* ---------- marquee duplication ---------- */
-const track = document.getElementById('marqueeTrack');
-track.innerHTML += track.innerHTML;
-
-/* ---------- card cursor glow ---------- */
-document.querySelectorAll('.svc').forEach(card => {
-  card.addEventListener('pointermove', e => {
-    const r = card.getBoundingClientRect();
-    card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-    card.style.setProperty('--my', (e.clientY - r.top) + 'px');
-  });
-});
-
-/* ---------- reveal on scroll ---------- */
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-}, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-/* ---------- animated counters ---------- */
-const counters = document.querySelectorAll('[data-count]');
-const cio = new IntersectionObserver((entries) => {
-  entries.forEach(en => {
-    if (!en.isIntersecting) return;
-    const el = en.target, target = +el.dataset.count,
-          prefix = el.dataset.prefix || '', suffix = el.dataset.suffix || '';
-    let start = null;
-    const dur = 1400;
-    const tick = ts => {
-      if (!start) start = ts;
-      const p = Math.min((ts - start) / dur, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = prefix + Math.round(target * eased) + suffix;
-      if (p < 1) requestAnimationFrame(tick); else el.textContent = prefix + target + suffix;
-    };
-    requestAnimationFrame(tick);
-    cio.unobserve(el);
-  });
-}, {threshold:.4});
-counters.forEach(c => cio.observe(c));
-
-/* ---------- FAQ accordion ---------- */
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.parentElement, body = item.querySelector('.faq-a'), open = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => {
-      i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = null;
+    /* ---------- mobile nav ---------- */
+    const burger = document.getElementById('burger');
+    const mNav = document.getElementById('mobileNav');
+    burger.addEventListener('click', () => {
+      const open = mNav.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    if (!open) { item.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
-  });
-});
+    mNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mNav.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+    }));
 
-/* ---------- lead form ---------- */
-const form = document.getElementById('auditForm');
-const msg  = document.getElementById('formMsg');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const name  = form.name.value.trim();
-  const phone = form.phone.value.trim();
-  const email = form.email.value.trim();
-  const biz   = form.business.value;
-
-  if (!name || !phone || !email || !biz) {
-    msg.className = 'form-msg err';
-    msg.textContent = 'Please fill in your name, phone, email and what you need help with.';
-    return;
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    msg.className = 'form-msg err';
-    msg.textContent = 'Please enter a valid email address.';
-    return;
-  }
-
-  const payload = {
-    name, phone, email, business: biz,
-    plan: form.plan.value,
-    timestamp: new Date().toISOString(),
-    date: new Date().toLocaleDateString('en-IN'),
-    time: new Date().toLocaleTimeString('en-IN'),
-    source: 'Landing page — free growth audit'
-  };
-
-  const btn = form.querySelector('button[type=submit]');
-  const original = btn.textContent;
-  btn.disabled = true; btn.textContent = 'Sending…';
-
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json','Accept':'application/json'},
-      body: JSON.stringify(payload)
+    /* ---------- faq accordion ---------- */
+    document.querySelectorAll('#faq .service').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling;
+        const isOpen = btn.classList.contains('open');
+        document.querySelectorAll('#faq .service').forEach(b => {
+          b.classList.remove('open'); b.nextElementSibling.style.maxHeight = null;
+        });
+        if (!isOpen) { btn.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
+      });
     });
-    const data = await res.json().catch(() => null);
-    if (!res.ok || !data || data.success === false) throw new Error('server');
 
-    msg.className = 'form-msg ok';
-    msg.textContent = 'Thanks! Your audit request is in. Our team will reach out within 1 business day.';
-    form.reset();
-    if (typeof fbq === 'function') fbq('track','Lead');
-    if (typeof gtag === 'function') gtag('event','generate_lead',{form_name:'free_growth_audit'});
-  } catch (err) {
-    /* Graceful fallback: hand off to WhatsApp so no lead is ever lost */
-    msg.className = 'form-msg ok';
-    msg.textContent = 'Thanks! Opening WhatsApp so we can confirm your free audit request.';
-    const text = encodeURIComponent(
-      `Hi Akestech, I'd like a free growth audit.\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nNeed help with: ${biz}\nMonthly revenue: ${form.plan.value}`
-    );
-    setTimeout(() => window.open('https://wa.me/917275013628?text=' + text, '_blank'), 700);
-    if (typeof fbq === 'function') fbq('track','Lead');
-  } finally {
-    btn.disabled = false; btn.textContent = original;
+    /* ---------- reveal on scroll ---------- */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ---------- lead form ---------- */
+    const form = document.getElementById('enquiryForm');
+    const msg = document.getElementById('formMsg');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const phone = form.phone.value.trim();
+      const email = form.email.value.trim();
+      const business = form.business.value;
+
+      if (!name || !phone || !email || !business) {
+        msg.className = 'form-msg err';
+        msg.textContent = 'Please fill in your name, phone, email and what you need help with.';
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        msg.className = 'form-msg err';
+        msg.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      const payload = {
+        name, phone, email, business,
+        plan: form.plan.value,
+        timestamp: new Date().toISOString(),
+        date: new Date().toLocaleDateString('en-IN'),
+        time: new Date().toLocaleTimeString('en-IN'),
+        source: 'Landing page — start a project'
+      };
+
+      const btn = form.querySelector('button[type=submit]');
+      const original = btn.innerHTML;
+      btn.disabled = true; btn.textContent = 'Sending…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json().catch(() => null);
+        if (!res.ok || !data || data.success === false) throw new Error('server');
+        msg.className = 'form-msg ok';
+        msg.textContent = 'Thanks! Your enquiry is in — we’ll get back to you within one business day.';
+        form.reset();
+        if (typeof fbq === 'function') fbq('track', 'Lead');
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'start_a_project' });
+      } catch (err) {
+        /* Fallback so no lead is ever lost */
+        msg.className = 'form-msg ok';
+        msg.textContent = 'Thanks! Opening WhatsApp so we can confirm your enquiry.';
+        const text = encodeURIComponent(
+          'Hi AKESTECH, I\'d like to start a project.\nName: ' + name + '\nPhone: ' + phone +
+          '\nEmail: ' + email + '\nNeed: ' + business + '\nStage: ' + form.plan.value
+        );
+        setTimeout(() => window.open('https://wa.me/917275013628?text=' + text, '_blank'), 700);
+        if (typeof fbq === 'function') fbq('track', 'Lead');
+      } finally {
+        btn.disabled = false; btn.innerHTML = original;
+      }
+    });
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AKESTECH",
+    "url": "https://akestech.com/",
+    "logo": "https://akestech.com/assets/images/akestech-transparent-logo.png",
+    "description": "AI, commerce and growth technology company. Shopify development, AI automation, product development, performance marketing, marketplace management and AI video production.",
+    "email": "contact@akestech.com",
+    "telephone": "+917275013628",
+    "slogan": "Build. Automate. Grow.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lucknow", "addressRegion": "Uttar Pradesh", "addressCountry": "IN" },
+    "sameAs": [
+      "https://x.com/akestechinfotec",
+      "https://www.linkedin.com/company/akestech",
+      "https://www.instagram.com/akestechinfotech/"
+    ],
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+917275013628", "contactType": "sales", "availableLanguage": ["English", "Hindi"] },
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shopify & Commerce", "url": "https://akestech.com/services/shopify-growth" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI & Automation", "url": "https://akestech.com/services/automation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product Development", "url": "https://akestech.com/services/technology" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance Marketing", "url": "https://akestech.com/services/performance-marketing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketplace Management", "url": "https://akestech.com/services/shopify-operations" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Videos", "url": "https://akestech.com/contact?type=ai-videos" } }
+    ]
   }
-});
-</script>
+  </script>
 
-<!-- Structured data: Organization + Service catalogue -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Akestech Infotech",
-  "url": "https://akestech.com/",
-  "logo": "https://akestech.com/assets/images/akestech-transparent-logo.png",
-  "description": "AI-first growth partner: AI automation, product development, performance marketing, ecommerce consulting, marketplace management and AI video production.",
-  "email": "contact@akestech.com",
-  "telephone": "+917275013628",
-  "address": {"@type":"PostalAddress","addressLocality":"Lucknow","addressRegion":"Uttar Pradesh","addressCountry":"IN"},
-  "sameAs": [
-    "https://x.com/akestechinfotec",
-    "https://www.linkedin.com/company/akestech",
-    "https://www.instagram.com/akestechinfotech/"
-  ],
-  "contactPoint": {"@type":"ContactPoint","telephone":"+917275013628","contactType":"sales","availableLanguage":["English","Hindi"]},
-  "makesOffer": [
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Automation","url":"https://akestech.com/services/automation"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Product Development","url":"https://akestech.com/services/technology"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Performance Marketing","url":"https://akestech.com/services/performance-marketing"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ecommerce Consulting","url":"https://akestech.com/services/shopify-growth"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Marketplace Management","url":"https://akestech.com/services/shopify-operations"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Videos","url":"https://akestech.com/contact?type=ai-videos"}}
-  ]
-}
-</script>
-
-<!-- FAQ structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"Are you still a Shopify agency?","acceptedAnswer":{"@type":"Answer","text":"Shopify and ecommerce are still a big part of what we do, but we are now an AI-first growth partner covering AI automation, product development, performance marketing, ecommerce consulting, marketplace management and AI video production. Every existing URL stays the same."}},
-    {"@type":"Question","name":"What does AI automation actually mean in practice?","acceptedAnswer":{"@type":"Answer","text":"We identify repetitive, high-volume work such as cart recovery, COD confirmation, customer support, lead qualification and reporting, and build AI agents and workflows that handle it across WhatsApp, email, n8n/Make and your CRM or ERP."}},
-    {"@type":"Question","name":"Do you build products, or only advise?","acceptedAnswer":{"@type":"Answer","text":"We build. Our in-house engineering team ships web apps, mobile apps, Shopify apps, AI and LLM products, dashboards and internal tools."}},
-    {"@type":"Question","name":"How is AI video different from a normal shoot?","acceptedAnswer":{"@type":"Answer","text":"Our AI video studio produces ad films, UGC-style content and product reels in days instead of weeks at a fraction of the cost, so you can test far more creative variations."}},
-    {"@type":"Question","name":"What is the minimum engagement?","acceptedAnswer":{"@type":"Answer","text":"Projects start at INR 50,000. Growth retainers typically start at INR 75,000 per month with a three-month commitment."}},
-    {"@type":"Question","name":"How fast will we see results?","acceptedAnswer":{"@type":"Answer","text":"Audit and roadmap within 7 days, first automation and campaign changes live inside 30 days, with compounding revenue impact typically between day 60 and day 90."}},
-    {"@type":"Question","name":"Do you work with non-ecommerce businesses?","acceptedAnswer":{"@type":"Answer","text":"Yes. We also work with healthcare, real estate, food and beverage, SaaS and startup clients."}},
-    {"@type":"Question","name":"Will changing the site affect my existing URLs or rankings?","acceptedAnswer":{"@type":"Answer","text":"No. Every existing slug stays exactly the same. We are changing the design and positioning, not the URL structure."}}
-  ]
-}
-</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Do you still build Shopify stores?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shopify and commerce remain at our core — we have expanded around it with AI automation, product development, marketplace operations and AI video. Every existing URL stays the same." } },
+      { "@type": "Question", "name": "Can you manage performance marketing after launch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Meta and Google Ads, creative, landing pages, tracking, CRO and retention, reported against one set of numbers." } },
+      { "@type": "Question", "name": "Can you build custom AI or SaaS products?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our in-house engineering team ships SaaS platforms, AI agents and LLM products, web and mobile apps, Shopify apps and integrations." } },
+      { "@type": "Question", "name": "Can you connect our CRM, WhatsApp and marketing stack?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most of our automation work connects lead sources, CRM, WhatsApp, email, payments and reporting so follow-ups move automatically." } },
+      { "@type": "Question", "name": "What is AI video and when does it make sense?", "acceptedAnswer": { "@type": "Answer", "text": "It makes sense when creative is the bottleneck. We generate ad films, UGC-style content and product reels with AI in days instead of weeks." } },
+      { "@type": "Question", "name": "Will changing the website affect our existing URLs or rankings?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every existing slug stays exactly the same. We are changing the design and positioning, not the URL structure." } }
+    ]
+  }
+  </script>
 
 </body>
 </html>
