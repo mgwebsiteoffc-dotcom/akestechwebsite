@@ -234,7 +234,7 @@ class SEO {
         $keywords = self::get('meta_keywords', '');
         $ogTitle = self::get('og_title', $title);
         $ogDesc = self::get('og_description', $desc);
-        $ogImage = self::get('og_image', url('assets/images/og-default.jpg'));
+        $ogImage = self::get('og_image', url('assets/images/og-akestech.jpg'));
         $canonical = self::get('canonical_url', self::currentUrl());
         $robots = self::get('robots', 'index, follow');
 

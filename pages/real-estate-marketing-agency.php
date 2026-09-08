@@ -197,7 +197,7 @@ ob_start();
             </div>
             <div class="animate-on-scroll">
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 lg:p-5">
-                    <img src="<?= asset('images/hero-real-estate-dashboard.svg') ?>" alt="Real estate marketing dashboard" class="w-full rounded-xl border border-gray-200 bg-white">
+                    <img src="<?= asset('images/hero-real-estate-dashboard.jpg') ?>" alt="Real estate marketing dashboard" class="w-full rounded-xl border border-gray-200 bg-white">
                     <div class="grid grid-cols-3 gap-3 mt-3">
                         <div class="bg-white rounded-xl border border-gray-100 p-3">
                             <p class="text-lg font-bold text-gray-950">62%</p>

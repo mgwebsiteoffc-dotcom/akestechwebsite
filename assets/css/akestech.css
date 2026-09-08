@@ -479,3 +479,30 @@ a.ak-row:hover{padding-left:10px}
 .ak-card .ak-ic,.ak-row .ak-ic{transition:transform .3s var(--ease)}
 a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2px)}
 .ak-ic--lg{width:24px;height:24px}
+
+/* ==========================================================================
+   FIGURE, QUOTE, LIST VARIANTS, STEP NUMBER  (about / editorial pages)
+   ========================================================================== */
+.ak-figure{margin:0}
+.ak-figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:var(--radius);background:#e9e9e5;object-fit:cover;max-height:520px}
+.ak-figure figcaption{margin-top:14px;font-size:14px;color:#777;max-width:660px;line-height:1.6}
+
+.ak-quote{
+  margin:0;padding:30px 32px;background:var(--card);border:1px solid var(--line);
+  border-left:3px solid var(--ink);border-radius:var(--radius-sm);
+}
+.ak-quote p{margin:0;font-size:19px;line-height:1.6;letter-spacing:-.2px;color:var(--ink)}
+.ak-quote cite{display:block;margin-top:16px;font-size:13px;font-style:normal;color:#888;letter-spacing:.02em}
+
+.ak-list--no li::before{content:"×";color:#c2c2bc}
+.ak-list--no li{color:#8a8a84}
+
+.ak-step__num{
+  flex:none;width:96px;font-size:15px;font-weight:700;letter-spacing:-.2px;color:var(--ink);
+  padding-top:2px;
+}
+@media (max-width:760px){
+  .ak-step__num{width:auto;margin-bottom:8px}
+  .ak-quote{padding:24px}
+  .ak-quote p{font-size:17px}
+}
