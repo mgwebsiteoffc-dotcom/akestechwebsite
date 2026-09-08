@@ -101,10 +101,10 @@ ob_start();
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <?php if (empty($posts)): ?>
             <div class="text-center py-16">
-                <span class="text-4xl block mb-4">📝</span>
+                <span class="text-4xl block mb-4"><?= ak_icon('file-text', 18) ?></span>
                 <h2 class="text-xl font-semibold text-gray-900 mb-2">No posts found</h2>
                 <p class="text-gray-600 mb-6">We're working on new content. Check back soon!</p>
-                <a href="<?= url('blog') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">View all posts →</a>
+                <a href="<?= url('blog') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">View all posts <?= ak_icon('arrow-right', 16) ?></a>
             </div>
         <?php else: ?>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -119,7 +119,7 @@ ob_start();
                 <div class="flex items-center gap-2">
                     <?php if ($page > 1): ?>
                     <a href="<?= url('blog') ?>?page=<?= $page - 1 ?><?= $categorySlug ? '&category=' . $categorySlug : '' ?>" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                        ← Previous
+                        <?= ak_icon('arrow-left', 16) ?> Previous
                     </a>
                     <?php endif; ?>
 
@@ -132,7 +132,7 @@ ob_start();
 
                     <?php if ($page < $totalPages): ?>
                     <a href="<?= url('blog') ?>?page=<?= $page + 1 ?><?= $categorySlug ? '&category=' . $categorySlug : '' ?>" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                        Next →
+                        Next <?= ak_icon('arrow-right', 16) ?>
                     </a>
                     <?php endif; ?>
                 </div>

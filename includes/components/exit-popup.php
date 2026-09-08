@@ -29,7 +29,7 @@
                 <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 mb-5">
                     <div class="flex items-center gap-3">
                         <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <span class="text-xl">🎁</span>
+                            <span class="text-xl"><?= ak_icon('gift', 18) ?></span>
                         </div>
                         <div>
                             <p class="text-sm font-bold text-gray-900">Free Shopify Growth Checklist</p>
@@ -71,7 +71,7 @@
                         <input type="tel" name="phone" placeholder="Phone Number" required
                                class="w-full px-4 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent">
                         <button type="submit" class="w-full px-6 py-3 text-sm font-semibold text-white bg-gray-900 rounded-xl hover:bg-gray-800 transition-colors">
-                            Send Me the Checklist + Free Audit →
+                            Send Me the Checklist + Free Audit <?= ak_icon('arrow-right', 16) ?>
                         </button>
                     </div>
                 </form>

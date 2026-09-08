@@ -31,78 +31,78 @@ ob_start();
             <!-- Resource 1 -->
             <div class="animate-on-scroll bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
                 <div class="aspect-video bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
-                    <span class="text-4xl">📊</span>
+                    <span class="text-4xl"><?= ak_icon('bar-chart', 18) ?></span>
                 </div>
                 <div class="p-6">
                     <span class="text-xs font-semibold text-primary-600 uppercase tracking-wider">Guide</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">Shopify Growth Playbook 2024</h3>
                     <p class="text-sm text-gray-600 mb-4">Complete guide to scaling your Shopify store from ₹5L to ₹1Cr monthly revenue.</p>
-                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free →</a>
+                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
 
             <!-- Resource 2 -->
             <div class="animate-on-scroll bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
                 <div class="aspect-video bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
-                    <span class="text-4xl">💬</span>
+                    <span class="text-4xl"><?= ak_icon('message-circle', 18) ?></span>
                 </div>
                 <div class="p-6">
                     <span class="text-xs font-semibold text-green-600 uppercase tracking-wider">Template</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">WhatsApp Message Templates</h3>
                     <p class="text-sm text-gray-600 mb-4">20+ proven WhatsApp templates for cart recovery, COD verification, and customer engagement.</p>
-                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free →</a>
+                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
 
             <!-- Resource 3 -->
             <div class="animate-on-scroll bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
                 <div class="aspect-video bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center">
-                    <span class="text-4xl">🧮</span>
+                    <span class="text-4xl"><?= ak_icon('calculator', 18) ?></span>
                 </div>
                 <div class="p-6">
                     <span class="text-xs font-semibold text-orange-600 uppercase tracking-wider">Calculator</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">ROAS Calculator</h3>
                     <p class="text-sm text-gray-600 mb-4">Calculate your target ROAS, break-even point, and profitability with our free calculator.</p>
-                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Use Calculator →</a>
+                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Use Calculator <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
 
             <!-- Resource 4 -->
             <div class="animate-on-scroll bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
                 <div class="aspect-video bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
-                    <span class="text-4xl">📋</span>
+                    <span class="text-4xl"><?= ak_icon('clipboard', 18) ?></span>
                 </div>
                 <div class="p-6">
                     <span class="text-xs font-semibold text-purple-600 uppercase tracking-wider">Checklist</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">Shopify Launch Checklist</h3>
                     <p class="text-sm text-gray-600 mb-4">50-point checklist to ensure your Shopify store is ready to convert from day one.</p>
-                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free →</a>
+                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
 
             <!-- Resource 5 -->
             <div class="animate-on-scroll bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
                 <div class="aspect-video bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
-                    <span class="text-4xl">📈</span>
+                    <span class="text-4xl"><?= ak_icon('trending-up', 18) ?></span>
                 </div>
                 <div class="p-6">
                     <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Guide</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">Meta Ads for D2C Brands</h3>
                     <p class="text-sm text-gray-600 mb-4">Step-by-step guide to setting up profitable Meta ad campaigns for your Shopify store.</p>
-                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free →</a>
+                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
 
             <!-- Resource 6 -->
             <div class="animate-on-scroll bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
                 <div class="aspect-video bg-gradient-to-br from-cyan-50 to-cyan-100 flex items-center justify-center">
-                    <span class="text-4xl">🔍</span>
+                    <span class="text-4xl"><?= ak_icon('search', 18) ?></span>
                 </div>
                 <div class="p-6">
                     <span class="text-xs font-semibold text-cyan-600 uppercase tracking-wider">Tool</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">Shopify Speed Analyzer</h3>
                     <p class="text-sm text-gray-600 mb-4">Check your Shopify store speed score and get instant optimization recommendations.</p>
-                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Analyze Now →</a>
+                    <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Analyze Now <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ $metrics = json_decode($study['metrics'] ?? '{}', true);
             <img src="<?= ($study['featured_image']) ?>" alt="<?= clean($study['title']) ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
         <?php else: ?>
             <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100">
-                <span class="text-4xl">📊</span>
+                <span class="text-4xl"><?= ak_icon('bar-chart', 18) ?></span>
             </div>
         <?php endif; ?>
         <?php if ($study['industry']): ?>

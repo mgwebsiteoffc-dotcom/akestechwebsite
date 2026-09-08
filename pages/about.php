@@ -264,7 +264,7 @@ ob_start();
                         <?php endforeach; ?>
                     </div>
                     <a href="<?= url('services/shopify-growth') ?>" class="inline-flex items-center text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors">
-                        Explore our services →
+                        Explore our services <?= ak_icon('arrow-right', 16) ?>
                     </a>
                 </div>
             </div>
@@ -302,7 +302,7 @@ ob_start();
                         <?php endforeach; ?>
                     </div>
                     <a href="<?= url('products/whatsapp-shopify') ?>" class="inline-flex items-center text-sm font-semibold text-green-700 hover:text-green-800 transition-colors">
-                        Explore our product →
+                        Explore our product <?= ak_icon('arrow-right', 16) ?>
                     </a>
                 </div>
             </div>
@@ -321,7 +321,7 @@ ob_start();
                     </div>
                     <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center">
-                        <span class="text-sm font-bold text-orange-600">🚀</span>
+                        <span class="text-sm font-bold text-orange-600"><?= ak_icon('rocket', 18) ?></span>
                     </div>
                 </div>
                 <p class="text-sm text-gray-600">
@@ -431,32 +431,32 @@ ob_start();
                 [
                     'role' => 'Growth Strategist',
                     'desc' => 'Owns your growth roadmap. Sets KPIs, allocates budgets, and ensures all channels work together.',
-                    'icon' => '🎯',
+                    'icon' => 'target',
                     'bg' => 'bg-primary-50'
                 ],
                 [
                     'role' => 'Performance Marketer',
                     'desc' => 'Manages your Meta & Google campaigns. Builds audiences, tests creatives, and optimizes for ROAS daily.',
-                    'icon' => '📈',
+                    'icon' => 'trending-up',
                     'bg' => 'bg-orange-50'
                 ],
                 [
                     'role' => 'Shopify Developer',
                     'desc' => 'Handles store optimizations, custom development, speed improvements, and technical implementations.',
-                    'icon' => '💻',
+                    'icon' => 'monitor',
                     'bg' => 'bg-blue-50'
                 ],
                 [
                     'role' => 'Ops & Automation Specialist',
                     'desc' => 'Streamlines your operations, sets up WhatsApp automation, and builds workflows that save you 20+ hours/week.',
-                    'icon' => '⚙️',
+                    'icon' => 'settings',
                     'bg' => 'bg-green-50'
                 ],
             ];
             foreach ($team as $t): ?>
             <div class="animate-on-scroll text-center p-6 bg-white border border-gray-100 rounded-2xl hover:shadow-lg transition-all">
                 <div class="w-16 h-16 <?= $t['bg'] ?> rounded-2xl flex items-center justify-center mx-auto mb-5">
-                    <span class="text-2xl"><?= $t['icon'] ?></span>
+                    <?= ak_icon($t['icon'], 24) ?>
                 </div>
                 <h3 class="text-base font-semibold text-gray-900 mb-2"><?= $t['role'] ?></h3>
                 <p class="text-sm text-gray-500 leading-relaxed"><?= $t['desc'] ?></p>
@@ -497,16 +497,16 @@ ob_start();
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 animate-on-scroll">
             <?php
             $industries = [
-                ['icon' => '👗', 'name' => 'Fashion & Apparel'],
-                ['icon' => '💄', 'name' => 'Beauty & Skincare'],
-                ['icon' => '💪', 'name' => 'Health & Wellness'],
-                ['icon' => '📱', 'name' => 'Electronics'],
-                ['icon' => '🏠', 'name' => 'Home & Living'],
-                ['icon' => '🍕', 'name' => 'Food & Beverage'],
+                ['icon' => 'shirt', 'name' => 'Fashion & Apparel'],
+                ['icon' => 'sparkle', 'name' => 'Beauty & Skincare'],
+                ['icon' => 'dumbbell', 'name' => 'Health & Wellness'],
+                ['icon' => 'smartphone', 'name' => 'Electronics'],
+                ['icon' => 'home', 'name' => 'Home & Living'],
+                ['icon' => 'utensils', 'name' => 'Food & Beverage'],
             ];
             foreach ($industries as $ind): ?>
             <div class="bg-white border border-gray-100 rounded-xl p-4 text-center hover:shadow-md hover:border-gray-200 transition-all">
-                <span class="text-2xl block mb-2"><?= $ind['icon'] ?></span>
+                <?= ak_icon($ind['icon'], 24) ?>
                 <p class="text-xs font-medium text-gray-700"><?= $ind['name'] ?></p>
             </div>
             <?php endforeach; ?>
@@ -629,12 +629,12 @@ $industries = [
                         <span class="px-3 py-1.5 bg-white/10 text-white text-xs font-medium rounded-full border border-white/10">Ownership Culture</span>
                     </div>
                     <a href="mailto:<?= SITE_EMAIL ?>?subject=Career Inquiry" class="inline-flex items-center px-6 py-3 text-sm font-semibold text-gray-900 bg-white rounded-xl hover:bg-gray-100 transition-colors">
-                        View Open Positions →
+                        View Open Positions <?= ak_icon('arrow-right', 16) ?>
                     </a>
                 </div>
                 <div class="hidden lg:flex items-center justify-center">
                     <div class="text-center">
-                        <span class="text-6xl block mb-3">🙌</span>
+                        <span class="text-6xl block mb-3"><?= ak_icon('users', 18) ?></span>
                         <p class="text-gray-500 text-sm">We're growing fast.<br>Come build with us.</p>
                     </div>
                 </div>

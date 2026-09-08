@@ -89,6 +89,7 @@
     <!-- End Meta Pixel Code -->
 </head>
 <body>
+<?= ak_icon_sprite() ?>
 
     <?php component('navbar'); ?>
 

@@ -19,7 +19,7 @@ $secondaryLink = $secondaryLink ?? ('https://wa.me/' . WHATSAPP_NUMBER);
       <div>
         <?php if (!empty($description)): ?><p><?= $description ?></p><?php endif; ?>
         <div class="ak-btns" style="margin-top:0">
-          <a href="<?= $primaryLink ?>" class="ak-btn ak-btn--onDark"><?= $primaryBtn ?> ↗</a>
+          <a href="<?= $primaryLink ?>" class="ak-btn ak-btn--onDark"><?= $primaryBtn ?> <?= ak_icon('arrow-up-right', 16) ?></a>
           <a href="<?= $secondaryLink ?>" class="ak-btn ak-btn--ghost"><?= $secondaryBtn ?></a>
         </div>
       </div>

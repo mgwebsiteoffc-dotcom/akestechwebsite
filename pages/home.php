@@ -70,7 +70,7 @@ ob_start();
         <span class="ak-chip"><span class="ak-dot"></span> Commerce + growth in one team</span>
       </div>
       <div class="ak-btns">
-        <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark">Build with AKESTECH ↗</a>
+        <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark">Build with AKESTECH <?= ak_icon('arrow-up-right', 16) ?></a>
         <a href="#capabilities" class="ak-btn ak-btn--light">Explore capabilities</a>
       </div>
     </div>
@@ -105,7 +105,7 @@ ob_start();
           <h3>Shopify &amp; Commerce</h3>
           <p>From store setup to complex custom commerce infrastructure and conversion optimization.</p>
           <div class="ak-tags"><span class="ak-tag">Store Setup</span><span class="ak-tag">Development</span><span class="ak-tag">Shopify Plus</span><span class="ak-tag">CRO</span></div>
-          <span class="ak-arrow">↗</span>
+          <span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span>
         </div>
       </a>
       <a class="ak-card ak-spot ak-reveal ak-d2" href="<?= url('services/automation') ?>">
@@ -114,7 +114,7 @@ ob_start();
           <h3>AI &amp; Automation</h3>
           <p>Turn repetitive sales, support and operations into intelligent automated workflows.</p>
           <div class="ak-tags"><span class="ak-tag">AI Agents</span><span class="ak-tag">WhatsApp</span><span class="ak-tag">CRM</span><span class="ak-tag">Workflows</span></div>
-          <span class="ak-arrow">↗</span>
+          <span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span>
         </div>
       </a>
       <a class="ak-card ak-spot ak-reveal ak-d3" href="<?= url('services/technology') ?>">
@@ -123,7 +123,7 @@ ob_start();
           <h3>Product Development</h3>
           <p>Build SaaS, AI products, apps and custom digital platforms from idea to production.</p>
           <div class="ak-tags"><span class="ak-tag">SaaS</span><span class="ak-tag">AI Products</span><span class="ak-tag">Web Apps</span><span class="ak-tag">Mobile</span></div>
-          <span class="ak-arrow">↗</span>
+          <span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span>
         </div>
       </a>
       <a class="ak-card ak-spot ak-reveal ak-d1" href="<?= url('services/performance-marketing') ?>">
@@ -132,7 +132,7 @@ ob_start();
           <h3>Performance Marketing</h3>
           <p>End-to-end acquisition across paid media, creative, landing pages, tracking, CRO and retention.</p>
           <div class="ak-tags"><span class="ak-tag">Meta Ads</span><span class="ak-tag">Google Ads</span><span class="ak-tag">Creative</span><span class="ak-tag">Analytics</span></div>
-          <span class="ak-arrow">↗</span>
+          <span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span>
         </div>
       </a>
       <a class="ak-card ak-spot ak-reveal ak-d2" href="<?= url('services/shopify-operations') ?>">
@@ -141,7 +141,7 @@ ob_start();
           <h3>Marketplace Management</h3>
           <p>Amazon, Flipkart and D2C operations — listings, ads, inventory, fulfilment and RTO control.</p>
           <div class="ak-tags"><span class="ak-tag">Amazon</span><span class="ak-tag">Flipkart</span><span class="ak-tag">Catalogue</span><span class="ak-tag">RTO</span></div>
-          <span class="ak-arrow">↗</span>
+          <span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span>
         </div>
       </a>
       <a class="ak-card ak-spot ak-reveal ak-d3" href="<?= url('services/ai-videos') ?>">
@@ -150,7 +150,7 @@ ob_start();
           <h3>AI Videos</h3>
           <p>Studio-quality ad films, UGC and product reels generated with AI — at 10X the volume.</p>
           <div class="ak-tags"><span class="ak-tag">Ad Films</span><span class="ak-tag">AI UGC</span><span class="ak-tag">Reels</span><span class="ak-tag">Dubbing</span></div>
-          <span class="ak-arrow">↗</span>
+          <span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span>
         </div>
       </a>
     </div>
@@ -163,7 +163,7 @@ ob_start();
     <div class="ak-statement ak-reveal" style="margin-bottom:0">
       <div>
         <div class="ak-kicker" style="color:#999;margin-bottom:20px">02 / End-to-end solution</div>
-        <p>One partner from <strong>idea → technology → traffic → conversion → scale.</strong></p>
+        <p>One partner from <strong>idea <?= ak_icon('arrow-right', 16) ?> technology <?= ak_icon('arrow-right', 16) ?> traffic <?= ak_icon('arrow-right', 16) ?> conversion <?= ak_icon('arrow-right', 16) ?> scale.</strong></p>
       </div>
       <span>We connect commerce, AI, product development, marketplace and performance marketing into one growth engine.</span>
     </div>
@@ -201,15 +201,15 @@ ob_start();
         <div class="ak-kicker">03 / Shopify &amp; Commerce</div>
         <h2 class="ak-h3" style="margin-top:18px">Commerce is still at our core.</h2>
         <p>We don't hide our Shopify expertise. We expand it. From launching your first store to building sophisticated commerce systems and marketplace operations for growing brands.</p>
-        <div class="ak-btns"><a class="ak-btn ak-btn--dark" href="<?= url('services/shopify-growth') ?>">Talk Shopify ↗</a></div>
+        <div class="ak-btns"><a class="ak-btn ak-btn--dark" href="<?= url('services/shopify-growth') ?>">Talk Shopify <?= ak_icon('arrow-up-right', 16) ?></a></div>
       </div>
       <div class="ak-rows ak-reveal ak-d2">
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>01</small><b>Shopify Store Setup</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>02</small><b>Custom Theme Development</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/technology') ?>"><small>03</small><b>Custom Shopify Development</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>04</small><b>Shopify Plus</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/technology') ?>"><small>05</small><b>Migration &amp; Integrations</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>06</small><b>CRO &amp; Store Optimization</b><span>↗</span></a>
+        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>01</small><b>Shopify Store Setup</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>02</small><b>Custom Theme Development</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/technology') ?>"><small>03</small><b>Custom Shopify Development</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>04</small><b>Shopify Plus</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/technology') ?>"><small>05</small><b>Migration &amp; Integrations</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>06</small><b>CRO &amp; Store Optimization</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
       </div>
     </div>
   </div>
@@ -223,15 +223,15 @@ ob_start();
         <div class="ak-kicker">04 / Performance Marketing</div>
         <h2 class="ak-h3" style="margin-top:18px">Traffic is easy. Profitable growth is the job.</h2>
         <p>Media buying, creative, landing pages, tracking, CRO and retention — connected into one measurable acquisition system.</p>
-        <div class="ak-btns"><a class="ak-btn ak-btn--dark" href="<?= url('services/performance-marketing') ?>">Grow with us ↗</a></div>
+        <div class="ak-btns"><a class="ak-btn ak-btn--dark" href="<?= url('services/performance-marketing') ?>">Grow with us <?= ak_icon('arrow-up-right', 16) ?></a></div>
       </div>
       <div class="ak-rows ak-reveal ak-d2">
-        <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>01</small><b>Meta &amp; Google Ads</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/ai-videos') ?>"><small>02</small><b>Creative &amp; AI UGC Strategy</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>03</small><b>Landing Pages &amp; Funnels</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>04</small><b>Tracking &amp; Attribution</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/automation') ?>"><small>05</small><b>Retargeting &amp; Retention</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>06</small><b>CRO &amp; Experimentation</b><span>↗</span></a>
+        <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>01</small><b>Meta &amp; Google Ads</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/ai-videos') ?>"><small>02</small><b>Creative &amp; AI UGC Strategy</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>03</small><b>Landing Pages &amp; Funnels</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>04</small><b>Tracking &amp; Attribution</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/automation') ?>"><small>05</small><b>Retargeting &amp; Retention</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>06</small><b>CRO &amp; Experimentation</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
       </div>
     </div>
   </div>
@@ -252,7 +252,7 @@ ob_start();
       <article class="ak-card ak-spot ak-reveal ak-d2"><div class="ak-card__num">02</div><div><h3>WhatsApp Automation</h3><p>Conversational journeys for enquiries, sales, support, payments and follow-ups.</p></div></article>
       <article class="ak-card ak-spot ak-reveal ak-d3"><div class="ak-card__num">03</div><div><h3>CRM Intelligence</h3><p>Connect lead sources, teams, customer data and automated next actions.</p></div></article>
       <article class="ak-card ak-spot ak-reveal ak-d4"><div class="ak-card__num">04</div><div><h3>Operations</h3><p>Automate repetitive workflows across teams and business processes.</p></div></article>
-      <a class="ak-card ak-spot ak-reveal ak-d5" href="<?= url('services/automation') ?>"><div class="ak-card__num">05</div><div><h3>AI Video Studio</h3><p>Generate ad films, UGC and product reels with AI at production speed.</p><span class="ak-arrow">↗</span></div></a>
+      <a class="ak-card ak-spot ak-reveal ak-d5" href="<?= url('services/automation') ?>"><div class="ak-card__num">05</div><div><h3>AI Video Studio</h3><p>Generate ad films, UGC and product reels with AI at production speed.</p><span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span></div></a>
     </div>
   </div>
 </section>
@@ -272,7 +272,7 @@ ob_start();
       <article class="ak-card ak-spot ak-reveal ak-d2"><div class="ak-card__num">02</div><div><h3>AI UGC Creators</h3><p>Avatar-led, testimonial-style content that looks native to the feed.</p></div></article>
       <article class="ak-card ak-spot ak-reveal ak-d3"><div class="ak-card__num">03</div><div><h3>Product Reels</h3><p>Catalogue-scale video for every SKU, variant and marketplace listing.</p></div></article>
       <article class="ak-card ak-spot ak-reveal ak-d4"><div class="ak-card__num">04</div><div><h3>Multi-language</h3><p>Voiceovers and dubbing so one creative works across every market.</p></div></article>
-      <a class="ak-card ak-spot ak-reveal ak-d5" href="<?= url('services/ai-videos') ?>"><div class="ak-card__num">05</div><div><h3>Paired with media</h3><p>Creative testing loops connected directly to your Meta and Google accounts.</p><span class="ak-arrow">↗</span></div></a>
+      <a class="ak-card ak-spot ak-reveal ak-d5" href="<?= url('services/ai-videos') ?>"><div class="ak-card__num">05</div><div><h3>Paired with media</h3><p>Creative testing loops connected directly to your Meta and Google accounts.</p><span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span></div></a>
     </div>
   </div>
 </section>
@@ -288,12 +288,12 @@ ob_start();
       <article class="ak-product ak-spot ak-reveal ak-d1">
         <div class="ak-product__label">AKESTECH PRODUCT / 01</div>
         <div><h3>Lead365</h3><p>Lead management and automation infrastructure connecting channels, teams and customer journeys.</p></div>
-        <a href="<?= url('products/lead365') ?>" class="ak-btn ak-btn--light" style="width:max-content">Explore product ↗</a>
+        <a href="<?= url('products/lead365') ?>" class="ak-btn ak-btn--light" style="width:max-content">Explore product <?= ak_icon('arrow-up-right', 16) ?></a>
       </article>
       <article class="ak-product ak-spot ak-reveal ak-d2">
         <div class="ak-product__label">AKESTECH PRODUCT / 02</div>
         <div><h3>Whatify</h3><p>AI-powered WhatsApp commerce and customer engagement designed to turn conversations into business outcomes.</p></div>
-        <a href="<?= url('products/whatsapp-shopify') ?>" class="ak-btn ak-btn--light" style="width:max-content">Explore product ↗</a>
+        <a href="<?= url('products/whatsapp-shopify') ?>" class="ak-btn ak-btn--light" style="width:max-content">Explore product <?= ak_icon('arrow-up-right', 16) ?></a>
       </article>
     </div>
   </div>
@@ -311,7 +311,7 @@ ob_start();
       <article class="ak-card ak-spot ak-reveal ak-d2"><div class="ak-card__num">02</div><div><h3>AI Products</h3><p>AI-powered applications, agents, knowledge systems and workflow products.</p></div></article>
       <article class="ak-card ak-spot ak-reveal ak-d3"><div class="ak-card__num">03</div><div><h3>Web &amp; Mobile</h3><p>Customer-facing applications and internal platforms designed for real use.</p></div></article>
       <article class="ak-card ak-spot ak-reveal ak-d4"><div class="ak-card__num">04</div><div><h3>Integrations</h3><p>APIs, payments, CRM, WhatsApp, Shopify and existing business systems.</p></div></article>
-      <a class="ak-card ak-spot ak-reveal ak-d5" href="<?= url('services/technology') ?>"><div class="ak-card__num">05</div><div><h3>Shopify Apps</h3><p>Public and private apps built, submitted and maintained on the Shopify platform.</p><span class="ak-arrow">↗</span></div></a>
+      <a class="ak-card ak-spot ak-reveal ak-d5" href="<?= url('services/technology') ?>"><div class="ak-card__num">05</div><div><h3>Shopify Apps</h3><p>Public and private apps built, submitted and maintained on the Shopify platform.</p><span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span></div></a>
     </div>
   </div>
 </section>
@@ -324,15 +324,15 @@ ob_start();
         <div class="ak-kicker">09 / Marketplace Management</div>
         <h2 class="ak-h3" style="margin-top:18px">Sell everywhere, operate from one place.</h2>
         <p>Amazon, Flipkart and your own store — managed as one business with one view of inventory, margin and customer data.</p>
-        <div class="ak-btns"><a class="ak-btn ak-btn--dark" href="<?= url('services/shopify-operations') ?>">Talk marketplace ops ↗</a></div>
+        <div class="ak-btns"><a class="ak-btn ak-btn--dark" href="<?= url('services/shopify-operations') ?>">Talk marketplace ops <?= ak_icon('arrow-up-right', 16) ?></a></div>
       </div>
       <div class="ak-rows ak-reveal ak-d2">
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>01</small><b>Amazon Account Management</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>02</small><b>Flipkart &amp; Marketplace Ads</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>03</small><b>Listing SEO &amp; Catalogue</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>04</small><b>Inventory &amp; Fulfilment</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>05</small><b>RTO &amp; Returns Control</b><span>↗</span></a>
-        <a class="ak-row" href="<?= url('services/automation') ?>"><small>06</small><b>Ops Automation</b><span>↗</span></a>
+        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>01</small><b>Amazon Account Management</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>02</small><b>Flipkart &amp; Marketplace Ads</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>03</small><b>Listing SEO &amp; Catalogue</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>04</small><b>Inventory &amp; Fulfilment</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>05</small><b>RTO &amp; Returns Control</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/automation') ?>"><small>06</small><b>Ops Automation</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
       </div>
     </div>
   </div>
@@ -385,7 +385,7 @@ ob_start();
       </div>
       <div>
         <p>Whether you're launching a Shopify brand, building a product or transforming an existing business — let's build what's next.</p>
-        <a href="#contact" class="ak-btn ak-btn--onDark">Start a conversation ↗</a>
+        <a href="#contact" class="ak-btn ak-btn--onDark">Start a conversation <?= ak_icon('arrow-up-right', 16) ?></a>
       </div>
     </div>
   </div>
@@ -443,12 +443,12 @@ ob_start();
         <div>
           <h3><?= clean($study['title']) ?></h3>
           <p><?= clean($study['excerpt'] ?? '') ?></p>
-          <span class="ak-arrow">↗</span>
+          <span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span>
         </div>
       </a>
       <?php endforeach; ?>
     </div>
-    <div style="margin-top:34px"><a class="ak-btn ak-btn--light" href="<?= url('case-studies') ?>">See all case studies ↗</a></div>
+    <div style="margin-top:34px"><a class="ak-btn ak-btn--light" href="<?= url('case-studies') ?>">See all case studies <?= ak_icon('arrow-up-right', 16) ?></a></div>
   </div>
 </section>
 <?php endif; ?>
@@ -467,12 +467,12 @@ ob_start();
         <div>
           <h3 style="font-size:22px"><?= clean($post['title']) ?></h3>
           <p><?= clean($post['excerpt'] ?? '') ?></p>
-          <span class="ak-arrow">↗</span>
+          <span class="ak-arrow"><?= ak_icon('arrow-up-right', 16) ?></span>
         </div>
       </a>
       <?php endforeach; ?>
     </div>
-    <div style="margin-top:34px"><a class="ak-btn ak-btn--light" href="<?= url('blog') ?>">Read the blog ↗</a></div>
+    <div style="margin-top:34px"><a class="ak-btn ak-btn--light" href="<?= url('blog') ?>">Read the blog <?= ak_icon('arrow-up-right', 16) ?></a></div>
   </div>
 </section>
 <?php endif; ?>
@@ -517,9 +517,9 @@ ob_start();
     <div class="ak-split">
       <div class="ak-reveal">
         <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-          <a class="ak-btn ak-btn--dark" href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?> ↗</a>
-          <a class="ak-btn ak-btn--light" href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $waText ?>" target="_blank" rel="noopener">WhatsApp us ↗</a>
-          <a class="ak-btn ak-btn--light" href="tel:<?= SITE_PHONE ?>"><?= SITE_PHONE ?> ↗</a>
+          <a class="ak-btn ak-btn--dark" href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?> <?= ak_icon('arrow-up-right', 16) ?></a>
+          <a class="ak-btn ak-btn--light" href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $waText ?>" target="_blank" rel="noopener">WhatsApp us <?= ak_icon('arrow-up-right', 16) ?></a>
+          <a class="ak-btn ak-btn--light" href="tel:<?= SITE_PHONE ?>"><?= SITE_PHONE ?> <?= ak_icon('arrow-up-right', 16) ?></a>
         </div>
         <p style="margin-top:26px;color:#777;font-size:15px;max-width:360px;line-height:1.6">
           Prefer to read first? Browse our
@@ -573,7 +573,7 @@ ob_start();
           <label for="hk-message">Tell us more</label>
           <textarea id="hk-message" name="message" placeholder="Current challenges, platforms you use, timelines…"></textarea>
         </div>
-        <button type="submit" class="ak-btn ak-btn--dark" style="width:100%">Start a project ↗</button>
+        <button type="submit" class="ak-btn ak-btn--dark" style="width:100%">Start a project <?= ak_icon('arrow-up-right', 16) ?></button>
         <p class="ak-form__note">By submitting you agree to our <a href="<?= url('privacy-policy') ?>">Privacy Policy</a>. No spam — ever.</p>
         <div class="ak-msg"></div>
       </form>

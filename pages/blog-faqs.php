@@ -61,7 +61,7 @@ ob_start();
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#faqs" class="inline-flex items-center justify-center px-7 py-3.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-                    Browse FAQs ↓
+                    Browse FAQs <?= ak_icon('arrow-down', 16) ?>
                 </a>
                 <a href="<?= url('contact') ?>" class="inline-flex items-center justify-center px-7 py-3.5 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800/50 transition-colors">
                     Ask a Question
@@ -77,27 +77,27 @@ ob_start();
             $categories = [
                 'performance-marketing' => [
                     'name' => 'Performance Marketing',
-                    'icon' => '📊',
+                    'icon' => 'bar-chart',
                     'desc' => 'Meta Ads, Google Ads, and paid marketing strategies'
                 ],
                 'shopify-growth' => [
                     'name' => 'Shopify Store Growth',
-                    'icon' => '🛍',
+                    'icon' => 'shopping-bag',
                     'desc' => 'CRO, conversion optimization, and store scaling'
                 ],
                 'shopify-operations' => [
                     'name' => 'Operations & RTO',
-                    'icon' => '📦',
+                    'icon' => 'package',
                     'desc' => 'RTO reduction, fulfillment, and logistics'
                 ],
                 'automation' => [
                     'name' => 'WhatsApp Automation',
-                    'icon' => '💬',
+                    'icon' => 'message-circle',
                     'desc' => 'WhatsApp Business API, cart recovery, and automation'
                 ],
                 'technology' => [
                     'name' => 'Technology & Integration',
-                    'icon' => '⚙️',
+                    'icon' => 'settings',
                     'desc' => 'Tracking, integration, and technical setup'
                 ]
             ];
@@ -109,7 +109,7 @@ ob_start();
             
             <div class="mb-16 animate-on-scroll">
                 <div class="flex items-center gap-3 mb-8 pb-4 border-b border-gray-200">
-                    <span class="text-3xl"><?= $category['icon'] ?></span>
+                    <?= ak_icon($category['icon'], 28) ?>
                     <div>
                         <h2 class="text-2xl font-extrabold text-gray-900"><?= $category['name'] ?></h2>
                         <p class="text-sm text-gray-500 mt-1"><?= $category['desc'] ?></p>
@@ -151,13 +151,13 @@ ob_start();
                 <p class="text-gray-600 mb-6">Explore our detailed blog posts with case studies, data, and step-by-step guides.</p>
                 <div class="grid sm:grid-cols-3 gap-4">
                     <a href="<?= url('blog?category=performance-marketing') ?>" class="inline-flex items-center px-5 py-3 bg-white border border-gray-300 rounded-lg font-semibold text-gray-900 hover:border-blue-600 hover:text-blue-600 transition-colors">
-                        📊 Performance Marketing
+                        <?= ak_icon('bar-chart', 18) ?> Performance Marketing
                     </a>
                     <a href="<?= url('blog?category=shopify-operations') ?>" class="inline-flex items-center px-5 py-3 bg-white border border-gray-300 rounded-lg font-semibold text-gray-900 hover:border-blue-600 hover:text-blue-600 transition-colors">
-                        📦 Operations & RTO
+                        <?= ak_icon('package', 18) ?> Operations & RTO
                     </a>
                     <a href="<?= url('blog?category=automation') ?>" class="inline-flex items-center px-5 py-3 bg-white border border-gray-300 rounded-lg font-semibold text-gray-900 hover:border-blue-600 hover:text-blue-600 transition-colors">
-                        💬 WhatsApp Automation
+                        <?= ak_icon('message-circle', 18) ?> WhatsApp Automation
                     </a>
                 </div>
             </div>
@@ -167,7 +167,7 @@ ob_start();
                 <h3 class="text-2xl font-extrabold text-gray-900 mb-4">Still Have Questions?</h3>
                 <p class="text-gray-600 mb-8">Schedule a free consultation with our Shopify growth experts.</p>
                 <a href="<?= url('contact') ?>" class="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl">
-                    Book Free Strategy Call →
+                    Book Free Strategy Call <?= ak_icon('arrow-right', 16) ?>
                 </a>
             </div>
         </div>

@@ -41,7 +41,7 @@ ob_start();
                         Install Free on Shopify
                     </a>
                     <a href="#features" class="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-xl hover:bg-gray-50 transition-all">
-                        See Features ↓
+                        See Features <?= ak_icon('arrow-down', 16) ?>
                     </a>
                 </div>
                 <div class="flex items-center gap-6 text-sm text-gray-500">
@@ -56,7 +56,7 @@ ob_start();
             <div class="animate-on-scroll">
                 <div class="bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border border-gray-200">
                     <div class="text-center p-8">
-                        <span class="text-5xl block mb-3">📱</span>
+                        <span class="text-5xl block mb-3"><?= ak_icon('smartphone', 18) ?></span>
                         <p class="text-sm text-gray-500">App Screenshot Placeholder</p>
                         <p class="text-xs text-gray-400 mt-1">Dashboard Preview</p>
                     </div>
@@ -171,15 +171,15 @@ ob_start();
         </div>
         <div class="grid md:grid-cols-3 gap-6 animate-on-scroll">
             <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-                <div class="aspect-video bg-gray-100 flex items-center justify-center"><span class="text-3xl">📊</span></div>
+                <div class="aspect-video bg-gray-100 flex items-center justify-center"><span class="text-3xl"><?= ak_icon('bar-chart', 18) ?></span></div>
                 <div class="p-4"><p class="text-sm font-medium text-gray-900">Analytics Dashboard</p></div>
             </div>
             <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-                <div class="aspect-video bg-gray-100 flex items-center justify-center"><span class="text-3xl">🔄</span></div>
+                <div class="aspect-video bg-gray-100 flex items-center justify-center"><span class="text-3xl"><?= ak_icon('refresh', 18) ?></span></div>
                 <div class="p-4"><p class="text-sm font-medium text-gray-900">Automation Flow Builder</p></div>
             </div>
             <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-                <div class="aspect-video bg-gray-100 flex items-center justify-center"><span class="text-3xl">💬</span></div>
+                <div class="aspect-video bg-gray-100 flex items-center justify-center"><span class="text-3xl"><?= ak_icon('message-circle', 18) ?></span></div>
                 <div class="p-4"><p class="text-sm font-medium text-gray-900">Chat Interface</p></div>
             </div>
         </div>
@@ -196,14 +196,14 @@ ob_start();
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-on-scroll">
             <?php
             $useCases = [
-                ['icon' => '👗', 'title' => 'Fashion & Apparel', 'desc' => 'Size guides, style recommendations, and collection launches.'],
-                ['icon' => '💄', 'title' => 'Beauty & Skincare', 'desc' => 'Routine reminders, reorder prompts, and ingredient queries.'],
-                ['icon' => '🍕', 'title' => 'Food & Beverages', 'desc' => 'Order tracking, repeat orders, and freshness notifications.'],
-                ['icon' => '📱', 'title' => 'Electronics', 'desc' => 'Warranty info, setup guides, and accessory recommendations.'],
+                ['icon' => 'shirt', 'title' => 'Fashion & Apparel', 'desc' => 'Size guides, style recommendations, and collection launches.'],
+                ['icon' => 'sparkle', 'title' => 'Beauty & Skincare', 'desc' => 'Routine reminders, reorder prompts, and ingredient queries.'],
+                ['icon' => 'utensils', 'title' => 'Food & Beverages', 'desc' => 'Order tracking, repeat orders, and freshness notifications.'],
+                ['icon' => 'smartphone', 'title' => 'Electronics', 'desc' => 'Warranty info, setup guides, and accessory recommendations.'],
             ];
             foreach ($useCases as $uc): ?>
             <div class="p-6 bg-gray-50 rounded-2xl text-center hover:bg-gray-100 transition-colors">
-                <span class="text-3xl block mb-3"><?= $uc['icon'] ?></span>
+                <?= ak_icon($uc['icon'], 28) ?>
                 <h3 class="text-base font-semibold text-gray-900 mb-1"><?= $uc['title'] ?></h3>
                 <p class="text-sm text-gray-600"><?= $uc['desc'] ?></p>
             </div>
@@ -312,10 +312,10 @@ ob_start();
         <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Our support team is available to help you set up and optimize your WhatsApp automation. We typically respond within 2 hours.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:<?= SITE_EMAIL ?>" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-gray-700 border border-gray-300 rounded-xl hover:bg-white transition-colors">
-                📧 Email Support
+                <?= ak_icon('mail', 18) ?> Email Support
             </a>
             <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-green-600 rounded-xl hover:bg-green-700 transition-colors">
-                💬 Chat on WhatsApp
+                <?= ak_icon('message-circle', 18) ?> Chat on WhatsApp
             </a>
         </div>
     </div>

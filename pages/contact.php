@@ -95,7 +95,7 @@ ob_start();
                     </div>
 
                     <button type="submit" class="w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-gray-900 rounded-xl hover:bg-gray-800 transition-colors shadow-lg shadow-gray-900/20">
-                        <?= $formType === 'audit' ? 'Get My Free Audit' : 'Send Message' ?> →
+                        <?= $formType === 'audit' ? 'Get My Free Audit' : 'Send Message' ?> <?= ak_icon('arrow-right', 16) ?>
                     </button>
                     <p class="text-xs text-gray-400 mt-2">By submitting, you agree to our <a href="<?= url('privacy-policy') ?>" class="text-primary-600 hover:underline">Privacy Policy</a>.</p>
                 </form>

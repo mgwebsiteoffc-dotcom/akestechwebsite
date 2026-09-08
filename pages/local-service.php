@@ -396,7 +396,7 @@ ob_start();
     <p><?= htmlspecialchars($page['intro']) ?></p>
 
     <div class="ak-btns">
-      <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark"><?= htmlspecialchars($page['primaryCta']) ?> ↗</a>
+      <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark"><?= htmlspecialchars($page['primaryCta']) ?> <?= ak_icon('arrow-up-right', 16) ?></a>
       <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $whatsappText ?>" target="_blank" rel="noopener" class="ak-btn ak-btn--light">WhatsApp Us</a>
     </div>
 
@@ -474,7 +474,7 @@ ob_start();
       <div>
         <p>We support businesses across <?= htmlspecialchars(implode(', ', $page['areas'])) ?> and nearby markets <?= htmlspecialchars($page['nearby']) ?>, while building campaigns that can scale nationally.</p>
         <div class="ak-btns" style="margin-top:0">
-          <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--onDark">Request Free Audit ↗</a>
+          <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--onDark">Request Free Audit <?= ak_icon('arrow-up-right', 16) ?></a>
           <a href="tel:<?= SITE_PHONE ?>" class="ak-btn ak-btn--ghost">Call <?= SITE_PHONE ?></a>
         </div>
       </div>
@@ -518,7 +518,7 @@ ob_start();
       <a class="ak-row" href="<?= url($r['url']) ?>">
         <small><?= str_pad((string)$i, 2, '0', STR_PAD_LEFT) ?></small>
         <b><?= htmlspecialchars($r['title']) ?></b>
-        <span>↗</span>
+        <span><?= ak_icon('arrow-up-right', 16) ?></span>
       </a>
       <?php $i++; endforeach; ?>
     </div>

@@ -81,7 +81,7 @@ ob_start();
     <p><?= htmlspecialchars($sp['intro'] ?? '') ?></p>
 
     <div class="ak-btns">
-      <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark"><?= htmlspecialchars($sp['ctaBtn'] ?? 'Talk to us') ?> ↗</a>
+      <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark"><?= htmlspecialchars($sp['ctaBtn'] ?? 'Talk to us') ?> <?= ak_icon('arrow-up-right', 16) ?></a>
       <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $waText ?>" target="_blank" rel="noopener" class="ak-btn ak-btn--light">WhatsApp us</a>
     </div>
 
@@ -166,7 +166,7 @@ ob_start();
       <a class="ak-row" href="<?= $r['url'] ?>">
         <small><?= str_pad((string)$i, 2, '0', STR_PAD_LEFT) ?></small>
         <b><?= htmlspecialchars($r['title']) ?><?= !empty($r['copy']) ? ' — <span style="font-weight:400;color:#777;font-size:15px">' . htmlspecialchars($r['copy']) . '</span>' : '' ?></b>
-        <span>↗</span>
+        <span><?= ak_icon('arrow-up-right', 16) ?></span>
       </a>
       <?php $i++; endforeach; ?>
     </div>
@@ -208,7 +208,7 @@ ob_start();
       <div>
         <p><?= htmlspecialchars($sp['ctaCopy'] ?? 'Talk to our team and get a clear plan within one business day.') ?></p>
         <div class="ak-btns" style="margin-top:0">
-          <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--onDark"><?= htmlspecialchars($sp['ctaBtn'] ?? 'Talk to us') ?> ↗</a>
+          <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--onDark"><?= htmlspecialchars($sp['ctaBtn'] ?? 'Talk to us') ?> <?= ak_icon('arrow-up-right', 16) ?></a>
           <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $waText ?>" target="_blank" rel="noopener" class="ak-btn ak-btn--ghost">WhatsApp us</a>
         </div>
       </div>

@@ -60,7 +60,7 @@ ob_start();
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <?php if (empty($studies)): ?>
             <div class="text-center py-16">
-                <span class="text-4xl block mb-4">📊</span>
+                <span class="text-4xl block mb-4"><?= ak_icon('bar-chart', 18) ?></span>
                 <h2 class="text-xl font-semibold text-gray-900 mb-2">No case studies yet</h2>
                 <p class="text-gray-600">We're documenting our success stories. Check back soon!</p>
             </div>

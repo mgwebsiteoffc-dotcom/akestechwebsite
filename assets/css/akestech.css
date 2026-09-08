@@ -471,3 +471,11 @@ a.ak-row:hover{padding-left:10px}
 @media (max-width:380px){
   .ak-h1{font-size:46px;letter-spacing:-2px}
 }
+
+/* ==========================================================================
+   ICONS — sprite references replacing emoji site-wide
+   ========================================================================== */
+.ak-ic{display:inline-block;vertical-align:-.14em;flex:none;stroke-linecap:round;stroke-linejoin:round}
+.ak-card .ak-ic,.ak-row .ak-ic{transition:transform .3s var(--ease)}
+a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2px)}
+.ak-ic--lg{width:24px;height:24px}

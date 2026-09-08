@@ -71,7 +71,7 @@ ob_start();
         <p class="text-xs font-bold uppercase tracking-[0.2em] text-green-400 mb-4">Free ecommerce resource</p>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">24 WhatsApp Message Templates for Ecommerce</h1>
         <p class="mt-6 text-lg lg:text-xl leading-relaxed text-slate-300 max-w-3xl mx-auto">Copy, customize, and use practical messages for abandoned cart recovery, COD verification, order updates, retention, and support.</p>
-        <div class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-slate-300"><span>✓ Copy and paste</span><span>✓ 5 categories</span><span>✓ Shopify friendly</span><span>✓ No signup</span></div>
+        <div class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-slate-300"><span><?= ak_icon('check', 16) ?> Copy and paste</span><span><?= ak_icon('check', 16) ?> 5 categories</span><span><?= ak_icon('check', 16) ?> Shopify friendly</span><span><?= ak_icon('check', 16) ?> No signup</span></div>
     </div>
 </section>
 
@@ -110,7 +110,7 @@ ob_start();
 </section>
 
 <section class="grid lg:grid-cols-2 gap-6 mb-16"><div class="bg-white border border-gray-200 rounded-2xl p-7"><h2 class="text-xl font-bold text-gray-900 mb-4">Variable cheat sheet</h2><div class="space-y-3 text-sm"><?php foreach ([['{{1}}', 'Customer name'], ['{{2}}', 'Product, order number, or store'], ['{{3}}', 'Benefit, amount, date, or address'], ['{{4}}', 'Secure checkout, tracking, or support link']] as $v): ?><div class="flex items-center gap-4"><code class="px-2.5 py-1 bg-gray-100 rounded text-primary-700 font-semibold"><?= $v[0] ?></code><span class="text-gray-600"><?= $v[1] ?></span></div><?php endforeach; ?></div></div>
-<div class="bg-amber-50 border border-amber-200 rounded-2xl p-7"><h2 class="text-xl font-bold text-gray-900 mb-4">Pre-send checklist</h2><ul class="space-y-3 text-sm text-gray-700"><li>✓ Recipient gave appropriate WhatsApp consent</li><li>✓ Every placeholder has a valid value</li><li>✓ Links use HTTPS and open correctly</li><li>✓ Offers, stock claims, and deadlines are accurate</li><li>✓ Promotional messages offer an easy opt-out</li></ul></div></section>
+<div class="bg-amber-50 border border-amber-200 rounded-2xl p-7"><h2 class="text-xl font-bold text-gray-900 mb-4">Pre-send checklist</h2><ul class="space-y-3 text-sm text-gray-700"><li><?= ak_icon('check', 16) ?> Recipient gave appropriate WhatsApp consent</li><li><?= ak_icon('check', 16) ?> Every placeholder has a valid value</li><li><?= ak_icon('check', 16) ?> Links use HTTPS and open correctly</li><li><?= ak_icon('check', 16) ?> Offers, stock claims, and deadlines are accurate</li><li><?= ak_icon('check', 16) ?> Promotional messages offer an easy opt-out</li></ul></div></section>
 
 <section><div class="text-center mb-10"><h2 class="text-3xl font-extrabold text-gray-900 mb-3">WhatsApp template FAQs</h2><p class="text-gray-600">Quick answers for ecommerce teams.</p></div><div class="space-y-4"><?php foreach ($faqs as $faq): ?><details class="bg-white border border-gray-200 rounded-xl group"><summary class="cursor-pointer list-none px-6 py-5 font-semibold text-gray-900 flex justify-between gap-4"><?= clean($faq['question']) ?><span class="text-primary-600 group-open:rotate-45 transition-transform">+</span></summary><div class="px-6 pb-5 text-gray-600 leading-relaxed"><?= clean($faq['answer']) ?></div></details><?php endforeach; ?></div></section>
 </div></main>

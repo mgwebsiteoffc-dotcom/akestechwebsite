@@ -10,7 +10,7 @@
             <img src="<?= $post['featured_image'] ?>" alt="<?= clean($post['title']) ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
         <?php else: ?>
             <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
-                <span class="text-3xl">📝</span>
+                <span class="text-3xl"><?= ak_icon('file-text', 18) ?></span>
             </div>
         <?php endif; ?>
     </div>

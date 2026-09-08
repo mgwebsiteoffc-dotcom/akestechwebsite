@@ -196,7 +196,7 @@ $pages = [
         'h1' => 'Site visits, not just enquiry volume.',
         'intro' => 'Project funnels, qualification and WhatsApp follow-up that turn ad spend into booked site visits and site visits into bookings.',
         'answer' => 'Real estate marketing fails when every enquiry is treated the same. AKESTECH builds project-specific landing pages, runs Meta and Google campaigns, qualifies and scores every enquiry in Lead365, automates WhatsApp and call follow-up, and reports on cost per site visit and cost per booking instead of cost per lead.',
-        'stats' => [['value' => 'CPL → CPV', 'label' => 'Reporting that matters'], ['value' => '< 5 min', 'label' => 'Speed to first contact'], ['value' => '100%', 'label' => 'Enquiries tracked'], ['value' => 'Auto', 'label' => 'Site-visit reminders']],
+        'stats' => [['value' => 'CPL to CPV', 'label' => 'Reporting that matters'], ['value' => '< 5 min', 'label' => 'Speed to first contact'], ['value' => '100%', 'label' => 'Enquiries tracked'], ['value' => 'Auto', 'label' => 'Site-visit reminders']],
         'challenges' => [
             ['title' => 'Unqualified enquiries', 'copy' => 'Sales teams waste hours. Automated scoring and qualification filter before handover.'],
             ['title' => 'Slow first response', 'copy' => 'Buyers enquire everywhere at once. Instant WhatsApp response keeps you in the running.'],
@@ -297,7 +297,7 @@ ob_start();
     <p><?= htmlspecialchars($page['intro']) ?></p>
 
     <div class="ak-btns">
-      <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark">Talk to our team ↗</a>
+      <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark">Talk to our team <?= ak_icon('arrow-up-right', 16) ?></a>
       <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $whatsappText ?>" target="_blank" rel="noopener" class="ak-btn ak-btn--light">WhatsApp us</a>
     </div>
 
@@ -355,7 +355,7 @@ ob_start();
       <a class="ak-row" href="<?= $s['url'] ?>">
         <small><?= str_pad((string)$i, 2, '0', STR_PAD_LEFT) ?></small>
         <b><?= htmlspecialchars($s['title']) ?></b>
-        <span>↗</span>
+        <span><?= ak_icon('arrow-up-right', 16) ?></span>
       </a>
       <?php $i++; endforeach; ?>
     </div>
@@ -416,7 +416,7 @@ ob_start();
       <div>
         <p>Tell us where you are today. We'll come back within one business day with the three biggest opportunities we can see.</p>
         <div class="ak-btns" style="margin-top:0">
-          <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--onDark">Start a conversation ↗</a>
+          <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--onDark">Start a conversation <?= ak_icon('arrow-up-right', 16) ?></a>
           <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $whatsappText ?>" target="_blank" rel="noopener" class="ak-btn ak-btn--ghost">WhatsApp us</a>
         </div>
       </div>

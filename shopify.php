@@ -433,7 +433,7 @@
         }
 
         .problem-list li::before {
-            content: "✗";
+            content: "<?= ak_icon('x', 16) ?>";
             position: absolute;
             left: 0;
             color: var(--danger);
@@ -442,7 +442,7 @@
         }
 
         .solution-list li::before {
-            content: "✓";
+            content: "<?= ak_icon('check', 16) ?>";
             position: absolute;
             left: 0;
             color: var(--success);
@@ -536,7 +536,7 @@
         }
 
         .step-deliverables li::before {
-            content: "→";
+            content: "<?= ak_icon('arrow-right', 16) ?>";
             position: absolute;
             left: 0;
             color: var(--primary);
@@ -632,7 +632,7 @@
         }
 
         .features li::before {
-            content: "✓";
+            content: "<?= ak_icon('check', 16) ?>";
             position: absolute;
             left: 0;
             color: var(--success);
@@ -863,21 +863,21 @@
 
     <!-- Announcement -->
     <div class="announcement">
-        🔥 <span>LIMITED OFFER:</span> Get 15% OFF + FREE Marketing Setup Worth ₹35,000 - Only 7 Spots Left This Week!
+        <?= ak_icon('flame', 18) ?> <span>LIMITED OFFER:</span> Get 15% OFF + FREE Marketing Setup Worth ₹35,000 - Only 7 Spots Left This Week!
     </div>
 
     <!-- Header -->
     <header>
         <div class="header-content">
             <div class="logo">ShopifyPro</div>
-            <a href="#contact" class="header-cta">Book Free Call →</a>
+            <a href="#contact" class="header-cta">Book Free Call <?= ak_icon('arrow-right', 16) ?></a>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">✓ 500+ Stores Launched • ₹50Cr+ Revenue Generated</div>
+            <div class="hero-badge"><?= ak_icon('check', 16) ?> 500+ Stores Launched • ₹50Cr+ Revenue Generated</div>
             <h1>Build a Shopify Store That Makes <span>₹10L-₹1Cr+/Month</span></h1>
             <p>We don't build pretty websites. We build money-making machines that convert visitors into paying customers. Launch in 7 days with our proven system.</p>
             
@@ -901,12 +901,12 @@
             </div>
 
             <div class="hero-ctas">
-                <a href="#contact" class="btn btn-primary">Start at ₹9,999 →</a>
+                <a href="#contact" class="btn btn-primary">Start at ₹9,999 <?= ak_icon('arrow-right', 16) ?></a>
                 <a href="#case-studies" class="btn btn-secondary">See Success Stories</a>
             </div>
 
             <div class="guarantee">
-                🛡️ 30-Day Money-Back Guarantee • No Questions Asked
+                <?= ak_icon('shield', 18) ?> 30-Day Money-Back Guarantee • No Questions Asked
             </div>
         </div>
     </section>
@@ -1055,7 +1055,7 @@
 
             <div class="problem-solution-grid">
                 <div class="problem-side">
-                    <h3 class="side-title">❌ What You're Doing Wrong</h3>
+                    <h3 class="side-title"><?= ak_icon('x-circle', 18) ?> What You're Doing Wrong</h3>
                     <ul class="problem-list">
                         <li>Using cheap templates that look like everyone else</li>
                         <li>Slow loading speed (losing 50%+ visitors)</li>
@@ -1069,7 +1069,7 @@
                 </div>
 
                 <div class="solution-side">
-                    <h3 class="side-title">✅ How We Make You Succeed</h3>
+                    <h3 class="side-title"><?= ak_icon('check-circle', 18) ?> How We Make You Succeed</h3>
                     <ul class="solution-list">
                         <li>Custom premium design that stands out</li>
                         <li>Lightning-fast loading (under 2 seconds)</li>
@@ -1194,7 +1194,7 @@
                         <li>30 days support</li>
                         <li><strong>FREE Marketing Setup</strong></li>
                     </ul>
-                    <button class="plan-cta" onclick="selectPlan('Growth - ₹34,999')">Best Value →</button>
+                    <button class="plan-cta" onclick="selectPlan('Growth - ₹34,999')">Best Value <?= ak_icon('arrow-right', 16) ?></button>
                 </div>
 
                 <div class="pricing-card">
@@ -1271,7 +1271,7 @@
                             <option>Not Sure - Need Consultation</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%; padding:20px;">Get Started Now →</button>
+                    <button type="submit" class="btn btn-primary" style="width:100%; padding:20px;">Get Started Now <?= ak_icon('arrow-right', 16) ?></button>
                 </form>
             </div>
         </div>

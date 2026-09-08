@@ -42,7 +42,7 @@ if (empty($faqs)) return;
 
     <div class="ak-reveal" style="margin-top:34px">
       <p style="color:#777;font-size:16px">Didn't find what you're looking for?
-        <a href="<?= url('contact') ?>" style="text-decoration:underline;color:var(--ink)">Talk to our team →</a>
+        <a href="<?= url('contact') ?>" style="text-decoration:underline;color:var(--ink)">Talk to our team <?= ak_icon('arrow-right', 16) ?></a>
       </p>
     </div>
   </div>

@@ -63,7 +63,7 @@ ob_start();
                     <span class="text-xs font-semibold text-primary-600 uppercase tracking-wider">Guide</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">Shopify Growth Playbook 2026</h3>
                     <p class="text-sm text-gray-600 mb-4">Complete guide to scaling your Shopify store from ₹5L to ₹1Cr monthly revenue.</p>
-                    <button type="button" data-open-playbook class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free →</button>
+                    <button type="button" data-open-playbook class="text-sm font-medium text-primary-600 hover:text-primary-700">Download Free <?= ak_icon('arrow-right', 16) ?></button>
                 </div>
             </div>
 
@@ -76,7 +76,7 @@ ob_start();
                     <span class="text-xs font-semibold text-green-600 uppercase tracking-wider">Template</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">WhatsApp Message Templates</h3>
                     <p class="text-sm text-gray-600 mb-4">20+ proven WhatsApp templates for cart recovery, COD verification, and customer engagement.</p>
-                    <a href="<?= url('resources/whatsapp-message-templates') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">View More →</a>
+                    <a href="<?= url('resources/whatsapp-message-templates') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">View More <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
 
@@ -89,7 +89,7 @@ ob_start();
                     <span class="text-xs font-semibold text-orange-600 uppercase tracking-wider">Calculator</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">ROAS Calculator</h3>
                     <p class="text-sm text-gray-600 mb-4">Calculate your target ROAS, break-even point, and profitability with our free calculator.</p>
-                    <a href="<?= url('resources/roas-calculator') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">Use Calculator →</a>
+                    <a href="<?= url('resources/roas-calculator') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">Use Calculator <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@ ob_start();
                     <span class="text-xs font-semibold text-purple-600 uppercase tracking-wider">Checklist</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">Shopify Launch Checklist</h3>
                     <p class="text-sm text-gray-600 mb-4">50-point checklist to ensure your Shopify store is ready to convert from day one.</p>
-                    <a href="<?= url('resources/shopify-launch-checklist') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">View Checklist →</a>
+                    <a href="<?= url('resources/shopify-launch-checklist') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">View Checklist <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
 
@@ -115,7 +115,7 @@ ob_start();
                     <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Guide</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">Meta Ads for D2C Brands</h3>
                     <p class="text-sm text-gray-600 mb-4">Step-by-step guide to setting up profitable Meta ad campaigns for your Shopify store.</p>
-                    <a href="<?= url('resources/meta-ads-d2c-guide') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">View Guide →</a>
+                    <a href="<?= url('resources/meta-ads-d2c-guide') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">View Guide <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
 
@@ -128,7 +128,7 @@ ob_start();
                     <span class="text-xs font-semibold text-cyan-600 uppercase tracking-wider">Tool</span>
                     <h3 class="text-base font-semibold text-gray-900 mt-1.5 mb-2 group-hover:text-primary-600 transition-colors">Shopify Speed Analyzer</h3>
                     <p class="text-sm text-gray-600 mb-4">Check your Shopify store speed score and get instant optimization recommendations.</p>
-                    <a href="<?= url('resources/shopify-speed-analyzer') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">Analyze Now →</a>
+                    <a href="<?= url('resources/shopify-speed-analyzer') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">Analyze Now <?= ak_icon('arrow-right', 16) ?></a>
                 </div>
             </div>
         </div>

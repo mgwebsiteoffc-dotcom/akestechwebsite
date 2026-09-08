@@ -88,7 +88,7 @@ $industries = [
       <a href="<?= url('about') ?>">About</a>
     </div>
 
-    <a href="<?= url('contact') ?>" class="ak-navcta">Start a project →</a>
+    <a href="<?= url('contact') ?>" class="ak-navcta">Start a project <?= ak_icon('arrow-right', 16) ?></a>
 
     <button class="ak-burger" id="akBurger" aria-label="Open menu" aria-expanded="false"><i></i></button>
   </nav>
@@ -111,6 +111,6 @@ $industries = [
     <a href="<?= url('resources') ?>">Resources</a>
     <a href="<?= url('blog') ?>">Blog</a>
     <a href="<?= url('about') ?>">About</a>
-    <a href="<?= url('contact') ?>">Start a project →</a>
+    <a href="<?= url('contact') ?>">Start a project <?= ak_icon('arrow-right', 16) ?></a>
   </div>
 </div>
