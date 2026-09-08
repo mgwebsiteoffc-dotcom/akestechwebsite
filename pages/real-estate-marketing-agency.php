@@ -199,16 +199,16 @@ ob_start();
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 lg:p-5">
                     <img src="<?= asset('images/hero-real-estate-dashboard.jpg') ?>" alt="Real estate marketing dashboard" class="w-full rounded-xl border border-gray-200 bg-white">
                     <div class="grid grid-cols-3 gap-3 mt-3">
-                        <div class="bg-white rounded-xl border border-gray-100 p-3">
-                            <p class="text-lg font-bold text-gray-950">62%</p>
+                        <div class="ak-card ak-card--flat ak-card--sm">
+                            <p class="ak-h3">62%</p>
                             <p class="text-[11px] text-gray-500 mt-1">Qualified</p>
                         </div>
-                        <div class="bg-white rounded-xl border border-gray-100 p-3">
-                            <p class="text-lg font-bold text-gray-950">18%</p>
+                        <div class="ak-card ak-card--flat ak-card--sm">
+                            <p class="ak-h3">18%</p>
                             <p class="text-[11px] text-gray-500 mt-1">Visit ratio</p>
                         </div>
-                        <div class="bg-white rounded-xl border border-gray-100 p-3">
-                            <p class="text-lg font-bold text-gray-950">4.2X</p>
+                        <div class="ak-card ak-card--flat ak-card--sm">
+                            <p class="ak-h3">4.2X</p>
                             <p class="text-[11px] text-gray-500 mt-1">Remarketing</p>
                         </div>
                     </div>

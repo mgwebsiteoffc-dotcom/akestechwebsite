@@ -77,50 +77,50 @@ ob_start();
 
 <!-- CONTENT -->
 <section class="bg-white py-12 lg:py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="ak-container">
         <?php if ($study['problem']): ?>
-        <div class="mb-12 animate-on-scroll">
+        <div class="ak-reveal">
             <div class="flex items-center gap-3 mb-4">
                 <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center"><span class="text-lg"><?= ak_icon('target', 18) ?></span></div>
-                <h2 class="text-xl font-bold text-gray-900">The Challenge</h2>
+                <h2 class="ak-h3">The Challenge</h2>
             </div>
-            <div class="prose max-w-none pl-13">
+            <div class="ak-prose">
                 <p class="text-gray-600 leading-relaxed"><?= nl2br(clean($study['problem'])) ?></p>
             </div>
         </div>
         <?php endif; ?>
 
         <?php if ($study['strategy']): ?>
-        <div class="mb-12 animate-on-scroll">
+        <div class="ak-reveal">
             <div class="flex items-center gap-3 mb-4">
                 <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center"><span class="text-lg"><?= ak_icon('lightbulb', 18) ?></span></div>
-                <h2 class="text-xl font-bold text-gray-900">Our Strategy</h2>
+                <h2 class="ak-h3">Our Strategy</h2>
             </div>
-            <div class="prose max-w-none pl-13">
+            <div class="ak-prose">
                 <p class="text-gray-600 leading-relaxed"><?= nl2br(clean($study['strategy'])) ?></p>
             </div>
         </div>
         <?php endif; ?>
 
         <?php if ($study['execution']): ?>
-        <div class="mb-12 animate-on-scroll">
+        <div class="ak-reveal">
             <div class="flex items-center gap-3 mb-4">
                 <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center"><span class="text-lg"><?= ak_icon('zap', 18) ?></span></div>
-                <h2 class="text-xl font-bold text-gray-900">Execution</h2>
+                <h2 class="ak-h3">Execution</h2>
             </div>
-            <div class="prose max-w-none pl-13">
+            <div class="ak-prose">
                 <p class="text-gray-600 leading-relaxed"><?= nl2br(clean($study['execution'])) ?></p>
             </div>
         </div>
         <?php endif; ?>
 
         <?php if ($study['results']): ?>
-        <div class="mb-12 animate-on-scroll">
+        <div class="ak-reveal">
             <div class="flex items-center gap-3 mb-4">
                 <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center"><span class="text-lg"><?= ak_icon('trending-up', 18) ?></span></div>
-                <h2 class="text-xl font-bold text-gray-900">Results</h2>
+                <h2 class="ak-h3">Results</h2>
             </div>
-            <div class="prose max-w-none pl-13">
+            <div class="ak-prose">
                 <p class="text-gray-600 leading-relaxed"><?= nl2br(clean($study['results'])) ?></p>
             </div>
         </div>

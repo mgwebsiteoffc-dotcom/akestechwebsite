@@ -165,7 +165,7 @@ ob_start();
 <!-- SCREENSHOTS SECTION -->
 <section class="ak-section">
     <div class="ak-container">
-        <div class="text-center mb-12 animate-on-scroll">
+        <div class="ak-head ak-head--center ak-reveal">
             <h2 class="ak-h3">See It in Action</h2>
             <p class="text-gray-600">A quick look at the dashboard and WhatsApp flows.</p>
         </div>
@@ -189,7 +189,7 @@ ob_start();
 <!-- USE CASES -->
 <section class="ak-section">
     <div class="ak-container">
-        <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll">
+        <div class="ak-head ak-head--center ak-reveal">
             <h2 class="ak-h3">Built for Every Shopify Use Case</h2>
             <p class="text-gray-600">Whether you sell fashion, beauty, electronics, or food — our automation works for you.</p>
         </div>
@@ -215,17 +215,17 @@ ob_start();
 <!-- PRICING -->
 <section class="ak-section" id="pricing">
     <div class="ak-container">
-        <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll">
+        <div class="ak-head ak-head--center ak-reveal">
             <h2 class="ak-h3">Simple, Transparent Pricing</h2>
             <p class="text-gray-600">Start free. Scale as you grow. No hidden charges.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
             <!-- Free -->
-            <div class="animate-on-scroll bg-white border border-gray-200 rounded-2xl p-6 lg:p-8">
-                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Starter</p>
+            <div class="ak-card ak-spot ak-reveal">
+                <p class="ak-kicker">Starter</p>
                 <div class="flex items-baseline gap-1 mb-1">
-                    <span class="text-4xl font-extrabold text-gray-900">Free</span>
+                    <span class="ak-h1">Free</span>
                 </div>
                 <p class="text-sm text-gray-500 mb-6">For stores getting started</p>
                 <ul class="space-y-3 mb-8">
@@ -235,7 +235,7 @@ ob_start();
                     <li class="flex items-center gap-2 text-sm text-gray-400"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> COD verification</li>
                     <li class="flex items-center gap-2 text-sm text-gray-400"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> Broadcast campaigns</li>
                 </ul>
-                <a href="<?= SHOPIFY_APP_URL ?>" target="_blank" class="block text-center px-6 py-3 text-sm font-semibold text-primary-600 border border-primary-200 rounded-xl hover:bg-primary-50 transition-colors">Start Free</a>
+                <a href="<?= SHOPIFY_APP_URL ?>" target="_blank" class="ak-btn ak-btn--outline ak-btn--block">Start Free</a>
             </div>
 
             <!-- Growth (Popular) -->
@@ -243,7 +243,7 @@ ob_start();
                 <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary-600 text-white text-xs font-semibold rounded-full">Most Popular</span>
                 <p class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-2">Growth</p>
                 <div class="flex items-baseline gap-1 mb-1">
-                    <span class="text-4xl font-extrabold text-gray-900">₹2,499</span>
+                    <span class="ak-h1">₹2,499</span>
                     <span class="text-sm text-gray-500">/month</span>
                 </div>
                 <p class="text-sm text-gray-500 mb-6">For growing D2C brands</p>
@@ -258,10 +258,10 @@ ob_start();
             </div>
 
             <!-- Enterprise -->
-            <div class="animate-on-scroll bg-white border border-gray-200 rounded-2xl p-6 lg:p-8">
-                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Enterprise</p>
+            <div class="ak-card ak-spot ak-reveal">
+                <p class="ak-kicker">Enterprise</p>
                 <div class="flex items-baseline gap-1 mb-1">
-                    <span class="text-4xl font-extrabold text-gray-900">Custom</span>
+                    <span class="ak-h1">Custom</span>
                 </div>
                 <p class="text-sm text-gray-500 mb-6">For high-volume stores</p>
                 <ul class="space-y-3 mb-8">
@@ -271,7 +271,7 @@ ob_start();
                     <li class="flex items-center gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Custom integrations</li>
                     <li class="flex items-center gap-2 text-sm text-gray-700"><svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Dedicated account manager</li>
                 </ul>
-                <a href="<?= url('contact') ?>" class="block text-center px-6 py-3 text-sm font-semibold text-primary-600 border border-primary-200 rounded-xl hover:bg-primary-50 transition-colors">Contact Sales</a>
+                <a href="<?= url('contact') ?>" class="ak-btn ak-btn--outline ak-btn--block">Contact Sales</a>
             </div>
         </div>
     </div>
@@ -281,7 +281,7 @@ ob_start();
 <?php if (!empty($faqs)): ?>
 <section class="ak-section" id="faq">
     <div class="ak-container ak-narrow">
-        <div class="text-center mb-12 animate-on-scroll">
+        <div class="ak-head ak-head--center ak-reveal">
             <h2 class="ak-h3">Frequently Asked Questions</h2>
             <p class="text-gray-600">Quick answers to common questions about our WhatsApp automation app.</p>
         </div>
