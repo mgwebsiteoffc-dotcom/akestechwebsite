@@ -41,7 +41,7 @@ ob_start();
             </thead>
             <tbody class="divide-y divide-gray-100">
                 <?php if (empty($studies)): ?>
-                <tr><td colspan="5" class="px-5 py-8 text-center text-gray-500">No case studies yet. <a href="/admin/?page=case-study-edit" class="text-primary-600 font-medium">Create one →</a></td></tr>
+                <tr><td colspan="5" class="px-5 py-8 text-center text-gray-500">No case studies yet. <a href="/admin/?page=case-study-edit" class="text-primary-600 font-medium">Create one <?= ad_icon('arrow-right', 14) ?></a></td></tr>
                 <?php else: ?>
                     <?php foreach ($studies as $s): ?>
                     <tr class="hover:bg-gray-50 transition-colors">

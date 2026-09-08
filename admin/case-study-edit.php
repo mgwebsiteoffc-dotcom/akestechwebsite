@@ -100,7 +100,7 @@ ob_start();
 ?>
 
 <div class="mb-4">
-    <a href="/admin/?page=case-studies" class="text-sm text-gray-500 hover:text-gray-700">← Back to Case Studies</a>
+    <a href="/admin/?page=case-studies" class="text-sm text-gray-500 hover:text-gray-700"><?= ad_icon('arrow-left') ?> Back to Case Studies</a>
 </div>
 
 <form method="POST" enctype="multipart/form-data" class="grid lg:grid-cols-3 gap-6">
@@ -166,14 +166,14 @@ ob_start();
                                class="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600">
                         <input type="text" name="metric_value[]" value="<?= clean($val) ?>" placeholder="Value (e.g. 3.5X)"
                                class="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600">
-                        <button type="button" onclick="this.parentElement.remove()" class="px-2 text-red-400 hover:text-red-600">✕</button>
+                        <button type="button" onclick="this.parentElement.remove()" class="px-2 text-red-400 hover:text-red-600"><?= ad_icon('x', 14) ?></button>
                     </div>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <div class="flex gap-3 metric-row">
                         <input type="text" name="metric_key[]" placeholder="Metric name" class="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg">
                         <input type="text" name="metric_value[]" placeholder="Value" class="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg">
-                        <button type="button" onclick="this.parentElement.remove()" class="px-2 text-red-400 hover:text-red-600">✕</button>
+                        <button type="button" onclick="this.parentElement.remove()" class="px-2 text-red-400 hover:text-red-600"><?= ad_icon('x', 14) ?></button>
                     </div>
                 <?php endif; ?>
             </div>
@@ -244,7 +244,7 @@ function addMetricRow() {
     row.innerHTML = `
         <input type="text" name="metric_key[]" placeholder="Metric name" class="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg">
         <input type="text" name="metric_value[]" placeholder="Value" class="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg">
-        <button type="button" onclick="this.parentElement.remove()" class="px-2 text-red-400 hover:text-red-600">✕</button>
+        <button type="button" onclick="this.parentElement.remove()" class="px-2 text-red-400 hover:text-red-600"><?= ad_icon('x', 14) ?></button>
     `;
     container.appendChild(row);
 }

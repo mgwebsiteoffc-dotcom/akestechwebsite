@@ -19,9 +19,9 @@
 
             <!-- Top Visual -->
             <div class="bg-gradient-to-br from-primary-600 to-primary-700 px-6 py-8 text-center">
-                <span class="text-4xl block mb-3">⏳</span>
+                <span class="block mb-3 text-white/90"><svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke-width="2"/><polyline points="12 7 12 12 15.5 14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 <h2 class="text-2xl font-bold text-white mb-2">Wait! Before You Go...</h2>
-                <p class="text-primary-100 text-sm">Don't miss out on growing your Shopify store</p>
+                <p class="text-primary-100 text-sm">Don't miss out on automating and growing your business</p>
             </div>
 
             <!-- Content -->

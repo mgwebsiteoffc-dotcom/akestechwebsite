@@ -103,7 +103,7 @@ ob_start();
         <option value="product_demo" <?= $typeFilter === 'product_demo' ? 'selected' : '' ?>>Product Demo</option>
     </select>
     <?php if ($statusFilter || $typeFilter): ?>
-    <a href="/admin/?page=leads" class="text-sm text-gray-500 hover:text-gray-700">Clear filters ✕</a>
+    <a href="/admin/?page=leads" class="text-sm text-gray-500 hover:text-gray-700">Clear filters <?= ad_icon('x', 14) ?></a>
     <?php endif; ?>
     <span class="text-sm text-gray-500 ml-auto"><?= $total ?> total leads</span>
 </div>
@@ -241,11 +241,11 @@ ob_start();
 <div class="flex justify-center mt-6">
     <div class="flex items-center gap-2">
         <?php if ($page > 1): ?>
-        <a href="/admin/?page=leads&p=<?= $page-1 ?>&status=<?= $statusFilter ?>&type=<?= $typeFilter ?>" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 bg-white">← Prev</a>
+        <a href="/admin/?page=leads&p=<?= $page-1 ?>&status=<?= $statusFilter ?>&type=<?= $typeFilter ?>" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 bg-white"><?= ad_icon('chev-left', 14) ?> Prev</a>
         <?php endif; ?>
         <span class="text-sm text-gray-500">Page <?= $page ?> of <?= $totalPages ?></span>
         <?php if ($page < $totalPages): ?>
-        <a href="/admin/?page=leads&p=<?= $page+1 ?>&status=<?= $statusFilter ?>&type=<?= $typeFilter ?>" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 bg-white">Next →</a>
+        <a href="/admin/?page=leads&p=<?= $page+1 ?>&status=<?= $statusFilter ?>&type=<?= $typeFilter ?>" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 bg-white">Next <?= ad_icon('chev-right', 14) ?></a>
         <?php endif; ?>
     </div>
 </div>

@@ -66,7 +66,7 @@ ob_start();
             <tbody class="divide-y divide-gray-100">
                 <?php if (empty($posts)): ?>
                 <tr>
-                    <td colspan="5" class="px-5 py-8 text-center text-gray-500">No blog posts found. <a href="/admin/?page=blog-edit" class="text-primary-600 font-medium">Create one →</a></td>
+                    <td colspan="5" class="px-5 py-8 text-center text-gray-500">No blog posts found. <a href="/admin/?page=blog-edit" class="text-primary-600 font-medium">Create one <?= ad_icon('arrow-right', 14) ?></a></td>
                 </tr>
                 <?php else: ?>
                     <?php foreach ($posts as $post): ?>
@@ -76,7 +76,7 @@ ob_start();
                                 <?php if ($post['featured_image']): ?>
                                     <img src="<?= SITE_URL . '/' . $post['featured_image'] ?>" alt="" class="w-10 h-10 rounded-lg object-cover flex-shrink-0">
                                 <?php else: ?>
-                                    <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0"><span class="text-sm">📝</span></div>
+                                    <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0"><?= ad_icon('file-text', 18) ?></div>
                                 <?php endif; ?>
                                 <div class="min-w-0">
                                     <p class="font-medium text-gray-900 truncate max-w-xs"><?= clean($post['title']) ?></p>

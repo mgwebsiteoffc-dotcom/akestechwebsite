@@ -75,7 +75,7 @@ ob_start();
     <div class="bg-white rounded-xl border border-gray-200">
         <div class="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
             <h2 class="text-sm font-semibold text-gray-900">Recent Leads</h2>
-            <a href="/admin/?page=leads" class="text-xs text-primary-600 hover:text-primary-700 font-medium">View All →</a>
+            <a href="/admin/?page=leads" class="text-xs text-primary-600 hover:text-primary-700 font-medium">View All <?= ad_icon('arrow-right', 14) ?></a>
         </div>
         <div class="divide-y divide-gray-100">
             <?php if (empty($recentLeads)): ?>
@@ -106,7 +106,7 @@ ob_start();
     <div class="bg-white rounded-xl border border-gray-200">
         <div class="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
             <h2 class="text-sm font-semibold text-gray-900">Recent Blog Posts</h2>
-            <a href="/admin/?page=blogs" class="text-xs text-primary-600 hover:text-primary-700 font-medium">View All →</a>
+            <a href="/admin/?page=blogs" class="text-xs text-primary-600 hover:text-primary-700 font-medium">View All <?= ad_icon('arrow-right', 14) ?></a>
         </div>
         <div class="divide-y divide-gray-100">
             <?php if (empty($recentPosts)): ?>
@@ -134,19 +134,19 @@ ob_start();
     <h2 class="text-sm font-semibold text-gray-900 mb-4">Quick Actions</h2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <a href="/admin/?page=blog-edit" class="p-4 bg-white border border-gray-200 rounded-xl hover:border-primary-300 hover:shadow-sm transition-all text-center">
-            <span class="text-2xl block mb-2">✍️</span>
+            <?= ad_icon('edit', 26, 'ad-ico-block') ?>
             <p class="text-sm font-medium text-gray-900">New Blog Post</p>
         </a>
         <a href="/admin/?page=case-study-edit" class="p-4 bg-white border border-gray-200 rounded-xl hover:border-primary-300 hover:shadow-sm transition-all text-center">
-            <span class="text-2xl block mb-2">📊</span>
+            <?= ad_icon('chart', 26, 'ad-ico-block') ?>
             <p class="text-sm font-medium text-gray-900">New Case Study</p>
         </a>
         <a href="/admin/?page=faq-edit" class="p-4 bg-white border border-gray-200 rounded-xl hover:border-primary-300 hover:shadow-sm transition-all text-center">
-            <span class="text-2xl block mb-2">❓</span>
+            <?= ad_icon('help', 26, 'ad-ico-block') ?>
             <p class="text-sm font-medium text-gray-900">New FAQ</p>
         </a>
         <a href="/admin/?page=leads" class="p-4 bg-white border border-gray-200 rounded-xl hover:border-primary-300 hover:shadow-sm transition-all text-center">
-            <span class="text-2xl block mb-2">📥</span>
+            <?= ad_icon('inbox', 26, 'ad-ico-block') ?>
             <p class="text-sm font-medium text-gray-900">View Leads</p>
         </a>
     </div>
