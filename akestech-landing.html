@@ -209,13 +209,15 @@
     .service .plus { display: inline-block; transition: transform .25s ease; }
     .service.open .plus { transform: rotate(45deg); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height .45s ease; }
-    .faq-a p {
-      margin: 0 0 0 80px;
-      padding: 0;
-      background: none; border: 0; border-radius: 0; box-shadow: none;
-      color: #3a3a38; font-size: 18px; font-weight: 400; line-height: 1.7; max-width: 840px;
+    .faq-a__in {
+      display: grid; grid-template-columns: 60px 1fr 30px; gap: 20px; align-items: start;
+      padding: 24px 0 26px; border-bottom: 1px solid var(--line);
     }
-    .faq-a::after { content: ""; display: block; height: 22px; }
+    .faq-a__in p {
+      grid-column: 2; margin: 0; background: none; border: 0; border-radius: 0; box-shadow: none;
+      color: #3a3a38; font-size: 17px; font-weight: 400; line-height: 1.75; max-width: 840px;
+    }
+    .faq-a::after { content: ""; display: block; height: 0; }
 
     /* ---------------- PRODUCTS ---------------- */
     .products { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -341,7 +343,8 @@
       .statement, .cta { padding: 30px 24px; }
       footer { flex-direction: column; gap: 10px; }
       .form-row { grid-template-columns: 1fr; }
-      .faq-a p { margin-left: 0; padding: 0; font-size: 17px; }
+      .faq-a__in { grid-template-columns: 1fr; gap: 0; padding: 20px 0 22px; }
+      .faq-a__in p { grid-column: 1; font-size: 16.5px; }
       .logos { gap: 28px; }
       .logos img { height: 48px; }
     }
@@ -741,27 +744,27 @@
         <div class="services">
           <div>
             <button class="service" type="button"><small>01</small><b>Do you still build Shopify stores?</b><span class="plus">+</span></button>
-            <div class="faq-a"><p>Yes. Shopify and commerce remain at our core — we've simply expanded around it. We now also build AI automation, custom products, marketplace operations and AI video, so the same partner can take you from store to scale. Every existing Shopify page and resource stays at the same URL.</p></div>
+            <div class="faq-a"><div class="faq-a__in"><p>Yes. Shopify and commerce remain at our core — we've simply expanded around it. We now also build AI automation, custom products, marketplace operations and AI video, so the same partner can take you from store to scale. Every existing Shopify page and resource stays at the same URL.</p></div></div>
           </div>
           <div>
             <button class="service" type="button"><small>02</small><b>Can you manage performance marketing after launch?</b><span class="plus">+</span></button>
-            <div class="faq-a"><p>Yes. Most clients launch with us and then stay for growth — Meta and Google Ads, creative, landing pages, tracking, CRO and retention, reported against one set of numbers.</p></div>
+            <div class="faq-a"><div class="faq-a__in"><p>Yes. Most clients launch with us and then stay for growth — Meta and Google Ads, creative, landing pages, tracking, CRO and retention, reported against one set of numbers.</p></div></div>
           </div>
           <div>
             <button class="service" type="button"><small>03</small><b>Can you build custom AI or SaaS products?</b><span class="plus">+</span></button>
-            <div class="faq-a"><p>Yes. Our in-house engineering team ships SaaS platforms, AI agents and LLM products, web and mobile apps, Shopify apps and the integrations that connect them to your existing stack.</p></div>
+            <div class="faq-a"><div class="faq-a__in"><p>Yes. Our in-house engineering team ships SaaS platforms, AI agents and LLM products, web and mobile apps, Shopify apps and the integrations that connect them to your existing stack.</p></div></div>
           </div>
           <div>
             <button class="service" type="button"><small>04</small><b>Can you connect our CRM, WhatsApp and marketing stack?</b><span class="plus">+</span></button>
-            <div class="faq-a"><p>Yes. That's most of our automation work — connecting lead sources, CRM, WhatsApp, email, payments and reporting so data and follow-ups move automatically between them.</p></div>
+            <div class="faq-a"><div class="faq-a__in"><p>Yes. That's most of our automation work — connecting lead sources, CRM, WhatsApp, email, payments and reporting so data and follow-ups move automatically between them.</p></div></div>
           </div>
           <div>
             <button class="service" type="button"><small>05</small><b>What is AI video and when does it make sense?</b><span class="plus">+</span></button>
-            <div class="faq-a"><p>It makes sense whenever your creative is the bottleneck. We generate ad films, UGC-style content and product reels with AI in days instead of weeks, so you can test far more variations and keep winning angles fresh.</p></div>
+            <div class="faq-a"><div class="faq-a__in"><p>It makes sense whenever your creative is the bottleneck. We generate ad films, UGC-style content and product reels with AI in days instead of weeks, so you can test far more variations and keep winning angles fresh.</p></div></div>
           </div>
           <div>
             <button class="service" type="button"><small>06</small><b>Will changing the website affect our existing URLs or rankings?</b><span class="plus">+</span></button>
-            <div class="faq-a"><p>No. Every existing slug — services, resources, blog posts, case studies and local landing pages — stays exactly the same. We're changing the design and the positioning, not the URL structure.</p></div>
+            <div class="faq-a"><div class="faq-a__in"><p>No. Every existing slug — services, resources, blog posts, case studies and local landing pages — stays exactly the same. We're changing the design and the positioning, not the URL structure.</p></div></div>
           </div>
         </div>
       </section>

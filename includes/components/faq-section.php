@@ -32,7 +32,9 @@ if (empty($faqs)) return;
           <span class="ak-plus">+</span>
         </button>
         <div class="ak-rowbody" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-          <p itemprop="text"><?= nl2br(htmlspecialchars($a)) ?></p>
+          <div class="ak-rowbody__in">
+            <p itemprop="text"><?= nl2br(htmlspecialchars($a)) ?></p>
+          </div>
         </div>
       </div>
       <?php endforeach; ?>

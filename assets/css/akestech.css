@@ -296,18 +296,28 @@ a.ak-row:hover{padding-left:10px}
 .ak-row.is-open .ak-plus{transform:rotate(45deg)}
 .ak-row.is-open b{letter-spacing:-.6px}
 .ak-rowbody{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
-.ak-rowbody p{
-  margin:0 0 0 80px;          /* aligns with the question text column */
-  padding:0;
+/* the answer is its own full row, using the question row's exact grid,
+   padding and divider — it reads as a second row, not a callout box */
+.ak-rowbody__in{
+  display:grid;
+  grid-template-columns:60px 1fr 30px;
+  gap:20px;
+  align-items:start;
+  padding:24px 0 26px;
+  border-bottom:1px solid var(--line);
+}
+.ak-rowbody__in p{
+  grid-column:2;
+  margin:0;
   background:none;border:0;border-radius:0;box-shadow:none;
   color:#3a3a38;
-  font-size:18px;
+  font-size:17px;
   font-weight:400;
-  line-height:1.7;
+  line-height:1.75;
   max-width:840px;
 }
 /* vertical spacing lives inside the collapsing box so scrollHeight measures it */
-.ak-rowbody::after{content:"";display:block;height:22px}
+.ak-rowbody::after{content:"";display:block;height:0}
 
 /* ==========================================================================
    10. SPLIT SECTIONS / PRODUCTS / PROCESS / METRICS
@@ -449,7 +459,8 @@ a.ak-row:hover{padding-left:10px}
   .ak-card{min-height:240px}
   .ak-statement,.ak-cta{padding:30px 24px}
   .ak-foot{flex-direction:column}
-  .ak-rowbody p{margin-left:0;padding:0;font-size:17px}
+  .ak-rowbody__in{grid-template-columns:1fr;gap:0;padding:20px 0 22px}
+  .ak-rowbody__in p{grid-column:1;font-size:16.5px}
   .ak-logos{gap:26px}
   .ak-logos img{height:48px}
   .ak-marquee__track img{height:52px}
