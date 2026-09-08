@@ -22,9 +22,9 @@ ob_start();
 
 <!-- HERO -->
 <section class="bg-gradient-to-b from-green-50/50 to-white pt-16 pb-20 lg:pt-24 lg:pb-32">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="ak-container">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div class="animate-on-scroll">
+            <div class="ak-reveal">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-green-100 rounded-full mb-6">
                     <span class="w-2 h-2 bg-green-500 rounded-full"></span>
                     <span class="text-xs font-semibold text-green-700 uppercase tracking-wider">Shopify App</span>
@@ -53,7 +53,7 @@ ob_start();
                     <span>Free Plan Available</span>
                 </div>
             </div>
-            <div class="animate-on-scroll">
+            <div class="ak-reveal">
                 <div class="bg-gray-100 rounded-2xl aspect-video flex items-center justify-center border border-gray-200">
                     <div class="text-center p-8">
                         <span class="text-5xl block mb-3"><?= ak_icon('smartphone', 18) ?></span>
@@ -67,8 +67,8 @@ ob_start();
 </section>
 
 <!-- FEATURES LIST -->
-<section class="bg-white py-16 lg:py-24" id="features">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section" id="features">
+    <div class="ak-container">
         <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16 animate-on-scroll">
             <h2 class="text-2xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Everything You Need to Sell on WhatsApp
@@ -80,12 +80,12 @@ ob_start();
 
         <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
             <!-- Feature 1: Cart Recovery -->
-            <div class="animate-on-scroll flex gap-5 p-6 bg-white border border-gray-100 rounded-2xl hover:shadow-md transition-all">
+            <div class="ak-card ak-spot ak-reveal">
                 <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
                     <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Abandoned Cart Recovery</h3>
+                    <h3 class="ak-h3">Abandoned Cart Recovery</h3>
                     <p class="text-sm text-gray-600 leading-relaxed mb-3">Automatically detect abandoned carts and send personalized WhatsApp messages with product images, prices, and one-click checkout links.</p>
                     <ul class="space-y-1.5 text-sm text-gray-500">
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Multi-step recovery sequences</li>
@@ -96,12 +96,12 @@ ob_start();
             </div>
 
             <!-- Feature 2: COD Confirmation -->
-            <div class="animate-on-scroll flex gap-5 p-6 bg-white border border-gray-100 rounded-2xl hover:shadow-md transition-all">
+            <div class="ak-card ak-spot ak-reveal">
                 <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
                     <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">COD Order Verification</h3>
+                    <h3 class="ak-h3">COD Order Verification</h3>
                     <p class="text-sm text-gray-600 leading-relaxed mb-3">Verify Cash on Delivery orders via WhatsApp before shipping. Customers confirm with a simple reply, reducing fake orders significantly.</p>
                     <ul class="space-y-1.5 text-sm text-gray-500">
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Reduce RTO by up to 40%</li>
@@ -112,12 +112,12 @@ ob_start();
             </div>
 
             <!-- Feature 3: Order Notifications -->
-            <div class="animate-on-scroll flex gap-5 p-6 bg-white border border-gray-100 rounded-2xl hover:shadow-md transition-all">
+            <div class="ak-card ak-spot ak-reveal">
                 <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
                     <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Order Notifications</h3>
+                    <h3 class="ak-h3">Order Notifications</h3>
                     <p class="text-sm text-gray-600 leading-relaxed mb-3">Keep customers informed at every stage — order confirmation, shipping updates, out-for-delivery, and delivered notifications via WhatsApp.</p>
                     <ul class="space-y-1.5 text-sm text-gray-500">
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> 98% open rate on WhatsApp</li>
@@ -128,12 +128,12 @@ ob_start();
             </div>
 
             <!-- Feature 4: Broadcast -->
-            <div class="animate-on-scroll flex gap-5 p-6 bg-white border border-gray-100 rounded-2xl hover:shadow-md transition-all">
+            <div class="ak-card ak-spot ak-reveal">
                 <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
                     <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Broadcast Messaging</h3>
+                    <h3 class="ak-h3">Broadcast Messaging</h3>
                     <p class="text-sm text-gray-600 leading-relaxed mb-3">Send targeted campaigns to customer segments. Perfect for new product launches, flash sales, festive offers, and win-back campaigns.</p>
                     <ul class="space-y-1.5 text-sm text-gray-500">
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Customer segmentation</li>
@@ -149,7 +149,7 @@ ob_start();
                     <svg class="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">AI Chatbot</h3>
+                    <h3 class="ak-h3">AI Chatbot</h3>
                     <p class="text-sm text-gray-600 leading-relaxed mb-3">Automated chatbot handles common queries, provides product info, processes returns, and escalates complex issues to your team.</p>
                     <ul class="space-y-1.5 text-sm text-gray-500">
                         <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> 24/7 automated support</li>
@@ -163,22 +163,22 @@ ob_start();
 </section>
 
 <!-- SCREENSHOTS SECTION -->
-<section class="bg-gray-50 py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section">
+    <div class="ak-container">
         <div class="text-center mb-12 animate-on-scroll">
-            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">See It in Action</h2>
+            <h2 class="ak-h3">See It in Action</h2>
             <p class="text-gray-600">A quick look at the dashboard and WhatsApp flows.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-6 animate-on-scroll">
-            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <div class="ak-card ak-card--flat">
                 <div class="aspect-video bg-gray-100 flex items-center justify-center"><span class="text-3xl"><?= ak_icon('bar-chart', 18) ?></span></div>
                 <div class="p-4"><p class="text-sm font-medium text-gray-900">Analytics Dashboard</p></div>
             </div>
-            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <div class="ak-card ak-card--flat">
                 <div class="aspect-video bg-gray-100 flex items-center justify-center"><span class="text-3xl"><?= ak_icon('refresh', 18) ?></span></div>
                 <div class="p-4"><p class="text-sm font-medium text-gray-900">Automation Flow Builder</p></div>
             </div>
-            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <div class="ak-card ak-card--flat">
                 <div class="aspect-video bg-gray-100 flex items-center justify-center"><span class="text-3xl"><?= ak_icon('message-circle', 18) ?></span></div>
                 <div class="p-4"><p class="text-sm font-medium text-gray-900">Chat Interface</p></div>
             </div>
@@ -187,10 +187,10 @@ ob_start();
 </section>
 
 <!-- USE CASES -->
-<section class="bg-white py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section">
+    <div class="ak-container">
         <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll">
-            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Built for Every Shopify Use Case</h2>
+            <h2 class="ak-h3">Built for Every Shopify Use Case</h2>
             <p class="text-gray-600">Whether you sell fashion, beauty, electronics, or food — our automation works for you.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-on-scroll">
@@ -213,10 +213,10 @@ ob_start();
 </section>
 
 <!-- PRICING -->
-<section class="bg-gray-50 py-16 lg:py-24" id="pricing">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section" id="pricing">
+    <div class="ak-container">
         <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll">
-            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+            <h2 class="ak-h3">Simple, Transparent Pricing</h2>
             <p class="text-gray-600">Start free. Scale as you grow. No hidden charges.</p>
         </div>
 
@@ -279,10 +279,10 @@ ob_start();
 
 <!-- FAQ WITH SCHEMA -->
 <?php if (!empty($faqs)): ?>
-<section class="bg-white py-16 lg:py-24" id="faq">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section" id="faq">
+    <div class="ak-container ak-narrow">
         <div class="text-center mb-12 animate-on-scroll">
-            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <h2 class="ak-h3">Frequently Asked Questions</h2>
             <p class="text-gray-600">Quick answers to common questions about our WhatsApp automation app.</p>
         </div>
 
@@ -308,7 +308,7 @@ ob_start();
 <!-- SUPPORT -->
 <section class="bg-gray-50 py-16 lg:py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Need Help?</h2>
+        <h2 class="ak-h3">Need Help?</h2>
         <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Our support team is available to help you set up and optimize your WhatsApp automation. We typically respond within 2 hours.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:<?= SITE_EMAIL ?>" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-gray-700 border border-gray-300 rounded-xl hover:bg-white transition-colors">

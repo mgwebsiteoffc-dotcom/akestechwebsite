@@ -791,3 +791,35 @@ a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2
   .ak-tpl{padding:20px}
   .ak-tpl__head{flex-direction:column}
 }
+
+/* ==========================================================================
+   SHARED HELPER CLASSES — used by remapped legacy tool / product pages
+   ========================================================================== */
+.ak-onDark{color:#fff !important}
+.ak-center{text-align:center;margin-left:auto;margin-right:auto}
+.ak-darksec{background:var(--dark);color:#fff;border-top:none}
+.ak-darksec .ak-h1,.ak-darksec .ak-h2,.ak-darksec .ak-h3,.ak-darksec h4{color:#fff}
+.ak-darksec .ak-lead{color:#b9b9b4}
+.ak-darksec a:not(.ak-btn){color:#d7d7d2}
+.ak-pagehero--dark .ak-h3,.ak-pagehero--dark h4{color:#fff}
+
+/* details-based FAQ (legacy tool pages) */
+.ak-details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+.ak-details + .ak-details{margin-top:12px}
+.ak-details__q{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:22px 24px;font-size:17px;font-weight:650;cursor:pointer;color:var(--ink);
+  list-style:none;transition:background .25s var(--ease);
+}
+.ak-details__q::-webkit-details-marker{display:none}
+.ak-details__q:hover{background:#fafaf8}
+.ak-details__q::after{
+  content:"";flex:none;width:18px;height:18px;border-right:2px solid #101010;border-bottom:2px solid #101010;
+  transform:rotate(45deg) translateY(-3px);transition:transform .3s var(--ease);
+}
+.ak-details[open] .ak-details__q::after{transform:rotate(-135deg) translateY(-3px)}
+.ak-details__a{padding:0 24px 24px;color:#666;font-size:15.5px;line-height:1.7}
+@media (max-width:640px){
+  .ak-details__q{padding:18px 18px;font-size:16px}
+  .ak-details__a{padding:0 18px 20px}
+}

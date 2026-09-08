@@ -72,7 +72,7 @@ ob_start();
     <div class="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-70"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div class="grid lg:grid-cols-[1.08fr_0.92fr] gap-10 lg:gap-14 items-center">
-            <div class="animate-on-scroll">
+            <div class="ak-reveal">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-full mb-6">
                     <span class="w-2 h-2 bg-green-500 rounded-full"></span>
                     <span class="text-xs font-semibold text-gray-600 uppercase tracking-wider">For builders and real estate sales teams</span>
@@ -105,7 +105,7 @@ ob_start();
                 </div>
             </div>
 
-            <div class="animate-on-scroll" id="lead-form">
+            <div class="ak-reveal" id="lead-form">
                 <form method="POST" action="" class="bg-white border border-gray-200 rounded-2xl shadow-2xl shadow-gray-900/10 p-5 sm:p-6 lg:p-7">
                     <input type="hidden" name="form_action" value="audit">
                     <input type="hidden" name="source" value="real-estate-landing">
@@ -114,7 +114,7 @@ ob_start();
                     <input type="text" name="website_url_hp" class="hidden" tabindex="-1" autocomplete="off">
 
                     <div class="mb-5">
-                        <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">Free strategy review</p>
+                        <p class="ak-kicker">Free strategy review</p>
                         <h2 class="text-xl font-bold text-gray-950 mt-2">Get a 30-minute lead generation plan</h2>
                         <p class="text-sm text-gray-500 mt-2">Tell us about your project. We will reply with campaign, landing page, and automation recommendations.</p>
                     </div>
@@ -173,12 +173,12 @@ ob_start();
     </div>
 </section>
 
-<section class="bg-white py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section ak-section--tight">
+    <div class="ak-container">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div class="animate-on-scroll">
-                <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">Our system</p>
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-950 mt-3">One funnel from click to booking conversation</h2>
+            <div class="ak-reveal">
+                <p class="ak-kicker">Our system</p>
+                <h2 class="ak-h3">One funnel from click to booking conversation</h2>
                 <p class="text-gray-600 leading-relaxed mt-4">
                     We connect acquisition, landing page conversion, instant follow-up, CRM visibility, and sales feedback. That gives your team fewer junk leads and more serious prospects.
                 </p>
@@ -195,7 +195,7 @@ ob_start();
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="animate-on-scroll">
+            <div class="ak-reveal">
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 lg:p-5">
                     <img src="<?= asset('images/hero-real-estate-dashboard.jpg') ?>" alt="Real estate marketing dashboard" class="w-full rounded-xl border border-gray-200 bg-white">
                     <div class="grid grid-cols-3 gap-3 mt-3">
@@ -219,10 +219,10 @@ ob_start();
 </section>
 
 <section class="bg-gray-50 py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="ak-container">
         <div class="max-w-3xl mb-10 animate-on-scroll">
-            <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">What we manage</p>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-950 mt-3">A compact growth stack for property sales</h2>
+            <p class="ak-kicker">What we manage</p>
+            <h2 class="ak-h3">A compact growth stack for property sales</h2>
             <p class="text-gray-600 mt-4">Everything is built around one business goal: better lead quality and more site visits.</p>
         </div>
 
@@ -244,11 +244,11 @@ ob_start();
     </div>
 </section>
 
-<section class="bg-white py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section ak-section--tight">
+    <div class="ak-container">
         <div class="text-center max-w-3xl mx-auto mb-10 animate-on-scroll">
-            <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">Execution plan</p>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-950 mt-3">From audit to scale in five steps</h2>
+            <p class="ak-kicker">Execution plan</p>
+            <h2 class="ak-h3">From audit to scale in five steps</h2>
         </div>
         <div class="grid md:grid-cols-5 gap-4">
             <?php foreach ($process as $item): ?>
@@ -278,10 +278,10 @@ ob_start();
     </div>
 </section>
 
-<section class="bg-white py-14 lg:py-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section ak-section--tight">
+    <div class="ak-container">
         <div class="text-center mb-10 animate-on-scroll">
-            <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">FAQ</p>
+            <p class="ak-kicker">FAQ</p>
             <h2 class="text-3xl font-bold text-gray-950 mt-3">Questions real estate teams ask us</h2>
         </div>
         <div class="space-y-4">
