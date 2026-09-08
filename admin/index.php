@@ -54,9 +54,12 @@ switch ($page) {
     case 'leads':
         require_once __DIR__ . '/leads.php';
         break;
+    case 'local-pages':
+        require_once __DIR__ . '/local-pages.php';
+        break;
     default:
         $pageTitle = '404';
-        $adminContent = '<div class="text-center py-16"><p class="text-4xl mb-4">🔍</p><h2 class="text-xl font-semibold text-gray-900">Page not found</h2><a href="/admin/" class="text-primary-600 text-sm mt-4 inline-block">Back to Dashboard</a></div>';
+        $adminContent = '<div class="text-center py-16"><svg class="w-10 h-10 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35"/></svg><h2 class="text-xl font-semibold text-gray-900">Page not found</h2><a href="/admin/" class="text-primary-600 text-sm mt-4 inline-block">Back to Dashboard</a></div>';
         include __DIR__ . '/includes/admin-layout.php';
         break;
 }

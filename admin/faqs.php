@@ -62,7 +62,7 @@ ob_start();
             </thead>
             <tbody class="divide-y divide-gray-100">
                 <?php if (empty($faqs)): ?>
-                <tr><td colspan="5" class="px-5 py-8 text-center text-gray-500">No FAQs found. <a href="/admin/?page=faq-edit" class="text-primary-600 font-medium">Add one →</a></td></tr>
+                <tr><td colspan="5" class="px-5 py-8 text-center text-gray-500">No FAQs found. <a href="/admin/?page=faq-edit" class="text-primary-600 font-medium">Add one <?= ad_icon('arrow-right', 14) ?></a></td></tr>
                 <?php else: ?>
                     <?php foreach ($faqs as $faq): ?>
                     <tr class="hover:bg-gray-50 transition-colors">

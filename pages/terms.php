@@ -8,13 +8,23 @@ SEO::set('meta_description', 'Terms and conditions for using ' . SITE_NAME . ' s
 ob_start();
 ?>
 
-<section class="bg-white py-12 lg:py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="animate-on-scroll">
-            <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Terms of Service</h1>
-            <p class="text-sm text-gray-500 mb-8">Last updated: <?= date('F d, Y') ?></p>
+<!-- ============================ PAGE HERO ============================ -->
+<section class="ak-pagehero">
+  <div class="ak-container">
+    <div class="ak-pagehero__inner">
+      <div class="ak-crumbs"><a href="<?= url('/') ?>">Home</a> <span>/</span> Terms of Service</div>
+      <div class="ak-eyebrow">Legal</div>
+      <h1 class="ak-h1 ak-words" style="font-size:clamp(38px,4.8vw,68px)">Terms of Service</h1>
+      <p class="ak-lead">Last updated: <?= date('F d, Y') ?></p>
+    </div>
+  </div>
+</section>
 
-            <div class="prose max-w-none">
+<section class="ak-section" style="padding-top:34px;border-top:0">
+  <div class="ak-container">
+    <div class="ak-narrow">
+      <div class="ak-prose">
+
                 <p>These Terms of Service ("Terms") govern your use of <?= SITE_NAME ?>'s website, services, and Shopify applications. By using our services, you agree to these Terms.</p>
 
                 <h2>1. Services</h2>
@@ -90,9 +100,9 @@ ob_start();
 
                 <h2>11. Contact</h2>
                 <p>For questions about these Terms, contact us at <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a>.</p>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <?php

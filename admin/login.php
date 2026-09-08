@@ -2,6 +2,7 @@
 /**
  * Admin Login Page
  */
+require_once __DIR__ . '/includes/admin-icons.php';
 
 // If already logged in, redirect
 if (isLoggedIn()) {
@@ -77,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
         <p class="text-center text-xs text-gray-400 mt-6">
-            <a href="<?= SITE_URL ?>" class="hover:text-gray-600">← Back to website</a>
+            <a href="<?= SITE_URL ?>" class="hover:text-gray-600"><?= ad_icon('arrow-left') ?> Back to website</a>
         </p>
     </div>
 </body>

@@ -651,7 +651,7 @@ ob_start();
                   loading="lazy"
                 >
               <?php else: ?>
-                <div class="bd-rel-thumb-ph" aria-hidden="true">📄</div>
+                <div class="bd-rel-thumb-ph" aria-hidden="true"><?= ak_icon('file-text', 22) ?></div>
               <?php endif; ?>
               <div class="bd-rel-body">
                 <?php if (!empty($related['category_name'])): ?>

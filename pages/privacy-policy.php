@@ -10,13 +10,23 @@ SEO::set('robots', 'index, follow');
 ob_start();
 ?>
 
-<section class="bg-white py-12 lg:py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="animate-on-scroll">
-            <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Privacy Policy</h1>
-            <p class="text-sm text-gray-500 mb-8">Last updated: <?= date('F d, Y') ?></p>
+<!-- ============================ PAGE HERO ============================ -->
+<section class="ak-pagehero">
+  <div class="ak-container">
+    <div class="ak-pagehero__inner">
+      <div class="ak-crumbs"><a href="<?= url('/') ?>">Home</a> <span>/</span> Privacy Policy</div>
+      <div class="ak-eyebrow">Legal</div>
+      <h1 class="ak-h1 ak-words" style="font-size:clamp(38px,4.8vw,68px)">Privacy Policy</h1>
+      <p class="ak-lead">Last updated: <?= date('F d, Y') ?></p>
+    </div>
+  </div>
+</section>
 
-            <div class="prose max-w-none">
+<section class="ak-section" style="padding-top:34px;border-top:0">
+  <div class="ak-container">
+    <div class="ak-narrow">
+      <div class="ak-prose">
+
                 <p><?= SITE_NAME ?> ("we", "us", "our") operates the website <?= SITE_URL ?> and the <?= SITE_NAME ?> WhatsApp Automation app for Shopify. This Privacy Policy explains how we collect, use, disclose, and safeguard your information.</p>
 
                 <h2>1. Information We Collect</h2>
@@ -132,9 +142,9 @@ ob_start();
                     <li>Email: <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a></li>
                     <li>Data Deletion Requests: <a href="<?= url('data-deletion') ?>"><?= url('data-deletion') ?></a></li>
                 </ul>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <?php

@@ -75,7 +75,7 @@
                         <input type="url" name="website" placeholder="Shopify Store URL (optional)"
                                class="w-full px-4 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent">
                         <button type="submit" class="w-full px-6 py-3 text-sm font-semibold text-white bg-gray-900 rounded-xl hover:bg-gray-800 transition-colors">
-                            Get My Free Audit →
+                            Get My Free Audit <?= ak_icon('arrow-right', 16) ?>
                         </button>
                     </div>
                 </form>

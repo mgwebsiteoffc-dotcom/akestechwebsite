@@ -1,14 +1,33 @@
+# ---------------------------------------------------------------------------
+# AKESTECH — front controller
+#
+# NOTE: there is deliberately no "RewriteBase /" line.
+# A hardcoded base makes Apache resolve the rewrite against the domain root,
+# so pretty URLs 404 the moment the site lives in a subfolder such as
+# http://localhost/website/. Omitting it lets Apache use the directory this
+# .htaccess sits in, which works both at a domain root and in a subdirectory.
+# ---------------------------------------------------------------------------
+
+DirectoryIndex index.php
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /
 
-    # ✅ SITEMAP FIRST (VERY IMPORTANT)
+    # Sitemap first
     RewriteRule ^sitemap\.xml$ sitemap.php [L]
 
-    # Skip real files/folders
+    # Never rewrite real files or directories (assets, uploads, admin scripts)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
 
     # Main router
     RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+</IfModule>
+
+# Safety net: if mod_rewrite is disabled but .htaccess is still honoured,
+# send missing paths to the front controller instead of a raw 404.
+<IfModule !mod_rewrite.c>
+    <IfModule mod_dir.c>
+        FallbackResource index.php
+    </IfModule>
 </IfModule>

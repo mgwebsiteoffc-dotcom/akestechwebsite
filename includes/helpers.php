@@ -3,6 +3,8 @@
  * Helper Functions
  */
 
+require_once __DIR__ . '/icons.php';
+
 /**
  * Sanitize input
  */
@@ -18,12 +20,49 @@ function clean($input) {
 }
 
 /**
+ * Resolve the base URL the site is actually being served from.
+ *
+ * Production keeps the canonical SITE_URL, so canonicals, JSON-LD and sitemap
+ * output are untouched. When the request comes from a different host or a
+ * subdirectory (local dev, staging, e.g. http://localhost/website/), the base
+ * follows the request so navigation, assets and forms keep working there
+ * instead of pointing at the live domain.
+ */
+function ak_base_url() {
+    static $base = null;
+    if ($base !== null) {
+        return $base;
+    }
+
+    $base = rtrim((string) SITE_URL, '/');
+    $host = isset($_SERVER['HTTP_HOST']) ? (string) $_SERVER['HTTP_HOST'] : '';
+
+    if ($host !== '') {
+        $siteHost = parse_url($base, PHP_URL_HOST);
+        if (!$siteHost || strcasecmp($host, (string) $siteHost) !== 0) {
+            $https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+                || (isset($_SERVER['SERVER_PORT']) && (string) $_SERVER['SERVER_PORT'] === '443')
+                || (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https');
+
+            // Directory the front controller lives in: '' at a domain root,
+            // '/website' when served from a subfolder.
+            $script = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? ''));
+            $dir = rtrim(str_replace('\\', '/', dirname($script)), '/');
+
+            $base = ($https ? 'https://' : 'http://') . $host . $dir;
+        }
+    }
+
+    return $base = rtrim($base, '/');
+}
+
+/**
  * Generate URL
  */
 function url($path = '') {
-    $base = rtrim(SITE_URL, '/');
-    $path = ltrim($path, '/');
-    return $path ? "{$base}/{$path}" : $base;
+    $base = ak_base_url();
+    $path = ltrim((string) $path, '/');
+    return $path !== '' ? "{$base}/{$path}" : $base;
 }
 
 /**
@@ -151,5 +190,27 @@ function getFeaturedCaseStudies($limit = 3) {
 function component($name, $data = []) {
     extract($data);
     include __DIR__ . "/components/{$name}.php";
+}
+
+/**
+ * Safe FAQ lookup — never throws if the faqs table is unavailable.
+ * Falls back to an optional array of static FAQs supplied by the page.
+ */
+function ak_faqs($pageSlug, $fallback = []) {
+    try {
+        $faqs = getFaqs($pageSlug);
+        if (is_array($faqs) && !empty($faqs)) {
+            $out = [];
+            foreach ($faqs as $f) {
+                if (!empty($f['question'])) {
+                    $out[] = ['question' => $f['question'], 'answer' => $f['answer'] ?? ''];
+                }
+            }
+            if (!empty($out)) return $out;
+        }
+    } catch (Throwable $e) {
+        /* table missing or DB down — fall through to static FAQs */
+    }
+    return is_array($fallback) ? $fallback : [];
 }
 

@@ -1,24 +1,58 @@
 <?php
 /**
- * 404 Page
+ * 404 Page — AKESTECH design system
  */
 SEO::set('meta_title', 'Page Not Found — ' . SITE_NAME);
 SEO::set('meta_description', 'The page you are looking for does not exist.');
 SEO::set('robots', 'noindex, nofollow');
 
+$schemas = [];
+$schemas[] = SEO::breadcrumbSchema([
+    ['name' => 'Home', 'url' => url('/')],
+    ['name' => 'Page not found', 'url' => url('404')],
+]);
+
 ob_start();
 ?>
 
-<section class="min-h-[70vh] flex items-center justify-center px-4">
-    <div class="text-center max-w-lg">
-        <p class="text-8xl font-bold text-gray-200 mb-4">404</p>
-        <h1 class="text-2xl font-bold text-gray-900 mb-3">Page not found</h1>
-        <p class="text-gray-600 mb-8">Sorry, we couldn't find the page you're looking for. It might have been moved or deleted.</p>
-        <div class="flex gap-4 justify-center">
-            <a href="<?= url('/') ?>" class="px-6 py-2.5 text-sm font-semibold text-white bg-primary-600 rounded-lg hover:bg-primary-700 transition-colors">Go Home</a>
-            <a href="<?= url('contact') ?>" class="px-6 py-2.5 text-sm font-semibold text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">Contact Us</a>
-        </div>
+<section class="ak-pagehero" style="border-bottom:0">
+  <div class="ak-ai">
+    <div class="ak-ai__grid"></div>
+    <div class="ak-orb ak-orb--a"></div>
+    <div class="ak-orb ak-orb--b"></div>
+    <div class="ak-beam"></div>
+  </div>
+
+  <div class="ak-container ak-pagehero__inner">
+    <p class="ak-kicker">Error 404</p>
+    <h1 class="ak-h1 ak-words" style="font-size:clamp(64px,12vw,160px)">Lost signal.</h1>
+    <p>This page does not exist — but the work does. Here is where most people go next.</p>
+
+    <div class="ak-btns">
+      <a href="<?= url('/') ?>" class="ak-btn ak-btn--dark">Back to home <?= ak_icon('arrow-up-right', 16) ?></a>
+      <a href="<?= url('contact') ?>" class="ak-btn ak-btn--light">Contact us</a>
     </div>
+  </div>
+</section>
+
+<section class="ak-section ak-section--tight">
+  <div class="ak-container">
+    <div class="ak-head ak-reveal">
+      <div class="ak-kicker">Popular pages</div>
+      <div><h2 class="ak-h2">Start here instead.</h2></div>
+    </div>
+
+    <div class="ak-rows ak-reveal">
+      <a class="ak-row" href="<?= url('services/automation') ?>"><small>01</small><b>AI &amp; Automation</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+      <a class="ak-row" href="<?= url('services/technology') ?>"><small>02</small><b>Product Development</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+      <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>03</small><b>Performance Marketing</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+      <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>04</small><b>Shopify &amp; Commerce</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+      <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>05</small><b>Marketplace Management</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+      <a class="ak-row" href="<?= url('services/ai-videos') ?>"><small>06</small><b>AI Videos</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+      <a class="ak-row" href="<?= url('case-studies') ?>"><small>07</small><b>Case Studies</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+      <a class="ak-row" href="<?= url('blog') ?>"><small>08</small><b>Blog</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+    </div>
+  </div>
 </section>
 
 <?php

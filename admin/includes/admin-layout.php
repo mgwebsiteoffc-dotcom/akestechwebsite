@@ -4,6 +4,7 @@
  * $pageTitle — page title
  * $adminContent — main content HTML
  */
+require_once __DIR__ . '/admin-icons.php';
 $currentAdmin = adminUser();
 ?>
 <!DOCTYPE html>
@@ -30,6 +31,11 @@ $currentAdmin = adminUser();
     <style>
         .sidebar-link.active { background-color: #eef2ff; color: #4f46e5; font-weight: 600; }
         .sidebar-link:hover { background-color: #f9fafb; }
+        /* icon replacement for emoji / unicode pictographs — inherits text colour */
+        .ad-ico { display: inline-block; vertical-align: -0.14em; flex: none; }
+        a .ad-ico, button .ad-ico { vertical-align: -0.12em; }
+        a:hover .ad-ico { opacity: .75; }
+        .ad-ico-block { display: block; margin: 0 auto 8px; }
     </style>
 </head>
 <body class="font-sans bg-gray-50 text-gray-900 antialiased">
@@ -51,7 +57,7 @@ $currentAdmin = adminUser();
                 <h1 class="text-lg font-semibold text-gray-900"><?= $pageTitle ?? 'Dashboard' ?></h1>
 
                 <div class="flex items-center gap-4">
-                    <a href="<?= SITE_URL ?>" target="_blank" class="text-sm text-gray-500 hover:text-gray-700 hidden sm:block">View Site ↗</a>
+                    <a href="<?= SITE_URL ?>" target="_blank" class="text-sm text-gray-500 hover:text-gray-700 hidden sm:block">View Site <?= ad_icon('external', 14) ?></a>
                     <div class="flex items-center gap-2">
                         <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
                             <span class="text-xs font-bold text-primary-600"><?= strtoupper(substr($currentAdmin['full_name'] ?? 'A', 0, 1)) ?></span>

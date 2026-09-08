@@ -19,6 +19,8 @@ $routes = [
     'services/shopify-operations',
     'services/automation',
     'services/technology',
+    'services/ai-videos',
+    'products/lead365',
     'case-studies',
     'resources',
     'resources/whatsapp-message-templates',
@@ -33,13 +35,58 @@ $routes = [
     'performance-marketing-company-in-lucknow',
     'meta-ads-management-in-lucknow',
     'lead-generation-service-in-lucknow',
+    'ai-automation-company-in-lucknow',
+    'ecommerce-consultant-in-lucknow',
+    'digital-marketing-company-in-delhi-ncr',
+    'shopify-development-company-in-delhi-ncr',
+    'performance-marketing-company-in-delhi-ncr',
+    'meta-ads-management-in-delhi-ncr',
+    'lead-generation-service-in-delhi-ncr',
+    'ai-automation-company-in-delhi-ncr',
+    'ecommerce-consultant-in-delhi-ncr',
+    'industries/d2c-ecommerce',
+    'industries/healthcare',
+    'industries/education',
+    'industries/automotive',
+    'industries/food-and-beverage',
+    'industries/saas-and-startups',
+    'industries/real-estate',
+    'industries/retail-and-consumer-brands',
     'blog/faqs',
     'about',
     'contact',
     'privacy-policy',
     'terms',
-    'data-deletion'
+    'data-deletion',
+    'resources/download-shopify-growth-playbook'
 ];
+
+/* =========================
+   LOCAL PAGES CREATED IN THE ADMIN
+   (/admin/?page=local-pages) — picked up automatically
+   so new city/service pages are indexed without editing this file.
+========================= */
+require_once __DIR__ . '/includes/local-pages.php';
+foreach (array_keys(lp_slugs()) as $localSlug) {
+    if (!in_array($localSlug, $routes, true)) {
+        $routes[] = $localSlug;
+    }
+}
+// switched-off pages are removed from the sitemap
+$routes = array_values(array_diff($routes, lp_disabled()));
+
+/* =========================
+   SUB-SERVICE PAGES
+   (includes/sub-services.php) — picked up automatically
+   so new capability pages are indexed without editing this file.
+========================= */
+require_once __DIR__ . '/includes/sub-services.php';
+foreach (array_keys(ak_sub_services()) as $subRoute) {
+    if (!in_array($subRoute, $routes, true)) {
+        $routes[] = $subRoute;
+    }
+}
+
 /* =========================
    START XML
 ========================= */

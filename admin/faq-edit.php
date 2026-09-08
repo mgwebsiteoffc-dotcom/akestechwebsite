@@ -67,7 +67,7 @@ ob_start();
 ?>
 
 <div class="mb-4">
-    <a href="/admin/?page=faqs" class="text-sm text-gray-500 hover:text-gray-700">← Back to FAQs</a>
+    <a href="/admin/?page=faqs" class="text-sm text-gray-500 hover:text-gray-700"><?= ad_icon('arrow-left') ?> Back to FAQs</a>
 </div>
 
 <form method="POST" class="max-w-2xl">

@@ -99,11 +99,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ob_start();
 ?>
 
-<!-- ✅ TinyMCE CDN -->
+<!-- TinyMCE CDN -->
 <script src="https://cdn.tiny.cloud/1/4tv4sqdoznos8ugazclarbw8x0xbcf3hsoqdvjnbmmxwql4l/tinymce/6/tinymce.min.js"></script>
 
 <div class="mb-4">
-    <a href="/admin/?page=blogs" class="text-sm text-gray-500 hover:text-gray-700 transition-colors">← Back to Posts</a>
+    <a href="/admin/?page=blogs" class="text-sm text-gray-500 hover:text-gray-700 transition-colors"><?= ad_icon('arrow-left') ?> Back to Posts</a>
 </div>
 
 <form method="POST" enctype="multipart/form-data" class="grid lg:grid-cols-3 gap-6">
@@ -239,7 +239,7 @@ ob_start();
     </div>
 </form>
 
-<!-- ✅ TinyMCE Init -->
+<!-- TinyMCE Init -->
 <script>
 tinymce.init({
     selector: '#content_editor',

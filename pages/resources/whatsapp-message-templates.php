@@ -64,58 +64,180 @@ $schemas = [
 
 ob_start();
 ?>
-<section class="relative overflow-hidden bg-slate-950 py-16 lg:py-24">
-    <div class="absolute inset-0 opacity-30" style="background-image:radial-gradient(circle at 20% 20%,#22c55e 0,transparent 28%),radial-gradient(circle at 80% 70%,#2563eb 0,transparent 30%)"></div>
-    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <a href="<?= url('resources') ?>" class="inline-flex text-sm text-green-300 hover:text-green-200 mb-7">&larr; Back to resources</a>
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-green-400 mb-4">Free ecommerce resource</p>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">24 WhatsApp Message Templates for Ecommerce</h1>
-        <p class="mt-6 text-lg lg:text-xl leading-relaxed text-slate-300 max-w-3xl mx-auto">Copy, customize, and use practical messages for abandoned cart recovery, COD verification, order updates, retention, and support.</p>
-        <div class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-slate-300"><span>✓ Copy and paste</span><span>✓ 5 categories</span><span>✓ Shopify friendly</span><span>✓ No signup</span></div>
+<!-- ============================ HERO ============================ -->
+<section class="ak-pagehero ak-pagehero--dark">
+  <div class="ak-container">
+    <div class="ak-pagehero__inner">
+      <div class="ak-crumbs">
+        <a href="<?= url('/') ?>">Home</a> <span>/</span> <a href="<?= url('resources') ?>">Resources</a> <span>/</span> WhatsApp Templates
+      </div>
+      <div class="ak-eyebrow">Free ecommerce resource</div>
+      <h1 class="ak-h1 ak-words" style="font-size:clamp(38px,5.2vw,74px)">24 WhatsApp Message Templates for Ecommerce</h1>
+      <p class="ak-lead">
+        Copy, customise and use practical messages for abandoned cart recovery,
+        COD verification, order updates, retention and support.
+      </p>
+      <div class="ak-tags">
+        <span class="ak-tag"><?= ak_icon('check', 15) ?> Copy and paste</span>
+        <span class="ak-tag"><?= ak_icon('check', 15) ?> 5 categories</span>
+        <span class="ak-tag"><?= ak_icon('check', 15) ?> Shopify friendly</span>
+        <span class="ak-tag"><?= ak_icon('check', 15) ?> No signup</span>
+      </div>
     </div>
+  </div>
 </section>
 
-<section class="bg-white py-10 border-b border-gray-100"><div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"><div class="bg-green-50 border border-green-100 rounded-2xl p-6 lg:p-8">
-    <h2 class="text-xl font-bold text-gray-900 mb-2">The short answer</h2>
-    <p class="text-gray-700 leading-relaxed">The best ecommerce WhatsApp template is short, specific, useful, and easy to act on. Identify your brand, include only necessary context, use one clear action, and offer an opt-out for promotions. Send only to opted-in customers and follow current WhatsApp Business rules.</p>
-</div></div></section>
+<!-- ============================ SHORT ANSWER ============================ -->
+<section class="ak-section ak-section--tight">
+  <div class="ak-container">
+    <div class="ak-answer ak-reveal">
+      <b>The short answer</b>
+      The best ecommerce WhatsApp template is short, specific, useful and easy to act on.
+      Identify your brand, include only necessary context, use one clear action, and offer an
+      opt-out for promotions. Send only to opted-in customers and follow current WhatsApp Business rules.
+    </div>
+  </div>
+</section>
 
-<nav class="bg-white sticky top-0 z-30 border-b border-gray-200 shadow-sm" aria-label="Template categories"><div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-auto"><div class="flex gap-2 py-3 min-w-max">
-    <?php foreach ($categories as $id => $category): ?><a href="#<?= $id ?>" class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-green-50 hover:text-green-700 rounded-full"><?= clean($category[0]) ?></a><?php endforeach; ?>
-    <a href="#how-to-use" class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-green-50 hover:text-green-700 rounded-full">How to use</a>
-</div></div></nav>
+<!-- ============================ CATEGORY NAV ============================ -->
+<nav class="ak-chipnav" aria-label="Template categories">
+  <div class="ak-container">
+    <div class="ak-chipnav__row">
+      <?php foreach ($categories as $id => $category): ?>
+        <a href="#<?= $id ?>"><?= clean($category[0]) ?></a>
+      <?php endforeach; ?>
+      <a href="#how-to-use">How to use</a>
+    </div>
+  </div>
+</nav>
 
-<main class="bg-gray-50 py-14 lg:py-20"><div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-<?php $number = 1; foreach ($categories as $id => $category): ?>
-    <section id="<?= $id ?>" class="scroll-mt-24 mb-16 lg:mb-20">
-        <div class="mb-7"><p class="text-sm font-semibold text-green-600 mb-2"><?= count($category[2]) ?> ready-to-use messages</p><h2 class="text-2xl lg:text-3xl font-extrabold text-gray-900 mb-3"><?= clean($category[0]) ?> WhatsApp templates</h2><p class="text-gray-600 max-w-3xl leading-relaxed"><?= clean($category[1]) ?></p></div>
-        <div class="grid gap-5"><?php foreach ($category[2] as $template): ?>
-            <article class="bg-white border border-gray-200 rounded-2xl p-5 sm:p-7 shadow-sm">
-                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5"><div><p class="text-xs font-bold uppercase tracking-wider text-green-600">Template <?= $number++ ?></p><h3 class="text-lg font-bold text-gray-900 mt-1"><?= clean($template[0]) ?></h3><p class="text-xs text-gray-500 mt-1">Best timing: <?= clean($template[1]) ?></p></div><button type="button" class="copy-template shrink-0 px-4 py-2 text-sm font-semibold text-green-700 bg-green-50 hover:bg-green-100 rounded-lg">Copy template</button></div>
-                <div class="template-text whitespace-pre-line rounded-xl bg-[#e8f5e9] border border-green-100 p-5 text-sm sm:text-base leading-7 text-gray-800"><?= clean($template[2]) ?></div>
+<!-- ============================ TEMPLATES ============================ -->
+<section class="ak-section ak-section--tight" style="border-top:0">
+  <div class="ak-container">
+    <?php $number = 1; foreach ($categories as $id => $category): ?>
+      <div id="<?= $id ?>" class="ak-tplgroup ak-reveal">
+        <div class="ak-tplgroup__head">
+          <p class="ak-tplgroup__count"><?= count($category[2]) ?> ready-to-use messages</p>
+          <h2 class="ak-h3"><?= clean($category[0]) ?> WhatsApp templates</h2>
+          <p><?= clean($category[1]) ?></p>
+        </div>
+
+        <div class="ak-tplgrid">
+          <?php foreach ($category[2] as $template): ?>
+            <article class="ak-tpl ak-spot">
+              <div class="ak-tpl__head">
+                <div>
+                  <p class="ak-tpl__no">Template <?= $number++ ?></p>
+                  <h3><?= clean($template[0]) ?></h3>
+                  <p class="ak-tpl__timing">Best timing: <?= clean($template[1]) ?></p>
+                </div>
+                <!-- class "copy-template" is required by the script below -->
+                <button type="button" class="copy-template ak-copybtn">
+                  <?= ak_icon('clipboard', 15) ?> <span>Copy template</span>
+                </button>
+              </div>
+              <!-- class "template-text" is required by the script below -->
+              <div class="template-text ak-tpl__text"><?= clean($template[2]) ?></div>
             </article>
-        <?php endforeach; ?></div>
-    </section>
-<?php endforeach; ?>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    <?php endforeach; ?>
 
-<section id="how-to-use" class="scroll-mt-24 mb-16"><div class="text-center max-w-3xl mx-auto mb-10"><p class="text-sm font-semibold text-primary-600 mb-2">Implementation guide</p><h2 class="text-3xl font-extrabold text-gray-900 mb-3">How to use these WhatsApp templates</h2><p class="text-gray-600">A strong template still needs the right consent, context, and timing.</p></div>
-    <div class="grid md:grid-cols-2 gap-5"><?php foreach ([
-        ['Choose one job', 'Decide whether the message should confirm, inform, recover, or support. Keep one main action.'],
-        ['Replace every variable', 'Swap each placeholder for a customer name, order number, product, amount, date, or secure link.'],
-        ['Match your brand voice', 'Keep the required details, but edit the tone so the message sounds like your store.'],
-        ['Check consent and policy', 'Message customers with appropriate opt-in and submit templates for approval when required.'],
-        ['Test every path', 'Check mobile formatting, variables, buttons, links, tracking, replies, and opt-out handling.'],
-        ['Measure and improve', 'Track delivery, clicks, conversions, replies, blocks, and opt-outs before increasing frequency.'],
-    ] as $i => $step): ?><div class="bg-white border border-gray-200 rounded-2xl p-6 flex gap-4"><span class="w-9 h-9 shrink-0 rounded-full bg-primary-600 text-white font-bold flex items-center justify-center"><?= $i + 1 ?></span><div><h3 class="font-bold text-gray-900 mb-1"><?= clean($step[0]) ?></h3><p class="text-sm text-gray-600 leading-relaxed"><?= clean($step[1]) ?></p></div></div><?php endforeach; ?></div>
+    <!-- HOW TO USE -->
+    <div id="how-to-use" class="ak-tplgroup ak-reveal">
+      <div class="ak-head" style="margin-bottom:32px">
+        <div class="ak-kicker">Implementation guide</div>
+        <div>
+          <h2 class="ak-h2">How to use these WhatsApp templates</h2>
+          <p class="ak-lead">A strong template still needs the right consent, context and timing.</p>
+        </div>
+      </div>
+      <div class="ak-grid2">
+        <?php foreach ([
+          ['Choose one job', 'Decide whether the message should confirm, inform, recover, or support. Keep one main action.'],
+          ['Replace every variable', 'Swap each placeholder for a customer name, order number, product, amount, date, or secure link.'],
+          ['Match your brand voice', 'Keep the required details, but edit the tone so the message sounds like your store.'],
+          ['Check consent and policy', 'Message customers with appropriate opt-in and submit templates for approval when required.'],
+          ['Test every path', 'Check mobile formatting, variables, buttons, links, tracking, replies, and opt-out handling.'],
+          ['Measure and improve', 'Track delivery, clicks, conversions, replies, blocks, and opt-outs before increasing frequency.'],
+        ] as $i => $step): ?>
+          <article class="ak-card ak-spot ak-reveal">
+            <div class="ak-card__num"><?= $i + 1 ?></div>
+            <div>
+              <h3><?= clean($step[0]) ?></h3>
+              <p><?= clean($step[1]) ?></p>
+            </div>
+          </article>
+        <?php endforeach; ?>
+      </div>
+    </div>
+
+    <!-- CHEAT SHEET + CHECKLIST -->
+    <div class="ak-grid2" style="margin-top:46px">
+      <article class="ak-card ak-card--flat ak-reveal">
+        <div class="ak-card__num"><?= ak_icon('key', 20) ?></div>
+        <div>
+          <h3>Variable cheat sheet</h3>
+          <div class="ak-vars">
+            <?php foreach ([['{{1}}', 'Customer name'], ['{{2}}', 'Product, order number, or store'], ['{{3}}', 'Benefit, amount, date, or address'], ['{{4}}', 'Secure checkout, tracking, or support link']] as $v): ?>
+              <div><code><?= $v[0] ?></code><span><?= $v[1] ?></span></div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </article>
+
+      <article class="ak-card ak-card--flat ak-reveal">
+        <div class="ak-card__num"><?= ak_icon('check', 20) ?></div>
+        <div>
+          <h3>Pre-send checklist</h3>
+          <ul class="ak-list" style="margin-top:12px">
+            <li>Recipient gave appropriate WhatsApp consent</li>
+            <li>Every placeholder has a valid value</li>
+            <li>Links use HTTPS and open correctly</li>
+            <li>Offers, stock claims, and deadlines are accurate</li>
+            <li>Promotional messages offer an easy opt-out</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <!-- FAQ -->
+    <h2 class="ak-h2" style="margin-top:56px">WhatsApp template FAQs</h2>
+    <div class="ak-rows ak-acc ak-reveal" style="margin-top:26px">
+      <?php foreach ($faqs as $idx => $faq): ?>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="ak-row" type="button" itemprop="name">
+            <small><?= str_pad((string)($idx + 1), 2, '0', STR_PAD_LEFT) ?></small>
+            <b><?= htmlspecialchars($faq['question']) ?></b>
+            <span class="ak-plus">+</span>
+          </button>
+          <div class="ak-rowbody" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div class="ak-rowbody__in"><p itemprop="text"><?= htmlspecialchars($faq['answer']) ?></p></div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
 </section>
 
-<section class="grid lg:grid-cols-2 gap-6 mb-16"><div class="bg-white border border-gray-200 rounded-2xl p-7"><h2 class="text-xl font-bold text-gray-900 mb-4">Variable cheat sheet</h2><div class="space-y-3 text-sm"><?php foreach ([['{{1}}', 'Customer name'], ['{{2}}', 'Product, order number, or store'], ['{{3}}', 'Benefit, amount, date, or address'], ['{{4}}', 'Secure checkout, tracking, or support link']] as $v): ?><div class="flex items-center gap-4"><code class="px-2.5 py-1 bg-gray-100 rounded text-primary-700 font-semibold"><?= $v[0] ?></code><span class="text-gray-600"><?= $v[1] ?></span></div><?php endforeach; ?></div></div>
-<div class="bg-amber-50 border border-amber-200 rounded-2xl p-7"><h2 class="text-xl font-bold text-gray-900 mb-4">Pre-send checklist</h2><ul class="space-y-3 text-sm text-gray-700"><li>✓ Recipient gave appropriate WhatsApp consent</li><li>✓ Every placeholder has a valid value</li><li>✓ Links use HTTPS and open correctly</li><li>✓ Offers, stock claims, and deadlines are accurate</li><li>✓ Promotional messages offer an easy opt-out</li></ul></div></section>
-
-<section><div class="text-center mb-10"><h2 class="text-3xl font-extrabold text-gray-900 mb-3">WhatsApp template FAQs</h2><p class="text-gray-600">Quick answers for ecommerce teams.</p></div><div class="space-y-4"><?php foreach ($faqs as $faq): ?><details class="bg-white border border-gray-200 rounded-xl group"><summary class="cursor-pointer list-none px-6 py-5 font-semibold text-gray-900 flex justify-between gap-4"><?= clean($faq['question']) ?><span class="text-primary-600 group-open:rotate-45 transition-transform">+</span></summary><div class="px-6 pb-5 text-gray-600 leading-relaxed"><?= clean($faq['answer']) ?></div></details><?php endforeach; ?></div></section>
-</div></main>
-
-<section class="bg-primary-700 py-16"><div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h2 class="text-3xl lg:text-4xl font-extrabold text-white mb-4">Put these messages on autopilot</h2><p class="text-lg text-primary-100 mb-8">Recover carts, verify COD orders, and update customers with WhatsApp automation built for Shopify.</p><div class="flex flex-col sm:flex-row justify-center gap-3"><a href="<?= url('products/whatsapp-shopify') ?>" class="px-7 py-3.5 bg-white text-primary-700 font-semibold rounded-xl hover:bg-primary-50">Explore WhatsApp automation</a><a href="<?= url('contact') ?>" class="px-7 py-3.5 border border-primary-400 text-white font-semibold rounded-xl hover:bg-primary-600">Talk to our team</a></div></div></section>
+<!-- ============================ CTA ============================ -->
+<section class="ak-section ak-section--tight">
+  <div class="ak-container">
+    <div class="ak-cta ak-reveal">
+      <div>
+        <h2 class="ak-h2" style="font-size:clamp(30px,4vw,52px)">Put these messages on autopilot</h2>
+      </div>
+      <div>
+        <p>Recover carts, verify COD orders and update customers with WhatsApp automation built for commerce.</p>
+        <div class="ak-btns" style="margin-top:0">
+          <a href="<?= url('products/whatsapp-shopify') ?>" class="ak-btn ak-btn--onDark">Explore WhatsApp automation <?= ak_icon('arrow-up-right', 16) ?></a>
+          <a href="<?= url('contact') ?>" class="ak-btn ak-btn--ghost">Talk to our team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.copy-template').forEach(function(b){b.addEventListener('click',async function(){var t=b.closest('article').querySelector('.template-text').innerText.trim();try{await navigator.clipboard.writeText(t);var o=b.textContent;b.textContent='Copied!';setTimeout(function(){b.textContent=o},1800)}catch(e){var r=document.createRange();r.selectNode(b.closest('article').querySelector('.template-text'));window.getSelection().removeAllRanges();window.getSelection().addRange(r)}})})});</script>
 <?php

@@ -32,7 +32,7 @@ $proofMetrics = [
     ['value' => '100+', 'label' => 'Campaigns managed'],
     ['value' => '40%', 'label' => 'Average CPL reduction'],
     ['value' => '3X', 'label' => 'Site visit lift'],
-    ['value' => 'Under 30s', 'label' => 'Lead response automation'],
+    ['value' => '30s', 'label' => 'Automated lead response'],
 ];
 
 $painPoints = [
@@ -59,11 +59,33 @@ $process = [
 ];
 
 $faqs = [
-    ['q' => 'Do you work only with real estate builders?', 'a' => 'We work best with builders, developers, channel partners, and real estate teams that need qualified leads, site visits, and booking-focused campaigns.'],
-    ['q' => 'What budget should we start with?', 'a' => 'Most projects should start with a test budget of Rs. 1L to Rs. 3L per month, depending on city, ticket size, and inventory.'],
-    ['q' => 'Can you manage CRM and WhatsApp follow-up?', 'a' => 'Yes. We can integrate or build the CRM flow, route leads to sales teams, and automate WhatsApp qualification and reminders.'],
-    ['q' => 'How soon can leads start?', 'a' => 'Campaigns can start quickly after setup. Meaningful optimization usually needs two to four weeks of data.'],
+    ['q' => 'Do you work only with real estate builders?',
+     'a' => 'We work best with builders, developers, channel partners and real estate teams that need qualified leads, site visits and booking-focused campaigns. That includes residential and commercial projects, plotted developments, affordable and luxury inventory, and proptech platforms selling into the sector.'],
+    ['q' => 'What budget should we start with?',
+     'a' => 'Most projects should start with a test budget of Rs. 1L to Rs. 3L per month depending on city, ticket size and inventory. The test phase exists to establish a verified cost per qualified site visit, and we scale only once that number is stable and you are comfortable with it.'],
+    ['q' => 'Can you manage CRM and WhatsApp follow-up?',
+     'a' => 'Yes. We can integrate with your existing CRM or build the flow inside it, route leads automatically to the right salesperson or channel partner, and automate WhatsApp qualification, site-visit reminders and follow-up sequences with a human handover the moment a buyer replies.'],
+    ['q' => 'How soon can leads start?',
+     'a' => 'Campaigns usually go live within one to two weeks of kickoff once tracking, creative and landing pages are ready. Meaningful optimisation needs two to four weeks of data, after which cost per qualified site visit typically improves steadily as we cut what is not working.'],
+    ['q' => 'What counts as a qualified real estate lead?',
+     'a' => 'A qualified lead matches your buying criteria: the right city or project, a budget that fits the ticket size, a genuine timeline to purchase, and real intent to visit. We agree that definition with your sales team before launch and score every enquiry against it, so your team calls buyers rather than browsers.'],
+    ['q' => 'How do you track a lead from enquiry to booking?',
+     'a' => 'Every enquiry is captured with its source, scored, routed and then tracked through qualification, site visit and booking inside the CRM. That lets us report cost per qualified site visit and cost per booking instead of cost per lead, which is the number that actually tells you whether the marketing is working.'],
+    ['q' => 'Which cities do you run real estate campaigns in?',
+     'a' => 'We run campaigns across Indian metros and tier two cities, including Lucknow, Delhi NCR, and other active markets, with geo-targeting by city, pin code and radius. Campaigns can also target NRI buyers in the Gulf, Singapore, the UK and the US when your inventory suits that audience.'],
+    ['q' => 'Do you produce the ad creatives and project videos?',
+     'a' => 'Yes. We produce static and video creative, including AI-generated project films, walkthroughs, amenity reels and locality content, and we version them for different platforms, formats and languages. Creative volume matters in real estate because fatigue sets in quickly when the same few ads run for months.'],
 ];
+
+$schemas[] = SEO::serviceSchema(
+    'Real Estate Digital Marketing Agency',
+    'Qualified real estate lead generation, site visit and booking campaigns for builders and developers, combining Meta and Google Ads, landing pages, CRM, WhatsApp automation and performance reporting.'
+);
+
+// FAQPage schema — the FAQ markup below is plain HTML, so the graph needs this edge explicitly.
+$schemas[] = SEO::faqSchema(array_map(function ($f) {
+    return ['question' => $f['q'], 'answer' => $f['a']];
+}, $faqs));
 
 ob_start();
 ?>
@@ -72,7 +94,7 @@ ob_start();
     <div class="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-70"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div class="grid lg:grid-cols-[1.08fr_0.92fr] gap-10 lg:gap-14 items-center">
-            <div class="animate-on-scroll">
+            <div class="ak-reveal">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-full mb-6">
                     <span class="w-2 h-2 bg-green-500 rounded-full"></span>
                     <span class="text-xs font-semibold text-gray-600 uppercase tracking-wider">For builders and real estate sales teams</span>
@@ -95,6 +117,14 @@ ob_start();
                     </a>
                 </div>
 
+                <!-- AEO: concise, extractable definition for AI answer engines -->
+                <div class="mt-9 rounded-2xl border border-gray-200 bg-gray-50/70 p-5 sm:p-6">
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Direct answer</p>
+                    <p class="text-base text-gray-800 leading-relaxed">
+                        A real estate digital marketing agency generates property enquiries, qualifies them against budget, location and timeline, converts them into booked site visits, and tracks the result through to booking. Akestech runs that full chain for builders and developers: Meta and Google Ads, project landing pages, CRM routing, WhatsApp automation and reporting measured on cost per qualified site visit rather than cost per lead.
+                    </p>
+                </div>
+
                 <div class="mt-9 grid grid-cols-2 sm:grid-cols-4 gap-5">
                     <?php foreach ($proofMetrics as $metric): ?>
                     <div>
@@ -105,7 +135,7 @@ ob_start();
                 </div>
             </div>
 
-            <div class="animate-on-scroll" id="lead-form">
+            <div class="ak-reveal" id="lead-form">
                 <form method="POST" action="" class="bg-white border border-gray-200 rounded-2xl shadow-2xl shadow-gray-900/10 p-5 sm:p-6 lg:p-7">
                     <input type="hidden" name="form_action" value="audit">
                     <input type="hidden" name="source" value="real-estate-landing">
@@ -114,7 +144,7 @@ ob_start();
                     <input type="text" name="website_url_hp" class="hidden" tabindex="-1" autocomplete="off">
 
                     <div class="mb-5">
-                        <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">Free strategy review</p>
+                        <p class="ak-kicker">Free strategy review</p>
                         <h2 class="text-xl font-bold text-gray-950 mt-2">Get a 30-minute lead generation plan</h2>
                         <p class="text-sm text-gray-500 mt-2">Tell us about your project. We will reply with campaign, landing page, and automation recommendations.</p>
                     </div>
@@ -173,12 +203,12 @@ ob_start();
     </div>
 </section>
 
-<section class="bg-white py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section ak-section--tight">
+    <div class="ak-container">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div class="animate-on-scroll">
-                <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">Our system</p>
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-950 mt-3">One funnel from click to booking conversation</h2>
+            <div class="ak-reveal">
+                <p class="ak-kicker">Our system</p>
+                <h2 class="ak-h3">One funnel from click to booking conversation</h2>
                 <p class="text-gray-600 leading-relaxed mt-4">
                     We connect acquisition, landing page conversion, instant follow-up, CRM visibility, and sales feedback. That gives your team fewer junk leads and more serious prospects.
                 </p>
@@ -195,20 +225,20 @@ ob_start();
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="animate-on-scroll">
+            <div class="ak-reveal">
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 lg:p-5">
-                    <img src="<?= asset('images/hero-real-estate-dashboard.svg') ?>" alt="Real estate marketing dashboard" class="w-full rounded-xl border border-gray-200 bg-white">
+                    <img src="<?= asset('images/hero-real-estate-dashboard.jpg') ?>" alt="Real estate marketing dashboard" class="w-full rounded-xl border border-gray-200 bg-white">
                     <div class="grid grid-cols-3 gap-3 mt-3">
-                        <div class="bg-white rounded-xl border border-gray-100 p-3">
-                            <p class="text-lg font-bold text-gray-950">62%</p>
+                        <div class="ak-card ak-card--flat ak-card--sm">
+                            <p class="ak-h3">62%</p>
                             <p class="text-[11px] text-gray-500 mt-1">Qualified</p>
                         </div>
-                        <div class="bg-white rounded-xl border border-gray-100 p-3">
-                            <p class="text-lg font-bold text-gray-950">18%</p>
+                        <div class="ak-card ak-card--flat ak-card--sm">
+                            <p class="ak-h3">18%</p>
                             <p class="text-[11px] text-gray-500 mt-1">Visit ratio</p>
                         </div>
-                        <div class="bg-white rounded-xl border border-gray-100 p-3">
-                            <p class="text-lg font-bold text-gray-950">4.2X</p>
+                        <div class="ak-card ak-card--flat ak-card--sm">
+                            <p class="ak-h3">4.2X</p>
                             <p class="text-[11px] text-gray-500 mt-1">Remarketing</p>
                         </div>
                     </div>
@@ -219,10 +249,10 @@ ob_start();
 </section>
 
 <section class="bg-gray-50 py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="ak-container">
         <div class="max-w-3xl mb-10 animate-on-scroll">
-            <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">What we manage</p>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-950 mt-3">A compact growth stack for property sales</h2>
+            <p class="ak-kicker">What we manage</p>
+            <h2 class="ak-h3">A compact growth stack for property sales</h2>
             <p class="text-gray-600 mt-4">Everything is built around one business goal: better lead quality and more site visits.</p>
         </div>
 
@@ -244,11 +274,11 @@ ob_start();
     </div>
 </section>
 
-<section class="bg-white py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section ak-section--tight">
+    <div class="ak-container">
         <div class="text-center max-w-3xl mx-auto mb-10 animate-on-scroll">
-            <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">Execution plan</p>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-950 mt-3">From audit to scale in five steps</h2>
+            <p class="ak-kicker">Execution plan</p>
+            <h2 class="ak-h3">From audit to scale in five steps</h2>
         </div>
         <div class="grid md:grid-cols-5 gap-4">
             <?php foreach ($process as $item): ?>
@@ -278,10 +308,10 @@ ob_start();
     </div>
 </section>
 
-<section class="bg-white py-14 lg:py-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="ak-section ak-section--tight">
+    <div class="ak-container">
         <div class="text-center mb-10 animate-on-scroll">
-            <p class="text-xs font-semibold text-primary-600 uppercase tracking-wider">FAQ</p>
+            <p class="ak-kicker">FAQ</p>
             <h2 class="text-3xl font-bold text-gray-950 mt-3">Questions real estate teams ask us</h2>
         </div>
         <div class="space-y-4">
