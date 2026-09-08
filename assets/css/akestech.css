@@ -543,3 +543,28 @@ a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2
 @media (max-width:900px){
   .ak-contact{grid-template-columns:1fr;gap:26px}
 }
+
+/* ==========================================================================
+   PROSE EXTRAS — tables and steps inside legal / editorial pages
+   ========================================================================== */
+.ak-prose table{width:100%;border-collapse:collapse;margin:26px 0;font-size:16px}
+.ak-prose th,.ak-prose td{border:1px solid var(--line);padding:13px 15px;text-align:left;vertical-align:top}
+.ak-prose th{background:#efefec;font-weight:700;color:var(--ink);font-size:14px;letter-spacing:.01em}
+.ak-prose tbody tr:nth-child(even){background:#fafaf8}
+.ak-delstep{display:flex;gap:14px;align-items:flex-start;margin:16px 0}
+.ak-delstep > span{
+  flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
+}
+@media (max-width:600px){
+  .ak-prose table{font-size:15px}
+  .ak-prose th,.ak-prose td{padding:10px 11px}
+}
+.ak-prose ol.ak-steps{list-style:none;padding-left:0;counter-reset:akstep}
+.ak-prose ol.ak-steps li{
+  display:flex;gap:14px;align-items:flex-start;margin:16px 0;counter-increment:akstep;
+}
+.ak-prose ol.ak-steps li .ak-stepn{
+  flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;margin-top:2px;
+}

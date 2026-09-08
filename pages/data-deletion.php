@@ -9,13 +9,23 @@ SEO::set('meta_description', 'How to request data deletion from ' . SITE_NAME . 
 ob_start();
 ?>
 
-<section class="bg-white py-12 lg:py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="animate-on-scroll">
-            <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Data Deletion Policy</h1>
-            <p class="text-sm text-gray-500 mb-8">Last updated: <?= date('F d, Y') ?></p>
+<!-- ============================ PAGE HERO ============================ -->
+<section class="ak-pagehero">
+  <div class="ak-container">
+    <div class="ak-pagehero__inner">
+      <div class="ak-crumbs"><a href="<?= url('/') ?>">Home</a> <span>/</span> Data Deletion Policy</div>
+      <div class="ak-eyebrow">Legal</div>
+      <h1 class="ak-h1 ak-words" style="font-size:clamp(38px,4.8vw,68px)">Data Deletion Policy</h1>
+      <p class="ak-lead">Last updated: <?= date('F d, Y') ?></p>
+    </div>
+  </div>
+</section>
 
-            <div class="prose max-w-none">
+<section class="ak-section" style="padding-top:34px;border-top:0">
+  <div class="ak-container">
+    <div class="ak-narrow">
+      <div class="ak-prose">
+
                 <p><?= SITE_NAME ?> is committed to protecting your data and privacy. This policy explains how your data is deleted when you uninstall our app or request data removal.</p>
 
                 <h2>1. Automatic Data Deletion on Uninstall</h2>
@@ -26,14 +36,9 @@ ob_start();
                     <li><strong>Within 7 days:</strong> All stored customer data, order data, and message logs are permanently deleted from our servers</li>
                 </ul>
 
-                <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 my-6 not-prose">
-                    <div class="flex gap-3">
-                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <div>
-                            <p class="text-sm font-semibold text-blue-900">Automatic Process</p>
-                            <p class="text-sm text-blue-700 mt-1">Data deletion on uninstall is fully automatic. No manual request is needed.</p>
-                        </div>
-                    </div>
+                <div class="ak-answer">
+                    <b>Automatic process</b>
+                    Data deletion on uninstall is fully automatic. No manual request is needed.
                 </div>
 
                 <h2>2. What Data Is Deleted</h2>
@@ -58,46 +63,46 @@ ob_start();
                 <h2>4. Manual Data Deletion Request</h2>
                 <p>You can request manual data deletion at any time by:</p>
 
-                <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 my-6 not-prose">
-                    <h3 class="text-base font-semibold text-gray-900 mb-3">How to Request Data Deletion</h3>
-                    <ol class="space-y-3">
-                        <li class="flex gap-3">
-                            <span class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
-                            <span class="text-sm text-gray-700">Send an email to <a href="mailto:<?= SITE_EMAIL ?>" class="text-primary-600 font-medium"><?= SITE_EMAIL ?></a> with the subject line "Data Deletion Request"</span>
+                <div class="ak-answer">
+                    <b>How to request data deletion</b>
+                    <ol class="ak-steps">
+                        <li>
+                            <span class="ak-stepn">1</span>
+                            <span>Send an email to <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a> with the subject line "Data Deletion Request"</span>
                         </li>
-                        <li class="flex gap-3">
-                            <span class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
-                            <span class="text-sm text-gray-700">Include your Shopify store URL and registered email address</span>
+                        <li>
+                            <span class="ak-stepn">2</span>
+                            <span>Include your Shopify store URL and registered email address</span>
                         </li>
-                        <li class="flex gap-3">
-                            <span class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
-                            <span class="text-sm text-gray-700">We will confirm receipt within 24 hours</span>
+                        <li>
+                            <span class="ak-stepn">3</span>
+                            <span>We will confirm receipt within 24 hours</span>
                         </li>
-                        <li class="flex gap-3">
-                            <span class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">4</span>
-                            <span class="text-sm text-gray-700">Data deletion will be completed within <strong>7 business days</strong></span>
+                        <li>
+                            <span class="ak-stepn">4</span>
+                            <span>Data deletion will be completed within <strong>7 business days</strong></span>
                         </li>
-                        <li class="flex gap-3">
-                            <span class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">5</span>
-                            <span class="text-sm text-gray-700">You will receive a confirmation email once deletion is complete</span>
+                        <li>
+                            <span class="ak-stepn">5</span>
+                            <span>You will receive a confirmation email once deletion is complete</span>
                         </li>
                     </ol>
                 </div>
 
                 <h2>5. Data Deletion Timeline</h2>
-                <table class="w-full text-sm border-collapse my-6">
+                <table>
                     <thead>
-                        <tr class="bg-gray-50">
-                            <th class="text-left p-3 border border-gray-200 font-semibold">Data Type</th>
-                            <th class="text-left p-3 border border-gray-200 font-semibold">Deletion Timeline</th>
+<tr>
+                            <th>Data Type</th>
+                            <th>Deletion Timeline</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td class="p-3 border border-gray-200">Customer data (names, phones, emails)</td><td class="p-3 border border-gray-200">7 days</td></tr>
-                        <tr class="bg-gray-50"><td class="p-3 border border-gray-200">Order & cart data</td><td class="p-3 border border-gray-200">7 days</td></tr>
-                        <tr><td class="p-3 border border-gray-200">WhatsApp message logs</td><td class="p-3 border border-gray-200">7 days</td></tr>
-                        <tr class="bg-gray-50"><td class="p-3 border border-gray-200">Automation configurations</td><td class="p-3 border border-gray-200">7 days</td></tr>
-                        <tr><td class="p-3 border border-gray-200">Billing records</td><td class="p-3 border border-gray-200">Retained for legal compliance</td></tr>
+                        <tr><td>Customer data (names, phones, emails)</td><td>7 days</td></tr>
+<tr><td>Order & cart data</td><td>7 days</td></tr>
+                        <tr><td>WhatsApp message logs</td><td>7 days</td></tr>
+<tr><td>Automation configurations</td><td>7 days</td></tr>
+                        <tr><td>Billing records</td><td>Retained for legal compliance</td></tr>
                     </tbody>
                 </table>
 
@@ -115,9 +120,9 @@ ob_start();
                     <li>Email: <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a></li>
                     <li>WhatsApp: <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>">Chat with us</a></li>
                 </ul>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <?php
