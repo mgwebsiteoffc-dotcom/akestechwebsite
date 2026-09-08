@@ -1,6 +1,16 @@
 <?php
 /**
- * Local keyword service landing pages for Lucknow SEO/AEO.
+ * Local service landing pages for Lucknow and Delhi NCR.
+ *
+ * IMPORTANT: the five original Lucknow slugs are generated with exactly the
+ * same keys as before, so every existing URL keeps working unchanged:
+ *   digital-marketing-company-in-lucknow
+ *   shopify-development-company-in-lucknow
+ *   performance-marketing-company-in-lucknow
+ *   meta-ads-management-in-lucknow
+ *   lead-generation-service-in-lucknow
+ *
+ * New slugs are additive only.
  */
 if (!class_exists('SEO')) {
     require __DIR__ . '/../index.php';
@@ -9,18 +19,42 @@ if (!class_exists('SEO')) {
 
 $route = isset($_GET['route']) ? trim($_GET['route'], '/') : '';
 
-$pages = [
-    'digital-marketing-company-in-lucknow' => [
-        'eyebrow' => 'Digital marketing company in Lucknow',
-        'keyword' => 'Digital Marketing Company in Lucknow',
-        'title' => 'Digital Marketing Company in Lucknow | SEO, Ads, Leads | Akestech',
-        'description' => 'Akestech is a digital marketing company in Lucknow for SEO, Meta Ads, Google Ads, Shopify growth, lead generation, landing pages, CRO, and automation.',
-        'h1' => 'Digital Marketing Company in Lucknow for Measurable Growth',
-        'intro' => 'Akestech helps Lucknow businesses turn digital marketing into qualified enquiries, online sales, and repeatable growth. We plan, build, track, and optimize campaigns across SEO, paid ads, landing pages, Shopify, WhatsApp, and CRM.',
-        'answer' => 'A good digital marketing company in Lucknow should combine local market understanding with clear tracking, strong creatives, SEO content, paid ads, landing pages, and lead follow-up systems. Akestech provides that complete growth stack for local businesses, service brands, D2C companies, and B2B teams.',
-        'serviceName' => 'Digital Marketing Services in Lucknow',
-        'primaryCta' => 'Get Free Marketing Audit',
-        'accent' => 'primary',
+/* ============================================================
+   CITIES
+   ============================================================ */
+$cities = [
+    'lucknow' => [
+        'city'     => 'Lucknow',
+        'region'   => 'Uttar Pradesh',
+        'postal'   => '226001',
+        'slugbit'  => 'in-lucknow',
+        'areas'    => ['Gomti Nagar', 'Hazratganj', 'Aliganj', 'Indira Nagar', 'Mahanagar', 'Vibhuti Khand'],
+        'nearby'   => 'across Uttar Pradesh',
+    ],
+    'delhi-ncr' => [
+        'city'     => 'Delhi NCR',
+        'region'   => 'Delhi NCR',
+        'postal'   => '110001',
+        'slugbit'  => 'in-delhi-ncr',
+        'areas'    => ['Connaught Place', 'Noida', 'Gurugram', 'Dwarka', 'Saket', 'Ghaziabad', 'Faridabad'],
+        'nearby'   => 'across Delhi NCR and North India',
+    ],
+];
+
+/* ============================================================
+   SERVICE DEFINITIONS  ({city}, {region}, {areas} placeholders)
+   ============================================================ */
+$serviceDefs = [
+
+    'digital-marketing-company' => [
+        'eyebrow' => 'Digital marketing company in {city}',
+        'keyword' => 'Digital Marketing Company in {city}',
+        'h1' => 'Digital Marketing Company in {city} for Measurable Growth',
+        'intro' => 'AKESTECH helps {city} businesses turn digital marketing into qualified enquiries, online sales and repeatable growth. We plan, build, track and optimize campaigns across SEO, paid ads, landing pages, Shopify, WhatsApp and CRM.',
+        'answer' => 'A good digital marketing company in {city} should combine local market understanding with clear tracking, strong creatives, SEO and AEO content, paid ads, landing pages and lead follow-up systems. AKESTECH provides that complete growth stack for local businesses, service brands, D2C companies and B2B teams.',
+        'serviceName' => 'Digital Marketing Services in {city}',
+        'cta' => 'Get Free Marketing Audit',
+        'accent' => 'SEO + Ads',
         'metrics' => [
             ['value' => '360', 'label' => 'Growth stack'],
             ['value' => 'SEO + Ads', 'label' => 'Acquisition channels'],
@@ -28,31 +62,36 @@ $pages = [
             ['value' => 'Weekly', 'label' => 'Optimization rhythm'],
         ],
         'services' => [
-            ['title' => 'SEO and AEO Content', 'copy' => 'Keyword-led landing pages, service pages, FAQs, internal linking, schema, and answer-first content built for search and AI results.'],
-            ['title' => 'Meta and Google Ads', 'copy' => 'Full-funnel paid campaigns for awareness, leads, sales, remarketing, and conversion tracking.'],
-            ['title' => 'Landing Pages and CRO', 'copy' => 'Fast mobile-first pages with clear offers, trust signals, local proof, and enquiry-focused forms.'],
-            ['title' => 'Lead Management', 'copy' => 'CRM routing, WhatsApp follow-up, source tracking, and quality feedback loops for sales teams.'],
-            ['title' => 'Shopify and Ecommerce', 'copy' => 'Store optimization, product-page improvements, cart recovery, and performance marketing for online stores.'],
-            ['title' => 'Reporting and Strategy', 'copy' => 'Weekly action reports focused on cost per lead, conversion rate, revenue, and campaign quality.'],
+            ['title' => 'SEO and AEO Content', 'copy' => 'Keyword-led landing pages, service pages, FAQs, internal linking, schema and answer-first content built for search and AI results.'],
+            ['title' => 'Meta and Google Ads', 'copy' => 'Full-funnel paid campaigns for awareness, leads, sales, remarketing and conversion tracking.'],
+            ['title' => 'Landing Pages and CRO', 'copy' => 'Fast mobile-first pages with clear offers, trust signals, local proof and enquiry-focused forms.'],
+            ['title' => 'Lead Management', 'copy' => 'CRM routing, WhatsApp follow-up, source tracking and quality feedback loops for sales teams.'],
+            ['title' => 'Shopify and Ecommerce', 'copy' => 'Store optimization, product-page improvements, cart recovery and performance marketing for online stores.'],
+            ['title' => 'Reporting and Strategy', 'copy' => 'Weekly action reports focused on cost per lead, conversion rate, revenue and campaign quality.'],
         ],
         'faqs' => [
-            ['question' => 'Which is the best digital marketing company in Lucknow?', 'answer' => 'The best choice depends on your goal. If you need measurable leads, ecommerce sales, SEO content, ads, landing pages, and automation in one place, Akestech is built for that growth-focused requirement.'],
-            ['question' => 'What services does a digital marketing agency in Lucknow provide?', 'answer' => 'Core services include SEO, AEO content, Meta Ads, Google Ads, landing pages, website optimization, lead generation, Shopify growth, CRM setup, and WhatsApp automation.'],
-            ['question' => 'How much does digital marketing cost in Lucknow?', 'answer' => 'Costs depend on scope, ad budget, competition, and content volume. Most serious growth retainers start after an audit of your goals, current website, tracking, and funnel.'],
-            ['question' => 'Can digital marketing generate local leads in Lucknow?', 'answer' => 'Yes. Local SEO pages, Google Business Profile optimization, location-based ads, landing pages, and fast follow-up can generate qualified enquiries from Lucknow and nearby areas.'],
+            ['question' => 'Which is the best digital marketing company in {city}?', 'answer' => 'The best choice depends on your goal. If you need measurable leads, ecommerce sales, SEO content, ads, landing pages and automation in one place, AKESTECH is built for that growth-focused requirement.'],
+            ['question' => 'What services does a digital marketing agency in {city} provide?', 'answer' => 'Core services include SEO, AEO content, Meta Ads, Google Ads, landing pages, website optimization, lead generation, Shopify growth, CRM setup and WhatsApp automation.'],
+            ['question' => 'How much does digital marketing cost in {city}?', 'answer' => 'Costs depend on scope, ad budget, competition and content volume. Most serious growth retainers start after an audit of your goals, current website, tracking and funnel.'],
+            ['question' => 'Can digital marketing generate local leads in {city}?', 'answer' => 'Yes. Local SEO pages, Google Business Profile optimization, location-based ads, landing pages and fast follow-up generate qualified enquiries from {city} and nearby areas {nearby}.'],
+        ],
+        'related' => [
+            ['title' => 'Performance Marketing', 'url' => 'services/performance-marketing'],
+            ['title' => 'AI & Automation', 'url' => 'services/automation'],
+            ['title' => 'Shopify & Commerce', 'url' => 'services/shopify-growth'],
+            ['title' => 'Product Development', 'url' => 'services/technology'],
         ],
     ],
-    'shopify-development-company-in-lucknow' => [
-        'eyebrow' => 'Shopify development company in Lucknow',
-        'keyword' => 'Shopify Development Company in Lucknow',
-        'title' => 'Shopify Development Company in Lucknow | Akestech',
-        'description' => 'Hire a Shopify development company in Lucknow for Shopify store setup, theme customization, speed optimization, app integrations, tracking, and CRO.',
-        'h1' => 'Shopify Development Company in Lucknow for Stores That Sell',
-        'intro' => 'Akestech builds and improves Shopify stores for brands that need speed, clean UX, conversion-focused product pages, reliable tracking, and room to scale with ads and automation.',
-        'answer' => 'A Shopify development company in Lucknow should do more than install a theme. Akestech handles Shopify setup, theme customization, CRO, speed optimization, tracking, app integrations, migration, and growth support so your store is ready for real campaigns.',
-        'serviceName' => 'Shopify Development Services in Lucknow',
-        'primaryCta' => 'Discuss Shopify Project',
-        'accent' => 'green',
+
+    'shopify-development-company' => [
+        'eyebrow' => 'Shopify development company in {city}',
+        'keyword' => 'Shopify Development Company in {city}',
+        'h1' => 'Shopify Development Company in {city} for Stores That Sell',
+        'intro' => 'AKESTECH builds and improves Shopify stores for brands that need speed, clean UX, conversion-focused product pages, reliable tracking and room to scale with ads and automation.',
+        'answer' => 'A Shopify development company in {city} should do more than install a theme. AKESTECH handles Shopify setup, theme customization, CRO, speed optimization, tracking, app integrations, migration and growth support so your store is ready for real campaigns.',
+        'serviceName' => 'Shopify Development Services in {city}',
+        'cta' => 'Discuss Shopify Project',
+        'accent' => 'Shopify',
         'metrics' => [
             ['value' => 'Shopify', 'label' => 'Core platform'],
             ['value' => 'CRO', 'label' => 'Conversion focus'],
@@ -60,303 +99,430 @@ $pages = [
             ['value' => 'Ads-ready', 'label' => 'Tracking setup'],
         ],
         'services' => [
-            ['title' => 'Shopify Store Setup', 'copy' => 'New Shopify stores with theme setup, collections, navigation, pages, payment basics, shipping settings, and launch support.'],
-            ['title' => 'Theme Customization', 'copy' => 'Custom sections, product page layouts, cart improvements, homepage blocks, and brand-consistent UI changes.'],
-            ['title' => 'Speed Optimization', 'copy' => 'Image cleanup, script review, theme performance improvements, app audit, and mobile load-time fixes.'],
-            ['title' => 'App and API Integration', 'copy' => 'Integrations for WhatsApp, CRM, reviews, logistics, analytics, payment tools, and marketing automation.'],
-            ['title' => 'Tracking Setup', 'copy' => 'Meta Pixel, Google Ads tags, GA4, events, conversion tracking, UTMs, and campaign-ready reporting.'],
-            ['title' => 'CRO Improvements', 'copy' => 'Trust signals, product-page flow, checkout support, offer structure, cart recovery, and AOV improvements.'],
+            ['title' => 'Shopify Store Setup', 'copy' => 'New Shopify stores with theme setup, collections, navigation, pages, payment basics, shipping settings and launch support.'],
+            ['title' => 'Theme Customization', 'copy' => 'Custom sections, product page layouts, cart improvements, homepage blocks and brand-consistent UI changes.'],
+            ['title' => 'Speed Optimization', 'copy' => 'Image cleanup, script review, theme performance improvements, app audit and mobile load-time fixes.'],
+            ['title' => 'App and API Integration', 'copy' => 'Integrations for WhatsApp, CRM, reviews, logistics, analytics, payment tools and marketing automation.'],
+            ['title' => 'Tracking Setup', 'copy' => 'Meta Pixel, Google Ads tags, GA4, events, conversion tracking, UTMs and campaign-ready reporting.'],
+            ['title' => 'CRO Improvements', 'copy' => 'Trust signals, product-page flow, checkout support, offer structure, cart recovery and AOV improvements.'],
         ],
         'faqs' => [
-            ['question' => 'Do you build Shopify stores in Lucknow?', 'answer' => 'Yes. Akestech provides Shopify store setup, theme customization, app integrations, speed optimization, tracking, and growth support for businesses in Lucknow and across India.'],
-            ['question' => 'How long does Shopify development take?', 'answer' => 'A basic Shopify store can often launch in two to four weeks. Custom theme work, migration, integrations, and advanced CRO can take longer depending on scope.'],
-            ['question' => 'Can you improve an existing Shopify store?', 'answer' => 'Yes. We audit speed, UX, product pages, tracking, apps, checkout flow, and conversion issues, then prioritize fixes that can improve sales.'],
-            ['question' => 'Do you also manage Shopify marketing?', 'answer' => 'Yes. We can support Meta Ads, Google Ads, SEO, WhatsApp automation, cart recovery, and CRO after development.'],
+            ['question' => 'Do you build Shopify stores in {city}?', 'answer' => 'Yes. We build and optimize Shopify stores for {city} brands and support them with ads, automation and marketplace operations after launch.'],
+            ['question' => 'Can you customize an existing Shopify theme?', 'answer' => 'Yes. We work inside your current theme to add custom sections, improve product pages, fix speed issues and remove conversion friction.'],
+            ['question' => 'How long does a Shopify project take?', 'answer' => 'A new store typically takes three to five weeks. Theme customization and CRO improvements are usually delivered in two to four week cycles.'],
+            ['question' => 'Can you set up tracking before we run ads?', 'answer' => 'Yes. Pixel, GA4, events and conversion tracking are part of every build so your first campaign produces usable data.'],
+        ],
+        'related' => [
+            ['title' => 'Shopify & Commerce', 'url' => 'services/shopify-growth'],
+            ['title' => 'Performance Marketing', 'url' => 'services/performance-marketing'],
+            ['title' => 'Marketplace Management', 'url' => 'services/shopify-operations'],
+            ['title' => 'AI & Automation', 'url' => 'services/automation'],
         ],
     ],
-    'performance-marketing-company-in-lucknow' => [
-        'eyebrow' => 'Performance marketing company in Lucknow',
-        'keyword' => 'Performance Marketing Company in Lucknow',
-        'title' => 'Performance Marketing Company in Lucknow | Meta & Google Ads',
-        'description' => 'Akestech is a performance marketing company in Lucknow managing Meta Ads, Google Ads, landing pages, tracking, CRO, and revenue-focused optimization.',
-        'h1' => 'Performance Marketing Company in Lucknow for Profitable Campaigns',
-        'intro' => 'Akestech manages paid growth with clear targets: better leads, better ROAS, cleaner tracking, stronger creatives, and landing pages that turn traffic into enquiries and sales.',
-        'answer' => 'Performance marketing in Lucknow works best when campaigns, creatives, landing pages, analytics, and follow-up are managed together. Akestech builds this complete system across Meta Ads, Google Ads, tracking, reporting, and CRO.',
-        'serviceName' => 'Performance Marketing Services in Lucknow',
-        'primaryCta' => 'Get Ad Account Audit',
-        'accent' => 'orange',
+
+    'performance-marketing-company' => [
+        'eyebrow' => 'Performance marketing company in {city}',
+        'keyword' => 'Performance Marketing Company in {city}',
+        'h1' => 'Performance Marketing Company in {city} Built for ROAS',
+        'intro' => 'AKESTECH runs Meta and Google campaigns for {city} businesses that care about profit, not impressions. Structure, creative, tracking, landing pages and CRO work as one acquisition system.',
+        'answer' => 'A performance marketing company in {city} should be measured on cost per acquisition and ROAS, not clicks. AKESTECH manages Meta Ads and Google Ads end to end — creative testing, landing pages, tracking and attribution, retargeting and retention — and reports weekly against your revenue targets.',
+        'serviceName' => 'Performance Marketing Services in {city}',
+        'cta' => 'Get Free Ad Account Audit',
+        'accent' => 'ROAS',
         'metrics' => [
-            ['value' => 'Meta', 'label' => 'Facebook and Instagram'],
-            ['value' => 'Google', 'label' => 'Search and PMax'],
-            ['value' => 'CRO', 'label' => 'Landing page focus'],
-            ['value' => 'ROAS', 'label' => 'Profit lens'],
+            ['value' => '₹50Cr+', 'label' => 'Ad spend managed'],
+            ['value' => '3X+', 'label' => 'Average ROAS'],
+            ['value' => 'Weekly', 'label' => 'Creative testing'],
+            ['value' => 'Full', 'label' => 'Funnel tracking'],
         ],
         'services' => [
-            ['title' => 'Meta Ads Management', 'copy' => 'Campaign structure, creative testing, audience strategy, retargeting, lead ads, sales campaigns, and daily optimization.'],
-            ['title' => 'Google Ads Management', 'copy' => 'Search, Performance Max, Shopping, YouTube, call campaigns, conversion tracking, and keyword-led optimization.'],
-            ['title' => 'Creative Testing', 'copy' => 'Ad angles, hooks, static creatives, video briefs, UGC direction, and performance-based iteration.'],
-            ['title' => 'Landing Page Optimization', 'copy' => 'Dedicated campaign pages with persuasive copy, proof, forms, speed, and mobile-first conversion flow.'],
-            ['title' => 'Tracking and Analytics', 'copy' => 'Pixel setup, conversion events, GA4, UTMs, Meta CAPI support, and reporting that connects spend to outcomes.'],
-            ['title' => 'Scaling Strategy', 'copy' => 'Budget scaling, funnel diagnosis, offer testing, remarketing, and weekly action plans.'],
+            ['title' => 'Meta Ads Management', 'copy' => 'Facebook and Instagram campaigns structured for profitable scale with clean audience and creative testing.'],
+            ['title' => 'Google Ads Management', 'copy' => 'Search, Performance Max, Shopping and YouTube campaigns managed against contribution margin.'],
+            ['title' => 'Creative Strategy', 'copy' => 'High-volume creative production including AI video, tested on a weekly cadence against live results.'],
+            ['title' => 'Landing Pages and Funnels', 'copy' => 'Mobile-first pages with clear offers, proof and enquiry paths built to convert paid traffic.'],
+            ['title' => 'Tracking and Attribution', 'copy' => 'GA4, pixels, server-side events, UTMs and dashboards you can trust for budget decisions.'],
+            ['title' => 'Retention and Retargeting', 'copy' => 'Lifecycle campaigns across ads, email and WhatsApp that lift repeat purchase and lifetime value.'],
         ],
         'faqs' => [
-            ['question' => 'What does a performance marketing company do?', 'answer' => 'It manages paid campaigns with measurable goals such as leads, sales, ROAS, cost per lead, conversion rate, and revenue instead of focusing only on impressions or reach.'],
-            ['question' => 'Which platforms do you manage?', 'answer' => 'Akestech manages Meta Ads, Google Ads, Shopping, Performance Max, remarketing, landing pages, tracking, and reporting.'],
-            ['question' => 'Do you work with local Lucknow businesses?', 'answer' => 'Yes. We work with local service businesses, real estate teams, education brands, ecommerce stores, and B2B companies in Lucknow and across India.'],
-            ['question' => 'How soon can paid ads generate results?', 'answer' => 'Traffic and leads can start quickly after launch, but stable optimization usually needs two to four weeks of data, creative tests, and lead quality feedback.'],
+            ['question' => 'How much ad budget do we need in {city}?', 'answer' => 'It depends on category and competition. We recommend a budget after auditing your margins, current funnel and target cost per acquisition.'],
+            ['question' => 'How fast can campaigns show results?', 'answer' => 'Early signal arrives within two weeks. Stable, scalable performance usually takes 60 to 90 days of structured testing.'],
+            ['question' => 'Do you create the ad creatives?', 'answer' => 'Yes. Creative strategy, production and AI video are handled in-house and tested continuously against performance data.'],
+            ['question' => 'Will we own the ad accounts and data?', 'answer' => 'Yes. Accounts, pixels and historical data always remain in your ownership.'],
+        ],
+        'related' => [
+            ['title' => 'Performance Marketing', 'url' => 'services/performance-marketing'],
+            ['title' => 'AI Videos', 'url' => 'services/ai-videos'],
+            ['title' => 'Shopify & Commerce', 'url' => 'services/shopify-growth'],
+            ['title' => 'Case Studies', 'url' => 'case-studies'],
         ],
     ],
-    'meta-ads-management-in-lucknow' => [
-        'eyebrow' => 'Meta ads management in Lucknow',
-        'keyword' => 'Meta Ads Management in Lucknow',
-        'title' => 'Meta Ads Management in Lucknow | Facebook & Instagram Ads',
-        'description' => 'Get Meta Ads management in Lucknow for Facebook Ads, Instagram Ads, lead campaigns, ecommerce sales, retargeting, creatives, tracking, and reporting.',
-        'h1' => 'Meta Ads Management in Lucknow for Leads and Sales',
-        'intro' => 'Akestech manages Facebook and Instagram campaigns for Lucknow businesses that need better lead quality, ecommerce sales, retargeting, creative testing, and conversion tracking.',
-        'answer' => 'Meta Ads management in Lucknow includes campaign planning, audience testing, ad creative, lead forms, landing pages, pixel setup, retargeting, optimization, and weekly reporting. Akestech manages the full system so ad spend is tied to business outcomes.',
-        'serviceName' => 'Meta Ads Management Services in Lucknow',
-        'primaryCta' => 'Audit My Meta Ads',
-        'accent' => 'blue',
+
+    'meta-ads-management' => [
+        'eyebrow' => 'Meta Ads management in {city}',
+        'keyword' => 'Meta Ads Management in {city}',
+        'h1' => 'Meta Ads Management in {city} That Scales Profitably',
+        'intro' => 'Facebook and Instagram campaigns for {city} brands — structured, creative-led and optimized weekly against real revenue instead of vanity metrics.',
+        'answer' => 'Meta Ads management in {city} should cover account structure, audience strategy, creative testing, conversion tracking and budget optimization. AKESTECH runs all of it, pairing our AI video studio with structured testing so your account always has fresh angles to scale.',
+        'serviceName' => 'Meta Ads Management Services in {city}',
+        'cta' => 'Get Meta Ads Audit',
+        'accent' => 'Meta',
         'metrics' => [
-            ['value' => 'FB + IG', 'label' => 'Meta channels'],
-            ['value' => 'Leads', 'label' => 'Enquiry campaigns'],
-            ['value' => 'Sales', 'label' => 'Ecommerce campaigns'],
-            ['value' => 'Pixel', 'label' => 'Tracking setup'],
+            ['value' => 'Meta', 'label' => 'Ads + Instagram'],
+            ['value' => 'Weekly', 'label' => 'Creative testing'],
+            ['value' => 'CAPI', 'label' => 'Server-side tracking'],
+            ['value' => 'ROAS', 'label' => 'Primary metric'],
         ],
         'services' => [
-            ['title' => 'Campaign Strategy', 'copy' => 'Lead generation, sales, awareness, remarketing, and funnel planning based on your offer and audience.'],
-            ['title' => 'Audience Testing', 'copy' => 'Location, interest, lookalike, custom audience, broad targeting, and retargeting tests.'],
-            ['title' => 'Creative Direction', 'copy' => 'Hooks, offers, captions, static creatives, videos, reels, UGC briefs, and fatigue monitoring.'],
-            ['title' => 'Lead Forms and Landing Pages', 'copy' => 'Instant forms or landing pages depending on lead quality, ticket size, and sales process.'],
-            ['title' => 'Pixel and CAPI Support', 'copy' => 'Meta Pixel events, conversion tracking, domain checks, UTMs, and server-side tracking support where needed.'],
-            ['title' => 'Optimization and Reporting', 'copy' => 'Budget allocation, campaign cleanup, cost per lead review, quality feedback, and weekly next actions.'],
+            ['title' => 'Account Structure', 'copy' => 'Campaign and ad set architecture designed for clean data and controlled scaling.'],
+            ['title' => 'Audience Strategy', 'copy' => 'Broad, interest, lookalike and retention audiences tested and consolidated around what converts.'],
+            ['title' => 'Creative Production', 'copy' => 'Static, video and AI UGC produced in volume and tested on hooks, formats and offers.'],
+            ['title' => 'Conversion Tracking', 'copy' => 'Pixel, Conversions API and event setup so optimization has accurate signal.'],
+            ['title' => 'Budget Optimization', 'copy' => 'Daily and weekly budget moves driven by marginal ROAS, not guesses.'],
+            ['title' => 'Reporting', 'copy' => 'Clear weekly reporting on spend, ROAS, CAC and the next action being taken.'],
         ],
         'faqs' => [
-            ['question' => 'Do Facebook Ads work for Lucknow businesses?', 'answer' => 'Yes, when the offer, targeting, creative, landing page, and follow-up are aligned. Meta Ads can work well for local services, real estate, ecommerce, education, and events.'],
-            ['question' => 'What budget is needed for Meta Ads in Lucknow?', 'answer' => 'The right budget depends on your industry and goal. A practical test budget should allow enough leads or purchases for learning, optimization, and creative testing.'],
-            ['question' => 'Do you create ad creatives too?', 'answer' => 'Yes. We help with creative angles, copy, static designs, video briefs, UGC direction, and test planning.'],
-            ['question' => 'Can you improve my existing Meta campaigns?', 'answer' => 'Yes. We can audit your account structure, targeting, creatives, pixel events, landing pages, lead quality, and reporting before rebuilding or optimizing campaigns.'],
+            ['question' => 'Do you manage Instagram ads too?', 'answer' => 'Yes. Instagram is managed inside the same Meta account structure with placement-specific creative.'],
+            ['question' => 'How often do you change creatives?', 'answer' => 'We test new creatives weekly and refresh winning angles before performance declines.'],
+            ['question' => 'Can you fix a broken pixel or tracking setup?', 'answer' => 'Yes. Tracking audits and Conversions API setup are standard before any scaling work begins.'],
+            ['question' => 'What results should we expect in {city}?', 'answer' => 'Results depend on offer, margin and competition. We set targets after an audit instead of promising a fixed ROAS.'],
+        ],
+        'related' => [
+            ['title' => 'Performance Marketing', 'url' => 'services/performance-marketing'],
+            ['title' => 'AI Videos', 'url' => 'services/ai-videos'],
+            ['title' => 'Shopify & Commerce', 'url' => 'services/shopify-growth'],
+            ['title' => 'AI & Automation', 'url' => 'services/automation'],
         ],
     ],
-    'lead-generation-service-in-lucknow' => [
-        'eyebrow' => 'Lead generation service in Lucknow',
-        'keyword' => 'Lead Generation Service in Lucknow',
-        'title' => 'Lead Generation Service in Lucknow | Qualified Leads | Akestech',
-        'description' => 'Akestech provides lead generation service in Lucknow with Meta Ads, Google Ads, landing pages, CRM, WhatsApp automation, qualification, and reporting.',
-        'h1' => 'Lead Generation Service in Lucknow for Qualified Enquiries',
-        'intro' => 'Akestech builds lead generation funnels for Lucknow businesses that need more serious enquiries, faster follow-up, cleaner CRM data, and better cost per qualified lead.',
-        'answer' => 'A lead generation service in Lucknow should not stop at form fills. Akestech combines ads, landing pages, tracking, CRM routing, WhatsApp follow-up, and lead quality feedback so your sales team gets enquiries it can actually work on.',
-        'serviceName' => 'Lead Generation Services in Lucknow',
-        'primaryCta' => 'Plan My Lead Funnel',
-        'accent' => 'rose',
+
+    'lead-generation-service' => [
+        'eyebrow' => 'Lead generation services in {city}',
+        'keyword' => 'Lead Generation Services in {city}',
+        'h1' => 'Lead Generation Services in {city} for Qualified Enquiries',
+        'intro' => 'AKESTECH builds lead systems for {city} businesses — local SEO, paid campaigns, landing pages, instant follow-up and CRM routing that turns enquiries into conversations.',
+        'answer' => 'Lead generation in {city} works when acquisition, response speed and qualification are connected. AKESTECH combines local SEO and AEO pages, Meta and Google campaigns, conversion-focused landing pages, Lead365 routing and WhatsApp automation so every enquiry is captured, scored and followed up within minutes.',
+        'serviceName' => 'Lead Generation Services in {city}',
+        'cta' => 'Get Lead Generation Plan',
+        'accent' => 'Leads',
         'metrics' => [
-            ['value' => 'Meta', 'label' => 'Lead campaigns'],
-            ['value' => 'Google', 'label' => 'Intent capture'],
-            ['value' => 'CRM', 'label' => 'Lead routing'],
-            ['value' => 'WhatsApp', 'label' => 'Fast follow-up'],
+            ['value' => '< 5 min', 'label' => 'Speed to first response'],
+            ['value' => '100%', 'label' => 'Enquiries tracked'],
+            ['value' => 'Auto', 'label' => 'Follow-up sequences'],
+            ['value' => 'CPQL', 'label' => 'Reporting focus'],
         ],
         'services' => [
-            ['title' => 'Lead Strategy', 'copy' => 'Audience definition, offer planning, location targeting, funnel mapping, and qualification criteria.'],
-            ['title' => 'Paid Lead Campaigns', 'copy' => 'Meta lead ads, Google search campaigns, call campaigns, landing page campaigns, and remarketing.'],
-            ['title' => 'Landing Page Builds', 'copy' => 'Conversion pages with clear service copy, proof, local relevance, FAQs, forms, and mobile speed.'],
-            ['title' => 'CRM and Lead Routing', 'copy' => 'Source capture, lead assignment, sales status fields, reminders, and quality reporting.'],
-            ['title' => 'WhatsApp Follow-Up', 'copy' => 'Instant acknowledgement, qualification questions, brochure sharing, reminders, and sales handoff.'],
-            ['title' => 'Qualified Lead Reporting', 'copy' => 'Weekly review of CPL, qualified CPL, lead source, sales feedback, and next optimization actions.'],
+            ['title' => 'Local SEO and AEO Pages', 'copy' => 'Location and service pages with schema and answer-first content built to be cited by search and AI assistants.'],
+            ['title' => 'Paid Lead Campaigns', 'copy' => 'Meta and Google campaigns structured around cost per qualified lead rather than raw form fills.'],
+            ['title' => 'Landing Pages and Forms', 'copy' => 'Fast pages with clear offers, trust signals and short forms that reduce drop-off.'],
+            ['title' => 'Lead Routing and CRM', 'copy' => 'Lead365 captures, deduplicates, scores and routes every enquiry to the right person automatically.'],
+            ['title' => 'WhatsApp and SMS Follow-up', 'copy' => 'Instant automated response and nurture sequences until a salesperson picks up the conversation.'],
+            ['title' => 'Attribution Reporting', 'copy' => 'Cost per lead and cost per qualified lead by campaign, channel and keyword.'],
         ],
         'faqs' => [
-            ['question' => 'What is lead generation?', 'answer' => 'Lead generation is the process of attracting potential customers and capturing their contact details through ads, search, landing pages, forms, calls, WhatsApp, or other channels.'],
-            ['question' => 'Can you generate qualified leads in Lucknow?', 'answer' => 'Yes. We use local targeting, offer testing, landing pages, form filters, CRM routing, and follow-up automation to improve lead quality.'],
-            ['question' => 'Which industries can use lead generation?', 'answer' => 'Lead generation works for real estate, education, healthcare, local services, B2B services, ecommerce, finance, events, and high-ticket consultation businesses.'],
-            ['question' => 'How do you reduce junk leads?', 'answer' => 'We improve targeting, add qualifying questions, use better landing page copy, track source quality, connect CRM feedback, and optimize campaigns based on qualified leads instead of raw leads.'],
+            ['question' => 'How do you improve lead quality in {city}?', 'answer' => 'Better targeting, qualifying questions on forms, lead scoring and fast follow-up. We report on qualified leads, not raw volume.'],
+            ['question' => 'Can you integrate with our CRM?', 'answer' => 'Yes. Lead365 integrates with most CRMs, or becomes the single system your team works inside.'],
+            ['question' => 'How quickly will leads start coming?', 'answer' => 'Paid campaigns can generate enquiries within days of launch. SEO and AEO pages typically compound over eight to twelve weeks.'],
+            ['question' => 'Do you work with B2B and service businesses?', 'answer' => 'Yes — real estate, healthcare, education, automotive, professional services and manufacturing companies across {city}.'],
+        ],
+        'related' => [
+            ['title' => 'Lead365 — Lead Management', 'url' => 'products/lead365'],
+            ['title' => 'AI & Automation', 'url' => 'services/automation'],
+            ['title' => 'Performance Marketing', 'url' => 'services/performance-marketing'],
+            ['title' => 'Product Development', 'url' => 'services/technology'],
+        ],
+    ],
+
+    'ai-automation-company' => [
+        'eyebrow' => 'AI automation company in {city}',
+        'keyword' => 'AI Automation Company in {city}',
+        'h1' => 'AI Automation Company in {city} for Real Business Workflows',
+        'intro' => 'AKESTECH designs and builds AI agents, WhatsApp automation, CRM intelligence and workflow automation for {city} businesses that want less manual work and more output.',
+        'answer' => 'An AI automation company in {city} should identify repetitive, high-volume work and replace it with reliable systems. AKESTECH builds AI sales and support agents, WhatsApp and email journeys, CRM and ERP integrations, and automated reporting — then maintains and improves them after launch.',
+        'serviceName' => 'AI Automation Services in {city}',
+        'cta' => 'Get Automation Assessment',
+        'accent' => 'AI',
+        'metrics' => [
+            ['value' => '20+', 'label' => 'Hours saved weekly'],
+            ['value' => '24/7', 'label' => 'Agents working'],
+            ['value' => '30', 'label' => 'Days to first system'],
+            ['value' => 'ROI', 'label' => 'Ranked opportunity map'],
+        ],
+        'services' => [
+            ['title' => 'AI Sales Agents', 'copy' => 'Qualify enquiries, answer questions and move prospects toward purchase across web, WhatsApp and email.'],
+            ['title' => 'WhatsApp Automation', 'copy' => 'Conversational journeys for enquiries, orders, COD confirmation, shipping updates and reviews.'],
+            ['title' => 'CRM Intelligence', 'copy' => 'Connect lead sources, teams and customer data so the next action is automatic and visible.'],
+            ['title' => 'Workflow Automation', 'copy' => 'n8n, Make and custom integrations that remove manual handoffs between your tools.'],
+            ['title' => 'Operations Automation', 'copy' => 'Order routing, status updates, exception handling and reconciliation without manual effort.'],
+            ['title' => 'Automated Reporting', 'copy' => 'Dashboards and summaries that arrive on schedule instead of being assembled by hand.'],
+        ],
+        'faqs' => [
+            ['question' => 'What can AI automation actually do for a {city} business?', 'answer' => 'It can answer enquiries instantly, qualify and route leads, recover abandoned carts, confirm COD orders, update customers on delivery and produce reports — all without a person starting the task.'],
+            ['question' => 'How long does an automation project take?', 'answer' => 'The first system is usually live within 30 days, following an audit that ranks every opportunity by hours saved and revenue impact.'],
+            ['question' => 'Will automation replace our team?', 'answer' => 'No. It removes repetitive work so your team can focus on judgement, relationships and growth. Human handover paths are built in.'],
+            ['question' => 'Can you integrate with the software we already use?', 'answer' => 'Yes. We integrate with CRMs, ERPs, Shopify, WhatsApp Business API, payment gateways and analytics tools, and build custom connectors when needed.'],
+        ],
+        'related' => [
+            ['title' => 'AI & Automation', 'url' => 'services/automation'],
+            ['title' => 'Product Development', 'url' => 'services/technology'],
+            ['title' => 'Lead365 — Lead Management', 'url' => 'products/lead365'],
+            ['title' => 'Whatify — WhatsApp Commerce', 'url' => 'products/whatsapp-shopify'],
+        ],
+    ],
+
+    'ecommerce-consultant' => [
+        'eyebrow' => 'Ecommerce consultant in {city}',
+        'keyword' => 'Ecommerce Consultant in {city}',
+        'h1' => 'Ecommerce Consultant in {city} for Profitable Online Growth',
+        'intro' => 'AKESTECH advises {city} brands on store strategy, CRO, platform selection, unit economics and marketplace growth — and then builds what the strategy recommends.',
+        'answer' => 'An ecommerce consultant in {city} should turn an audit into a ranked, executable plan. AKESTECH reviews your store, funnel, tracking, catalogue and unit economics, then builds the roadmap and can execute it: Shopify development, CRO, performance marketing, marketplace management and AI automation.',
+        'serviceName' => 'Ecommerce Consulting Services in {city}',
+        'cta' => 'Book Ecommerce Consultation',
+        'accent' => 'Strategy',
+        'metrics' => [
+            ['value' => 'Audit', 'label' => 'First 7 days'],
+            ['value' => 'Roadmap', 'label' => 'Ranked by revenue impact'],
+            ['value' => 'CRO', 'label' => 'Conversion focus'],
+            ['value' => 'Build', 'label' => 'Strategy executed too'],
+        ],
+        'services' => [
+            ['title' => 'Store and Funnel Audit', 'copy' => 'Scored review of UX, speed, merchandising, checkout, tracking and conversion leaks.'],
+            ['title' => 'CRO Roadmap', 'copy' => 'Prioritised experiments on product pages, offers, cart and checkout with expected impact.'],
+            ['title' => 'Platform and Stack Selection', 'copy' => 'Honest recommendation on Shopify, marketplace mix, apps and integrations for your stage.'],
+            ['title' => 'Unit Economics', 'copy' => 'Contribution margin, pricing, shipping and discount analysis that shows where profit leaks.'],
+            ['title' => 'Marketplace Strategy', 'copy' => 'Where to list, how to price and how to protect margin across Amazon, Flipkart and D2C.'],
+            ['title' => 'Execution Support', 'copy' => 'The same team builds and runs the roadmap if you want it delivered rather than just documented.'],
+        ],
+        'faqs' => [
+            ['question' => 'What does an ecommerce consultant do?', 'answer' => 'An ecommerce consultant audits your store and funnel, identifies where revenue and margin are leaking, and produces a prioritised roadmap across CRO, platform, marketing and operations. AKESTECH can also execute that roadmap.'],
+            ['question' => 'Do you only advise, or do you build too?', 'answer' => 'Both. Many clients start with an audit and continue with our team building, marketing and operating the recommendations.'],
+            ['question' => 'Is Shopify the right platform for us?', 'answer' => 'For most D2C brands, yes. We assess catalogue complexity, integrations and total cost before recommending Shopify, Shopify Plus or a marketplace-first approach.'],
+            ['question' => 'How long does a consultation take?', 'answer' => 'A focused audit and roadmap is typically delivered within seven days of kickoff.'],
+        ],
+        'related' => [
+            ['title' => 'Shopify & Commerce', 'url' => 'services/shopify-growth'],
+            ['title' => 'Marketplace Management', 'url' => 'services/shopify-operations'],
+            ['title' => 'Performance Marketing', 'url' => 'services/performance-marketing'],
+            ['title' => 'AI & Automation', 'url' => 'services/automation'],
         ],
     ],
 ];
 
-if (!isset($pages[$route])) {
+/* ============================================================
+   BUILD THE PAGE MAP
+   ============================================================ */
+function ak_fill($value, $city, $region, $nearby) {
+    if (is_array($value)) return array_map(function ($v) use ($city, $region, $nearby) { return ak_fill($v, $city, $region, $nearby); }, $value);
+    return str_replace(['{city}', '{region}', '{nearby}'], [$city, $region, $nearby], $value);
+}
+
+$pages = [];
+foreach ($cities as $cityKey => $c) {
+    foreach ($serviceDefs as $svcKey => $def) {
+        $slug = $svcKey . '-' . $c['slugbit'];
+        $pages[$slug] = [
+            'city'    => $c['city'],
+            'region'  => $c['region'],
+            'postal'  => $c['postal'],
+            'areas'   => $c['areas'],
+            'nearby'  => $c['nearby'],
+            'keyword' => ak_fill($def['keyword'], $c['city'], $c['region'], $c['nearby']),
+            'eyebrow' => ak_fill($def['eyebrow'], $c['city'], $c['region'], $c['nearby']),
+            'h1'      => ak_fill($def['h1'], $c['city'], $c['region'], $c['nearby']),
+            'intro'   => ak_fill($def['intro'], $c['city'], $c['region'], $c['nearby']),
+            'answer'  => ak_fill($def['answer'], $c['city'], $c['region'], $c['nearby']),
+            'serviceName' => ak_fill($def['serviceName'], $c['city'], $c['region'], $c['nearby']),
+            'primaryCta'  => $def['cta'],
+            'accent'  => $def['accent'],
+            'metrics' => $def['metrics'],
+            'services' => ak_fill($def['services'], $c['city'], $c['region'], $c['nearby']),
+            'faqs'    => ak_fill($def['faqs'], $c['city'], $c['region'], $c['nearby']),
+            'related' => $def['related'],
+        ];
+    }
+}
+
+/* Legacy safety: preserve the original five Lucknow slugs exactly as generated above.
+   (digital-marketing-company-in-lucknow, shopify-development-company-in-lucknow,
+    performance-marketing-company-in-lucknow, meta-ads-management-in-lucknow,
+    lead-generation-service-in-lucknow) */
+
+$page = $pages[$route] ?? null;
+
+if (!$page) {
     http_response_code(404);
-    require __DIR__ . '/404.php';
+    $pageTitle = 'Page Not Found';
+    $metaDescription = 'The page you are looking for does not exist.';
+    require_once __DIR__ . '/404.php';
     return;
 }
 
-$page = $pages[$route];
+/* ---------------- SEO / AEO ---------------- */
+SEO::load($route);
+
 $canonical = url($route);
-$contactUrl = url('contact') . '?type=audit&service=' . rawurlencode($page['keyword']);
-$whatsappText = rawurlencode('Hi Akestech, I want help with ' . $page['keyword'] . '.');
+$whatsappText = urlencode('Hi AKESTECH, I found you on the ' . $page['keyword'] . ' page and would like to discuss a project.');
+$contactUrl = url('contact');
 
-SEO::set('meta_title', $page['title']);
-SEO::set('meta_description', $page['description']);
-SEO::set('meta_keywords', strtolower($page['keyword']) . ', ' . strtolower($page['serviceName']) . ', digital marketing agency Lucknow, Akestech');
-SEO::set('og_title', $page['title']);
-SEO::set('og_description', $page['description']);
-SEO::set('canonical_url', $canonical);
-
-$faqForSchema = array_map(function ($faq) {
-    return ['question' => $faq['question'], 'answer' => $faq['answer']];
-}, $page['faqs']);
-
-$webPageSchema = json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'WebPage',
-    'name' => $page['keyword'],
-    'url' => $canonical,
-    'description' => $page['description'],
-    'inLanguage' => 'en-IN',
-    'about' => [
-        '@type' => 'Service',
-        'name' => $page['serviceName'],
-    ],
-    'isPartOf' => [
-        '@type' => 'WebSite',
-        'name' => SITE_NAME,
-        'url' => SITE_URL,
-    ],
-], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-
-$schemas = [
-    $webPageSchema,
-    SEO::localBusinessSchema(),
-    SEO::serviceSchema($page['serviceName'], $page['description']),
-    SEO::faqSchema($faqForSchema),
-    SEO::breadcrumbSchema([
-        ['name' => 'Home', 'url' => url('/')],
-        ['name' => $page['keyword'], 'url' => $canonical],
-    ]),
-];
-
-$accentClasses = [
-    'primary' => ['text' => 'text-primary-600', 'bg' => 'bg-primary-50', 'solid' => 'bg-primary-600', 'border' => 'border-primary-100'],
-    'green' => ['text' => 'text-green-600', 'bg' => 'bg-green-50', 'solid' => 'bg-green-600', 'border' => 'border-green-100'],
-    'orange' => ['text' => 'text-orange-600', 'bg' => 'bg-orange-50', 'solid' => 'bg-orange-600', 'border' => 'border-orange-100'],
-    'blue' => ['text' => 'text-blue-600', 'bg' => 'bg-blue-50', 'solid' => 'bg-blue-600', 'border' => 'border-blue-100'],
-    'rose' => ['text' => 'text-rose-600', 'bg' => 'bg-rose-50', 'solid' => 'bg-rose-600', 'border' => 'border-rose-100'],
-];
-$accent = $accentClasses[$page['accent']] ?? $accentClasses['primary'];
-
-$process = [
-    ['step' => '01', 'title' => 'Audit', 'copy' => 'We review your current website, campaigns, tracking, content, and lead quality.'],
-    ['step' => '02', 'title' => 'Plan', 'copy' => 'We define keywords, audience segments, offers, funnel pages, tracking, and success metrics.'],
-    ['step' => '03', 'title' => 'Build', 'copy' => 'We create pages, campaigns, creatives, forms, CRM flows, and automation where required.'],
-    ['step' => '04', 'title' => 'Launch', 'copy' => 'We launch in controlled stages so performance data stays clean and useful.'],
-    ['step' => '05', 'title' => 'Optimize', 'copy' => 'We improve budgets, content, creatives, conversion rate, and lead quality every week.'],
-];
+$schemas = [];
+$schemas[] = SEO::breadcrumbSchema([
+    ['name' => 'Home', 'url' => url('/')],
+    ['name' => 'Locations', 'url' => url('digital-marketing-company-in-lucknow')],
+    ['name' => $page['keyword'], 'url' => $canonical],
+]);
+$schemas[] = SEO::localBusinessSchema($page['city'], $page['region'], $page['postal'], $page['areas']);
+$schemas[] = SEO::serviceSchema($page['serviceName'], $page['answer']);
+$schemas[] = SEO::faqSchema($page['faqs']);
 
 ob_start();
 ?>
 
-<section class="relative overflow-hidden bg-white">
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-70"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
-        <div class="grid lg:grid-cols-[1.08fr_0.92fr] gap-10 lg:gap-14 items-center">
-            <div class="animate-on-scroll">
-                <span class="inline-flex px-3 py-1.5 rounded-full <?= $accent['bg'] ?> <?= $accent['text'] ?> text-xs font-semibold uppercase tracking-wider"><?= htmlspecialchars($page['eyebrow']) ?></span>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-950 mt-6 leading-[1.06]"><?= htmlspecialchars($page['h1']) ?></h1>
-                <p class="mt-6 text-lg text-gray-600 leading-relaxed max-w-2xl"><?= htmlspecialchars($page['intro']) ?></p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                    <a href="<?= $contactUrl ?>" class="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-white bg-gray-950 rounded-xl hover:bg-gray-800 transition-all shadow-lg shadow-gray-900/20">
-                        <?= htmlspecialchars($page['primaryCta']) ?>
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-                    <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $whatsappText ?>" target="_blank" class="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-gray-800 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all">
-                        WhatsApp Us
-                    </a>
-                </div>
-            </div>
+<!-- ============ HERO ============ -->
+<section class="ak-pagehero">
+  <div class="ak-ai">
+    <div class="ak-ai__grid"></div>
+    <div class="ak-orb ak-orb--a"></div>
+    <div class="ak-orb ak-orb--b"></div>
+    <div class="ak-beam"></div>
+  </div>
 
-            <div class="animate-on-scroll">
-                <div class="bg-gray-950 rounded-2xl p-6 lg:p-7 shadow-2xl shadow-gray-900/10">
-                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Direct answer</p>
-                    <h2 class="text-2xl font-bold text-white mt-3">What should you expect from <?= htmlspecialchars($page['keyword']) ?>?</h2>
-                    <p class="text-sm text-gray-300 leading-relaxed mt-4"><?= htmlspecialchars($page['answer']) ?></p>
-                    <div class="grid grid-cols-2 gap-3 mt-6">
-                        <?php foreach ($page['metrics'] as $metric): ?>
-                        <div class="bg-white/5 border border-white/10 rounded-xl p-4">
-                            <p class="text-lg font-extrabold text-white"><?= htmlspecialchars($metric['value']) ?></p>
-                            <p class="text-xs text-gray-400 mt-1"><?= htmlspecialchars($metric['label']) ?></p>
-                        </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="ak-container ak-pagehero__inner">
+    <nav class="ak-crumbs" aria-label="Breadcrumb">
+      <a href="<?= url('/') ?>">Home</a> <span>/</span>
+      <span>Locations</span> <span>/</span>
+      <span><?= htmlspecialchars($page['city']) ?></span>
+    </nav>
+
+    <p class="ak-kicker"><?= htmlspecialchars($page['eyebrow']) ?></p>
+    <h1 class="ak-words"><?= htmlspecialchars($page['h1']) ?></h1>
+    <p><?= htmlspecialchars($page['intro']) ?></p>
+
+    <div class="ak-btns">
+      <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark"><?= htmlspecialchars($page['primaryCta']) ?> ↗</a>
+      <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $whatsappText ?>" target="_blank" rel="noopener" class="ak-btn ak-btn--light">WhatsApp Us</a>
     </div>
+
+    <div class="ak-metrics" style="margin-top:46px">
+      <?php foreach ($page['metrics'] as $m): ?>
+      <div class="ak-metric">
+        <b><?= htmlspecialchars($m['value']) ?></b>
+        <span><?= htmlspecialchars($m['label']) ?></span>
+      </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
 </section>
 
-<section class="bg-gray-50 py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mb-10 animate-on-scroll">
-            <p class="text-xs font-semibold <?= $accent['text'] ?> uppercase tracking-wider">Services</p>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-950 mt-3"><?= htmlspecialchars($page['serviceName']) ?></h2>
-            <p class="text-gray-600 mt-4">AEO-friendly, conversion-focused service content supported by practical execution, tracking, and weekly improvement.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-            <?php foreach ($page['services'] as $service): ?>
-            <div class="animate-on-scroll bg-white border border-gray-100 rounded-2xl p-6 hover:border-gray-200 hover:shadow-lg transition-all">
-                <div class="w-10 h-10 <?= $accent['bg'] ?> <?= $accent['text'] ?> rounded-xl flex items-center justify-center mb-4">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <h3 class="text-base font-semibold text-gray-950"><?= htmlspecialchars($service['title']) ?></h3>
-                <p class="text-sm text-gray-600 leading-relaxed mt-2"><?= htmlspecialchars($service['copy']) ?></p>
-            </div>
-            <?php endforeach; ?>
-        </div>
+<!-- ============ AEO ANSWER ============ -->
+<section class="ak-section ak-section--tight">
+  <div class="ak-container">
+    <div class="ak-answer ak-reveal">
+      <b>Direct answer — what should you expect from <?= htmlspecialchars($page['keyword']) ?>?</b>
+      <?= htmlspecialchars($page['answer']) ?>
     </div>
+  </div>
 </section>
 
-<section class="bg-white py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-10 animate-on-scroll">
-            <p class="text-xs font-semibold <?= $accent['text'] ?> uppercase tracking-wider">How we work</p>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-950 mt-3">A clear process from audit to optimization</h2>
-        </div>
-        <div class="grid md:grid-cols-5 gap-4">
-            <?php foreach ($process as $item): ?>
-            <div class="animate-on-scroll bg-gray-50 border border-gray-100 rounded-2xl p-5">
-                <span class="inline-flex w-10 h-10 items-center justify-center <?= $accent['solid'] ?> text-white rounded-xl text-xs font-bold"><?= $item['step'] ?></span>
-                <h3 class="text-sm font-semibold text-gray-950 mt-4"><?= htmlspecialchars($item['title']) ?></h3>
-                <p class="text-xs text-gray-500 leading-relaxed mt-2"><?= htmlspecialchars($item['copy']) ?></p>
-            </div>
-            <?php endforeach; ?>
-        </div>
+<!-- ============ SERVICES ============ -->
+<section class="ak-section" id="services">
+  <div class="ak-container">
+    <div class="ak-head ak-reveal">
+      <div class="ak-kicker">Services</div>
+      <div>
+        <h2 class="ak-h2"><?= htmlspecialchars($page['serviceName']) ?></h2>
+        <p class="ak-lead">AEO-friendly, conversion-focused service content supported by practical execution, tracking and weekly improvement.</p>
+      </div>
     </div>
+
+    <div class="ak-grid3">
+      <?php $i = 1; foreach ($page['services'] as $s): ?>
+      <article class="ak-card ak-spot ak-reveal">
+        <div class="ak-card__num"><?= str_pad((string)$i, 2, '0', STR_PAD_LEFT) ?></div>
+        <div>
+          <h3><?= htmlspecialchars($s['title']) ?></h3>
+          <p><?= htmlspecialchars($s['copy']) ?></p>
+        </div>
+      </article>
+      <?php $i++; endforeach; ?>
+    </div>
+  </div>
 </section>
 
-<section class="bg-gray-950 py-14 lg:py-20">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
-        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Local SEO coverage</p>
-        <h2 class="text-3xl lg:text-5xl font-bold text-white mt-4 leading-tight">Serving Lucknow businesses with India-ready digital execution.</h2>
-        <p class="text-gray-400 mt-5 max-w-2xl mx-auto">We support businesses across Gomti Nagar, Hazratganj, Aliganj, Indira Nagar, Mahanagar, Vibhuti Khand, and nearby Lucknow markets, while building campaigns that can scale across Uttar Pradesh and India.</p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="<?= $contactUrl ?>" class="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-gray-950 bg-white rounded-xl hover:bg-gray-100 transition-all">
-                Request Free Audit
-            </a>
-            <a href="tel:<?= SITE_PHONE ?>" class="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white border border-white/20 rounded-xl hover:bg-white/10 transition-all">
-                Call <?= SITE_PHONE ?>
-            </a>
-        </div>
+<!-- ============ PROCESS ============ -->
+<section class="ak-section" id="process">
+  <div class="ak-container">
+    <div class="ak-head ak-reveal">
+      <div class="ak-kicker">How we work</div>
+      <div><h2 class="ak-h2">A clear process from audit to optimization.</h2></div>
     </div>
+    <div class="ak-process">
+      <div class="ak-step ak-reveal"><span>01</span><h3>Audit</h3><p>We review your current website, campaigns, tracking, content and lead quality.</p></div>
+      <div class="ak-step ak-reveal"><span>02</span><h3>Plan</h3><p>We define keywords, audience segments, offers, funnel pages, tracking and success metrics.</p></div>
+      <div class="ak-step ak-reveal"><span>03</span><h3>Build</h3><p>We create pages, campaigns, creatives, forms, CRM flows and automation where required.</p></div>
+      <div class="ak-step ak-reveal"><span>04</span><h3>Launch</h3><p>We launch in controlled stages so performance data stays clean and useful.</p></div>
+      <div class="ak-step ak-reveal"><span>05</span><h3>Optimize</h3><p>We improve budgets, content, creatives, conversion rate and lead quality every week.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="bg-white py-14 lg:py-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10 animate-on-scroll">
-            <p class="text-xs font-semibold <?= $accent['text'] ?> uppercase tracking-wider">FAQ</p>
-            <h2 class="text-3xl font-bold text-gray-950 mt-3">People also ask about <?= htmlspecialchars($page['keyword']) ?></h2>
+<!-- ============ LOCAL COVERAGE ============ -->
+<section class="ak-section ak-section--tight">
+  <div class="ak-container">
+    <div class="ak-cta ak-reveal">
+      <div>
+        <div class="ak-kicker" style="color:#999;margin-bottom:20px">Local coverage</div>
+        <h2 class="ak-h2" style="font-size:clamp(30px,4vw,54px)">Serving <?= htmlspecialchars($page['city']) ?> businesses with India-ready execution.</h2>
+      </div>
+      <div>
+        <p>We support businesses across <?= htmlspecialchars(implode(', ', $page['areas'])) ?> and nearby markets <?= htmlspecialchars($page['nearby']) ?>, while building campaigns that can scale nationally.</p>
+        <div class="ak-btns" style="margin-top:0">
+          <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--onDark">Request Free Audit ↗</a>
+          <a href="tel:<?= SITE_PHONE ?>" class="ak-btn ak-btn--ghost">Call <?= SITE_PHONE ?></a>
         </div>
-        <div class="space-y-4">
-            <?php foreach ($page['faqs'] as $index => $faq): ?>
-            <details class="animate-on-scroll group border border-gray-200 rounded-2xl p-5 hover:border-gray-300 transition-all">
-                <summary class="flex cursor-pointer items-start justify-between gap-4">
-                    <span class="text-base font-semibold text-gray-950"><?= ($index + 1) ?>. <?= htmlspecialchars($faq['question']) ?></span>
-                    <span class="<?= $accent['text'] ?> group-open:rotate-180 transition-transform">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </span>
-                </summary>
-                <p class="text-sm text-gray-600 leading-relaxed mt-4"><?= htmlspecialchars($faq['answer']) ?></p>
-            </details>
-            <?php endforeach; ?>
-        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="ak-section" id="faq" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="ak-container">
+    <div class="ak-head ak-reveal">
+      <div class="ak-kicker">FAQ</div>
+      <div><h2 class="ak-h2">People also ask about <?= htmlspecialchars($page['keyword']) ?>.</h2></div>
+    </div>
+    <div class="ak-rows ak-acc ak-reveal">
+      <?php foreach ($page['faqs'] as $i => $faq): ?>
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="ak-row" type="button" itemprop="name">
+          <small><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></small>
+          <b><?= htmlspecialchars($faq['question']) ?></b>
+          <span class="ak-plus">+</span>
+        </button>
+        <div class="ak-rowbody" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+          <p itemprop="text"><?= nl2br(htmlspecialchars($faq['answer'])) ?></p>
+        </div>
+      </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RELATED ============ -->
+<section class="ak-section" id="related">
+  <div class="ak-container">
+    <div class="ak-head ak-reveal">
+      <div class="ak-kicker">Explore</div>
+      <div><h2 class="ak-h2">Go deeper with AKESTECH.</h2></div>
+    </div>
+    <div class="ak-rows ak-reveal">
+      <?php $i = 1; foreach ($page['related'] as $r): ?>
+      <a class="ak-row" href="<?= url($r['url']) ?>">
+        <small><?= str_pad((string)$i, 2, '0', STR_PAD_LEFT) ?></small>
+        <b><?= htmlspecialchars($r['title']) ?></b>
+        <span>↗</span>
+      </a>
+      <?php $i++; endforeach; ?>
+    </div>
+  </div>
 </section>
 
 <?php

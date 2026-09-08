@@ -37,6 +37,8 @@ $routes = [
     'services/shopify-operations'   => 'pages/services/shopify-operations.php',
     'services/automation'           => 'pages/services/automation.php',
     'services/technology'           => 'pages/services/technology.php',
+    'services/ai-videos'            => 'pages/services/ai-videos.php',
+    'products/lead365'              => 'pages/products/lead365.php',
     'case-studies'                  => 'pages/case-studies.php',
     'resources'                     => 'pages/resources.php',
     'resources/whatsapp-message-templates' => 'pages/resources/whatsapp-message-templates.php',
@@ -46,14 +48,40 @@ $routes = [
     'resources/shopify-launch-checklist'  => 'pages/resources/shopify-launch-checklist.php',
     'resources/download-shopify-growth-playbook' => 'pages/resources/download-shopify-growth-playbook.php',
     'blog'                          => 'pages/blog.php',
+    'blog/faqs'                     => 'pages/blog-faqs.php',
     'about'                         => 'pages/about.php',
     'contact'                       => 'pages/contact.php',
     'real-estate-marketing-agency'   => 'pages/real-estate-marketing-agency.php',
+
+    /* ---- Local: Lucknow (original five kept exactly) ---- */
     'digital-marketing-company-in-lucknow' => 'pages/local-service.php',
     'shopify-development-company-in-lucknow' => 'pages/local-service.php',
     'performance-marketing-company-in-lucknow' => 'pages/local-service.php',
     'meta-ads-management-in-lucknow' => 'pages/local-service.php',
     'lead-generation-service-in-lucknow' => 'pages/local-service.php',
+    /* ---- Local: Lucknow (additive) ---- */
+    'ai-automation-company-in-lucknow' => 'pages/local-service.php',
+    'ecommerce-consultant-in-lucknow' => 'pages/local-service.php',
+
+    /* ---- Local: Delhi NCR (additive) ---- */
+    'digital-marketing-company-in-delhi-ncr' => 'pages/local-service.php',
+    'shopify-development-company-in-delhi-ncr' => 'pages/local-service.php',
+    'performance-marketing-company-in-delhi-ncr' => 'pages/local-service.php',
+    'meta-ads-management-in-delhi-ncr' => 'pages/local-service.php',
+    'lead-generation-service-in-delhi-ncr' => 'pages/local-service.php',
+    'ai-automation-company-in-delhi-ncr' => 'pages/local-service.php',
+    'ecommerce-consultant-in-delhi-ncr' => 'pages/local-service.php',
+
+    /* ---- Industries (additive) ---- */
+    'industries/d2c-ecommerce'              => 'pages/industry.php',
+    'industries/healthcare'                 => 'pages/industry.php',
+    'industries/education'                  => 'pages/industry.php',
+    'industries/automotive'                 => 'pages/industry.php',
+    'industries/food-and-beverage'          => 'pages/industry.php',
+    'industries/saas-and-startups'          => 'pages/industry.php',
+    'industries/real-estate'                => 'pages/industry.php',
+    'industries/retail-and-consumer-brands' => 'pages/industry.php',
+
     'privacy-policy'                => 'pages/privacy-policy.php',
     'terms'                         => 'pages/terms.php',
     'data-deletion'                 => 'pages/data-deletion.php',

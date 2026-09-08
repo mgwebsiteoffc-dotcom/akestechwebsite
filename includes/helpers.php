@@ -153,3 +153,25 @@ function component($name, $data = []) {
     include __DIR__ . "/components/{$name}.php";
 }
 
+/**
+ * Safe FAQ lookup — never throws if the faqs table is unavailable.
+ * Falls back to an optional array of static FAQs supplied by the page.
+ */
+function ak_faqs($pageSlug, $fallback = []) {
+    try {
+        $faqs = getFaqs($pageSlug);
+        if (is_array($faqs) && !empty($faqs)) {
+            $out = [];
+            foreach ($faqs as $f) {
+                if (!empty($f['question'])) {
+                    $out[] = ['question' => $f['question'], 'answer' => $f['answer'] ?? ''];
+                }
+            }
+            if (!empty($out)) return $out;
+        }
+    } catch (Throwable $e) {
+        /* table missing or DB down — fall through to static FAQs */
+    }
+    return is_array($fallback) ? $fallback : [];
+}
+
