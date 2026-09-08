@@ -739,3 +739,55 @@ a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2
   .ak-guide__nav{position:static;order:2}
   .ak-guide__body{order:1}
 }
+
+/* ==========================================================================
+   TEMPLATE RESOURCE PAGE — category chips, template cards, variables
+   ========================================================================== */
+.ak-chipnav{position:sticky;top:0;z-index:30;background:var(--card);border-bottom:1px solid var(--line)}
+.ak-chipnav__row{display:flex;gap:8px;padding:12px 0;overflow-x:auto;scrollbar-width:none}
+.ak-chipnav__row::-webkit-scrollbar{display:none}
+.ak-chipnav__row a{
+  flex:none;padding:9px 16px;border-radius:999px;border:1px solid var(--line);
+  background:var(--bg);font-size:14px;font-weight:600;color:#555;transition:.22s var(--ease);
+}
+.ak-chipnav__row a:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+
+.ak-tplgroup{margin-bottom:56px;scroll-margin-top:90px}
+.ak-tplgroup:last-child{margin-bottom:0}
+.ak-tplgroup__head{margin-bottom:22px}
+.ak-tplgroup__count{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:#8d8d88}
+.ak-tplgroup__head > p{margin-top:8px;color:#666;font-size:16px;max-width:720px;line-height:1.6}
+
+.ak-tplgrid{display:grid;gap:16px}
+.ak-tpl{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:24px 26px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease);
+}
+.ak-tpl__head{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
+.ak-tpl__no{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:#8d8d88}
+.ak-tpl__head h3{font-size:18px;font-weight:750;letter-spacing:-.3px;color:var(--ink);margin:6px 0 5px}
+.ak-tpl__timing{font-size:13px;color:#888}
+.ak-copybtn{
+  display:inline-flex;align-items:center;gap:7px;flex:none;cursor:pointer;
+  background:var(--bg);border:1px solid var(--line);border-radius:11px;
+  padding:9px 14px;font-size:13.5px;font-weight:650;color:var(--ink);font-family:inherit;
+  transition:.22s var(--ease);
+}
+.ak-copybtn:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.ak-tpl__text{
+  white-space:pre-line;border-radius:14px;background:#f2f2ee;border:1px solid var(--line);
+  padding:18px 20px;font-size:15px;line-height:1.75;color:#2f2f2c;
+}
+
+.ak-vars{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.ak-vars > div{display:flex;align-items:center;gap:12px}
+.ak-vars code{
+  flex:none;background:var(--bg);border:1px solid var(--line);border-radius:8px;
+  padding:5px 9px;font-size:13px;color:var(--ink);font-weight:700;
+}
+.ak-vars span{font-size:14px;color:#666}
+
+@media (max-width:640px){
+  .ak-tpl{padding:20px}
+  .ak-tpl__head{flex-direction:column}
+}
