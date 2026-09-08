@@ -49,22 +49,33 @@ ob_start();
     <div class="ak-beam"></div>
   </div>
 
-  <div class="ak-hero__inner">
-    <div class="ak-eyebrow">AI · Commerce · Growth Technology</div>
-    <h1 class="ak-h1 ak-words">Build. Automate. Grow.</h1>
-  </div>
+  <div class="ak-hero__grid ak-container">
 
-  <div class="ak-hero__copy ak-hero__inner">
-    <strong>Technology for the next generation of commerce.</strong>
-    <p style="margin-top:14px">We build Shopify stores, digital products, AI systems and growth engines that help ambitious businesses launch, sell and scale.</p>
-    <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
-      <span class="ak-chip"><span class="ak-dot"></span> AI agents running 24/7</span>
-      <span class="ak-chip"><span class="ak-dot"></span> Commerce + growth in one team</span>
+    <div class="ak-hero__inner">
+      <div class="ak-eyebrow">AI · Commerce · Growth Technology</div>
+
+      <!-- Typewriter heading: three stacked lines, text lives in the HTML for SEO -->
+      <h1 class="ak-h1" data-ak-seq data-ak-speed="80" data-ak-gap="190" data-ak-start="300">
+        <span class="ak-typeline">Build.</span>
+        <span class="ak-typeline">Automate.</span>
+        <span class="ak-typeline">Grow.</span>
+      </h1>
     </div>
-    <div class="ak-btns">
-      <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark">Build with AKESTECH ↗</a>
-      <a href="#capabilities" class="ak-btn ak-btn--light">Explore capabilities</a>
+
+    <div class="ak-hero__copy">
+      <strong>Technology for the next generation of commerce.</strong>
+      <p style="margin-top:14px">We build Shopify stores, digital products, AI systems and growth engines that help ambitious businesses launch, sell and scale.</p>
+      <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
+        <span class="ak-chip"><span class="ak-dot"></span> AI agents running 24/7</span>
+        <span class="ak-chip"><span class="ak-dot"></span> Commerce + growth in one team</span>
+      </div>
+      <div class="ak-btns">
+        <a href="<?= $contactUrl ?>" class="ak-btn ak-btn--dark">Build with AKESTECH ↗</a>
+        <a href="#capabilities" class="ak-btn ak-btn--light">Explore capabilities</a>
+      </div>
     </div>
+
+  </div><!-- /.ak-hero__grid -->
   </div>
 </section>
 

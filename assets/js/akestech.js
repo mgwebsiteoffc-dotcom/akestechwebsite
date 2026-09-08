@@ -86,13 +86,63 @@
      5. Cursor spotlight on .ak-spot elements
      ------------------------------------------------------------------ */
   if (!reduce && window.matchMedia('(hover: hover)').matches) {
-    document.querySelectorAll('.ak-spot').forEach(function (el) {
-      el.addEventListener('pointermove', function (e) {
-        var r = el.getBoundingClientRect();
-        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    /* ---- Smooth glow that follows the cursor across card grids ----
+       Each card keeps a target glow + target highlight position; every frame we
+       ease the current values toward the target, so sliding from one box to the
+       next looks like one continuous light instead of an on/off switch. */
+    var spots = [].slice.call(document.querySelectorAll('.ak-spot'));
+    if (spots.length) {
+      spots.forEach(function (el) {
+        el._tx = 50; el._ty = 50;   /* target highlight position (%) */
+        el._cx = 50; el._cy = 50;   /* eased highlight position (%)  */
+        el._tg = 0;  el._g = 0;     /* target / eased glow strength   */
+        el.classList.add('ak-spot--js');
       });
-    });
+
+      var mx = -9999, my = -9999, raf = null;
+
+      function frame() {
+        raf = null;
+        var moving = false;
+        for (var i = 0; i < spots.length; i++) {
+          var el = spots[i];
+          var r = el.getBoundingClientRect();
+          if (!r.width || !r.height) continue;
+
+          /* distance from the cursor to the card's rectangle (0 when inside) */
+          var dx = Math.max(r.left - mx, 0, mx - r.right);
+          var dy = Math.max(r.top - my, 0, my - r.bottom);
+          var dist = Math.sqrt(dx * dx + dy * dy);
+
+          /* proximity falloff — neighbours light up slightly as you approach */
+          el._tg = Math.min(1, Math.max(0, 1 - dist / 340) * 1.15);
+          el._tx = ((mx - r.left) / r.width) * 100;
+          el._ty = ((my - r.top) / r.height) * 100;
+
+          el._cx += (el._tx - el._cx) * 0.14;
+          el._cy += (el._ty - el._cy) * 0.14;
+          el._g  += (el._tg - el._g) * 0.11;
+
+          if (Math.abs(el._g - el._tg) > 0.003 ||
+              Math.abs(el._cx - el._tx) > 0.05 ||
+              Math.abs(el._cy - el._ty) > 0.05) moving = true;
+
+          el.style.setProperty('--mx', el._cx.toFixed(2) + '%');
+          el.style.setProperty('--my', el._cy.toFixed(2) + '%');
+          el.style.setProperty('--glow', el._g.toFixed(3));
+        }
+        if (moving) raf = requestAnimationFrame(frame);
+      }
+
+      window.addEventListener('pointermove', function (e) {
+        mx = e.clientX; my = e.clientY;
+        if (!raf) raf = requestAnimationFrame(frame);
+      }, { passive: true });
+
+      window.addEventListener('scroll', function () {
+        if (!raf) raf = requestAnimationFrame(frame);
+      }, { passive: true });
+    }
 
     /* Subtle magnetic lift on primary buttons */
     document.querySelectorAll('.ak-btn--dark, .ak-navcta').forEach(function (btn) {
@@ -174,7 +224,54 @@
   }
 
   /* ------------------------------------------------------------------
-     10. Typing effect for [data-ak-type]
+     10a. Sequential typewriter for hero headings  ([data-ak-seq])
+          Renders one .ak-typeline at a time with a live caret. The full
+          text stays in the HTML source, so crawlers always read it.
+     ------------------------------------------------------------------ */
+  if (!reduce) {
+    document.querySelectorAll('[data-ak-seq]').forEach(function (seq) {
+      var lines = [].slice.call(seq.querySelectorAll('.ak-typeline'));
+      if (!lines.length) return;
+
+      var texts = lines.map(function (l) { return l.textContent.replace(/\s+/g, ' ').trim(); });
+      var full = texts.join(' ');
+      var speed = parseInt(seq.dataset.akSpeed || '72', 10);
+      var gap = parseInt(seq.dataset.akGap || '170', 10);
+      var start = parseInt(seq.dataset.akStart || '320', 10);
+
+      /* keep the heading readable to screen readers while it types */
+      seq.setAttribute('aria-label', full);
+      lines.forEach(function (l) { l.textContent = ''; });
+
+      var caret = document.createElement('span');
+      caret.className = 'ak-caret';
+      var li = 0, ci = 0;
+
+      function typeLine() {
+        if (li >= lines.length) return;
+        var line = lines[li];
+        line.classList.add('is-typing');
+        line.appendChild(caret);
+
+        function step() {
+          ci++;
+          line.textContent = texts[li].slice(0, ci);
+          line.appendChild(caret);
+          if (ci < texts[li].length) return setTimeout(step, speed);
+          line.classList.remove('is-typing');
+          line.classList.add('is-done');
+          li++; ci = 0;
+          if (li < lines.length) return setTimeout(typeLine, gap);
+        }
+        setTimeout(step, 80);
+      }
+
+      setTimeout(typeLine, start);
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     10b. Typing effect for [data-ak-type]  (single element, looping)
      ------------------------------------------------------------------ */
   if (!reduce) {
     document.querySelectorAll('[data-ak-type]').forEach(function (el) {

@@ -27,10 +27,6 @@ $industries = [
     ['url' => url('industries/retail-and-consumer-brands'), 'title' => 'Retail & Consumer'],
 ];
 
-$locations = [
-    ['url' => url('digital-marketing-company-in-lucknow'),      'title' => 'Lucknow'],
-    ['url' => url('digital-marketing-company-in-delhi-ncr'),    'title' => 'Delhi NCR'],
-];
 ?>
 <style>
 .ak-dd{position:relative}
@@ -86,17 +82,6 @@ $locations = [
         </div>
       </div>
 
-      <div class="ak-dd">
-        <button type="button" aria-haspopup="true">Locations
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="ak-dd__panel">
-          <?php foreach ($locations as $s): ?>
-            <a href="<?= $s['url'] ?>"><strong><?= htmlspecialchars($s['title']) ?></strong></a>
-          <?php endforeach; ?>
-        </div>
-      </div>
-
       <a href="<?= url('case-studies') ?>">Case Studies</a>
       <a href="<?= url('resources') ?>">Resources</a>
       <a href="<?= url('blog') ?>">Blog</a>
@@ -118,10 +103,6 @@ $locations = [
     <?php foreach ($industries as $s): ?>
       <a href="<?= $s['url'] ?>"><?= htmlspecialchars($s['title']) ?></a>
     <?php endforeach; ?>
-
-    <p class="ak-mnav__group">Locations</p>
-    <a href="<?= url('digital-marketing-company-in-lucknow') ?>">Lucknow</a>
-    <a href="<?= url('digital-marketing-company-in-delhi-ncr') ?>">Delhi NCR</a>
 
     <p class="ak-mnav__group">Explore</p>
     <a href="<?= url('products/whatsapp-shopify') ?>">Whatify — WhatsApp Commerce</a>

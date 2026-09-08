@@ -73,7 +73,7 @@
       border-bottom: 1px solid var(--line);
     }
     .logo { display: flex; align-items: center; gap: 9px; font-size: 22px; font-weight: 850; letter-spacing: -1px; }
-    .logo img { height: 34px; width: auto; object-fit: contain; }
+    .logo img { height: 52px; width: auto; object-fit: contain; }
     .navlinks { display: flex; gap: 30px; font-size: 14px; }
     .navlinks a { color: #333; transition: color .2s ease; }
     .navlinks a:hover { color: var(--ink); }
@@ -114,6 +114,11 @@
       max-width: 900px;
       font-weight: 850;
     }
+    .ak-typeline { display: block; min-height: .9em; white-space: nowrap; }
+    .ak-typeline .ak-caret { opacity: 0; }
+    .ak-typeline.is-typing .ak-caret, .ak-typeline.is-done .ak-caret { opacity: 1; }
+    .ak-caret { display: inline-block; width: 9px; height: 1.05em; background: var(--ink); vertical-align: -.16em; margin-left: 3px; animation: akBlink 1.05s steps(2, start) infinite; }
+    @keyframes akBlink { 50% { opacity: 0; } }
     .hero-copy {
       max-width: 430px;
       padding-bottom: 7px;
@@ -160,6 +165,24 @@
       transition: .25s ease;
     }
     a.card:hover { transform: translateY(-5px); border-color: #999; }
+
+    /* Smooth cursor glow — JS eases --mx/--my/--glow so the highlight glides
+       from one box to the next instead of switching on and off. */
+    .card, .product { position: relative; overflow: hidden; }
+    .card > *, .product > * { position: relative; z-index: 1; }
+    .card::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      opacity: 0; transition: opacity .35s ease;
+      background: radial-gradient(460px circle at var(--mx, 50%) var(--my, 50%), rgba(16,16,16,.075), transparent 62%);
+    }
+    .card:hover::before { opacity: 1; }
+    .ak-spot--js::before, .ak-spot--js:hover::before { transition: none; opacity: var(--glow, 0); }
+    .ak-spot--js::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1; border-radius: inherit;
+      box-shadow: inset 0 0 0 1px rgba(16,16,16,calc(var(--glow, 0) * .55));
+    }
+    a.card.ak-spot--js { border-color: rgba(16,16,16,calc(.12 + var(--glow, 0) * .5)); }
+    a.card.ak-spot--js:hover { transform: translateY(calc(var(--glow, 0) * -6px)); box-shadow: 0 30px 60px -32px rgba(16,16,16,calc(var(--glow, 0) * .85)); }
     .number { font-size: 12px; color: #888; letter-spacing: .04em; }
     .card h3 { font-size: 26px; letter-spacing: -1px; margin-bottom: 12px; font-weight: 750; }
     .card p { color: #666; font-size: 15px; }
@@ -185,8 +208,18 @@
     .service { color: var(--ink); }
     .service .plus { display: inline-block; transition: transform .25s ease; }
     .service.open .plus { transform: rotate(45deg); }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
-    .faq-a p { color: var(--muted); font-size: 16px; max-width: 780px; padding: 0 0 24px 80px; line-height: 1.6; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .45s ease; }
+    .faq-a p {
+      margin: 0 0 0 80px;
+      padding: 20px 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--ink);
+      border-radius: 16px;
+      color: #333; font-size: 16.5px; line-height: 1.75; max-width: 820px;
+      box-shadow: 0 18px 36px -30px rgba(16,16,16,.55);
+    }
+    .faq-a::after { content: ""; display: block; height: 22px; }
 
     /* ---------------- PRODUCTS ---------------- */
     .products { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -210,14 +243,14 @@
 
     /* ---------------- METRICS ---------------- */
     .metrics { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .metric { padding: 34px 24px; border-right: 1px solid var(--line); }
+    .metric { padding: 40px 28px; border-right: 1px solid var(--line); }
     .metric:last-child { border-right: 0; }
-    .metric b { display: block; font-size: clamp(38px, 4.4vw, 58px); letter-spacing: -3px; font-weight: 850; line-height: 1; }
-    .metric span { display: block; font-size: 13px; color: #777; margin-top: 10px; }
+    .metric b { display: block; font-size: clamp(46px, 5.6vw, 78px); letter-spacing: -4px; font-weight: 850; line-height: 1; }
+    .metric span { display: block; font-size: 14px; color: #777; margin-top: 12px; }
 
     /* ---------------- LOGOS ---------------- */
-    .logos { display: flex; flex-wrap: wrap; gap: 46px; align-items: center; padding: 40px 0; }
-    .logos img { height: 40px; width: auto; object-fit: contain; opacity: .55; filter: grayscale(1); transition: .25s ease; }
+    .logos { display: flex; flex-wrap: wrap; gap: 62px; align-items: center; padding: 44px 0; }
+    .logos img { height: 62px; width: auto; object-fit: contain; opacity: .62; filter: grayscale(1); transition: .35s ease; }
     .logos img:hover { opacity: 1; filter: none; }
 
     /* ---------------- CTA ---------------- */
@@ -308,9 +341,9 @@
       .statement, .cta { padding: 30px 24px; }
       footer { flex-direction: column; gap: 10px; }
       .form-row { grid-template-columns: 1fr; }
-      .faq-a p { padding-left: 0; }
+      .faq-a p { margin-left: 0; padding: 18px 20px; font-size: 16px; }
       .logos { gap: 28px; }
-      .logos img { height: 30px; }
+      .logos img { height: 42px; }
     }
   </style>
 </head>
@@ -351,7 +384,11 @@
       <section class="hero" style="border-top:0;">
         <div>
           <div class="eyebrow">AI · Commerce · Growth Technology</div>
-          <h1>Build.<br />Automate.<br />Grow.</h1>
+          <h1 data-ak-seq data-ak-speed="80" data-ak-gap="190" data-ak-start="300">
+            <span class="ak-typeline">Build.</span>
+            <span class="ak-typeline">Automate.</span>
+            <span class="ak-typeline">Grow.</span>
+          </h1>
         </div>
         <div class="hero-copy">
           <strong>Technology for the next generation of commerce.</strong>
@@ -857,7 +894,93 @@
   </a>
 
   <script>
-    /* ---------- year ---------- */
+    /* ---------- smooth cursor glow across cards ---------- */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: hover)').matches) return;
+
+  var cards = [].slice.call(document.querySelectorAll('.card, .product'));
+  if (!cards.length) return;
+
+  cards.forEach(function (el) {
+    el._tx = 50; el._ty = 50; el._cx = 50; el._cy = 50; el._tg = 0; el._g = 0;
+    el.classList.add('ak-spot--js');
+  });
+
+  var mx = -9999, my = -9999, raf = null;
+
+  function frame() {
+    raf = null;
+    var moving = false;
+    for (var i = 0; i < cards.length; i++) {
+      var el = cards[i], r = el.getBoundingClientRect();
+      if (!r.width || !r.height) continue;
+      var dx = Math.max(r.left - mx, 0, mx - r.right);
+      var dy = Math.max(r.top - my, 0, my - r.bottom);
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      el._tg = Math.min(1, Math.max(0, 1 - dist / 340) * 1.15);
+      el._tx = ((mx - r.left) / r.width) * 100;
+      el._ty = ((my - r.top) / r.height) * 100;
+      el._cx += (el._tx - el._cx) * 0.14;
+      el._cy += (el._ty - el._cy) * 0.14;
+      el._g  += (el._tg - el._g) * 0.11;
+      if (Math.abs(el._g - el._tg) > 0.003 || Math.abs(el._cx - el._tx) > 0.05 || Math.abs(el._cy - el._ty) > 0.05) moving = true;
+      el.style.setProperty('--mx', el._cx.toFixed(2) + '%');
+      el.style.setProperty('--my', el._cy.toFixed(2) + '%');
+      el.style.setProperty('--glow', el._g.toFixed(3));
+    }
+    if (moving) raf = requestAnimationFrame(frame);
+  }
+
+  window.addEventListener('pointermove', function (e) {
+    mx = e.clientX; my = e.clientY;
+    if (!raf) raf = requestAnimationFrame(frame);
+  }, { passive: true });
+  window.addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(frame); }, { passive: true });
+})();
+
+/* ---------- sequential typewriter for the hero heading ---------- */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.querySelectorAll('[data-ak-seq]').forEach(function (seq) {
+    var lines = [].slice.call(seq.querySelectorAll('.ak-typeline'));
+    if (!lines.length) return;
+
+    var texts = lines.map(function (l) { return l.textContent.replace(/\s+/g, ' ').trim(); });
+    var speed = parseInt(seq.dataset.akSpeed || '72', 10);
+    var gap = parseInt(seq.dataset.akGap || '170', 10);
+    var start = parseInt(seq.dataset.akStart || '320', 10);
+
+    seq.setAttribute('aria-label', texts.join(' '));
+    lines.forEach(function (l) { l.textContent = ''; });
+
+    var caret = document.createElement('span');
+    caret.className = 'ak-caret';
+    var li = 0, ci = 0;
+
+    function typeLine() {
+      if (li >= lines.length) return;
+      var line = lines[li];
+      line.classList.add('is-typing');
+      line.appendChild(caret);
+      function step() {
+        ci++;
+        line.textContent = texts[li].slice(0, ci);
+        line.appendChild(caret);
+        if (ci < texts[li].length) return setTimeout(step, speed);
+        line.classList.remove('is-typing');
+        line.classList.add('is-done');
+        li++; ci = 0;
+        if (li < lines.length) return setTimeout(typeLine, gap);
+      }
+      setTimeout(step, 80);
+    }
+    setTimeout(typeLine, start);
+  });
+})();
+
+/* ---------- year ---------- */
     document.getElementById('yr').textContent = new Date().getFullYear();
 
     /* ---------- mobile nav ---------- */

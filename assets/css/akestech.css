@@ -73,7 +73,7 @@ img{max-width:100%}
 .ak-section--flush{padding-top:0}
 .ak-section--tight{padding:72px 0}
 .ak-head{display:grid;grid-template-columns:.45fr 1fr;gap:40px;margin-bottom:55px}
-.ak-kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:800;color:var(--muted-2)}
+.ak-kicker{font-size:13px;text-transform:uppercase;letter-spacing:2px;font-weight:800;color:var(--muted-2)}
 .ak-h2{font-size:clamp(42px,6vw,76px);line-height:.94;letter-spacing:-4px;max-width:850px;font-weight:800}
 .ak-h3{font-size:clamp(28px,3.4vw,42px);line-height:1.02;letter-spacing:-2px;font-weight:800}
 .ak-lead{color:var(--muted);font-size:18px;max-width:620px;margin-top:22px;line-height:1.5}
@@ -164,9 +164,9 @@ img{max-width:100%}
 .ak-marquee{overflow:hidden;position:relative;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);
           mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-.ak-marquee__track{display:flex;align-items:center;gap:56px;width:max-content;animation:akScroll 34s linear infinite}
+.ak-marquee__track{display:flex;align-items:center;gap:80px;width:max-content;animation:akScroll 34s linear infinite}
 .ak-marquee:hover .ak-marquee__track{animation-play-state:paused}
-.ak-marquee__track img{height:38px;width:auto;object-fit:contain;opacity:.5;filter:grayscale(1);transition:.3s}
+.ak-marquee__track img{height:62px;width:auto;object-fit:contain;opacity:.62;filter:grayscale(1);transition:.35s var(--ease)}
 .ak-marquee__track img:hover{opacity:1;filter:none}
 @keyframes akScroll{to{transform:translateX(-50%)}}
 
@@ -186,7 +186,7 @@ img{max-width:100%}
 .ak-nav{height:82px;display:flex;align-items:center;justify-content:space-between;
   border-bottom:1px solid var(--line);position:relative;z-index:2}
 .ak-logo{display:flex;align-items:center;gap:9px;font-size:22px;font-weight:850;letter-spacing:-1px}
-.ak-logo img{height:34px;width:auto;object-fit:contain}
+.ak-logo img{height:52px;width:auto;object-fit:contain}
 .ak-navlinks{display:flex;gap:28px;font-size:14px}
 .ak-navlinks a{color:#333;position:relative;transition:color .2s}
 .ak-navlinks a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--ink);transition:width .28s var(--ease)}
@@ -211,11 +211,15 @@ img{max-width:100%}
 /* ==========================================================================
    6. HERO / PAGE HERO
    ========================================================================== */
-.ak-hero{min-height:660px;display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:end;padding:90px 0 70px;position:relative}
-.ak-hero__inner{position:relative;z-index:1}
+.ak-hero{min-height:660px;padding:90px 0 70px;position:relative}
+.ak-hero__grid{display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:end;position:relative;z-index:1}
+.ak-hero__inner{position:relative;z-index:1;min-width:0}
 .ak-eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:750;color:#555;margin-bottom:24px}
+.ak-typeline{display:block;min-height:.9em;white-space:nowrap}
+.ak-typeline .ak-caret{opacity:0}
+.ak-typeline.is-typing .ak-caret,.ak-typeline.is-done .ak-caret{opacity:1}
 .ak-h1{font-size:clamp(64px,9vw,132px);line-height:.87;letter-spacing:-7px;max-width:900px;font-weight:850}
-.ak-hero__copy{max-width:430px;padding-bottom:7px;font-size:19px;color:#444}
+.ak-hero__copy{max-width:430px;min-width:0;padding-bottom:7px;font-size:19px;color:#444}
 .ak-hero__copy strong{color:var(--ink)}
 
 .ak-pagehero{padding:74px 0 58px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
@@ -256,11 +260,20 @@ a.ak-card:hover{transform:translateY(-5px);border-color:#999;box-shadow:var(--gl
 .ak-card .ak-arrow{font-size:18px;color:#999;margin-top:18px;display:inline-block;transition:transform .28s var(--ease)}
 a.ak-card:hover .ak-arrow{transform:translate(4px,-4px);color:var(--ink)}
 
-/* cursor spotlight on card grids */
-.ak-spot{position:relative}
-.ak-spot::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;
-  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(16,16,16,.055),transparent 60%)}
+/* cursor spotlight on card grids — JS drives --mx/--my/--glow with lerping
+   so the highlight glides between boxes instead of snapping */
+.ak-spot{position:relative;overflow:hidden}
+.ak-spot::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .35s ease;
+  background:radial-gradient(460px circle at var(--mx,50%) var(--my,50%),rgba(16,16,16,.075),transparent 62%)}
 .ak-spot:hover::before{opacity:1}
+/* JS mode: opacity + lift + border are all driven by the smoothed --glow value */
+.ak-spot--js::before,.ak-spot--js:hover::before{transition:none;opacity:var(--glow,0)}
+.ak-card > *, .ak-product > *{position:relative;z-index:1}
+.ak-spot--js::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;border-radius:inherit;
+  box-shadow:inset 0 0 0 1px rgba(16,16,16,calc(var(--glow,0) * .55));opacity:1;transition:none}
+a.ak-card.ak-spot--js:hover{transform:translateY(calc(var(--glow,0) * -6px))}
+a.ak-card.ak-spot--js{border-color:rgba(16,16,16,calc(.12 + var(--glow,0) * .5))}
+a.ak-card.ak-spot--js:hover{box-shadow:0 30px 60px -32px rgba(16,16,16,calc(var(--glow,0) * .85))}
 
 /* tags */
 .ak-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
@@ -279,10 +292,22 @@ a.ak-row:hover{padding-left:10px}
 .ak-row small{color:#999;font-size:13px}
 .ak-row b{font-size:20px;font-weight:650;letter-spacing:-.4px}
 .ak-row > span{color:#999;font-size:15px;text-align:right}
-.ak-row .ak-plus{display:inline-block;transition:transform .3s var(--ease)}
+.ak-row .ak-plus{display:inline-block;transition:transform .35s var(--ease)}
 .ak-row.is-open .ak-plus{transform:rotate(45deg)}
-.ak-rowbody{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
-.ak-rowbody p{color:var(--muted);font-size:16px;max-width:800px;padding:0 0 24px 80px;line-height:1.6}
+.ak-row.is-open b{letter-spacing:-.6px}
+.ak-rowbody{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
+.ak-rowbody p{
+  margin:0 0 0 80px;                 /* aligns with the question text column */
+  padding:20px 24px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-left:3px solid var(--ink);
+  border-radius:16px;
+  color:#333;font-size:16.5px;line-height:1.75;max-width:820px;
+  box-shadow:0 18px 36px -30px rgba(16,16,16,.55);
+}
+/* vertical spacing lives inside the collapsing box so scrollHeight measures it */
+.ak-rowbody::after{content:"";display:block;height:22px}
 
 /* ==========================================================================
    10. SPLIT SECTIONS / PRODUCTS / PROCESS / METRICS
@@ -306,16 +331,16 @@ a.ak-row:hover{padding-left:10px}
 .ak-step p{color:#666;font-size:14px;line-height:1.55}
 
 .ak-metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.ak-metric{padding:34px 24px;border-right:1px solid var(--line)}
+.ak-metric{padding:40px 28px;border-right:1px solid var(--line)}
 .ak-metric:last-child{border-right:0}
-.ak-metric b{display:block;font-size:clamp(38px,4.4vw,58px);letter-spacing:-3px;font-weight:850;line-height:1}
-.ak-metric span{display:block;font-size:13px;color:#777;margin-top:10px}
+.ak-metric b{display:block;font-size:clamp(46px,5.6vw,78px);letter-spacing:-4px;font-weight:850;line-height:1}
+.ak-metric span{display:block;font-size:14px;color:#777;margin-top:12px}
 
 /* ==========================================================================
    11. LOGOS / PROOF
    ========================================================================== */
-.ak-logos{display:flex;flex-wrap:wrap;gap:46px;align-items:center;padding:38px 0}
-.ak-logos img{height:38px;width:auto;object-fit:contain;opacity:.5;filter:grayscale(1);transition:.3s var(--ease)}
+.ak-logos{display:flex;flex-wrap:wrap;gap:60px;align-items:center;padding:38px 0}
+.ak-logos img{height:56px;width:auto;object-fit:contain;opacity:.6;filter:grayscale(1);transition:.35s var(--ease)}
 .ak-logos img:hover{opacity:1;filter:none;transform:translateY(-2px)}
 
 /* ==========================================================================
@@ -397,7 +422,7 @@ a.ak-row:hover{padding-left:10px}
 @media (max-width:900px){
   .ak-navlinks,.ak-navcta{display:none}
   .ak-burger{display:flex}
-  .ak-hero,.ak-split,.ak-head,.ak-form__row,.ak-grid4{grid-template-columns:1fr}
+  .ak-hero__grid,.ak-split,.ak-head,.ak-form__row,.ak-grid4{grid-template-columns:1fr}
   .ak-hero{min-height:auto;padding:70px 0}
   .ak-h1{letter-spacing:-4px}
   .ak-statement,.ak-cta{flex-direction:column;align-items:flex-start}
@@ -411,15 +436,20 @@ a.ak-row:hover{padding-left:10px}
   .ak-container,.ak-narrow{width:min(var(--max),calc(100% - 28px))}
   .ak-nav{height:70px}
   .ak-hero{padding:55px 0}
-  .ak-h1{font-size:62px;letter-spacing:-4px}
+  .ak-h1{font-size:54px;letter-spacing:-3px}
+  .ak-typeline{white-space:normal}
   .ak-section{padding:75px 0}
   .ak-grid5,.ak-grid3,.ak-process,.ak-metrics{grid-template-columns:1fr}
   .ak-metric{border-right:0;border-bottom:1px solid var(--line)}
   .ak-card{min-height:240px}
   .ak-statement,.ak-cta{padding:30px 24px}
   .ak-foot{flex-direction:column}
-  .ak-rowbody p{padding-left:0}
+  .ak-rowbody p{margin-left:0;padding:18px 20px;font-size:16px}
   .ak-logos{gap:26px}
-  .ak-logos img{height:30px}
+  .ak-logos img{height:40px}
   .ak-pagehero{padding:54px 0 42px}
+}
+
+@media (max-width:380px){
+  .ak-h1{font-size:46px;letter-spacing:-2px}
 }
