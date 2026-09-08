@@ -20,7 +20,7 @@ if (empty($faqs)) return;
       </div>
     </div>
 
-    <div class="ak-rows ak-reveal">
+    <div class="ak-rows ak-acc ak-reveal">
       <?php foreach ($faqs as $index => $faq):
         $q = is_array($faq) ? ($faq['question'] ?? '') : $faq;
         $a = is_array($faq) ? ($faq['answer'] ?? '') : '';

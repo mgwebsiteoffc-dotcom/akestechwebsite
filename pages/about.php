@@ -380,7 +380,7 @@ ob_start();
         <h2 class="ak-h2">Questions about working with us.</h2>
       </div>
     </div>
-    <div class="ak-rows ak-reveal">
+    <div class="ak-rows ak-acc ak-reveal">
       <?php foreach ($faqs as $index => $faq):
         $q = is_array($faq) ? ($faq['question'] ?? '') : $faq;
         $a = is_array($faq) ? ($faq['answer'] ?? '') : '';

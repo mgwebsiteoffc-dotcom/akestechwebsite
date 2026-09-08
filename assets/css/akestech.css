@@ -649,3 +649,27 @@ a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2
   .ak-newsletter__form{width:100%}
   .ak-newsletter__form input{min-width:0;flex:1}
 }
+
+/* ==========================================================================
+   DARK PAGE HERO, FAQ GROUPS, RELATED BLOCKS
+   ========================================================================== */
+.ak-pagehero--dark{background:var(--dark);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.ak-pagehero--dark .ak-h1,.ak-pagehero--dark .ak-eyebrow{color:#fff}
+.ak-pagehero--dark .ak-lead{color:#b9b9b4}
+.ak-pagehero--dark .ak-crumbs,.ak-pagehero--dark .ak-crumbs a{color:#9a9a95}
+.ak-pagehero--dark .ak-crumbs a:hover{color:#fff}
+
+.ak-faqgroup{margin-bottom:62px}
+.ak-faqgroup:last-of-type{margin-bottom:40px}
+.ak-faqgroup__head{
+  display:flex;gap:16px;align-items:flex-start;
+  padding-bottom:18px;margin-bottom:6px;border-bottom:1px solid var(--line);
+}
+.ak-faqgroup__head .ak-ic{color:var(--ink);margin-top:4px}
+.ak-faqgroup__head p{font-size:14.5px;color:#777;margin-top:4px}
+
+.ak-related{
+  margin-top:56px;padding:34px;border:1px solid var(--line);
+  border-radius:var(--radius);background:var(--card);
+}
+.ak-related > p{margin-top:10px;color:#666;font-size:16px;max-width:640px}
