@@ -8,7 +8,6 @@ SEO::load('home');
 
 $featuredCaseStudies = function_exists('getFeaturedCaseStudies') ? getFeaturedCaseStudies(3) : [];
 $featuredPosts       = function_exists('getFeaturedPosts') ? getFeaturedPosts(3) : [];
-$faqs                = function_exists('ak_faqs') ? ak_faqs('home', $homeFaqs) : $homeFaqs;
 
 $homeFaqs = [
     ['question' => 'Are you still a Shopify agency?', 'answer' => "Shopify and commerce are still a big part of what we do, but they are no longer all we do. AKESTECH is now an AI, commerce and growth technology company covering Shopify and commerce, AI automation, product development, performance marketing, marketplace management and AI video production. Every existing page and resource stays live at the same URL."],
@@ -20,6 +19,8 @@ $homeFaqs = [
     ['question' => 'Do you work with non-ecommerce businesses?', 'answer' => 'Yes. Alongside D2C and marketplace brands, we work with healthcare, real estate, education, automotive, food and beverage, SaaS and startup clients on automation, product development, paid acquisition and AI content.'],
     ['question' => 'Will changing the website affect our existing URLs or rankings?', 'answer' => 'No. Every existing slug - services, resources, blog posts, case studies and local landing pages - stays exactly the same. We are changing the design and the positioning, not the URL structure.'],
 ];
+
+$faqs = function_exists('ak_faqs') ? ak_faqs('home', $homeFaqs) : $homeFaqs;
 
 $contactUrl = url('contact');
 $waText = urlencode("Hi AKESTECH, I'd like to discuss a project.");
