@@ -836,3 +836,13 @@ a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2
   .ak-head{grid-template-columns:1fr;gap:16px}
   .ak-head--center .ak-lead{margin-left:0;margin-right:0}
 }
+
+/* ==========================================================================
+   LINKED DELIVERABLE CARDS — parent service cards that deep-link to
+   sub-service pages (e.g. Shopify Growth -> Shopify Store Setup)
+   ========================================================================== */
+a.ak-card--link{display:block;color:inherit;transition:border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+a.ak-card--link:hover{border-color:#b9b9b2;transform:translateY(-3px);box-shadow:0 18px 36px -22px rgba(16,16,16,.35)}
+a.ak-card--link h3{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ak-card__go{display:inline-flex;color:#8d8d88;transition:transform .3s var(--ease),color .3s var(--ease)}
+a.ak-card--link:hover .ak-card__go{transform:translate(3px,-3px);color:var(--ink)}

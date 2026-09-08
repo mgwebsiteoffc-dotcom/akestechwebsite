@@ -18,12 +18,12 @@ $sp = [
         ['value' => '25+', 'label' => 'Plus-grade features shipped'],
     ],
     'deliverables' => [
-        ['title' => 'Shopify Store Setup', 'copy' => 'New stores with themes, collections, navigation, payments, shipping and launch support.'],
-        ['title' => 'Custom Theme Development', 'copy' => 'Bespoke sections, product page layouts, cart improvements and brand-consistent UI.'],
+        ['title' => 'Shopify Store Setup', 'copy' => 'New stores with themes, collections, navigation, payments, shipping and launch support.', 'url' => url('services/shopify-store-setup')],
+        ['title' => 'Custom Theme Development', 'copy' => 'Bespoke sections, product page layouts, cart improvements and brand-consistent UI.', 'url' => url('services/custom-shopify-theme-development')],
         ['title' => 'Speed Optimisation', 'copy' => 'Image cleanup, script review, app audits and mobile load-time fixes that protect conversion.'],
-        ['title' => 'App & API Integration', 'copy' => 'WhatsApp, CRM, reviews, logistics, analytics and payment tools wired into your store.'],
-        ['title' => 'Tracking Setup', 'copy' => 'Meta Pixel, Google Ads tags, GA4, events, conversion tracking and UTMs done properly.'],
-        ['title' => 'CRO & Store Optimisation', 'copy' => 'Trust signals, product page flow, checkout support, offers and AOV improvements.'],
+        ['title' => 'App & API Integration', 'copy' => 'WhatsApp, CRM, reviews, logistics, analytics and payment tools wired into your store.', 'url' => url('services/custom-shopify-development')],
+        ['title' => 'Tracking Setup', 'copy' => 'Meta Pixel, Google Ads tags, GA4, events, conversion tracking and UTMs done properly.', 'url' => url('services/tracking-attribution')],
+        ['title' => 'CRO & Store Optimisation', 'copy' => 'Trust signals, product page flow, checkout support, offers and AOV improvements.', 'url' => url('services/shopify-cro-optimization')],
     ],
     'process' => [
         ['title' => 'Audit', 'copy' => 'Technical, UX and conversion review of your store against a scored checklist.'],

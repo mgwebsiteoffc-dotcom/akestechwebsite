@@ -194,6 +194,99 @@ class SEO {
             ],
         ];
 
+
+        /* ---------- sub-service pages (auto-registered) ---------- */
+            'shopify-store-setup' => [
+                'meta_title' => 'Shopify Store Setup Services | AKESTECH',
+                'meta_description' => 'Complete Shopify store setup for new and growing brands: theme configuration, catalogue and collections, payments and shipping, apps, tracking and.',
+                'meta_keywords' => 'shopify store setup, , akestech, india',
+            ],
+            'custom-shopify-theme-development' => [
+                'meta_title' => 'Custom Theme Development Services | AKESTECH',
+                'meta_description' => 'Bespoke Shopify theme design and development using Online Store 2.0 — sections, metafields and Liquid built for your catalogue, your merchandising and.',
+                'meta_keywords' => 'custom theme development, , akestech, india',
+            ],
+            'custom-shopify-development' => [
+                'meta_title' => 'Custom Shopify Development Services | AKESTECH',
+                'meta_description' => 'Custom Shopify development for the things no app store listing does properly: bespoke apps, checkout and cart extensions, ERP and CRM integrations.',
+                'meta_keywords' => 'custom shopify development, , akestech, india',
+            ],
+            'shopify-plus' => [
+                'meta_title' => 'Shopify Plus Services | AKESTECH',
+                'meta_description' => 'Shopify Plus migration, build and optimisation for high-volume brands: checkout extensibility, Shopify Functions, automation with Flow, multi-store and.',
+                'meta_keywords' => 'shopify plus, , akestech, india',
+            ],
+            'shopify-migration-integrations' => [
+                'meta_title' => 'Migration & Integrations Services | AKESTECH',
+                'meta_description' => 'Replatforming to Shopify from WooCommerce, Magento, Wix, BigCommerce or a custom build — with redirect mapping, catalogue and customer migration, Order.',
+                'meta_keywords' => 'migration & integrations, , akestech, india',
+            ],
+            'shopify-cro-optimization' => [
+                'meta_title' => 'CRO & Store Optimization Services | AKESTECH',
+                'meta_description' => 'Conversion rate optimisation for Shopify stores: funnel and analytics diagnosis, heatmaps and session review, structured A/B testing, checkout and cart.',
+                'meta_keywords' => 'cro & store optimization, , akestech, india',
+            ],
+            'meta-google-ads' => [
+                'meta_title' => 'Meta & Google Ads Services | AKESTECH',
+                'meta_description' => 'Full-funnel paid media management across Meta, Google Search, Shopping, YouTube and Display — structured by intent stage, with verified server-side.',
+                'meta_keywords' => 'meta & google ads, , akestech, india',
+            ],
+            'creative-ai-ugc-strategy' => [
+                'meta_title' => 'Creative & AI UGC Strategy Services | AKESTECH',
+                'meta_description' => 'Ad creative strategy and production at testing velocity: hooks, scripts, AI-generated UGC and video, static variations and multilingual versions —.',
+                'meta_keywords' => 'creative & ai ugc strategy, , akestech, india',
+            ],
+            'landing-pages-funnels' => [
+                'meta_title' => 'Landing Pages & Funnels Services | AKESTECH',
+                'meta_description' => 'High-converting landing pages and funnels for paid traffic and lead generation: message-match pages, multi-step forms, quiz and calculator funnels.',
+                'meta_keywords' => 'landing pages & funnels, , akestech, india',
+            ],
+            'tracking-attribution' => [
+                'meta_title' => 'Tracking & Attribution Services | AKESTECH',
+                'meta_description' => 'Server-side conversion tracking, consent-mode configuration, GA4 and CRM reconciliation, call and WhatsApp tracking, and attribution modelling — so.',
+                'meta_keywords' => 'tracking & attribution, , akestech, india',
+            ],
+            'retargeting-retention' => [
+                'meta_title' => 'Retargeting & Retention Services | AKESTECH',
+                'meta_description' => 'Retargeting and lifecycle retention systems: segmented remarketing, abandoned cart and browse recovery, email and WhatsApp lifecycle flows, win-back.',
+                'meta_keywords' => 'retargeting & retention, , akestech, india',
+            ],
+            'cro-experimentation' => [
+                'meta_title' => 'CRO & Experimentation Services | AKESTECH',
+                'meta_description' => 'Full-funnel conversion rate optimisation and structured experimentation: hypothesis backlog, A/B and multivariate testing, landing page and form.',
+                'meta_keywords' => 'cro & experimentation, , akestech, india',
+            ],
+            'amazon-account-management' => [
+                'meta_title' => 'Amazon Account Management Services | AKESTECH',
+                'meta_description' => 'End-to-end Amazon seller account management: catalogue and listing quality, advertising, Buy Box and pricing, inventory planning, account health and.',
+                'meta_keywords' => 'amazon account management, , akestech, india',
+            ],
+            'flipkart-marketplace-ads' => [
+                'meta_title' => 'Flipkart & Marketplace Ads Services | AKESTECH',
+                'meta_description' => 'Paid advertising across Flipkart, Amazon, Myntra, Nykaa, Ajio and Meesho — campaign structure, keyword and product targeting, bid and budget control.',
+                'meta_keywords' => 'flipkart & marketplace ads, , akestech, india',
+            ],
+            'listing-seo-catalogue' => [
+                'meta_title' => 'Listing SEO & Catalogue Services | AKESTECH',
+                'meta_description' => 'Marketplace listing and catalogue optimisation: keyword research, titles and bullets, backend search terms, images and A+ content, variation structure.',
+                'meta_keywords' => 'listing seo & catalogue, , akestech, india',
+            ],
+            'inventory-fulfilment' => [
+                'meta_title' => 'Inventory & Fulfilment Services | AKESTECH',
+                'meta_description' => 'Unified inventory and fulfilment operations across marketplaces, D2C and retail: single stock view with per-channel buffers, demand forecasting, FBA.',
+                'meta_keywords' => 'inventory & fulfilment, , akestech, india',
+            ],
+            'rto-returns-control' => [
+                'meta_title' => 'RTO & Returns Control Services | AKESTECH',
+                'meta_description' => 'Return-to-origin and returns reduction for Indian ecommerce: COD verification, address validation, pre-dispatch confirmation, delivery exception.',
+                'meta_keywords' => 'rto & returns control, marketplace management, akestech, india',
+            ],
+            'ops-automation' => [
+                'meta_title' => 'Ops Automation Services | AKESTECH',
+                'meta_description' => 'Operations automation for commerce businesses: order and inventory workflows, catalogue synchronisation, reconciliation, reporting and exception.',
+                'meta_keywords' => 'ops automation, marketplace management, akestech, india',
+            ],
+
         /* Accept both 'automation' and 'services/automation' style keys */
         $candidates = [$slug, 'services/' . $slug, preg_replace('#^services/#', '', $slug)];
         $key = null;
@@ -560,6 +653,49 @@ class SEO {
             "bestRating" => "5",
             "worstRating" => "1"
         ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    }
+
+    /**
+     * HowTo Schema — describes a process as ordered steps.
+     *
+     * Strong AEO signal: answer engines can lift the numbered sequence
+     * straight from the graph. Used by the sub-service pages to expose
+     * their delivery process.
+     *
+     * @param string $name        What the process achieves
+     * @param string $description Summary of the process
+     * @param array  $steps       Array of ['title' => ..., 'copy' => ...]
+     * @param int    $totalMinutes Optional estimated duration
+     */
+    public static function howToSchema($name, $description, $steps, $totalMinutes = 0) {
+        if (empty($steps)) return '';
+
+        $schemaSteps = [];
+        $i = 1;
+        foreach ($steps as $s) {
+            $step = [
+                "@type" => "HowToStep",
+                "position" => $i,
+                "name" => $s['title'],
+                "text" => $s['copy'],
+            ];
+            $schemaSteps[] = $step;
+            $i++;
+        }
+
+        $schema = [
+            "@context" => "https://schema.org",
+            "@type" => "HowTo",
+            "name" => $name,
+            "description" => $description,
+            "step" => $schemaSteps,
+        ];
+
+        if ($totalMinutes > 0) {
+            $schema["totalTime"] = "PT" . (int) $totalMinutes . "M";
+        }
+
+        return json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
     }
 
     /**

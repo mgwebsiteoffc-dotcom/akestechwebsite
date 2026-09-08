@@ -32,7 +32,9 @@ $route = $sp['route'] ?? '';
 SEO::load($sp['slug'] ?? $route);
 
 $schemas = [];
-$schemas[] = SEO::breadcrumbSchema([
+// Pages may supply their own trail (sub-services nest under a parent service);
+// otherwise fall back to the standard two-level trail.
+$schemas[] = SEO::breadcrumbSchema($sp['breadcrumbs'] ?? [
     ['name' => 'Home', 'url' => url('/')],
     ['name' => 'Services', 'url' => url('services/automation')],
     ['name' => $sp['eyebrow'] ?? 'Service', 'url' => url($route)],
@@ -41,6 +43,16 @@ $schemas[] = SEO::serviceSchema(
     $sp['schemaName'] ?? ($sp['eyebrow'] ?? 'Service'),
     $sp['intro'] ?? ''
 );
+
+/* HowTo schema — exposes the delivery process as ordered steps for AI answer engines.
+   Set $sp['howTo'] = false to suppress on a given page. */
+if (!empty($sp['process']) && ($sp['howTo'] ?? true) !== false) {
+    $schemas[] = SEO::howToSchema(
+        $sp['howToName'] ?? ('How we deliver ' . ($sp['eyebrow'] ?? 'this service')),
+        $sp['answer'] ?? ($sp['intro'] ?? ''),
+        $sp['process']
+    );
+}
 
 /* Optional extra schema (e.g. SoftwareApplication on product pages) */
 if (!empty($sp['extraSchemas']) && is_array($sp['extraSchemas'])) {
@@ -130,13 +142,14 @@ ob_start();
 
     <div class="ak-grid3">
       <?php $i = 1; foreach ($sp['deliverables'] as $d): ?>
-      <article class="ak-card ak-spot ak-reveal">
+      <?php $dUrl = $d['url'] ?? ''; ?>
+      <<?= $dUrl ? 'a href="' . htmlspecialchars($dUrl) . '"' : 'article' ?> class="ak-card ak-spot ak-reveal<?= $dUrl ? ' ak-card--link' : '' ?>">
         <div class="ak-card__num"><?= str_pad((string)$i, 2, '0', STR_PAD_LEFT) ?></div>
         <div>
-          <h3><?= htmlspecialchars($d['title']) ?></h3>
+          <h3><?= htmlspecialchars($d['title']) ?><?php if ($dUrl): ?> <span class="ak-card__go"><?= ak_icon('arrow-up-right', 15) ?></span><?php endif; ?></h3>
           <p><?= htmlspecialchars($d['copy']) ?></p>
         </div>
-      </article>
+      </<?= $dUrl ? 'a' : 'article' ?>>
       <?php $i++; endforeach; ?>
     </div>
   </div>

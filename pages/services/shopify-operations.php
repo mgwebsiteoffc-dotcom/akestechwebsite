@@ -18,12 +18,12 @@ $sp = [
         ['value' => '98%', 'label' => 'Catalogue accuracy'],
     ],
     'deliverables' => [
-        ['title' => 'Amazon Account Management', 'copy' => 'Account health, listings, A+ content, ads and performance monitoring handled end to end.'],
-        ['title' => 'Flipkart & Marketplace Ads', 'copy' => 'Sponsored product and brand campaigns managed against contribution margin, not just ACOS.'],
-        ['title' => 'Listing SEO & Catalogue', 'copy' => 'Keyword-led titles, bullets, backend terms and image sets that rank and convert.'],
-        ['title' => 'Inventory & Fulfilment', 'copy' => 'Demand planning, stock sync and shipping SLAs so you stop overselling and stocking out.'],
-        ['title' => 'RTO & Returns Control', 'copy' => 'Address verification, prepaid nudges, confirmation calls and return analytics.'],
-        ['title' => 'Ops Automation', 'copy' => 'Order routing, status updates, exception handling and reconciliation without manual work.'],
+        ['title' => 'Amazon Account Management', 'copy' => 'Account health, listings, A+ content, ads and performance monitoring handled end to end.', 'url' => url('services/amazon-account-management')],
+        ['title' => 'Flipkart & Marketplace Ads', 'copy' => 'Sponsored product and brand campaigns managed against contribution margin, not just ACOS.', 'url' => url('services/flipkart-marketplace-ads')],
+        ['title' => 'Listing SEO & Catalogue', 'copy' => 'Keyword-led titles, bullets, backend terms and image sets that rank and convert.', 'url' => url('services/listing-seo-catalogue')],
+        ['title' => 'Inventory & Fulfilment', 'copy' => 'Demand planning, stock sync and shipping SLAs so you stop overselling and stocking out.', 'url' => url('services/inventory-fulfilment')],
+        ['title' => 'RTO & Returns Control', 'copy' => 'Address verification, prepaid nudges, confirmation calls and return analytics.', 'url' => url('services/rto-returns-control')],
+        ['title' => 'Ops Automation', 'copy' => 'Order routing, status updates, exception handling and reconciliation without manual work.', 'url' => url('services/ops-automation')],
     ],
     'process' => [
         ['title' => 'Map', 'copy' => 'We document your current order, inventory and return flows end to end.'],
