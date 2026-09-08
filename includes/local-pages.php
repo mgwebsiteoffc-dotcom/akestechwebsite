@@ -54,6 +54,13 @@ if (!function_exists('lp_builtin_services')) {
             ['value' => '100%', 'label' => 'Enquiries tracked in CRM'],
             ['value' => '52', 'label' => 'Optimisation cycles a year'],
         ],
+        'process' => [
+            ['title' => 'Audit', 'copy' => 'We review your website, campaigns, tracking, content, competitors and the actual quality of the enquiries you receive today.'],
+            ['title' => 'Local search plan', 'copy' => 'We map the searches your buyers really use and plan pages, FAQs and schema around them.'],
+            ['title' => 'Build', 'copy' => 'Landing pages, tracking, forms, CRM flows and creative are built and tested before any spend increases.'],
+            ['title' => 'Launch', 'copy' => 'SEO, AEO content, paid campaigns and follow-up automation go live in controlled stages.'],
+            ['title' => 'Optimise', 'copy' => 'Weekly improvements to budget, content, creative, conversion rate and lead quality.'],
+        ],
         'services' => [
             ['title' => 'SEO and AEO Content', 'copy' => 'Keyword-led landing pages, service pages, FAQs, internal linking, schema and answer-first content built for search and AI results.'],
             ['title' => 'Meta and Google Ads', 'copy' => 'Full-funnel paid campaigns for awareness, leads, sales, remarketing and conversion tracking.'],
@@ -93,6 +100,13 @@ if (!function_exists('lp_builtin_services')) {
             ['value' => '32%', 'label' => 'Average conversion lift'],
             ['value' => '< 2s', 'label' => 'Target store load time'],
             ['value' => '100%', 'label' => 'Tracking setup included'],
+        ],
+        'process' => [
+            ['title' => 'Discovery', 'copy' => 'We map your catalogue, operations, integrations and the commercial outcomes the store has to deliver.'],
+            ['title' => 'Design and build', 'copy' => 'Theme, product templates, cart and checkout built mobile-first and tested against your real catalogue.'],
+            ['title' => 'Integrations', 'copy' => 'Payments, shipping, ERP, CRM and marketing tools connected and tested end to end before launch.'],
+            ['title' => 'Launch', 'copy' => 'Redirects, tracking, QA and speed checks completed before traffic is switched over.'],
+            ['title' => 'Optimise', 'copy' => 'Conversion testing, performance monitoring and new features shipped every month.'],
         ],
         'services' => [
             ['title' => 'Shopify Store Setup', 'copy' => 'New Shopify stores with theme setup, collections, navigation, pages, payment basics, shipping settings and launch support.'],
@@ -134,6 +148,13 @@ if (!function_exists('lp_builtin_services')) {
             ['value' => '50+', 'label' => 'Creatives tested monthly'],
             ['value' => '100%', 'label' => 'Funnel tracked end to end'],
         ],
+        'process' => [
+            ['title' => 'Account and funnel audit', 'copy' => 'We review historical performance, tracking accuracy, creative, landing pages and unit economics.'],
+            ['title' => 'Tracking rebuild', 'copy' => 'Server-side events, consent mode and CRM reconciliation put in place so decisions rest on accurate data.'],
+            ['title' => 'Campaign launch', 'copy' => 'Meta, Google and marketplace campaigns structured by funnel stage with a defined creative testing plan.'],
+            ['title' => 'Creative iteration', 'copy' => 'New variations produced and tested weekly, with budget moving towards proven winners.'],
+            ['title' => 'Scale on profit', 'copy' => 'Spend scaled against contribution margin and payback period, not platform-reported ROAS alone.'],
+        ],
         'services' => [
             ['title' => 'Meta Ads Management', 'copy' => 'Facebook and Instagram campaigns structured for profitable scale with clean audience and creative testing.'],
             ['title' => 'Google Ads Management', 'copy' => 'Search, Performance Max, Shopping and YouTube campaigns managed against contribution margin.'],
@@ -173,6 +194,13 @@ if (!function_exists('lp_builtin_services')) {
             ['value' => '50+', 'label' => 'Creatives tested monthly'],
             ['value' => '95%', 'label' => 'Server-side signal match'],
             ['value' => '30%', 'label' => 'Lower cost per purchase'],
+        ],
+        'process' => [
+            ['title' => 'Signal audit', 'copy' => 'We check the pixel, Conversions API, event quality, audiences and catalogue health before touching budget.'],
+            ['title' => 'Account restructure', 'copy' => 'Campaigns rebuilt around funnel stage, creative testing and clean measurement.'],
+            ['title' => 'Creative production', 'copy' => 'Variations produced at volume, including AI video, so testing never stalls for want of assets.'],
+            ['title' => 'Launch and learn', 'copy' => 'Controlled launch with clear budgets and a defined testing window per concept.'],
+            ['title' => 'Scale and maintain', 'copy' => 'Winning ads scaled, creative refreshed before fatigue sets in, and reporting tied to real revenue.'],
         ],
         'services' => [
             ['title' => 'Account Structure', 'copy' => 'Campaign and ad set architecture designed for clean data and controlled scaling.'],
@@ -214,6 +242,13 @@ if (!function_exists('lp_builtin_services')) {
             ['value' => '3X', 'label' => 'More enquiries converted'],
             ['value' => '40%', 'label' => 'Lower cost per qualified lead'],
         ],
+        'process' => [
+            ['title' => 'Qualification workshop', 'copy' => 'We agree exactly what a qualified lead means for your business before any campaign starts.'],
+            ['title' => 'Offer and funnel build', 'copy' => 'Landing pages, lead magnets and forms built around that definition and your buyer\'s real questions.'],
+            ['title' => 'Tracking and CRM setup', 'copy' => 'Every enquiry captured, scored by source and routed automatically to the right person.'],
+            ['title' => 'Instant response automation', 'copy' => 'WhatsApp, SMS and email sequences that respond in seconds and nurture until the lead is qualified.'],
+            ['title' => 'Optimise for cost per sale', 'copy' => 'Reporting moves beyond cost per lead to cost per qualified lead and cost per customer.'],
+        ],
         'services' => [
             ['title' => 'Local SEO and AEO Pages', 'copy' => 'Location and service pages with schema and answer-first content built to be cited by search and AI assistants.'],
             ['title' => 'Paid Lead Campaigns', 'copy' => 'Meta and Google campaigns structured around cost per qualified lead rather than raw form fills.'],
@@ -254,6 +289,13 @@ if (!function_exists('lp_builtin_services')) {
             ['value' => '30', 'label' => 'Days to first system'],
             ['value' => '100+', 'label' => 'Processes automated'],
         ],
+        'process' => [
+            ['title' => 'Process audit', 'copy' => 'We map every manual, repetitive process in the business and rank it by hours saved and revenue impact.'],
+            ['title' => 'Opportunity map', 'copy' => 'You receive a ranked build order with expected impact, effort and dependencies, in a document you own.'],
+            ['title' => 'Design and build', 'copy' => 'Agents, conversation flows, integrations and dashboards built against your live stack.'],
+            ['title' => 'Staged launch', 'copy' => 'Rollout in stages with guardrails, fallbacks and human handover paths for anything sensitive.'],
+            ['title' => 'Tune and support', 'copy' => 'Monthly optimisation of prompts, flows and triggers based on how people actually use them.'],
+        ],
         'services' => [
             ['title' => 'AI Sales Agents', 'copy' => 'Qualify enquiries, answer questions and move prospects toward purchase across web, WhatsApp and email.'],
             ['title' => 'WhatsApp Automation', 'copy' => 'Conversational journeys for enquiries, orders, COD confirmation, shipping updates and reviews.'],
@@ -293,6 +335,13 @@ if (!function_exists('lp_builtin_services')) {
             ['value' => '90', 'label' => 'Day growth roadmap'],
             ['value' => '32%', 'label' => 'Average conversion lift'],
             ['value' => '25+', 'label' => 'Hours saved every week'],
+        ],
+        'process' => [
+            ['title' => 'Business and data review', 'copy' => 'We analyse your catalogue, margins, channel mix, funnel data and the constraints your operations impose.'],
+            ['title' => 'Opportunity roadmap', 'copy' => 'Every recommendation ranked by expected revenue impact, effort and dependency, in writing.'],
+            ['title' => 'Priority fixes', 'copy' => 'The highest-impact changes to store, tracking, pricing and funnel are implemented first.'],
+            ['title' => 'Channel and retention build', 'copy' => 'Marketplace, D2C, lifecycle and automation systems built out around the agreed roadmap.'],
+            ['title' => 'Measure and iterate', 'copy' => 'Monthly reporting against the roadmap, with the plan revised as real numbers come in.'],
         ],
         'services' => [
             ['title' => 'Store and Funnel Audit', 'copy' => 'Scored review of UX, speed, merchandising, checkout, tracking and conversion leaks.'],

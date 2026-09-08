@@ -28,6 +28,13 @@ $pages = [
         'intro' => 'Shopify stores, marketplace operations, retention automation and performance marketing — run as one system for D2C brands from first sale to ₹5Cr a month.',
         'answer' => 'D2C and ecommerce brands need four things working together: a store that converts, marketplaces that are managed, traffic that is profitable, and retention that compounds. AKESTECH provides all four under one team, with AI automation handling cart recovery, COD confirmation, support and reporting in between.',
         'stats' => [['value' => '3.8X', 'label' => 'Typical ROAS'], ['value' => '₹4.1L', 'label' => 'Monthly revenue recovered'], ['value' => '40%', 'label' => 'RTO reduction'], ['value' => '200+', 'label' => 'Brands scaled']],
+        'process' => [
+            ['title' => 'Store and funnel audit', 'copy' => 'We review your store, catalogue, checkout, tracking and retention stack, then rank every fix by expected revenue impact rather than effort.'],
+            ['title' => 'Conversion rebuild', 'copy' => 'Product pages, cart, checkout, upsells, speed and mobile experience rebuilt around the points where buyers actually drop off.'],
+            ['title' => 'Acquisition launch', 'copy' => 'Meta, Google and marketplace campaigns go live with verified tracking and a structured creative testing plan from day one.'],
+            ['title' => 'Retention automation', 'copy' => 'Cart recovery, COD confirmation, re-order, win-back and review journeys automated across WhatsApp, SMS and email.'],
+            ['title' => 'Compound and scale', 'copy' => 'Weekly reporting on contribution margin, repeat rate and ROAS, with experiments shipped continuously instead of quarterly.'],
+        ],
         'challenges' => [
             ['title' => 'Rising acquisition costs', 'copy' => 'Ad costs climb while creative goes stale. We rebuild the funnel and feed it with AI-generated creative at volume.'],
             ['title' => 'Cart abandonment', 'copy' => 'Most carts never convert. AI agents recover them over WhatsApp, email and SMS within minutes.'],
@@ -61,6 +68,13 @@ $pages = [
         'intro' => 'Patient enquiries, appointment journeys, follow-ups and compliant funnels — automated end to end so your team spends time on care, not admin.',
         'answer' => 'Healthcare growth depends on trust, speed and follow-up. AKESTECH builds compliant, mobile-first patient acquisition funnels, connects enquiry sources into one system, automates appointment reminders and follow-ups over WhatsApp and email, and reports on cost per qualified enquiry rather than raw leads.',
         'stats' => [['value' => '24/7', 'label' => 'Enquiry response'], ['value' => '< 5 min', 'label' => 'Speed to first reply'], ['value' => '100%', 'label' => 'Enquiries tracked'], ['value' => '1', 'label' => 'Source of truth']],
+        'process' => [
+            ['title' => 'Discovery and compliance review', 'copy' => 'We map your patient journey, appointment flow and data handling, and agree together what can safely be automated and what must stay human.'],
+            ['title' => 'Journey design', 'copy' => 'Enquiry capture, appointment booking, reminders and follow-up designed around how your care team actually works, not a generic template.'],
+            ['title' => 'Systems and integrations', 'copy' => 'CRM, EMR or practice software connected so enquiries, appointments and records stay in one place instead of three.'],
+            ['title' => 'Acquisition launch', 'copy' => 'Policy-compliant search and social campaigns go live with call tracking and enquiry-level attribution from the first week.'],
+            ['title' => 'Optimise and report', 'copy' => 'No-show rates, cost per booked appointment and enquiry-to-visit conversion reviewed and improved every month.'],
+        ],
         'challenges' => [
             ['title' => 'Missed enquiries', 'copy' => 'Calls go unanswered after hours. AI agents respond instantly across web, WhatsApp and email.'],
             ['title' => 'No-shows', 'copy' => 'Automated reminders, confirmations and rescheduling reduce costly appointment no-shows.'],
@@ -93,6 +107,13 @@ $pages = [
         'intro' => 'Higher enquiry volume is easy. Qualified admissions are the job — we build the funnel, the automation and the reporting that separate the two.',
         'answer' => 'Education growth needs qualified enquiries, fast counsellor follow-up and visible attribution across campaigns. AKESTECH builds admission funnels and landing pages, runs paid media, routes every enquiry into Lead365 with automatic counsellor assignment, and automates WhatsApp, email and SMS nurture until a human takes over.',
         'stats' => [['value' => '1', 'label' => 'View of every enquiry'], ['value' => '< 5 min', 'label' => 'Counsellor response time'], ['value' => '100%', 'label' => 'Source attribution'], ['value' => '24/7', 'label' => 'Automated nurture']],
+        'process' => [
+            ['title' => 'Admission funnel audit', 'copy' => 'We map every enquiry source, counsellor workflow and drop-off point across the previous admission cycle before proposing anything.'],
+            ['title' => 'CRM and routing setup', 'copy' => 'Lead365 or your existing CRM configured with source attribution, lead scoring and automatic counsellor assignment.'],
+            ['title' => 'Nurture automation', 'copy' => 'Automated WhatsApp, SMS and email sequences that keep applicants moving from enquiry to application without manual chasing.'],
+            ['title' => 'Campaign launch', 'copy' => 'Regional language and English campaigns go live across search, social and local channels with enrolment-level tracking.'],
+            ['title' => 'Season optimisation', 'copy' => 'Weekly tuning through peak admission months, followed by a post-season review that feeds directly into the next cycle.'],
+        ],
         'challenges' => [
             ['title' => 'Unqualified enquiry volume', 'copy' => 'More leads is not more admissions. Scoring and qualification filter noise before it reaches counsellors.'],
             ['title' => 'Slow follow-up', 'copy' => 'Enquiries go cold in hours. Automated first response happens in seconds, not the next morning.'],
@@ -125,6 +146,13 @@ $pages = [
         'intro' => 'Test-drive bookings, service reminders and dealer lead routing — automated across every channel so no enquiry stalls on the showroom floor.',
         'answer' => 'Automotive buyers enquire across marketplaces, websites, social and walk-ins, then go cold if nobody responds fast. AKESTECH consolidates dealer enquiries into one system, automates instant WhatsApp and SMS response, books test drives and service slots, and runs performance marketing measured on bookings rather than leads.',
         'stats' => [['value' => '< 5 min', 'label' => 'First response time'], ['value' => '100%', 'label' => 'Enquiries captured'], ['value' => '2.5X', 'label' => 'Test-drive show-up rate'], ['value' => '1', 'label' => 'Dealer dashboard']],
+        'process' => [
+            ['title' => 'Dealer funnel audit', 'copy' => 'We map every enquiry source, response time and drop-off point between first enquiry, test drive and final sale.'],
+            ['title' => 'Lead consolidation', 'copy' => 'OEM portals, marketplaces, website and walk-in enquiries routed into one pipeline with instant automated response.'],
+            ['title' => 'Booking automation', 'copy' => 'Test-drive and service reminders, confirmations and one-tap reschedule flows automated across WhatsApp and SMS.'],
+            ['title' => 'Campaign launch', 'copy' => 'Model-level and regional campaigns go live with creative localised by language, market and buyer intent.'],
+            ['title' => 'Network reporting', 'copy' => 'Cost per test drive, show-up rate and cost per sale reported per rooftop, not only as a network average.'],
+        ],
         'challenges' => [
             ['title' => 'Slow dealer response', 'copy' => 'Enquiries sit in inboxes. Instant automated response keeps buyers engaged until sales picks up.'],
             ['title' => 'Scattered lead sources', 'copy' => 'OEM portals, marketplaces and own channels do not talk. Everything routes into one pipeline.'],
@@ -157,6 +185,13 @@ $pages = [
         'intro' => 'From online ordering and marketplace listings to retention automation and AI content — built for the speed food businesses actually operate at.',
         'answer' => 'Food and beverage brands win on repeat purchase, speed and visibility. AKESTECH builds and optimises direct ordering experiences, manages marketplace and delivery listings, runs performance marketing, automates re-order and subscription journeys, and produces AI video content at the volume this category needs.',
         'stats' => [['value' => '35%', 'label' => 'Repeat purchase lift'], ['value' => '50+', 'label' => 'Content pieces monthly'], ['value' => '6+', 'label' => 'Marketplaces managed'], ['value' => '< 2s', 'label' => 'Store load time']],
+        'process' => [
+            ['title' => 'Revenue audit', 'copy' => 'We review channel mix, contribution margin per order, repeat rates and operational friction across every location you operate.'],
+            ['title' => 'Direct channel build', 'copy' => 'Ordering experience, menu, payments and delivery logic built and integrated with how your kitchen actually runs.'],
+            ['title' => 'Marketplace optimisation', 'copy' => 'Listings, photography, pricing and advertising improved across every aggregator and delivery platform you sell on.'],
+            ['title' => 'Retention automation', 'copy' => 'Re-order reminders, subscriptions and win-back journeys launched across WhatsApp, SMS and email timed to consumption cycles.'],
+            ['title' => 'Scale and localise', 'copy' => 'Winning offers and creative extended city by city, with consolidated reporting that still breaks down by location.'],
+        ],
         'challenges' => [
             ['title' => 'Low repeat purchase', 'copy' => 'One-time orders cap growth. Automated re-order, subscription and win-back journeys lift frequency.'],
             ['title' => 'Marketplace dependency', 'copy' => 'Margin disappears into commissions. We build direct channels alongside marketplace presence.'],
@@ -189,6 +224,13 @@ $pages = [
         'intro' => 'MVP, AI features, integrations and go-to-market — delivered by one team so you are not managing four vendors and a handover document.',
         'answer' => 'Startups need shipped software and a repeatable acquisition motion at the same time. AKESTECH builds SaaS platforms, AI and LLM products, web and mobile apps and integrations, then runs performance marketing, landing pages, analytics and lifecycle automation against the product we shipped.',
         'stats' => [['value' => '90', 'label' => 'Days to production MVP'], ['value' => '40%', 'label' => 'Faster feature delivery'], ['value' => '100+', 'label' => 'Integrations shipped'], ['value' => '30%', 'label' => 'Lower blended CAC']],
+        'process' => [
+            ['title' => 'Product discovery', 'copy' => 'We scope the problem, users, constraints and success metrics, then agree the smallest version worth shipping to real users.'],
+            ['title' => 'Architecture and design', 'copy' => 'Data model, integrations, AI components and interface designed before the first line of production code is written.'],
+            ['title' => 'Build in sprints', 'copy' => 'Working software shipped in short cycles, with something you can actually click through at the end of each one.'],
+            ['title' => 'Launch and instrument', 'copy' => 'Production release with analytics, error monitoring and the admin tooling your team needs to operate the product.'],
+            ['title' => 'Growth and handover', 'copy' => 'Acquisition and lifecycle systems added, with documentation and hiring support as your own team takes ownership.'],
+        ],
         'challenges' => [
             ['title' => 'Slow shipping', 'copy' => 'Roadmaps slip between vendors. One in-house team builds, launches and iterates in short cycles.'],
             ['title' => 'No clear ICP', 'copy' => 'Messaging misses. We test positioning, offers and channels against real acquisition data.'],
@@ -221,6 +263,13 @@ $pages = [
         'intro' => 'Project funnels, qualification and WhatsApp follow-up that turn ad spend into booked site visits and site visits into bookings.',
         'answer' => 'Real estate marketing fails when every enquiry is treated the same. AKESTECH builds project-specific landing pages, runs Meta and Google campaigns, qualifies and scores every enquiry in Lead365, automates WhatsApp and call follow-up, and reports on cost per site visit and cost per booking instead of cost per lead.',
         'stats' => [['value' => '2.4X', 'label' => 'More qualified site visits'], ['value' => '< 5 min', 'label' => 'Speed to first contact'], ['value' => '100%', 'label' => 'Enquiries tracked'], ['value' => '40%', 'label' => 'Fewer site-visit no-shows']],
+        'process' => [
+            ['title' => 'Funnel audit', 'copy' => 'We review lead sources, response times, qualification criteria and the drop-off between enquiry and a booked site visit.'],
+            ['title' => 'CRM and attribution', 'copy' => 'Every enquiry routed, scored and tracked back to its source, with channel partner visibility built into the same system.'],
+            ['title' => 'Nurture automation', 'copy' => 'WhatsApp and SMS journeys that keep buyers warm between first enquiry and site visit, handing over the moment someone replies.'],
+            ['title' => 'Campaign launch', 'copy' => 'Project-level campaigns go live with geo-targeting, creative and landing pages built specifically for booking visits.'],
+            ['title' => 'Visit-to-booking optimisation', 'copy' => 'Cost per qualified visit, show-up rate and cost per booking reported and improved every month.'],
+        ],
         'challenges' => [
             ['title' => 'Unqualified enquiries', 'copy' => 'Sales teams waste hours. Automated scoring and qualification filter before handover.'],
             ['title' => 'Slow first response', 'copy' => 'Buyers enquire everywhere at once. Instant WhatsApp response keeps you in the running.'],
@@ -253,6 +302,13 @@ $pages = [
         'intro' => 'Connect stores, ecommerce and marketplaces into one operation — with the automation and creative to keep every channel moving.',
         'answer' => 'Retail and consumer brands sell across physical stores, their own website and marketplaces, often with disconnected data. AKESTECH unifies commerce and marketplace operations, builds direct-to-consumer channels, automates retention and support, and runs performance marketing and AI creative measured on contribution margin.',
         'stats' => [['value' => '6+', 'label' => 'Channels unified'], ['value' => '1', 'label' => 'View of inventory'], ['value' => '100+', 'label' => 'Creatives every month'], ['value' => '12%', 'label' => 'Average margin gain']],
+        'process' => [
+            ['title' => 'Omnichannel audit', 'copy' => 'We map your channels, inventory flows, margin by channel and the operational gaps opening up between them.'],
+            ['title' => 'Inventory unification', 'copy' => 'POS, ERP, marketplace and D2C stock connected into one view with sensible safety buffers per channel so overselling stops.'],
+            ['title' => 'Marketplace and D2C launch', 'copy' => 'Listings, catalogue and advertising improved across marketplaces while the direct-to-consumer channel is built out in parallel.'],
+            ['title' => 'Creative at scale', 'copy' => 'AI video and design produce the volume of creative a large catalogue needs across every channel and format.'],
+            ['title' => 'Margin reporting', 'copy' => 'Contribution margin by channel, SKU and campaign reported monthly, so decisions follow profit rather than top-line revenue.'],
+        ],
         'challenges' => [
             ['title' => 'Channel conflict', 'copy' => 'Marketplaces and D2C compete. Unified reporting and pricing logic protect margin across channels.'],
             ['title' => 'Disconnected inventory', 'copy' => 'Overselling and stockouts hurt trust. Inventory sync keeps every channel accurate.'],
@@ -402,7 +458,7 @@ ob_start();
       <div><h2 class="ak-h2">One connected system, end to end.</h2></div>
     </div>
     <div class="ak-process">
-      <?php $i = 1; foreach ($process as $p): ?>
+      <?php $i = 1; foreach (($page['process'] ?? $process) as $p): ?>
       <div class="ak-step ak-reveal">
         <span><?= str_pad((string)$i, 2, '0', STR_PAD_LEFT) ?></span>
         <h3><?= htmlspecialchars($p['title']) ?></h3>

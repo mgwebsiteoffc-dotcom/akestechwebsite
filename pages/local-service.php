@@ -63,6 +63,7 @@ foreach ($cities as $cityKey => $c) {
             'primaryCta'  => $def['cta'],
             'accent'  => $def['accent'],
             'metrics' => $def['metrics'],
+            'process'  => ak_fill($def['process'] ?? [], $c['city'], $c['region'], $c['nearby']),
             'services' => ak_fill($def['services'], $c['city'], $c['region'], $c['nearby']),
             'faqs'    => ak_fill($def['faqs'], $c['city'], $c['region'], $c['nearby']),
             'related' => $def['related'],
@@ -184,11 +185,21 @@ ob_start();
       <div><h2 class="ak-h2">A clear process from audit to optimization.</h2></div>
     </div>
     <div class="ak-process">
-      <div class="ak-step ak-reveal"><span>01</span><h3>Audit</h3><p>We review your current website, campaigns, tracking, content and lead quality.</p></div>
-      <div class="ak-step ak-reveal"><span>02</span><h3>Plan</h3><p>We define keywords, audience segments, offers, funnel pages, tracking and success metrics.</p></div>
-      <div class="ak-step ak-reveal"><span>03</span><h3>Build</h3><p>We create pages, campaigns, creatives, forms, CRM flows and automation where required.</p></div>
-      <div class="ak-step ak-reveal"><span>04</span><h3>Launch</h3><p>We launch in controlled stages so performance data stays clean and useful.</p></div>
-      <div class="ak-step ak-reveal"><span>05</span><h3>Optimize</h3><p>We improve budgets, content, creatives, conversion rate and lead quality every week.</p></div>
+      <?php
+      $steps = !empty($page['process']) ? $page['process'] : [
+        ['title' => 'Audit',    'copy' => 'We review your current website, campaigns, tracking, content and lead quality.'],
+        ['title' => 'Plan',     'copy' => 'We define keywords, audience segments, offers, funnel pages, tracking and success metrics.'],
+        ['title' => 'Build',    'copy' => 'We create pages, campaigns, creatives, forms, CRM flows and automation where required.'],
+        ['title' => 'Launch',   'copy' => 'We launch in controlled stages so performance data stays clean and useful.'],
+        ['title' => 'Optimize', 'copy' => 'We improve budgets, content, creatives, conversion rate and lead quality every week.'],
+      ];
+      $i = 1; foreach ($steps as $p): ?>
+      <div class="ak-step ak-reveal">
+        <span><?= str_pad((string)$i, 2, '0', STR_PAD_LEFT) ?></span>
+        <h3><?= htmlspecialchars($p['title']) ?></h3>
+        <p><?= htmlspecialchars($p['copy']) ?></p>
+      </div>
+      <?php $i++; endforeach; ?>
     </div>
   </div>
 </section>

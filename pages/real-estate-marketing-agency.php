@@ -59,11 +59,33 @@ $process = [
 ];
 
 $faqs = [
-    ['q' => 'Do you work only with real estate builders?', 'a' => 'We work best with builders, developers, channel partners, and real estate teams that need qualified leads, site visits, and booking-focused campaigns.'],
-    ['q' => 'What budget should we start with?', 'a' => 'Most projects should start with a test budget of Rs. 1L to Rs. 3L per month, depending on city, ticket size, and inventory.'],
-    ['q' => 'Can you manage CRM and WhatsApp follow-up?', 'a' => 'Yes. We can integrate or build the CRM flow, route leads to sales teams, and automate WhatsApp qualification and reminders.'],
-    ['q' => 'How soon can leads start?', 'a' => 'Campaigns can start quickly after setup. Meaningful optimization usually needs two to four weeks of data.'],
+    ['q' => 'Do you work only with real estate builders?',
+     'a' => 'We work best with builders, developers, channel partners and real estate teams that need qualified leads, site visits and booking-focused campaigns. That includes residential and commercial projects, plotted developments, affordable and luxury inventory, and proptech platforms selling into the sector.'],
+    ['q' => 'What budget should we start with?',
+     'a' => 'Most projects should start with a test budget of Rs. 1L to Rs. 3L per month depending on city, ticket size and inventory. The test phase exists to establish a verified cost per qualified site visit, and we scale only once that number is stable and you are comfortable with it.'],
+    ['q' => 'Can you manage CRM and WhatsApp follow-up?',
+     'a' => 'Yes. We can integrate with your existing CRM or build the flow inside it, route leads automatically to the right salesperson or channel partner, and automate WhatsApp qualification, site-visit reminders and follow-up sequences with a human handover the moment a buyer replies.'],
+    ['q' => 'How soon can leads start?',
+     'a' => 'Campaigns usually go live within one to two weeks of kickoff once tracking, creative and landing pages are ready. Meaningful optimisation needs two to four weeks of data, after which cost per qualified site visit typically improves steadily as we cut what is not working.'],
+    ['q' => 'What counts as a qualified real estate lead?',
+     'a' => 'A qualified lead matches your buying criteria: the right city or project, a budget that fits the ticket size, a genuine timeline to purchase, and real intent to visit. We agree that definition with your sales team before launch and score every enquiry against it, so your team calls buyers rather than browsers.'],
+    ['q' => 'How do you track a lead from enquiry to booking?',
+     'a' => 'Every enquiry is captured with its source, scored, routed and then tracked through qualification, site visit and booking inside the CRM. That lets us report cost per qualified site visit and cost per booking instead of cost per lead, which is the number that actually tells you whether the marketing is working.'],
+    ['q' => 'Which cities do you run real estate campaigns in?',
+     'a' => 'We run campaigns across Indian metros and tier two cities, including Lucknow, Delhi NCR, and other active markets, with geo-targeting by city, pin code and radius. Campaigns can also target NRI buyers in the Gulf, Singapore, the UK and the US when your inventory suits that audience.'],
+    ['q' => 'Do you produce the ad creatives and project videos?',
+     'a' => 'Yes. We produce static and video creative, including AI-generated project films, walkthroughs, amenity reels and locality content, and we version them for different platforms, formats and languages. Creative volume matters in real estate because fatigue sets in quickly when the same few ads run for months.'],
 ];
+
+$schemas[] = SEO::serviceSchema(
+    'Real Estate Digital Marketing Agency',
+    'Qualified real estate lead generation, site visit and booking campaigns for builders and developers, combining Meta and Google Ads, landing pages, CRM, WhatsApp automation and performance reporting.'
+);
+
+// FAQPage schema — the FAQ markup below is plain HTML, so the graph needs this edge explicitly.
+$schemas[] = SEO::faqSchema(array_map(function ($f) {
+    return ['question' => $f['q'], 'answer' => $f['a']];
+}, $faqs));
 
 ob_start();
 ?>
@@ -93,6 +115,14 @@ ob_start();
                     <a href="https://wa.me/<?= WHATSAPP_NUMBER ?>?text=<?= $whatsappText ?>" target="_blank" class="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-gray-800 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all">
                         WhatsApp Us
                     </a>
+                </div>
+
+                <!-- AEO: concise, extractable definition for AI answer engines -->
+                <div class="mt-9 rounded-2xl border border-gray-200 bg-gray-50/70 p-5 sm:p-6">
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Direct answer</p>
+                    <p class="text-base text-gray-800 leading-relaxed">
+                        A real estate digital marketing agency generates property enquiries, qualifies them against budget, location and timeline, converts them into booked site visits, and tracks the result through to booking. Akestech runs that full chain for builders and developers: Meta and Google Ads, project landing pages, CRM routing, WhatsApp automation and reporting measured on cost per qualified site visit rather than cost per lead.
+                    </p>
                 </div>
 
                 <div class="mt-9 grid grid-cols-2 sm:grid-cols-4 gap-5">
