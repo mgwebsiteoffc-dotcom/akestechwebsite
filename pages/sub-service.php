@@ -3,8 +3,9 @@
  * Sub-service pages — the specific capabilities listed under each main service.
  *
  * One template serves every sub-service route; content comes from
- * includes/sub-services.php. Routes are additive only — no existing slug
- * is renamed, moved or removed.
+ * includes/sub-services.php. Canonical slugs match their headings exactly;
+ * three legacy slugs 301-redirect to their new canonicals (see $redirects301
+ * in index.php) so no indexed URL or backlink breaks.
  *
  * Each page renders through the shared service renderer, so it inherits the
  * ak-* layout, the AEO direct-answer block, the process timeline, the related

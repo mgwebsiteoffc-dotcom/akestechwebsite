@@ -204,12 +204,12 @@ ob_start();
         <div class="ak-btns"><a class="ak-btn ak-btn--dark" href="<?= url('services/shopify-growth') ?>">Talk Shopify <?= ak_icon('arrow-up-right', 16) ?></a></div>
       </div>
       <div class="ak-rows ak-reveal ak-d2">
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>01</small><b>Shopify Store Setup</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>02</small><b>Custom Theme Development</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/technology') ?>"><small>03</small><b>Custom Shopify Development</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>04</small><b>Shopify Plus</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/technology') ?>"><small>05</small><b>Migration &amp; Integrations</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>06</small><b>CRO &amp; Store Optimization</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-store-setup') ?>"><small>01</small><b>Shopify Store Setup</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/custom-theme-development') ?>"><small>02</small><b>Custom Theme Development</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/custom-shopify-development') ?>"><small>03</small><b>Custom Shopify Development</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/shopify-plus') ?>"><small>04</small><b>Shopify Plus</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/migration-integrations') ?>"><small>05</small><b>Migration &amp; Integrations</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/cro-store-optimization') ?>"><small>06</small><b>CRO &amp; Store Optimization</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
       </div>
     </div>
   </div>
@@ -226,12 +226,12 @@ ob_start();
         <div class="ak-btns"><a class="ak-btn ak-btn--dark" href="<?= url('services/performance-marketing') ?>">Grow with us <?= ak_icon('arrow-up-right', 16) ?></a></div>
       </div>
       <div class="ak-rows ak-reveal ak-d2">
-        <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>01</small><b>Meta &amp; Google Ads</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/ai-videos') ?>"><small>02</small><b>Creative &amp; AI UGC Strategy</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>03</small><b>Landing Pages &amp; Funnels</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/performance-marketing') ?>"><small>04</small><b>Tracking &amp; Attribution</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/automation') ?>"><small>05</small><b>Retargeting &amp; Retention</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/shopify-growth') ?>"><small>06</small><b>CRO &amp; Experimentation</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/meta-google-ads') ?>"><small>01</small><b>Meta &amp; Google Ads</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/creative-ai-ugc-strategy') ?>"><small>02</small><b>Creative &amp; AI UGC Strategy</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/landing-pages-funnels') ?>"><small>03</small><b>Landing Pages &amp; Funnels</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/tracking-attribution') ?>"><small>04</small><b>Tracking &amp; Attribution</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/retargeting-retention') ?>"><small>05</small><b>Retargeting &amp; Retention</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/cro-experimentation') ?>"><small>06</small><b>CRO &amp; Experimentation</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
       </div>
     </div>
   </div>
@@ -327,12 +327,12 @@ ob_start();
         <div class="ak-btns"><a class="ak-btn ak-btn--dark" href="<?= url('services/shopify-operations') ?>">Talk marketplace ops <?= ak_icon('arrow-up-right', 16) ?></a></div>
       </div>
       <div class="ak-rows ak-reveal ak-d2">
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>01</small><b>Amazon Account Management</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>02</small><b>Flipkart &amp; Marketplace Ads</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>03</small><b>Listing SEO &amp; Catalogue</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>04</small><b>Inventory &amp; Fulfilment</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/shopify-operations') ?>"><small>05</small><b>RTO &amp; Returns Control</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
-        <a class="ak-row" href="<?= url('services/automation') ?>"><small>06</small><b>Ops Automation</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/amazon-account-management') ?>"><small>01</small><b>Amazon Account Management</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/flipkart-marketplace-ads') ?>"><small>02</small><b>Flipkart &amp; Marketplace Ads</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/listing-seo-catalogue') ?>"><small>03</small><b>Listing SEO &amp; Catalogue</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/inventory-fulfilment') ?>"><small>04</small><b>Inventory &amp; Fulfilment</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/rto-returns-control') ?>"><small>05</small><b>RTO &amp; Returns Control</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
+        <a class="ak-row" href="<?= url('services/ops-automation') ?>"><small>06</small><b>Ops Automation</b><span><?= ak_icon('arrow-up-right', 16) ?></span></a>
       </div>
     </div>
   </div>
