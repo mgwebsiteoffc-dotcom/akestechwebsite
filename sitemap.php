@@ -76,6 +76,18 @@ foreach (array_keys(lp_slugs()) as $localSlug) {
 $routes = array_values(array_diff($routes, lp_disabled()));
 
 /* =========================
+   SUB-SERVICE PAGES
+   (includes/sub-services.php) — picked up automatically
+   so new capability pages are indexed without editing this file.
+========================= */
+require_once __DIR__ . '/includes/sub-services.php';
+foreach (array_keys(ak_sub_services()) as $subRoute) {
+    if (!in_array($subRoute, $routes, true)) {
+        $routes[] = $subRoute;
+    }
+}
+
+/* =========================
    START XML
 ========================= */
 echo '<?xml version="1.0" encoding="UTF-8"?>';
