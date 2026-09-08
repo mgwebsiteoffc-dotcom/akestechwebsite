@@ -1,19 +1,31 @@
 -- =================================================================
--- AKESTECH — complete SEO + FAQ database seed
--- Generated from the repo's own content (single source of truth).
--- Run in phpMyAdmin (SQL tab) or:  mysql DB_NAME < db/akestech_seo_faq_seed.sql
+-- AKESTECH — complete SEO + FAQ database seed (matched to LIVE DB)
+-- Live DB : excelrbx_akestech_db  |  MySQL 5.7  |  phpMyAdmin 5.2.3
+-- Tables  : page_seo (12 cols, UNIQUE page_slug), faqs (idx page_slug)
+-- Charset : live tables are utf8 (3-byte); this file contains only
+--           BMP characters, so it imports cleanly. Verified lengths:
+--           meta/og titles<=255, descriptions/keywords<=500, q<=500.
+-- Run     : phpMyAdmin -> select excelrbx_akestech_db -> Import tab ->
+--           choose this file -> Go.  (Or: mysql DB < this file.)
 --
--- What it does:
---  1. Renames 3 legacy slugs to heading-exact slugs (faqs + page_seo).
---  2. Upserts page_seo for 55 pages (meta/OG/canonical/robots).
---  3. Refreshes faqs for 27 pages (210 rows).
--- Re-running resets those rows to repo content (custom edits lost).
--- Tables must exist already (live DB has them). No schema changes.
+-- STEP 1: rename 3 legacy slugs (0 rows on live DB - safe no-op).
+-- STEP 2: upsert page_seo for 55 load keys + 1 defensive
+--         duplicate key (whatsapp-shopify refreshes stale row id=2).
+--         Live 13 rows -> all refreshed, 43 new rows added = 56 total.
+--         custom_schema stays NULL (as on live); updated_at auto-bumps.
+-- STEP 3: refresh faqs for 27 slugs (210 rows).
+--         Live home x4 + performance-marketing x4 rows are REPLACED
+--         (ak_faqs() uses DB rows INSTEAD of file rows - no merge).
+--         Backup first if you want to keep them (Export table faqs).
+--         Live whatsapp-shopify x6 rows are left UNTOUCHED.
+--         Live 14 rows -> 6 kept + 210 new = 216 total.
+-- Re-running resets those rows to repo content.
+-- No schema changes. MySQL 5.7 compatible (VALUES() upserts).
 -- =================================================================
 SET NAMES utf8mb4;
 START TRANSACTION;
 
--- ---------- STEP 1: legacy slug renames (usually 0 rows) ----------
+-- ---------- STEP 1: legacy slug renames (expect 0 rows) ----------
 UPDATE `faqs` SET `page_slug` = 'custom-theme-development' WHERE `page_slug` = 'custom-shopify-theme-development';
 UPDATE `page_seo` SET `page_slug` = 'custom-theme-development' WHERE `page_slug` = 'custom-shopify-theme-development';
 UPDATE `faqs` SET `page_slug` = 'migration-integrations' WHERE `page_slug` = 'shopify-migration-integrations';
@@ -295,6 +307,11 @@ ON DUPLICATE KEY UPDATE `meta_title` = VALUES(`meta_title`), `meta_description` 
 -- industries/retail-and-consumer-brands  ->  https://akestech.com/industries/retail-and-consumer-brands
 INSERT INTO `page_seo` (`page_slug`, `meta_title`, `meta_description`, `meta_keywords`, `og_title`, `og_description`, `og_image`, `robots`, `canonical_url`) VALUES
 ('industries/retail-and-consumer-brands', 'Retail & Consumer Brand Growth | AKESTECH', 'Retail and consumer brand growth: ecommerce, marketplace management, retail media, retention automation and AI creative.', '', 'Retail & Consumer Brand Growth | AKESTECH', 'Retail and consumer brand growth: ecommerce, marketplace management, retail media, retention automation and AI creative.', 'https://akestech.com/assets/images/og-akestech.jpg', 'index, follow', 'https://akestech.com/industries/retail-and-consumer-brands')
+ON DUPLICATE KEY UPDATE `meta_title` = VALUES(`meta_title`), `meta_description` = VALUES(`meta_description`), `meta_keywords` = VALUES(`meta_keywords`), `og_title` = VALUES(`og_title`), `og_description` = VALUES(`og_description`), `og_image` = VALUES(`og_image`), `robots` = VALUES(`robots`), `canonical_url` = VALUES(`canonical_url`);
+
+-- whatsapp-shopify  ->  https://akestech.com/whatsapp-shopify  [defensive: refreshes live row id=2 so the legacy short key never serves stale copy]
+INSERT INTO `page_seo` (`page_slug`, `meta_title`, `meta_description`, `meta_keywords`, `og_title`, `og_description`, `og_image`, `robots`, `canonical_url`) VALUES
+('whatsapp-shopify', 'Whatify — AI WhatsApp Commerce & Automation | AKESTECH', 'Whatify is AKESTECH''s AI-powered WhatsApp commerce platform for cart recovery, COD verification, order updates and customer engagement.', '', 'Whatify — AI WhatsApp Commerce & Automation | AKESTECH', 'Whatify is AKESTECH''s AI-powered WhatsApp commerce platform for cart recovery, COD verification, order updates and customer engagement.', 'https://akestech.com/assets/images/og-akestech.jpg', 'index, follow', 'https://akestech.com/whatsapp-shopify')
 ON DUPLICATE KEY UPDATE `meta_title` = VALUES(`meta_title`), `meta_description` = VALUES(`meta_description`), `meta_keywords` = VALUES(`meta_keywords`), `og_title` = VALUES(`og_title`), `og_description` = VALUES(`og_description`), `og_image` = VALUES(`og_image`), `robots` = VALUES(`robots`), `canonical_url` = VALUES(`canonical_url`);
 
 -- ---------- STEP 3: faqs (refresh to repo content) ----------
@@ -616,4 +633,8 @@ INSERT INTO `faqs` (`question`, `answer`, `page_slug`, `sort_order`, `is_active`
 ('Who actually works on my account?', 'A dedicated team of senior specialists — a growth strategist, a performance marketer, a developer and an automation specialist — not a single account manager juggling twenty brands.', 'about', 4, 1),
 ('What are your engagement terms?', 'Projects start at Rs 50,000. Growth retainers typically start at Rs 75,000 per month with a three-month commitment, then run month to month. Results keep you, not contracts.', 'about', 5, 1);
 
+-- ---------- VERIFY (run separately after import) ----------
+-- SELECT COUNT(*) FROM page_seo;  -- expect 56
+-- SELECT COUNT(*) FROM faqs;      -- expect 216  (6 live whatsapp + 210 seed)
+-- SELECT page_slug, COUNT(*) c FROM faqs GROUP BY page_slug ORDER BY c DESC LIMIT 5;
 COMMIT;
