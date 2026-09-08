@@ -1,7 +1,7 @@
 <?php
 /**
- * Blog Listing Page
- * Supports category filtering and pagination
+ * Blog Listing Page — AKESTECH design system
+ * Pagination, category filtering, SQL and the newsletter form are unchanged.
  */
 SEO::load('blog');
 
@@ -66,96 +66,107 @@ $schemas[] = SEO::breadcrumbSchema([
     ['name' => 'Blog', 'url' => url('blog')]
 ]);
 
+$catQuery = $categorySlug ? '&category=' . urlencode($categorySlug) : '';
+
 ob_start();
 ?>
 
-<!-- HERO -->
-<section class="bg-gray-50 pt-12 pb-8 lg:pt-16 lg:pb-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl animate-on-scroll">
-            <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Blog</h1>
-            <p class="text-lg text-gray-600">Expert insights on Shopify growth, WhatsApp marketing, performance advertising, and D2C strategies.</p>
-        </div>
+<!-- ============================ PAGE HERO ============================ -->
+<section class="ak-pagehero">
+  <div class="ak-container">
+    <div class="ak-pagehero__inner">
+      <div class="ak-crumbs">
+        <a href="<?= url('/') ?>">Home</a> <span>/</span> Blog
+      </div>
+      <div class="ak-eyebrow">Insights</div>
+      <h1 class="ak-h1 ak-words" style="font-size:clamp(42px,5.6vw,80px)">Field notes on growth.</h1>
+      <p class="ak-lead">
+        Practical writing on AI automation, commerce, performance marketing,
+        marketplace operations and building products — from the team doing the work.
+      </p>
     </div>
+  </div>
 </section>
 
-<!-- CATEGORY FILTER -->
-<section class="bg-gray-50 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-wrap gap-2 animate-on-scroll">
-            <a href="<?= url('blog') ?>" class="px-4 py-2 text-sm font-medium rounded-full transition-colors <?= !$categorySlug ? 'bg-primary-600 text-white' : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-300' ?>">
-                All Posts
-            </a>
-            <?php foreach ($categories as $cat): ?>
-            <a href="<?= url('blog') ?>?category=<?= $cat['slug'] ?>" class="px-4 py-2 text-sm font-medium rounded-full transition-colors <?= $categorySlug === $cat['slug'] ? 'bg-primary-600 text-white' : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-300' ?>">
-                <?= clean($cat['name']) ?>
-                <span class="ml-1 text-xs opacity-60">(<?= $cat['post_count'] ?>)</span>
-            </a>
-            <?php endforeach; ?>
-        </div>
-    </div>
+<section class="ak-section ak-section--tight" style="padding-top:0">
+  <div class="ak-container">
+    <figure class="ak-figure ak-reveal">
+      <img src="<?= asset('images/hero-blog.jpg') ?>" alt="AKESTECH editorial desk" width="1408" height="768" loading="lazy">
+    </figure>
+  </div>
 </section>
 
-<!-- POSTS GRID -->
-<section class="bg-gray-50 pb-16 lg:pb-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <?php if (empty($posts)): ?>
-            <div class="text-center py-16">
-                <span class="text-4xl block mb-4"><?= ak_icon('file-text', 18) ?></span>
-                <h2 class="text-xl font-semibold text-gray-900 mb-2">No posts found</h2>
-                <p class="text-gray-600 mb-6">We're working on new content. Check back soon!</p>
-                <a href="<?= url('blog') ?>" class="text-sm font-medium text-primary-600 hover:text-primary-700">View all posts <?= ak_icon('arrow-right', 16) ?></a>
-            </div>
-        <?php else: ?>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                <?php foreach ($posts as $post): ?>
-                    <?php component('blog-card', ['post' => $post]); ?>
-                <?php endforeach; ?>
-            </div>
+<!-- ============================ CATEGORY FILTER ============================ -->
+<?php if (!empty($categories)): ?>
+<section class="ak-section ak-section--flush">
+  <div class="ak-container">
+    <div class="ak-tags ak-reveal">
+      <a class="ak-tag <?= $categorySlug === '' ? 'is-on' : '' ?>" href="<?= url('blog') ?>">All posts</a>
+      <?php foreach ($categories as $cat): ?>
+        <a class="ak-tag <?= $categorySlug === $cat['slug'] ? 'is-on' : '' ?>"
+           href="<?= url('blog') ?>?category=<?= urlencode($cat['slug']) ?>">
+          <?= clean($cat['name']) ?> <span class="ak-tag__n"><?= (int) $cat['post_count'] ?></span>
+        </a>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
 
-            <!-- Pagination -->
-            <?php if ($totalPages > 1): ?>
-            <nav class="flex justify-center mt-12 animate-on-scroll" aria-label="Pagination">
-                <div class="flex items-center gap-2">
-                    <?php if ($page > 1): ?>
-                    <a href="<?= url('blog') ?>?page=<?= $page - 1 ?><?= $categorySlug ? '&category=' . $categorySlug : '' ?>" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                        <?= ak_icon('arrow-left', 16) ?> Previous
-                    </a>
-                    <?php endif; ?>
+<!-- ============================ POSTS ============================ -->
+<section class="ak-section ak-section--tight">
+  <div class="ak-container">
+    <?php if (empty($posts)): ?>
+      <div class="ak-empty ak-reveal">
+        <?= ak_icon('file-text', 34) ?>
+        <h2 class="ak-h3">No posts found</h2>
+        <p>We publish new writing regularly. Check back soon, or browse everything we have published.</p>
+        <a href="<?= url('blog') ?>" class="ak-btn ak-btn--dark" style="margin-top:22px">View all posts <?= ak_icon('arrow-up-right', 16) ?></a>
+      </div>
+    <?php else: ?>
+      <div class="ak-grid3">
+        <?php foreach ($posts as $post): ?>
+          <?php component('blog-card', ['post' => $post]); ?>
+        <?php endforeach; ?>
+      </div>
 
-                    <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                    <a href="<?= url('blog') ?>?page=<?= $i ?><?= $categorySlug ? '&category=' . $categorySlug : '' ?>" 
-                       class="w-10 h-10 flex items-center justify-center text-sm font-medium rounded-lg transition-colors <?= $i === $page ? 'bg-primary-600 text-white' : 'text-gray-700 bg-white border border-gray-200 hover:bg-gray-50' ?>">
-                        <?= $i ?>
-                    </a>
-                    <?php endfor; ?>
-
-                    <?php if ($page < $totalPages): ?>
-                    <a href="<?= url('blog') ?>?page=<?= $page + 1 ?><?= $categorySlug ? '&category=' . $categorySlug : '' ?>" class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                        Next <?= ak_icon('arrow-right', 16) ?>
-                    </a>
-                    <?php endif; ?>
-                </div>
-            </nav>
-            <?php endif; ?>
+      <!-- Pagination -->
+      <?php if ($totalPages > 1): ?>
+      <nav class="ak-pager ak-reveal" aria-label="Pagination">
+        <?php if ($page > 1): ?>
+          <a href="<?= url('blog') ?>?page=<?= $page - 1 ?><?= $catQuery ?>"><?= ak_icon('arrow-left', 15) ?> Previous</a>
         <?php endif; ?>
-    </div>
+
+        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+          <a href="<?= url('blog') ?>?page=<?= $i ?><?= $catQuery ?>"
+             class="ak-pager__n <?= $i === $page ? 'is-on' : '' ?>"><?= $i ?></a>
+        <?php endfor; ?>
+
+        <?php if ($page < $totalPages): ?>
+          <a href="<?= url('blog') ?>?page=<?= $page + 1 ?><?= $catQuery ?>">Next <?= ak_icon('arrow-right', 15) ?></a>
+        <?php endif; ?>
+      </nav>
+      <?php endif; ?>
+    <?php endif; ?>
+  </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="bg-white py-16 lg:py-20 border-t border-gray-100">
-    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
-        <h2 class="text-2xl font-bold text-gray-900 mb-3">Stay Updated</h2>
-        <p class="text-gray-600 mb-6">Get weekly Shopify growth tips, WhatsApp marketing strategies, and industry insights.</p>
-        <form method="POST" action="" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input type="hidden" name="form_action" value="newsletter">
-            <?= csrfField() ?>
-            <input type="email" name="email" placeholder="Enter your email" required class="flex-1 px-4 py-3 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-            <button type="submit" class="px-6 py-3 text-sm font-semibold text-white bg-primary-600 rounded-xl hover:bg-primary-700 transition-colors">
-                Subscribe
-            </button>
-        </form>
+<!-- ============================ NEWSLETTER ============================ -->
+<section class="ak-section ak-section--tight">
+  <div class="ak-container">
+    <div class="ak-newsletter ak-reveal">
+      <div>
+        <h2 class="ak-h3">Stay updated</h2>
+        <p>Practical growth tactics and automation ideas. No fluff, unsubscribe any time.</p>
+      </div>
+      <form method="POST" action="" class="ak-newsletter__form">
+        <input type="hidden" name="form_action" value="newsletter">
+        <?= csrfField() ?>
+        <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
+  </div>
 </section>
 
 <?php

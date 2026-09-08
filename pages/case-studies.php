@@ -1,6 +1,7 @@
 <?php
 /**
- * Case Studies Listing with Industry Filter
+ * Case Studies Listing with Industry Filter — AKESTECH design system
+ * Queries and the ?industry= filter are unchanged.
  */
 SEO::load('case-studies');
 
@@ -29,56 +30,71 @@ $schemas[] = SEO::breadcrumbSchema([
 ob_start();
 ?>
 
-<!-- HERO -->
-<section class="bg-gray-50 pt-12 pb-8 lg:pt-16 lg:pb-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl animate-on-scroll">
-            <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">Case Studies</h1>
-            <p class="text-lg text-gray-600">Real results for real brands. See how we've helped Shopify stores and D2C brands achieve transformative growth.</p>
-        </div>
+<!-- ============================ PAGE HERO ============================ -->
+<section class="ak-pagehero">
+  <div class="ak-container">
+    <div class="ak-pagehero__inner">
+      <div class="ak-crumbs">
+        <a href="<?= url('/') ?>">Home</a> <span>/</span> Case Studies
+      </div>
+      <div class="ak-eyebrow">Proof</div>
+      <h1 class="ak-h1 ak-words" style="font-size:clamp(42px,5.6vw,80px)">Results, not promises.</h1>
+      <p class="ak-lead">
+        Real work for real brands — the numbers we moved, the systems we built
+        and the timelines we did it in.
+      </p>
     </div>
+  </div>
 </section>
 
-<!-- INDUSTRY FILTER -->
-<section class="bg-gray-50 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-wrap gap-2 animate-on-scroll">
-            <a href="<?= url('case-studies') ?>" class="px-4 py-2 text-sm font-medium rounded-full transition-colors <?= !$industryFilter ? 'bg-primary-600 text-white' : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-300' ?>">
-                All Industries
-            </a>
-            <?php foreach ($industries as $ind): ?>
-            <a href="<?= url('case-studies') ?>?industry=<?= urlencode($ind) ?>" class="px-4 py-2 text-sm font-medium rounded-full transition-colors <?= $industryFilter === $ind ? 'bg-primary-600 text-white' : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-300' ?>">
-                <?= clean($ind) ?>
-            </a>
-            <?php endforeach; ?>
-        </div>
-    </div>
+<section class="ak-section ak-section--tight" style="padding-top:0">
+  <div class="ak-container">
+    <figure class="ak-figure ak-reveal">
+      <img src="<?= asset('images/hero-case-studies.jpg') ?>" alt="Growth charts representing client results" width="1408" height="768" loading="lazy">
+    </figure>
+  </div>
 </section>
 
-<!-- STUDIES GRID -->
-<section class="bg-gray-50 pb-16 lg:pb-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <?php if (empty($studies)): ?>
-            <div class="text-center py-16">
-                <span class="text-4xl block mb-4"><?= ak_icon('bar-chart', 18) ?></span>
-                <h2 class="text-xl font-semibold text-gray-900 mb-2">No case studies yet</h2>
-                <p class="text-gray-600">We're documenting our success stories. Check back soon!</p>
-            </div>
-        <?php else: ?>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                <?php foreach ($studies as $study): ?>
-                    <?php component('case-study-card', ['study' => $study]); ?>
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
+<!-- ============================ FILTER ============================ -->
+<?php if (!empty($industries)): ?>
+<section class="ak-section ak-section--flush">
+  <div class="ak-container">
+    <div class="ak-tags ak-reveal">
+      <a class="ak-tag <?= $industryFilter === '' ? 'is-on' : '' ?>" href="<?= url('case-studies') ?>">All industries</a>
+      <?php foreach ($industries as $ind): ?>
+        <a class="ak-tag <?= $industryFilter === $ind ? 'is-on' : '' ?>"
+           href="<?= url('case-studies') ?>?industry=<?= urlencode($ind) ?>"><?= clean($ind) ?></a>
+      <?php endforeach; ?>
     </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- ============================ GRID ============================ -->
+<section class="ak-section ak-section--tight">
+  <div class="ak-container">
+    <?php if (empty($studies)): ?>
+      <div class="ak-empty ak-reveal">
+        <?= ak_icon('bar-chart', 34) ?>
+        <h2 class="ak-h3">No case studies here yet</h2>
+        <p>We are documenting new work all the time. Check back soon, or ask us for a relevant example directly.</p>
+        <a href="<?= url('contact') ?>" class="ak-btn ak-btn--dark" style="margin-top:22px">Ask for an example <?= ak_icon('arrow-up-right', 16) ?></a>
+      </div>
+    <?php else: ?>
+      <div class="ak-grid3">
+        <?php foreach ($studies as $study): ?>
+          <?php component('case-study-card', ['study' => $study]); ?>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
+  </div>
 </section>
 
 <?php
 component('cta-section', [
-    'title' => 'Want Results Like These?',
-    'description' => 'Book a free consultation and let us build a custom growth strategy for your brand.',
-    'primaryBtn' => 'Book Free Consultation',
+    'title' => 'Want results like these?',
+    'description' => 'Book a free consultation and let us build a custom growth plan for your business.',
+    'primaryBtn' => 'Book free consultation',
     'primaryLink' => url('contact'),
     'style' => 'dark'
 ]);

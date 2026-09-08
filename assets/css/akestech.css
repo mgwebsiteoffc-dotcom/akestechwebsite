@@ -568,3 +568,84 @@ a:hover > .ak-ic.ak-ic--go, .ak-card:hover .ak-ic--go{transform:translate(2px,-2
   flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;
   display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;margin-top:2px;
 }
+
+/* ==========================================================================
+   TILES — shared card for blog posts, case studies and listings
+   ========================================================================== */
+.ak-tile{
+  display:flex;flex-direction:column;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;
+  transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease);
+}
+.ak-tile__media{position:relative;aspect-ratio:16/9;background:#e9e9e5;overflow:hidden}
+.ak-tile__media img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease)}
+.ak-tile:hover .ak-tile__media img{transform:scale(1.045)}
+.ak-tile__ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#c6c6c0}
+.ak-tile__tag{
+  position:absolute;top:12px;left:12px;background:rgba(255,255,255,.94);
+  border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:#444;letter-spacing:.01em;
+}
+.ak-tile__body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.ak-tile__cat{font-size:10.5px;text-transform:uppercase;letter-spacing:1.4px;color:#888;font-weight:800}
+.ak-tile__body h3{
+  font-size:19px;letter-spacing:-.4px;font-weight:750;color:var(--ink);
+  line-height:1.25;margin:9px 0 9px;
+}
+.ak-tile__body p{font-size:14.5px;color:#666;line-height:1.6}
+.ak-tile__meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.ak-tile__m{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 11px}
+.ak-tile__m span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#888;font-weight:700}
+.ak-tile__m b{font-size:14px;color:var(--ink)}
+.ak-tile__date{font-size:12.5px;color:#999;margin-top:14px}
+.ak-tile__go{
+  display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:18px;
+  font-size:13px;font-weight:650;color:var(--ink);
+}
+.ak-tile:hover .ak-tile__go .ak-ic{transform:translate(2px,-2px)}
+.ak-tile__go .ak-ic{transition:transform .3s var(--ease)}
+
+/* ==========================================================================
+   TAG ACTIVE STATE, EMPTY STATE, PAGER, NEWSLETTER
+   ========================================================================== */
+.ak-tag.is-on{background:var(--ink);border-color:var(--ink);color:#fff}
+.ak-tag.is-on .ak-tag__n{opacity:.65}
+.ak-tag__n{margin-left:6px;font-size:11px;opacity:.6}
+
+.ak-empty{
+  text-align:center;padding:70px 24px;border:1px solid var(--line);
+  border-radius:var(--radius);background:var(--card);color:#666;
+}
+.ak-empty .ak-ic{color:#c6c6c0;margin-bottom:18px}
+.ak-empty p{max-width:520px;margin:12px auto 0;font-size:16px;line-height:1.65}
+
+.ak-pager{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin-top:52px}
+.ak-pager a{
+  display:inline-flex;align-items:center;gap:7px;padding:10px 16px;border-radius:12px;
+  border:1px solid var(--line);background:var(--card);font-size:14px;font-weight:600;color:#333;
+  transition:.25s var(--ease);
+}
+.ak-pager a:hover{border-color:var(--ink);color:var(--ink)}
+.ak-pager__n{width:42px;justify-content:center;padding:10px 0!important}
+.ak-pager__n.is-on{background:var(--ink);border-color:var(--ink);color:#fff}
+
+.ak-newsletter{
+  display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:36px 34px;
+}
+.ak-newsletter p{margin-top:8px;color:#666;font-size:16px;max-width:520px}
+.ak-newsletter__form{display:flex;gap:10px;flex-wrap:wrap}
+.ak-newsletter__form input{
+  min-width:250px;background:var(--bg);border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;font-size:15px;font-family:inherit;color:var(--ink);
+}
+.ak-newsletter__form input:focus{border-color:var(--ink);background:#fff;outline:none}
+.ak-newsletter__form button{
+  background:var(--ink);color:#fff;border:0;border-radius:12px;padding:13px 24px;
+  font-size:15px;font-weight:650;font-family:inherit;cursor:pointer;transition:.25s var(--ease);
+}
+.ak-newsletter__form button:hover{opacity:.86}
+@media (max-width:640px){
+  .ak-newsletter{padding:26px 22px}
+  .ak-newsletter__form{width:100%}
+  .ak-newsletter__form input{min-width:0;flex:1}
+}
