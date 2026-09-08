@@ -32,7 +32,7 @@ $proofMetrics = [
     ['value' => '100+', 'label' => 'Campaigns managed'],
     ['value' => '40%', 'label' => 'Average CPL reduction'],
     ['value' => '3X', 'label' => 'Site visit lift'],
-    ['value' => 'Under 30s', 'label' => 'Lead response automation'],
+    ['value' => '30s', 'label' => 'Automated lead response'],
 ];
 
 $painPoints = [

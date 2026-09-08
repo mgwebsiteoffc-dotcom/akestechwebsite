@@ -15,7 +15,7 @@ $sp = [
         ['value' => '₹50Cr+', 'label' => 'Ad spend managed'],
         ['value' => '3X+', 'label' => 'Average ROAS'],
         ['value' => '200+', 'label' => 'Brands scaled'],
-        ['value' => 'Weekly', 'label' => 'Optimisation rhythm'],
+        ['value' => '50+', 'label' => 'Creatives tested monthly'],
     ],
     'deliverables' => [
         ['title' => 'Meta & Google Ads', 'copy' => 'Account structure, audience strategy, bidding and budget management built for profitable scale.'],
@@ -39,6 +39,9 @@ $sp = [
         ['question' => 'How quickly will we see results?', 'answer' => 'Early signal arrives within two weeks of launch. Stable, scalable performance usually takes 60 to 90 days of structured creative, audience and landing page testing.'],
         ['question' => 'Do you produce the ad creatives?', 'answer' => 'Yes. Creative strategy, production and AI video are handled in-house and tested weekly against live performance data so winning angles never go stale.'],
         ['question' => 'Do we keep ownership of our ad accounts and data?', 'answer' => 'Yes. Ad accounts, pixels, audiences and all historical data always remain in your ownership.'],
+        ['question' => 'What is a good ROAS?', 'answer' => 'It depends entirely on gross margin, repeat purchase and cash cycle. A 2X ROAS can be profitable for a brand with strong repeat rates and healthy margin, while 6X can still lose money on a one-time-purchase product with thin margins and high return rates. We report contribution margin alongside ROAS so you can see what the number is actually worth.'],
+        ['question' => 'Do you run Meta, Google and marketplace ads?', 'answer' => 'Yes. We plan and run Meta, Google Search, Shopping and YouTube, plus Amazon, Flipkart and other marketplace advertising, as one funnel rather than separate budgets. That prevents channels competing for the same conversion and lets budget move to whatever is genuinely producing incremental revenue.'],
+        ['question' => 'How do you track conversions after cookie and iOS changes?', 'answer' => 'We implement server-side tracking through the Meta Conversions API and Google\'s server-side tagging, alongside first-party data capture and consent-mode configuration, then reconcile platform numbers against your own order and CRM data. Modelled and platform-reported conversions are reported separately from verified ones so decisions are made on accurate figures.'],
     ],
     'ctaTitle' => 'Stop burning ad budget. Start scaling profitably.',
     'ctaCopy' => 'Get a free ad account audit and discover how much revenue you are leaving on the table.',

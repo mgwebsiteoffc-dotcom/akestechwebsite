@@ -47,6 +47,10 @@ $pages = [
             ['question' => 'Which platforms do you support?', 'answer' => 'Primarily Shopify and Shopify Plus, plus Amazon, Flipkart and other Indian marketplaces, with integrations into your CRM, ERP, payments and logistics tools.'],
             ['question' => 'How quickly can we see results?', 'answer' => 'Audit and roadmap within seven days, first automation and campaign changes live inside 30 days, with compounding revenue impact typically between day 60 and day 90.'],
             ['question' => 'Can you work with our existing team?', 'answer' => 'Yes. We frequently plug into in-house marketing, ops or tech teams and take ownership of specific outcomes rather than everything at once.'],
+            ['question' => 'What does an ecommerce growth agency do?', 'answer' => 'An ecommerce growth agency plans and runs the whole revenue system around an online brand: store and conversion rate optimisation, marketplace and D2C operations, performance marketing, retention and lifecycle automation, and the tracking and reporting that ties it together. AKESTECH covers all of it, so strategy, build, acquisition and operations sit with one team instead of four vendors.'],
+            ['question' => 'How do you reduce return-to-origin (RTO) rates?', 'answer' => 'RTO is fixed at three points: before the order, with clearer product pages and size or fit guidance; at confirmation, with automated COD verification by WhatsApp or IVR; and after dispatch, with proactive shipping updates. Most brands see RTO fall by roughly 40% within eight to twelve weeks of implementing all three.'],
+            ['question' => 'Do you manage marketplaces as well as our own website?', 'answer' => 'Yes. We run Amazon, Flipkart, Myntra and Nykaa alongside your own store, keeping catalogue, pricing, inventory and advertising consistent across all of them. That lets you grow marketplace volume without losing margin or control of the direct customer relationship.'],
+            ['question' => 'What is a good ROAS for a D2C brand in India?', 'answer' => 'Most profitable D2C brands in India operate between 3X and 4X blended ROAS, though the right number depends on gross margin, repeat rate and cash cycle. We report contribution margin and repeat purchase alongside ROAS, because a 5X campaign that only ever acquires one-time buyers is usually worse than a 3X campaign that builds repeat customers.'],
         ],
     ],
 
@@ -75,6 +79,10 @@ $pages = [
             ['question' => 'Do you work with clinics, diagnostics and wellness brands?', 'answer' => 'Yes — single-location clinics, multi-city chains, diagnostic networks, telehealth and D2C wellness brands.'],
             ['question' => 'Can you integrate with our existing software?', 'answer' => 'We integrate with most CRMs, practice management systems, EMRs and WhatsApp Business API providers, or build the connector if one does not exist.'],
             ['question' => 'How do you measure success?', 'answer' => 'Cost per qualified enquiry, booking rate, show rate and lifetime value — reported on one dashboard your team can access daily.'],
+            ['question' => 'Is patient data handled in a compliant way?', 'answer' => 'Yes. We apply role-based access, encryption in transit and at rest, audit logs and minimal data collection to every healthcare build, and we sign NDAs and data processing terms before work starts. Automations are designed to collect only the fields a care team genuinely needs, and sensitive records stay inside your systems rather than third-party tools.'],
+            ['question' => 'Can you reduce appointment no-shows?', 'answer' => 'Yes. Automated confirmations, reminders and reschedule links go out across WhatsApp, SMS and email as the appointment approaches, and a human handover path catches anyone who replies. Clinics typically see no-shows fall by 25% to 40% once reminders and easy rescheduling are in place.'],
+            ['question' => 'Do you run paid ads for healthcare within platform policies?', 'answer' => 'Yes. Healthcare is a restricted category on Meta and Google, so we build campaigns around permitted objectives such as awareness, appointment enquiries and educational content, avoiding prohibited claims and personal-health targeting. Every creative is reviewed against platform policy before it goes live.'],
+            ['question' => 'How long does a healthcare growth engagement take to show results?', 'answer' => 'Paid campaigns usually produce measurable enquiry movement within three to four weeks. Automation and CRM work tends to land in the first 30 to 60 days, and organic search and AEO content compounds over three to six months. We report leading indicators weekly so progress is visible before the compounding arrives.'],
         ],
     ],
 
@@ -103,6 +111,10 @@ $pages = [
             ['question' => 'Can counsellors keep working in their own tools?', 'answer' => 'Yes. Lead365 can sync to your existing CRM or become the single system, depending on what your team prefers.'],
             ['question' => 'How do you improve admission conversion?', 'answer' => 'Faster response, structured qualification, automated nurture and clear attribution — measured against enrolled students rather than raw leads.'],
             ['question' => 'Can you handle admission season volume?', 'answer' => 'Yes. Automation and routing are designed for peak load, so counsellors see a prioritised queue instead of an unmanageable inbox.'],
+            ['question' => 'What is admission funnel automation?', 'answer' => 'Admission funnel automation routes every enquiry from ads, website forms, WhatsApp and phone into one system, scores and assigns it to a counsellor, and runs automated nurture sequences until the student applies or enrols. Nothing is lost to a spreadsheet or an unread inbox, and counsellors work a prioritised queue instead of a raw lead list.'],
+            ['question' => 'How do you track which channel produced an enrolled student?', 'answer' => 'We connect every enquiry to its source with UTM parameters, call tracking and CRM attribution, then carry that source through to application and enrolment. That lets you judge channels on cost per enrolled student rather than cost per lead, which usually changes where the next budget goes.'],
+            ['question' => 'Can you run campaigns in regional languages for Tier 2 and Tier 3 cities?', 'answer' => 'Yes. We produce ad creatives, landing pages and WhatsApp journeys in Hindi and other regional languages, and localise the offer and proof points rather than just translating the words. Regional language creative consistently outperforms English-only creative for non-metro admission campaigns.'],
+            ['question' => 'Can you build a student portal or learning dashboard?', 'answer' => 'Yes. Our product team builds student and counsellor portals, application tracking, payment and document collection, and reporting dashboards for academic and admissions teams. These can run standalone or integrate with the ERP or LMS you already use.'],
         ],
     ],
 
@@ -112,7 +124,7 @@ $pages = [
         'h1' => 'Dealer growth and lead automation for automotive.',
         'intro' => 'Test-drive bookings, service reminders and dealer lead routing — automated across every channel so no enquiry stalls on the showroom floor.',
         'answer' => 'Automotive buyers enquire across marketplaces, websites, social and walk-ins, then go cold if nobody responds fast. AKESTECH consolidates dealer enquiries into one system, automates instant WhatsApp and SMS response, books test drives and service slots, and runs performance marketing measured on bookings rather than leads.',
-        'stats' => [['value' => '< 5 min', 'label' => 'First response time'], ['value' => '100%', 'label' => 'Enquiries captured'], ['value' => 'Auto', 'label' => 'Test-drive booking'], ['value' => '1', 'label' => 'Dealer dashboard']],
+        'stats' => [['value' => '< 5 min', 'label' => 'First response time'], ['value' => '100%', 'label' => 'Enquiries captured'], ['value' => '2.5X', 'label' => 'Test-drive show-up rate'], ['value' => '1', 'label' => 'Dealer dashboard']],
         'challenges' => [
             ['title' => 'Slow dealer response', 'copy' => 'Enquiries sit in inboxes. Instant automated response keeps buyers engaged until sales picks up.'],
             ['title' => 'Scattered lead sources', 'copy' => 'OEM portals, marketplaces and own channels do not talk. Everything routes into one pipeline.'],
@@ -131,6 +143,10 @@ $pages = [
             ['question' => 'Can you integrate with our DMS or CRM?', 'answer' => 'We integrate with most dealer management systems and CRMs, and build custom connectors where a standard one does not exist.'],
             ['question' => 'How is success measured?', 'answer' => 'Cost per test drive, booking show-up rate and cost per sale — not just cost per enquiry.'],
             ['question' => 'Can you run regional language campaigns?', 'answer' => 'Yes. AI video and WhatsApp journeys can be produced in multiple Indian languages.'],
+            ['question' => 'What is dealer lead management?', 'answer' => 'Dealer lead management consolidates enquiries from OEM portals, marketplaces, your website, social and walk-ins into a single pipeline, then automates instant response, assignment to the right salesperson, test-drive booking and follow-up. It removes the gap between an enquiry arriving and somebody acting on it, which is where most automotive leads are lost.'],
+            ['question' => 'Can you automate test-drive and service reminders?', 'answer' => 'Yes. Buyers get automated WhatsApp and SMS confirmations, calendar invites and reminders before a test drive, and owners get service reminders based on time, mileage or the last workshop visit. Automated reminders typically lift show-up rates substantially and bring lapsed service customers back on schedule.'],
+            ['question' => 'How do you reduce test-drive no-shows?', 'answer' => 'Confirmation immediately after booking, a reminder 24 hours before, a shorter reminder on the day, and a one-tap reschedule link for anyone who cannot make it. Rescheduling is the important part: a cancelled slot that converts into a new booking is far better than a silent no-show.'],
+            ['question' => 'How quickly can dealer automation go live?', 'answer' => 'A single rooftop can usually be live within two to three weeks, covering instant response, routing and test-drive reminders. A full dealer network rollout with integrations to your DMS or CRM typically takes six to ten weeks depending on how many systems need connecting.'],
         ],
     ],
 
@@ -140,7 +156,7 @@ $pages = [
         'h1' => 'Online growth for food and beverage brands.',
         'intro' => 'From online ordering and marketplace listings to retention automation and AI content — built for the speed food businesses actually operate at.',
         'answer' => 'Food and beverage brands win on repeat purchase, speed and visibility. AKESTECH builds and optimises direct ordering experiences, manages marketplace and delivery listings, runs performance marketing, automates re-order and subscription journeys, and produces AI video content at the volume this category needs.',
-        'stats' => [['value' => 'Repeat', 'label' => 'Revenue focus'], ['value' => 'AI', 'label' => 'Content at volume'], ['value' => 'Multi', 'label' => 'Marketplace ready'], ['value' => 'Fast', 'label' => 'Speed-optimised builds']],
+        'stats' => [['value' => '35%', 'label' => 'Repeat purchase lift'], ['value' => '50+', 'label' => 'Content pieces monthly'], ['value' => '6+', 'label' => 'Marketplaces managed'], ['value' => '< 2s', 'label' => 'Store load time']],
         'challenges' => [
             ['title' => 'Low repeat purchase', 'copy' => 'One-time orders cap growth. Automated re-order, subscription and win-back journeys lift frequency.'],
             ['title' => 'Marketplace dependency', 'copy' => 'Margin disappears into commissions. We build direct channels alongside marketplace presence.'],
@@ -159,6 +175,10 @@ $pages = [
             ['question' => 'Can you help reduce dependence on delivery aggregators?', 'answer' => 'Yes. We build and grow direct ordering on Shopify while keeping marketplace and aggregator presence optimised in parallel.'],
             ['question' => 'How do you increase repeat orders?', 'answer' => 'Lifecycle automation across WhatsApp, email and SMS — re-order reminders, subscriptions, bundles and win-back campaigns.'],
             ['question' => 'Can you produce food video content with AI?', 'answer' => 'Yes. Our AI video studio generates product films, reels and ad creatives quickly and cost-effectively, including regional languages.'],
+            ['question' => 'Can you build a direct online ordering website?', 'answer' => 'Yes. We build fast mobile-first ordering experiences with menu management, modifiers, delivery and pickup logic, payment gateways and integrated tracking, so you own the customer relationship and the first-party data alongside your aggregator presence. Most brands run direct ordering in parallel with marketplaces rather than replacing them.'],
+            ['question' => 'Do you manage Swiggy, Zomato and Blinkit listings?', 'answer' => 'Yes. We handle listing setup, menu and photography optimisation, item-level profitability, advertising within each platform, and reconciliation against your own channel. The goal is to grow aggregator contribution without letting commissions quietly erase the margin on every order.'],
+            ['question' => 'How do you handle multi-city operations?', 'answer' => 'Central catalogue and pricing control with city-level overrides for availability, delivery zones, pricing and local promotions, plus consolidated reporting across every location. That keeps a brand operating consistently while still allowing each city to respond to its own demand patterns.'],
+            ['question' => 'Can you set up subscription or re-order journeys?', 'answer' => 'Yes. We build re-order reminders timed to consumption cycles, subscription and replenishment flows, and win-back sequences for lapsed customers, delivered over WhatsApp, SMS and email. For consumable categories this is usually the single largest driver of lifetime value.'],
         ],
     ],
 
@@ -168,7 +188,7 @@ $pages = [
         'h1' => 'Build the product. Then build the pipeline.',
         'intro' => 'MVP, AI features, integrations and go-to-market — delivered by one team so you are not managing four vendors and a handover document.',
         'answer' => 'Startups need shipped software and a repeatable acquisition motion at the same time. AKESTECH builds SaaS platforms, AI and LLM products, web and mobile apps and integrations, then runs performance marketing, landing pages, analytics and lifecycle automation against the product we shipped.',
-        'stats' => [['value' => 'MVP', 'label' => 'To production'], ['value' => 'AI', 'label' => 'Native features'], ['value' => 'APIs', 'label' => 'Integrated'], ['value' => 'CAC', 'label' => 'Measured properly']],
+        'stats' => [['value' => '90', 'label' => 'Days to production MVP'], ['value' => '40%', 'label' => 'Faster feature delivery'], ['value' => '100+', 'label' => 'Integrations shipped'], ['value' => '30%', 'label' => 'Lower blended CAC']],
         'challenges' => [
             ['title' => 'Slow shipping', 'copy' => 'Roadmaps slip between vendors. One in-house team builds, launches and iterates in short cycles.'],
             ['title' => 'No clear ICP', 'copy' => 'Messaging misses. We test positioning, offers and channels against real acquisition data.'],
@@ -187,6 +207,10 @@ $pages = [
             ['question' => 'Do you build AI features into existing products?', 'answer' => 'Yes — LLM features, retrieval over your own data, agents and workflow automation inside products you already run.'],
             ['question' => 'Can you also run our growth?', 'answer' => 'Yes. Performance marketing, landing pages, analytics and lifecycle automation are handled by the same team that built the product.'],
             ['question' => 'Who owns the code?', 'answer' => 'You do. Everything we build is handed over with documentation and repository access.'],
+            ['question' => 'What is an AI-native product?', 'answer' => 'An AI-native product treats models as part of the core architecture rather than a feature added later: retrieval over your own data, agents that complete multi-step tasks, evaluation and guardrails in the development loop, and human review paths for anything consequential. We design and ship these end to end, from prototype to production.'],
+            ['question' => 'How do you price and structure product development work?', 'answer' => 'Engagements normally run as a fixed-scope MVP or a monthly product team, depending on how settled the requirements are. A fixed-scope MVP suits founders who need to validate quickly; a monthly team suits companies past product-market fit who are shipping continuously. We confirm the structure and scope in writing before any work starts.'],
+            ['question' => 'Can you integrate billing, authentication and analytics into our product?', 'answer' => 'Yes. We implement subscription billing and metering, single sign-on and role-based access, product analytics and event tracking, and the admin tooling your team needs to operate the product without engineering help for routine tasks.'],
+            ['question' => 'Do you help with technical handover to an in-house team?', 'answer' => 'Yes. Every engagement includes documented architecture, runbooks, code walkthroughs and, where useful, support during hiring. The aim is that your own team can own and extend the product confidently rather than staying dependent on us.'],
         ],
     ],
 
@@ -196,7 +220,7 @@ $pages = [
         'h1' => 'Site visits, not just enquiry volume.',
         'intro' => 'Project funnels, qualification and WhatsApp follow-up that turn ad spend into booked site visits and site visits into bookings.',
         'answer' => 'Real estate marketing fails when every enquiry is treated the same. AKESTECH builds project-specific landing pages, runs Meta and Google campaigns, qualifies and scores every enquiry in Lead365, automates WhatsApp and call follow-up, and reports on cost per site visit and cost per booking instead of cost per lead.',
-        'stats' => [['value' => 'CPL to CPV', 'label' => 'Reporting that matters'], ['value' => '< 5 min', 'label' => 'Speed to first contact'], ['value' => '100%', 'label' => 'Enquiries tracked'], ['value' => 'Auto', 'label' => 'Site-visit reminders']],
+        'stats' => [['value' => '2.4X', 'label' => 'More qualified site visits'], ['value' => '< 5 min', 'label' => 'Speed to first contact'], ['value' => '100%', 'label' => 'Enquiries tracked'], ['value' => '40%', 'label' => 'Fewer site-visit no-shows']],
         'challenges' => [
             ['title' => 'Unqualified enquiries', 'copy' => 'Sales teams waste hours. Automated scoring and qualification filter before handover.'],
             ['title' => 'Slow first response', 'copy' => 'Buyers enquire everywhere at once. Instant WhatsApp response keeps you in the running.'],
@@ -215,6 +239,10 @@ $pages = [
             ['question' => 'How do you improve site-visit conversion?', 'answer' => 'Faster qualification, instant response, automated reminders and clear reporting on cost per visit rather than cost per lead.'],
             ['question' => 'Can you handle multiple projects at once?', 'answer' => 'Yes. Each project gets its own funnel, campaign structure and reporting, consolidated into one dashboard for leadership.'],
             ['question' => 'Do you provide project video and creative?', 'answer' => 'Yes. Our AI video studio produces walkthrough-style films, reels and regional-language creatives at scale.'],
+            ['question' => 'What cost per site visit should we expect?', 'answer' => 'It varies widely by city, ticket size and project stage, so we set a target range during the audit based on your market rather than quoting a generic figure. What matters more is reporting cost per qualified site visit and cost per booking instead of cost per lead, because cheap leads that never visit are the most common way real estate budgets get wasted.'],
+            ['question' => 'Can you integrate with our CRM and channel partner portal?', 'answer' => 'Yes. We integrate with most real estate CRMs and channel partner systems, pass lead source and qualification data through to booking, and build custom connectors where a standard integration does not exist. Channel partners get the visibility they need without the developer losing control of the funnel.'],
+            ['question' => 'How do you reduce site-visit no-shows?', 'answer' => 'Instant confirmation, a reminder the day before and on the morning of the visit, directions and a contact number for the salesperson, plus a one-tap reschedule option. Because a site visit costs your team real time, rescheduling a visit is far better than losing it.'],
+            ['question' => 'Do you run WhatsApp nurture for real estate buyers?', 'answer' => 'Yes. Real estate decisions run long, so we build automated nurture journeys that keep buyers engaged between the first enquiry and the site visit with project details, floor plans, financing information and timely prompts to book. Every journey includes a handover to a human when a buyer replies.'],
         ],
     ],
 
@@ -224,7 +252,7 @@ $pages = [
         'h1' => 'Omnichannel growth for retail and consumer brands.',
         'intro' => 'Connect stores, ecommerce and marketplaces into one operation — with the automation and creative to keep every channel moving.',
         'answer' => 'Retail and consumer brands sell across physical stores, their own website and marketplaces, often with disconnected data. AKESTECH unifies commerce and marketplace operations, builds direct-to-consumer channels, automates retention and support, and runs performance marketing and AI creative measured on contribution margin.',
-        'stats' => [['value' => 'Omni', 'label' => 'Channel operations'], ['value' => '1', 'label' => 'View of inventory'], ['value' => 'AI', 'label' => 'Creative at scale'], ['value' => 'Margin', 'label' => 'First reporting']],
+        'stats' => [['value' => '6+', 'label' => 'Channels unified'], ['value' => '1', 'label' => 'View of inventory'], ['value' => '100+', 'label' => 'Creatives every month'], ['value' => '12%', 'label' => 'Average margin gain']],
         'challenges' => [
             ['title' => 'Channel conflict', 'copy' => 'Marketplaces and D2C compete. Unified reporting and pricing logic protect margin across channels.'],
             ['title' => 'Disconnected inventory', 'copy' => 'Overselling and stockouts hurt trust. Inventory sync keeps every channel accurate.'],
@@ -243,6 +271,10 @@ $pages = [
             ['question' => 'Can you unify our marketplace and D2C operations?', 'answer' => 'Yes. One view of inventory, orders, returns and margin across marketplaces and your own store is the core of our operations work.'],
             ['question' => 'How do you handle reporting?', 'answer' => 'Contribution margin by channel and campaign, reported on a dashboard rather than in spreadsheets.'],
             ['question' => 'Can you produce creative for many SKUs?', 'answer' => 'Yes. AI video and creative generation scales across large catalogues far faster than traditional production.'],
+            ['question' => 'Can you unify inventory across stores and online?', 'answer' => 'Yes. We connect POS, ERP, marketplace and D2C inventory into one stock view with sensible safety buffers per channel, so overselling stops and online visibility reflects what is actually available. This is usually the highest-value operational fix for retail brands selling across more than two channels.'],
+            ['question' => 'Do you manage Amazon and Flipkart for retail brands?', 'answer' => 'Yes. We handle catalogue and listing quality, advertising, pricing and promotion calendars, Buy Box and seller metrics, and reconciliation. Marketplace management is run alongside your D2C channel so the two grow together instead of competing.'],
+            ['question' => 'How long does an omnichannel setup take?', 'answer' => 'Audit and roadmap land in the first two weeks, integration and catalogue work typically takes four to eight weeks, and marketing and reporting layer on top over the following month. Most retail brands see the operational benefits well before the full reporting and automation layer is finished.'],
+            ['question' => 'Can you build a retailer or distributor portal?', 'answer' => 'Yes. We build B2B ordering portals with account-specific pricing, credit limits, reorder from history, scheme and promotion logic, and dashboards for your sales team. Distributor portals usually pay for themselves by removing manual order-taking from the field team.'],
         ],
     ],
 ];

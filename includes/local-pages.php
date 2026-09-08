@@ -50,9 +50,9 @@ if (!function_exists('lp_builtin_services')) {
         'accent' => 'SEO + Ads',
         'metrics' => [
             ['value' => '360', 'label' => 'Growth stack'],
-            ['value' => 'SEO + Ads', 'label' => 'Acquisition channels'],
-            ['value' => 'CRM', 'label' => 'Lead visibility'],
-            ['value' => 'Weekly', 'label' => 'Optimization rhythm'],
+            ['value' => '6+', 'label' => 'Acquisition channels'],
+            ['value' => '100%', 'label' => 'Enquiries tracked in CRM'],
+            ['value' => '52', 'label' => 'Optimisation cycles a year'],
         ],
         'services' => [
             ['title' => 'SEO and AEO Content', 'copy' => 'Keyword-led landing pages, service pages, FAQs, internal linking, schema and answer-first content built for search and AI results.'],
@@ -67,6 +67,9 @@ if (!function_exists('lp_builtin_services')) {
             ['question' => 'What services does a digital marketing agency in {city} provide?', 'answer' => 'Core services include SEO, AEO content, Meta Ads, Google Ads, landing pages, website optimization, lead generation, Shopify growth, CRM setup and WhatsApp automation.'],
             ['question' => 'How much does digital marketing cost in {city}?', 'answer' => 'Costs depend on scope, ad budget, competition and content volume. Most serious growth retainers start after an audit of your goals, current website, tracking and funnel.'],
             ['question' => 'Can digital marketing generate local leads in {city}?', 'answer' => 'Yes. Local SEO pages, Google Business Profile optimization, location-based ads, landing pages and fast follow-up generate qualified enquiries from {city} and nearby areas {nearby}.'],
+            ['question' => 'How do you handle local SEO for {city} businesses?', 'answer' => 'We optimise your Google Business Profile, build location and service pages that match how people in {city} actually search, manage citations and reviews, and add local business and FAQ schema so you appear in map results and AI answers. Local SEO is usually the cheapest long-term source of enquiries for a {city} business because the intent is already high.'],
+            ['question' => 'Can you help us rank for near me searches in {city}?', 'answer' => 'Yes. Near me rankings depend on a complete and accurate Google Business Profile, consistent name, address and phone details across the web, genuine reviews, location-relevant content and mobile page speed. We fix all of those together rather than treating them as separate jobs, and report on map pack and local pack visibility monthly.'],
+            ['question' => 'What reporting will we actually receive?', 'answer' => 'A monthly report that shows enquiries and revenue by channel, cost per lead and cost per qualified lead, what was tested and what changed, and what happens next. We also give you a live dashboard if you prefer to check numbers during the month. Platform dashboards are reconciled against your own CRM or order data so the figures are real.'],
         ],
         'related' => [
             ['title' => 'Performance Marketing', 'url' => 'services/performance-marketing'],
@@ -86,10 +89,10 @@ if (!function_exists('lp_builtin_services')) {
         'cta' => 'Discuss Shopify Project',
         'accent' => 'Shopify',
         'metrics' => [
-            ['value' => 'Shopify', 'label' => 'Core platform'],
-            ['value' => 'CRO', 'label' => 'Conversion focus'],
-            ['value' => 'Speed', 'label' => 'Performance first'],
-            ['value' => 'Ads-ready', 'label' => 'Tracking setup'],
+            ['value' => '150+', 'label' => 'Stores built and scaled'],
+            ['value' => '32%', 'label' => 'Average conversion lift'],
+            ['value' => '< 2s', 'label' => 'Target store load time'],
+            ['value' => '100%', 'label' => 'Tracking setup included'],
         ],
         'services' => [
             ['title' => 'Shopify Store Setup', 'copy' => 'New Shopify stores with theme setup, collections, navigation, pages, payment basics, shipping settings and launch support.'],
@@ -104,6 +107,9 @@ if (!function_exists('lp_builtin_services')) {
             ['question' => 'Can you customize an existing Shopify theme?', 'answer' => 'Yes. We work inside your current theme to add custom sections, improve product pages, fix speed issues and remove conversion friction.'],
             ['question' => 'How long does a Shopify project take?', 'answer' => 'A new store typically takes three to five weeks. Theme customization and CRO improvements are usually delivered in two to four week cycles.'],
             ['question' => 'Can you set up tracking before we run ads?', 'answer' => 'Yes. Pixel, GA4, events and conversion tracking are part of every build so your first campaign produces usable data.'],
+            ['question' => 'Do you work with {city} brands already on another platform?', 'answer' => 'Yes. We migrate stores from WooCommerce, Magento, Wix and custom builds to Shopify, carrying across products, variants, customers and order history, with redirect mapping planned before launch so existing search rankings are preserved. Migration is one of the most common projects we run for {city} brands.'],
+            ['question' => 'Can you integrate Indian payment and shipping providers?', 'answer' => 'Yes. We set up Razorpay, PayU, Cashfree, Paytm and UPI, along with Shiprocket, Delhivery, Bluedart and other shipping and fulfilment partners, plus COD rules and RTO reduction flows. These integrations are configured and tested end to end before launch rather than left for the first real order.'],
+            ['question' => 'Do you provide support after the store goes live?', 'answer' => 'Yes. Support ranges from a fixed post-launch warranty period to an ongoing monthly retainer covering improvements, new features, conversion testing and speed monitoring. Most {city} brands keep us on a monthly basis once the store is live because the optimisation work is where the returns compound.'],
         ],
         'related' => [
             ['title' => 'Shopify & Commerce', 'url' => 'services/shopify-growth'],
@@ -125,8 +131,8 @@ if (!function_exists('lp_builtin_services')) {
         'metrics' => [
             ['value' => '₹50Cr+', 'label' => 'Ad spend managed'],
             ['value' => '3X+', 'label' => 'Average ROAS'],
-            ['value' => 'Weekly', 'label' => 'Creative testing'],
-            ['value' => 'Full', 'label' => 'Funnel tracking'],
+            ['value' => '50+', 'label' => 'Creatives tested monthly'],
+            ['value' => '100%', 'label' => 'Funnel tracked end to end'],
         ],
         'services' => [
             ['title' => 'Meta Ads Management', 'copy' => 'Facebook and Instagram campaigns structured for profitable scale with clean audience and creative testing.'],
@@ -141,6 +147,9 @@ if (!function_exists('lp_builtin_services')) {
             ['question' => 'How fast can campaigns show results?', 'answer' => 'Early signal arrives within two weeks. Stable, scalable performance usually takes 60 to 90 days of structured testing.'],
             ['question' => 'Do you create the ad creatives?', 'answer' => 'Yes. Creative strategy, production and AI video are handled in-house and tested continuously against performance data.'],
             ['question' => 'Will we own the ad accounts and data?', 'answer' => 'Yes. Accounts, pixels and historical data always remain in your ownership.'],
+            ['question' => 'Can you run campaigns targeted only to {city}?', 'answer' => 'Yes. We geo-target by city, pin code and radius, and layer interests, intent signals and remarketing audiences on top. For {city} businesses with a defined service area this usually improves cost per lead substantially, because budget stops being spent on locations you cannot serve.'],
+            ['question' => 'What industries do you run ads for in {city}?', 'answer' => 'Real estate, education and coaching, healthcare and clinics, D2C and retail, automotive dealerships, and B2B and professional services. The mechanics differ by industry, but the discipline is the same: verified tracking, structured creative testing, and reporting on cost per qualified outcome rather than clicks.'],
+            ['question' => 'Do you work with businesses outside {city}?', 'answer' => 'Yes. We work with clients across India and internationally, and the same tracking, creative and reporting systems apply regardless of location. The {city} specific advantage is local market understanding and geo-targeting, which matters most when your customers are concentrated in one region.'],
         ],
         'related' => [
             ['title' => 'Performance Marketing', 'url' => 'services/performance-marketing'],
@@ -160,10 +169,10 @@ if (!function_exists('lp_builtin_services')) {
         'cta' => 'Get Meta Ads Audit',
         'accent' => 'Meta',
         'metrics' => [
-            ['value' => 'Meta', 'label' => 'Ads + Instagram'],
-            ['value' => 'Weekly', 'label' => 'Creative testing'],
-            ['value' => 'CAPI', 'label' => 'Server-side tracking'],
-            ['value' => 'ROAS', 'label' => 'Primary metric'],
+            ['value' => '3.5X', 'label' => 'Average ROAS on Meta'],
+            ['value' => '50+', 'label' => 'Creatives tested monthly'],
+            ['value' => '95%', 'label' => 'Server-side signal match'],
+            ['value' => '30%', 'label' => 'Lower cost per purchase'],
         ],
         'services' => [
             ['title' => 'Account Structure', 'copy' => 'Campaign and ad set architecture designed for clean data and controlled scaling.'],
@@ -178,6 +187,9 @@ if (!function_exists('lp_builtin_services')) {
             ['question' => 'How often do you change creatives?', 'answer' => 'We test new creatives weekly and refresh winning angles before performance declines.'],
             ['question' => 'Can you fix a broken pixel or tracking setup?', 'answer' => 'Yes. Tracking audits and Conversions API setup are standard before any scaling work begins.'],
             ['question' => 'What results should we expect in {city}?', 'answer' => 'Results depend on offer, margin and competition. We set targets after an audit instead of promising a fixed ROAS.'],
+            ['question' => 'Can you target ads to specific areas within {city}?', 'answer' => 'Yes. We target by pin code, radius around a location, or specific neighbourhoods, and exclude areas you cannot serve. For {city} businesses with a physical location or a defined delivery zone this is often the single biggest improvement in cost per lead, because it removes wasted impressions entirely.'],
+            ['question' => 'Do you run lead ads as well as catalogue sales ads?', 'answer' => 'Yes. We run lead forms for enquiry-driven businesses, catalogue and Advantage+ sales campaigns for ecommerce, and retargeting for both. Lead ads are connected directly to your CRM or Lead365 so enquiries are followed up automatically rather than sitting in a spreadsheet.'],
+            ['question' => 'Can you work with creative we already have?', 'answer' => 'Yes. We can run and optimise against your existing creative, or produce new variations with AI video and design alongside it. Most clients end up with a mix: your brand assets as the base, and a steady flow of new variations for testing so performance does not decay.'],
         ],
         'related' => [
             ['title' => 'Performance Marketing', 'url' => 'services/performance-marketing'],
@@ -199,8 +211,8 @@ if (!function_exists('lp_builtin_services')) {
         'metrics' => [
             ['value' => '< 5 min', 'label' => 'Speed to first response'],
             ['value' => '100%', 'label' => 'Enquiries tracked'],
-            ['value' => 'Auto', 'label' => 'Follow-up sequences'],
-            ['value' => 'CPQL', 'label' => 'Reporting focus'],
+            ['value' => '3X', 'label' => 'More enquiries converted'],
+            ['value' => '40%', 'label' => 'Lower cost per qualified lead'],
         ],
         'services' => [
             ['title' => 'Local SEO and AEO Pages', 'copy' => 'Location and service pages with schema and answer-first content built to be cited by search and AI assistants.'],
@@ -215,6 +227,9 @@ if (!function_exists('lp_builtin_services')) {
             ['question' => 'Can you integrate with our CRM?', 'answer' => 'Yes. Lead365 integrates with most CRMs, or becomes the single system your team works inside.'],
             ['question' => 'How quickly will leads start coming?', 'answer' => 'Paid campaigns can generate enquiries within days of launch. SEO and AEO pages typically compound over eight to twelve weeks.'],
             ['question' => 'Do you work with B2B and service businesses?', 'answer' => 'Yes — real estate, healthcare, education, automotive, professional services and manufacturing companies across {city}.'],
+            ['question' => 'What counts as a qualified lead?', 'answer' => 'A qualified lead matches your buying criteria: the right location, budget or company size, a genuine need, and a real intent to buy. We agree that definition with you before campaigns launch and score leads against it, so your sales team receives enquiries worth calling rather than raw form fills.'],
+            ['question' => 'Can leads be contacted automatically?', 'answer' => 'Yes. Every enquiry triggers an instant WhatsApp and SMS response, is routed to the right person, and enters an automated follow-up sequence until someone replies or the lead is qualified. Speed to lead is the largest single driver of conversion, and automation makes the first response happen in seconds rather than hours.'],
+            ['question' => 'Do you work with high-ticket and B2B businesses?', 'answer' => 'Yes. Longer B2B and high-ticket cycles need nurture rather than instant closing, so we build multi-step journeys combining ads, content, landing pages, CRM tracking and automated follow-up. Reporting focuses on cost per qualified lead and cost per sale, not cost per click.'],
         ],
         'related' => [
             ['title' => 'Lead365 — Lead Management', 'url' => 'products/lead365'],
@@ -237,7 +252,7 @@ if (!function_exists('lp_builtin_services')) {
             ['value' => '20+', 'label' => 'Hours saved weekly'],
             ['value' => '24/7', 'label' => 'Agents working'],
             ['value' => '30', 'label' => 'Days to first system'],
-            ['value' => 'ROI', 'label' => 'Ranked opportunity map'],
+            ['value' => '100+', 'label' => 'Processes automated'],
         ],
         'services' => [
             ['title' => 'AI Sales Agents', 'copy' => 'Qualify enquiries, answer questions and move prospects toward purchase across web, WhatsApp and email.'],
@@ -252,6 +267,9 @@ if (!function_exists('lp_builtin_services')) {
             ['question' => 'How long does an automation project take?', 'answer' => 'The first system is usually live within 30 days, following an audit that ranks every opportunity by hours saved and revenue impact.'],
             ['question' => 'Will automation replace our team?', 'answer' => 'No. It removes repetitive work so your team can focus on judgement, relationships and growth. Human handover paths are built in.'],
             ['question' => 'Can you integrate with the software we already use?', 'answer' => 'Yes. We integrate with CRMs, ERPs, Shopify, WhatsApp Business API, payment gateways and analytics tools, and build custom connectors when needed.'],
+            ['question' => 'What does an AI automation audit include?', 'answer' => 'A full map of every manual process in your business, ranked by hours saved and revenue impact, followed by a recommended build order, the tools and integrations required, and a realistic timeline. You receive the audit as a document you own, whether or not you go on to build with us.'],
+            ['question' => 'Can automation handle customers in Hindi or other regional languages?', 'answer' => 'Yes. AI agents and WhatsApp journeys can be built to understand and reply in Hindi and other regional languages, which matters considerably for {city} businesses serving customers who prefer not to interact in English. Language handling is configured during design rather than added afterwards.'],
+            ['question' => 'Do you provide support after automation is live?', 'answer' => 'Yes. Automations need tuning as real conversations and edge cases appear, so we offer monthly support covering prompt and flow optimisation, new integrations, monitoring and reporting. Most clients keep support on because the value of an automation improves steadily once it is being tuned against real usage.'],
         ],
         'related' => [
             ['title' => 'AI & Automation', 'url' => 'services/automation'],
@@ -271,10 +289,10 @@ if (!function_exists('lp_builtin_services')) {
         'cta' => 'Book Ecommerce Consultation',
         'accent' => 'Strategy',
         'metrics' => [
-            ['value' => 'Audit', 'label' => 'First 7 days'],
-            ['value' => 'Roadmap', 'label' => 'Ranked by revenue impact'],
-            ['value' => 'CRO', 'label' => 'Conversion focus'],
-            ['value' => 'Build', 'label' => 'Strategy executed too'],
+            ['value' => '7', 'label' => 'Days to full audit'],
+            ['value' => '90', 'label' => 'Day growth roadmap'],
+            ['value' => '32%', 'label' => 'Average conversion lift'],
+            ['value' => '25+', 'label' => 'Hours saved every week'],
         ],
         'services' => [
             ['title' => 'Store and Funnel Audit', 'copy' => 'Scored review of UX, speed, merchandising, checkout, tracking and conversion leaks.'],
@@ -289,6 +307,9 @@ if (!function_exists('lp_builtin_services')) {
             ['question' => 'Do you only advise, or do you build too?', 'answer' => 'Both. Many clients start with an audit and continue with our team building, marketing and operating the recommendations.'],
             ['question' => 'Is Shopify the right platform for us?', 'answer' => 'For most D2C brands, yes. We assess catalogue complexity, integrations and total cost before recommending Shopify, Shopify Plus or a marketplace-first approach.'],
             ['question' => 'How long does a consultation take?', 'answer' => 'A focused audit and roadmap is typically delivered within seven days of kickoff.'],
+            ['question' => 'Do you work with businesses that are not on Shopify?', 'answer' => 'Yes. We advise across Shopify, WooCommerce, Magento, custom builds and marketplace-first operations. The recommendation is based on your catalogue, operations and team rather than on a preferred platform, and if Shopify is not the right answer we will say so.'],
+            ['question' => 'Can you help us decide between D2C and marketplaces?', 'answer' => 'Yes. Marketplaces give volume and trust quickly but take commission and control; D2C gives margin and customer ownership but requires acquisition. Most brands end up running both with a clear split, and we model the economics of each before recommending where to put effort and budget.'],
+            ['question' => 'How do you measure whether the consulting worked?', 'answer' => 'The audit ends with a written roadmap where every recommendation has an expected impact, an effort estimate and an owner, and we track delivery against that roadmap monthly. Success is measured in conversion rate, order value, repeat purchase, margin and operational hours saved, not in the number of recommendations produced.'],
         ],
         'related' => [
             ['title' => 'Shopify & Commerce', 'url' => 'services/shopify-growth'],

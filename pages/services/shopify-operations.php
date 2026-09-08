@@ -14,8 +14,8 @@ $sp = [
     'stats' => [
         ['value' => '40%', 'label' => 'Average RTO reduction'],
         ['value' => '25 hrs', 'label' => 'Saved every week'],
-        ['value' => 'Amazon', 'label' => 'Account management'],
-        ['value' => 'Flipkart', 'label' => 'Ads and catalogue'],
+        ['value' => '6+', 'label' => 'Marketplaces managed'],
+        ['value' => '98%', 'label' => 'Catalogue accuracy'],
     ],
     'deliverables' => [
         ['title' => 'Amazon Account Management', 'copy' => 'Account health, listings, A+ content, ads and performance monitoring handled end to end.'],
@@ -39,6 +39,9 @@ $sp = [
         ['question' => 'Can you manage Amazon and Flipkart alongside our own store?', 'answer' => 'Yes. One view of inventory, orders, returns and margin across marketplaces and your own store is the core of our operations work.'],
         ['question' => 'How is marketplace performance reported?', 'answer' => 'Contribution margin by channel and campaign, reported on a dashboard rather than in spreadsheets - including ad spend, fees, shipping and returns.'],
         ['question' => 'Do you automate operational work?', 'answer' => 'Yes. Order routing, status updates, exception handling, reconciliation and reporting are automated so your team is not doing manual data entry.'],
+        ['question' => 'Which marketplaces do you manage?', 'answer' => 'Amazon, Flipkart, Myntra, Nykaa, Ajio and Meesho, along with quick-commerce platforms where they fit the category. We manage onboarding, catalogue, advertising, pricing, promotions and account health, and reconcile marketplace performance against your own store so you can see true contribution.'],
+        ['question' => 'Do you handle catalogue and listing optimisation?', 'answer' => 'Yes. That covers titles, bullets and descriptions written for marketplace search and for conversion, image and A+ content standards, variation and parent-child structure, attribute completeness and backend keywords. Catalogue quality is usually the cheapest available improvement in marketplace performance.'],
+        ['question' => 'Can you manage marketplace advertising?', 'answer' => 'Yes. We run sponsored products, brands and display campaigns, manage bids and budgets against target ACOS rather than impressions, and report marketplace advertising alongside your other channels so the same revenue is not counted twice in different dashboards.'],
     ],
     'ctaTitle' => 'Stop losing margin to operational chaos.',
     'ctaCopy' => 'Get an operations review and see exactly where your money is leaking.',
