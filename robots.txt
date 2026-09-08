@@ -1,38 +1,45 @@
-# Robots.txt for Akestech Infotech
-# SEO Optimized - Last Updated: June 2026
+# Robots.txt for Akestech Infotech — https://akestech.com
+# Canonical host is apex (akestech.com); www 301-redirects to it.
 
-# Default rules for all bots
 User-agent: *
 Allow: /
-Allow: /services/
-Allow: /blog/
-Allow: /pages/
 
-# Disallow private/admin areas  
+# Private / functional areas (not content)
 Disallow: /admin/
-Disallow: /admin-users/
 Disallow: /uploads/
 Disallow: /config/
-Disallow: /private/
-Disallow: /temp/
+Disallow: /includes/
+Disallow: /data/
+Disallow: /v1/
+Disallow: /save-enquiry.php
+Disallow: /view-enquiries.php
 
-# Disallow duplicate content and tracking parameters
+# Tracking-parameter duplicates
 Disallow: /*?utm_source=
 Disallow: /*?utm_medium=
 Disallow: /*?utm_campaign=
 Disallow: /*?utm_content=
+Disallow: /*?gclid=
+Disallow: /*?fbclid=
 
-# Google-specific rules
-User-agent: Googlebot
+# AI answer engines are explicitly welcome — this powers
+# citations in ChatGPT, Perplexity, Gemini and AI Overviews.
+User-agent: GPTBot
 Allow: /
 
-# Bing-specific rules
-User-agent: Bingbot
+User-agent: ChatGPT-User
 Allow: /
 
-# Sitemap locations
-Sitemap: https://www.akestech.com/sitemap.xml
-Sitemap: https://www.akestech.com/sitemap-blog.xml
+User-agent: PerplexityBot
+Allow: /
 
-# Crawl delay
-Crawl-delay: 1
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://akestech.com/sitemap.xml

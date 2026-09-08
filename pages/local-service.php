@@ -89,6 +89,18 @@ if (!$page) {
 /* ---------------- SEO / AEO ---------------- */
 SEO::load($route);
 
+// Admin-created city x service pages have no defaults row — build meta from
+// the page data so they never ship with a bare brand-name title.
+if (SEO::get('meta_title', '') === '') {
+    SEO::set('meta_title', $page['keyword'] . ' | AKESTECH');
+    SEO::set('meta_description', $page['intro']);
+    SEO::set('og_title', $page['keyword'] . ' | AKESTECH');
+    SEO::set('og_description', $page['intro']);
+}
+if (SEO::get('canonical_url', '') === '') {
+    SEO::set('canonical_url', url($route));
+}
+
 $canonical = url($route);
 $whatsappText = urlencode('Hi AKESTECH, I found you on the ' . $page['keyword'] . ' page and would like to discuss a project.');
 $contactUrl = url('contact');

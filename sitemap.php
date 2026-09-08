@@ -1,7 +1,14 @@
 <?php
 header("Content-Type: application/xml; charset=utf-8");
 
-$baseUrl = "https://www.akestech.com";
+$baseUrl = "https://akestech.com"; // canonical apex host (www 301s here)
+
+/* Static-route freshness: date of the last code deploy rather than "today",
+   so <lastmod> is honest. Blog/case-study rows below keep their real dates. */
+$staticLastmod = date("Y-m-d", max(
+    @filemtime(__DIR__ . '/index.php') ?: time(),
+    @filemtime(__FILE__) ?: time()
+));
 
 /* =========================
    LOAD SYSTEM (PDO BASED)
@@ -104,7 +111,7 @@ foreach ($routes as $route) {
 
     echo "<url>";
     echo "<loc>$url</loc>";
-    echo "<lastmod>" . date("Y-m-d") . "</lastmod>";
+    echo "<lastmod>$staticLastmod</lastmod>";
     echo "<changefreq>weekly</changefreq>";
     echo "<priority>" . ($route === '' ? '1.0' : '0.8') . "</priority>";
     echo "</url>";

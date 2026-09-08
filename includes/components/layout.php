@@ -53,21 +53,13 @@
 
     <meta name="google-site-verification" content="_TWkROr8bVLwANXVRTwFc2mIFxNdruJbwkVo3o5252Y" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tags: both properties, single library load -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3MCEF58PD"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-J3MCEF58PD');
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQQ630YX04"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
       gtag('config', 'G-GQQ630YX04');
     </script>
 

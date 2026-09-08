@@ -13,6 +13,27 @@ DirectoryIndex index.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    # 1. Canonical host + HTTPS (production only — localhost unaffected).
+    #    Apex https://akestech.com is canonical; www and http 301 to it.
+    #    Logic: (host is www.akestech.com OR not-https) AND host is akestech.com.
+    RewriteCond %{HTTP_HOST} ^www\.akestech\.com$ [NC,OR]
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_HOST} ^(www\.)?akestech\.com$ [NC]
+    RewriteRule ^(.*)$ https://akestech.com/$1 [R=301,L]
+
+    # 2. Legacy standalone pages (unlinked, competing titles) 301 to their
+    #    closest canonical service page. Relative targets keep working both
+    #    at domain root and in a subdirectory (localhost/website).
+    RewriteRule ^shopify-operation\.php$ services/shopify-operations [R=301,L]
+    RewriteRule ^shopify-operations-1\.php$ services/shopify-operations [R=301,L]
+    RewriteRule ^shopify-development\.php$ services/shopify-growth [R=301,L]
+    RewriteRule ^shopify\.php$ services/shopify-store-setup [R=301,L]
+
+    # 3. Internal docs + sensitive files/dirs — never served (403).
+    RewriteRule ^akestech-(landing|seo-strategy)\.html$ - [F,L]
+    RewriteRule ^(enquiries\.json|error_log)$ - [F,L]
+    RewriteRule ^(v1|config|data|includes)/ - [F,L]
+
     # Sitemap first
     RewriteRule ^sitemap\.xml$ sitemap.php [L]
 

@@ -2,7 +2,7 @@
 /**
  * Product Page: WhatsApp Automation for Shopify
  */
-SEO::load('whatsapp-shopify');
+SEO::load('products/whatsapp-shopify');
 
 $faqs = getFaqs('whatsapp-shopify');
 

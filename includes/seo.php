@@ -58,6 +58,28 @@ class SEO {
                 'meta_description' => 'Talk to AKESTECH about Shopify, AI automation, product development, performance marketing, marketplace management or AI video production.',
             ],
 
+            /* ---------- content hubs ---------- */
+            'blog' => [
+                'meta_title' => 'Blog — Shopify, D2C & Growth Playbooks | AKESTECH',
+                'meta_description' => 'Practical playbooks on Shopify growth, Meta & Google Ads, CRO, RTO reduction, WhatsApp automation and marketplace ops from 200+ brands scaled.',
+                'meta_keywords' => 'shopify blog india, d2c growth playbook, ecommerce marketing blog, akestech',
+            ],
+            'blog-faqs' => [
+                'meta_title' => 'Shopify Growth FAQ — Ads, CRO, RTO & Automation | AKESTECH',
+                'meta_description' => 'Answers on Shopify growth, Meta & Google Ads, WhatsApp automation, RTO reduction and D2C strategy — the complete AKESTECH FAQ archive.',
+                'meta_keywords' => 'shopify faq, d2c faq, performance marketing questions, akestech',
+            ],
+            'case-studies' => [
+                'meta_title' => 'Case Studies — 3X+ ROAS, Real D2C Numbers | AKESTECH',
+                'meta_description' => 'Real client results: ROAS lifts, RTO reduction, CRO wins and scale-up stories across fashion, beauty, health and food D2C brands.',
+                'meta_keywords' => 'd2c case studies, shopify growth results, agency case studies india, akestech',
+            ],
+            'real-estate-marketing-agency' => [
+                'meta_title' => 'Real Estate Marketing Agency India — Leads & Site Visits | AKESTECH',
+                'meta_description' => 'Real estate lead generation with Meta & Google Ads, project funnels, CRM routing and WhatsApp automation for builders and developers.',
+                'meta_keywords' => 'real estate marketing agency, property lead generation india, builder marketing, akestech',
+            ],
+
             /* ---------- services ---------- */
             'services/automation' => [
                 'meta_title' => 'AI Automation Services | AI Agents & Workflows | AKESTECH',
