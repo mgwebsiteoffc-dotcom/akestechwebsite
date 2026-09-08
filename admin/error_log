@@ -1,0 +1,4 @@
+[29-Aug-2026 06:12:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function db() in /home1/excelrbx/akestech.com/admin/dashboard.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/excelrbx/akestech.com/admin/dashboard.php on line 8

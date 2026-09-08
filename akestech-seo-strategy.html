@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akestech Infotech — Full SEO & AEO Strategy Report</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #0A0B0F;
+    --surface: #111318;
+    --surface2: #181C24;
+    --surface3: #1E2330;
+    --border: #252B3B;
+    --accent: #4F6EF7;
+    --accent2: #00E5A0;
+    --accent3: #FF6B35;
+    --accent4: #FFB800;
+    --text: #E8EAF0;
+    --text2: #8B91A8;
+    --text3: #5A6078;
+    --red: #FF4757;
+    --yellow: #FFB800;
+    --green: #00E5A0;
+    --blue: #4F6EF7;
+    --purple: #8B5CF6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  .report-header {
+    background: linear-gradient(135deg, #0A0B0F 0%, #111827 50%, #0F1729 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 40px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .report-header::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(79,110,247,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .report-header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 30%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,229,160,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+  .header-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(79,110,247,0.12);
+    border: 1px solid rgba(79,110,247,0.3);
+    color: var(--accent);
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .header-tag::before { content: '●'; font-size: 8px; }
+  h1.main-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  h1.main-title span { color: var(--accent); }
+  .header-sub { color: var(--text2); font-size: 16px; max-width: 600px; margin-bottom: 32px; }
+  .header-meta {
+    display: flex; flex-wrap: wrap; gap: 24px;
+  }
+  .meta-pill {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 8px 16px; border-radius: 8px;
+    font-size: 13px;
+  }
+  .meta-pill .label { color: var(--text3); }
+  .meta-pill .value { color: var(--text); font-weight: 600; }
+
+  /* LAYOUT */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+  /* NAV TABS */
+  .nav-tabs {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,11,15,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+  }
+  .nav-tabs-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; overflow-x: auto; gap: 0;
+  }
+  .nav-tabs-inner::-webkit-scrollbar { display: none; }
+  .nav-tab {
+    flex-shrink: 0;
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text3);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .nav-tab:hover { color: var(--text); }
+  .nav-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* SECTIONS */
+  .section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .section-desc { color: var(--text2); max-width: 680px; margin-bottom: 40px; font-size: 15px; }
+
+  /* SCORE CARD */
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .score-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .score-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .score-card.red::before { background: var(--red); }
+  .score-card.yellow::before { background: var(--yellow); }
+  .score-card.green::before { background: var(--green); }
+  .score-card.blue::before { background: var(--blue); }
+  .score-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .score-card.red .score-number { color: var(--red); }
+  .score-card.yellow .score-number { color: var(--yellow); }
+  .score-card.green .score-number { color: var(--green); }
+  .score-card.blue .score-number { color: var(--blue); }
+  .score-label { font-size: 12px; color: var(--text2); font-weight: 500; }
+
+  /* ISSUE CARDS */
+  .issues-grid { display: grid; gap: 16px; }
+  .issue-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: start;
+  }
+  .issue-badge {
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    align-self: start;
+    margin-top: 2px;
+  }
+  .badge-critical { background: rgba(255,71,87,0.15); color: var(--red); border: 1px solid rgba(255,71,87,0.3); }
+  .badge-high { background: rgba(255,184,0,0.12); color: var(--yellow); border: 1px solid rgba(255,184,0,0.3); }
+  .badge-medium { background: rgba(79,110,247,0.12); color: var(--blue); border: 1px solid rgba(79,110,247,0.3); }
+  .badge-good { background: rgba(0,229,160,0.1); color: var(--green); border: 1px solid rgba(0,229,160,0.3); }
+  .issue-body h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .issue-body p { font-size: 13px; color: var(--text2); margin-bottom: 8px; }
+  .issue-fix {
+    background: rgba(0,229,160,0.06);
+    border: 1px solid rgba(0,229,160,0.15);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--green);
+  }
+  .issue-fix strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; margin-bottom: 3px; }
+  .issue-impact {
+    font-size: 11px;
+    color: var(--text3);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin-bottom: 32px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  thead th {
+    background: var(--surface2);
+    color: var(--text2);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  tbody tr:hover { background: var(--surface); }
+  tbody td {
+    padding: 12px 16px;
+    vertical-align: top;
+  }
+  .td-kw { font-weight: 600; color: var(--text); }
+  .td-intent { }
+  .kd-pill {
+    display: inline-flex;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .kd-low { background: rgba(0,229,160,0.1); color: var(--green); }
+  .kd-med { background: rgba(255,184,0,0.1); color: var(--yellow); }
+  .kd-high { background: rgba(255,71,87,0.1); color: var(--red); }
+  .intent-transactional { color: var(--accent3); }
+  .intent-informational { color: var(--blue); }
+  .intent-commercial { color: var(--purple); }
+  .intent-navigational { color: var(--text2); }
+
+  /* BLOG CALENDAR */
+  .calendar-month { margin-bottom: 48px; }
+  .month-header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 20px;
+  }
+  .month-badge {
+    background: var(--accent);
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 6px;
+  }
+  .month-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .blog-entries { display: grid; gap: 12px; }
+  .blog-entry {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 20px;
+    align-items: start;
+  }
+  .blog-week {
+    text-align: center;
+    background: var(--surface2);
+    border-radius: 8px;
+    padding: 12px 8px;
+  }
+  .blog-week .wk { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 1px; }
+  .blog-week .wn { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: var(--accent); line-height: 1; }
+  .blog-content h4 {
+    font-size: 15px; font-weight: 600; margin-bottom: 6px; line-height: 1.4;
+  }
+  .blog-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .blog-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  .tag-intent { background: rgba(255,107,53,0.12); color: var(--accent3); }
+  .tag-category { background: rgba(79,110,247,0.12); color: var(--blue); }
+  .tag-type { background: rgba(139,92,246,0.12); color: var(--purple); }
+  .tag-aeo { background: rgba(0,229,160,0.1); color: var(--green); }
+  .blog-kw { font-size: 12px; color: var(--text3); }
+  .blog-kw span { color: var(--text2); font-weight: 500; }
+  .blog-notes {
+    font-size: 12px; color: var(--text2); line-height: 1.5;
+    border-top: 1px solid var(--border);
+    margin-top: 10px; padding-top: 10px;
+  }
+  .priority-badge {
+    font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 100px;
+    white-space: nowrap;
+  }
+  .pri-hot { background: rgba(255,71,87,0.12); color: var(--red); border: 1px solid rgba(255,71,87,0.25); }
+  .pri-high { background: rgba(255,184,0,0.1); color: var(--yellow); border: 1px solid rgba(255,184,0,0.25); }
+  .pri-med { background: rgba(79,110,247,0.1); color: var(--blue); border: 1px solid rgba(79,110,247,0.25); }
+
+  /* SOCIAL CALENDAR */
+  .social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .social-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .social-card-header {
+    padding: 14px 18px;
+    display: flex; align-items: center; gap: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .platform-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+  .li { background: #0A66C2; }
+  .tw { background: #000; }
+  .yt { background: #FF0000; }
+  .social-platform { font-weight: 600; font-size: 14px; }
+  .social-freq { font-size: 12px; color: var(--text3); }
+  .social-card-body { padding: 16px 18px; }
+  .social-week { margin-bottom: 16px; }
+  .social-week-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+    color: var(--text3); font-weight: 600; margin-bottom: 8px;
+  }
+  .social-post {
+    background: var(--surface2);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+  .post-type {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 4px;
+    color: var(--accent);
+  }
+  .post-copy { color: var(--text2); line-height: 1.5; }
+
+  /* GMB SECTION */
+  .gmb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .gmb-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .gmb-card-icon { font-size: 28px; margin-bottom: 12px; }
+  .gmb-card h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+  .gmb-card p { font-size: 13px; color: var(--text2); margin-bottom: 14px; }
+  .gmb-steps { list-style: none; }
+  .gmb-steps li {
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 8px;
+    color: var(--text2);
+  }
+  .gmb-steps li:last-child { border-bottom: none; }
+  .gmb-steps li::before { content: '→'; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+
+  /* AEO */
+  .aeo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .aeo-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .aeo-engine {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 16px;
+  }
+  .aeo-engine-badge {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--surface2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .aeo-engine-name { font-weight: 700; font-size: 15px; }
+  .aeo-engine-status { font-size: 12px; color: var(--text3); }
+  .aeo-items { list-style: none; }
+  .aeo-items li {
+    font-size: 13px; color: var(--text2);
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 8px;
+  }
+  .aeo-items li:last-child { border-bottom: none; }
+  .aeo-items li::before { content: '✦'; color: var(--accent2); font-size: 10px; margin-top: 3px; flex-shrink: 0; }
+
+  /* BACKLINK */
+  .backlink-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .backlink-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .backlink-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .backlink-card p { font-size: 12px; color: var(--text2); margin-bottom: 14px; }
+  .backlink-list { list-style: none; }
+  .backlink-list li {
+    font-size: 12px; color: var(--text2);
+    padding: 4px 0;
+    display: flex; gap: 8px;
+  }
+  .backlink-list li::before { content: '·'; color: var(--accent); font-size: 16px; line-height: 1; }
+
+  /* QUICK WINS */
+  .qw-grid { display: grid; gap: 12px; }
+  .qw-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent2);
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .qw-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px; font-weight: 800;
+    color: var(--accent2);
+    opacity: 0.4;
+    width: 40px; flex-shrink: 0;
+  }
+  .qw-body h4 { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .qw-body p { font-size: 13px; color: var(--text2); }
+  .qw-effort {
+    margin-left: auto; flex-shrink: 0;
+    font-size: 11px; color: var(--text3);
+    text-align: right;
+  }
+
+  /* EXECUTIVE SUMMARY */
+  .exec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .exec-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .exec-box h4 {
+    font-size: 14px; font-weight: 600;
+    color: var(--text3); text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 16px;
+  }
+  .exec-list { list-style: none; }
+  .exec-list li {
+    font-size: 13px; color: var(--text2);
+    padding: 5px 0;
+    display: flex; gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .exec-list li:last-child { border-bottom: none; }
+  .exec-list li.strength::before { content: '✓'; color: var(--green); flex-shrink: 0; }
+  .exec-list li.weakness::before { content: '✗'; color: var(--red); flex-shrink: 0; }
+  .exec-list li.opportunity::before { content: '↑'; color: var(--blue); flex-shrink: 0; }
+  .exec-list li.threat::before { content: '!'; color: var(--yellow); flex-shrink: 0; }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--accent2);
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 32px 0;
+  }
+
+  /* TOPICAL MAP */
+  .pillar-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .pillar-header {
+    padding: 16px 20px;
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .pillar-icon { font-size: 20px; }
+  .pillar-title { font-weight: 700; font-size: 15px; }
+  .pillar-count { font-size: 12px; color: var(--text3); margin-left: auto; }
+  .cluster-list {
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 8px;
+  }
+  .cluster-item {
+    font-size: 13px; color: var(--text2);
+    padding: 6px 10px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .cluster-item::before { content: '↳'; color: var(--text3); font-size: 12px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .report-header { padding: 40px 20px 36px; }
+    .container { padding: 0 20px; }
+    .nav-tabs { padding: 0 20px; }
+    .exec-grid { grid-template-columns: 1fr; }
+    .blog-entry { grid-template-columns: 60px 1fr; }
+    .blog-entry .priority-badge { display: none; }
+    .issue-card { grid-template-columns: 1fr; }
+    .issue-impact { text-align: left; }
+  }
+
+  /* SCROLL MARGIN for anchor links */
+  [id] { scroll-margin-top: 60px; }
+
+  /* FOOTER */
+  .report-footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    text-align: center;
+    color: var(--text3);
+    font-size: 13px;
+  }
+  .report-footer strong { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="report-header">
+  <div class="header-inner">
+    <div class="header-tag">SEO + AEO + GMB Full Strategy Report</div>
+    <h1 class="main-title">Akestech Infotech<br><span>Growth Engine Blueprint</span></h1>
+    <p class="header-sub">Full-spectrum SEO, AEO, Content & GMB strategy for India's Shopify growth agency — built to dominate high-intent searches and rank in AI engines.</p>
+    <div class="header-meta">
+      <div class="meta-pill"><span class="label">Website</span><span class="value">akestech.com</span></div>
+      <div class="meta-pill"><span class="label">Niche</span><span class="value">Shopify Agency · D2C Growth</span></div>
+      <div class="meta-pill"><span class="label">Market</span><span class="value">India (Primary) + SEA</span></div>
+      <div class="meta-pill"><span class="label">Report Date</span><span class="value">June 2026</span></div>
+      <div class="meta-pill"><span class="label">Horizon</span><span class="value">2-Month Content Calendar</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="nav-tabs">
+  <div class="nav-tabs-inner">
+    <a class="nav-tab active" href="#audit">🔍 Audit</a>
+    <a class="nav-tab" href="#keywords">🔑 Keywords</a>
+    <a class="nav-tab" href="#topical">🗺 Topical Map</a>
+    <a class="nav-tab" href="#blog">📅 Blog Calendar</a>
+    <a class="nav-tab" href="#social">📱 Social Calendar</a>
+    <a class="nav-tab" href="#gmb">📍 GMB Local</a>
+    <a class="nav-tab" href="#aeo">🤖 AEO/AI</a>
+    <a class="nav-tab" href="#backlinks">🔗 Backlinks</a>
+    <a class="nav-tab" href="#quickwins">⚡ Quick Wins</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 1: EXECUTIVE SUMMARY + AUDIT   -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section" id="audit">
+  <div class="section-eyebrow">01 — Technical SEO Audit</div>
+  <h2 class="section-title">Current SEO Health Report</h2>
+  <p class="section-desc">Deep crawl analysis of akestech.com covering technical, on-page, content, and UX signals. Site is promising but under-optimised for its clear traffic opportunity.</p>
+
+  <!-- SCORES -->
+  <div class="score-grid">
+    <div class="score-card yellow">
+      <div class="score-number">52</div>
+      <div class="score-label">Overall SEO Score</div>
+    </div>
+    <div class="score-card red">
+      <div class="score-number">3</div>
+      <div class="score-label">Blog Posts Published</div>
+    </div>
+    <div class="score-card yellow">
+      <div class="score-number">~40</div>
+      <div class="score-label">Est. Monthly Organic Traffic</div>
+    </div>
+    <div class="score-card red">
+      <div class="score-number">0</div>
+      <div class="score-label">Schema Markup Detected</div>
+    </div>
+    <div class="score-card green">
+      <div class="score-number">✓</div>
+      <div class="score-label">HTTPS Enabled</div>
+    </div>
+    <div class="score-card green">
+      <div class="score-number">✓</div>
+      <div class="score-label">OG Tags Present</div>
+    </div>
+    <div class="score-card yellow">
+      <div class="score-number">~</div>
+      <div class="score-label">Canonical Tags (partial)</div>
+    </div>
+    <div class="score-card red">
+      <div class="score-number">0</div>
+      <div class="score-label">Google Reviews Visible</div>
+    </div>
+  </div>
+
+  <!-- SWOT -->
+  <div class="exec-grid" style="margin-bottom:40px">
+    <div class="exec-box">
+      <h4>✓ Strengths</h4>
+      <ul class="exec-list">
+        <li class="strength">Strong value proposition (₹50Cr+ managed, 200+ stores, 3X ROAS)</li>
+        <li class="strength">Excellent meta title & description structure on homepage</li>
+        <li class="strength">Proprietary product (Whatify) — major authority builder</li>
+        <li class="strength">Clear topical focus: 100% Shopify, not fragmented</li>
+        <li class="strength">OG tags + Twitter card meta properly configured</li>
+        <li class="strength">Canonical URL declared on homepage</li>
+        <li class="strength">Blog exists — 4 posts, good angle, good readability</li>
+      </ul>
+    </div>
+    <div class="exec-box">
+      <h4>✗ Weaknesses</h4>
+      <ul class="exec-list">
+        <li class="weakness">No schema markup anywhere (FAQ, LocalBusiness, Article, Service)</li>
+        <li class="weakness">Blog has only 4 posts — near-zero topical authority</li>
+        <li class="weakness">Missing GMB / Google Business Profile presence</li>
+        <li class="weakness">No visible backlinks from high-DA Indian e-commerce publications</li>
+        <li class="weakness">Case study URLs use generic slugs (/brand-x-3x-roas)</li>
+        <li class="weakness">No structured FAQ section on service pages</li>
+        <li class="weakness">Thin internal linking between blog → service pages</li>
+        <li class="weakness">Performance Marketing blog category: 0 posts</li>
+      </ul>
+    </div>
+    <div class="exec-box">
+      <h4>↑ Opportunities</h4>
+      <ul class="exec-list">
+        <li class="opportunity">High-intent "Shopify agency India" keywords have low competition</li>
+        <li class="opportunity">Industry-specific Shopify content is almost untapped</li>
+        <li class="opportunity">Google AI Overviews heavily favour FAQ-structured content</li>
+        <li class="opportunity">WhatsApp automation niche for Shopify is very blue ocean</li>
+        <li class="opportunity">Comparison pages ("X vs Y") generate huge bottom-of-funnel traffic</li>
+        <li class="opportunity">Local SEO for Lucknow/UP-based ecommerce brands</li>
+        <li class="opportunity">Case study expansion with real named clients = strong EEAT</li>
+      </ul>
+    </div>
+    <div class="exec-box">
+      <h4>! Threats</h4>
+      <ul class="exec-list">
+        <li class="threat">Larger agencies (Bombay Shaving, etc.) entering content marketing</li>
+        <li class="threat">AI-generated low-quality content flooding the same keyword space</li>
+        <li class="threat">Shopify's own blog content competes on Shopify-related keywords</li>
+        <li class="threat">No AEO optimization = missing from AI search engine answers</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TECHNICAL ISSUES -->
+  <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:20px;">Critical Technical Issues</h3>
+  <div class="issues-grid">
+
+    <div class="issue-card">
+      <span class="issue-badge badge-critical">Critical</span>
+      <div class="issue-body">
+        <h4>Zero Schema Markup Site-Wide</h4>
+        <p>No JSON-LD schema detected anywhere — no LocalBusiness, Organization, Service, Article, FAQ, or BreadcrumbList. This means Google can't generate rich results and AI engines can't classify the business correctly.</p>
+        <div class="issue-fix"><strong>Fix</strong>Add Organization + LocalBusiness schema to homepage. Add FAQPage schema to all service pages. Add Article schema to every blog post. Add BreadcrumbList to all inner pages.</div>
+      </div>
+      <div class="issue-impact">AI Ranking<br>Rich Results<br>Trust Signals</div>
+    </div>
+
+    <div class="issue-card">
+      <span class="issue-badge badge-critical">Critical</span>
+      <div class="issue-body">
+        <h4>No Google Business Profile / GMB</h4>
+        <p>Akestech Infotech has no verified Google Business Profile. Competitors who appear in the local pack for "Shopify agency Lucknow" or "ecommerce marketing agency India" will capture high-intent leads you're missing entirely.</p>
+        <div class="issue-fix"><strong>Fix</strong>Create and fully optimize Google Business Profile — category: "Marketing Agency", add all services, 10+ photos, weekly posts, collect reviews actively. See GMB section below.</div>
+      </div>
+      <div class="issue-impact">Local Pack<br>Maps Traffic<br>Review Trust</div>
+    </div>
+
+    <div class="issue-card">
+      <span class="issue-badge badge-high">High</span>
+      <div class="issue-body">
+        <h4>No FAQ Sections on Service Pages</h4>
+        <p>Each service page (Performance Marketing, Shopify Growth, Operations, Automation, Technology) lacks structured FAQ sections. These are the single biggest driver of AI Overview appearances and featured snippet wins.</p>
+        <div class="issue-fix"><strong>Fix</strong>Add 6–8 FAQ items per service page with FAQPage JSON-LD. Target "People Also Ask" questions. Phrase answers as 40–60 word concise responses to maximise snippet capture.</div>
+      </div>
+      <div class="issue-impact">Featured Snippets<br>AI Overviews<br>Bounce Rate</div>
+    </div>
+
+    <div class="issue-card">
+      <span class="issue-badge badge-high">High</span>
+      <div class="issue-body">
+        <h4>Thin Internal Linking Structure</h4>
+        <p>Blog posts don't link to relevant service pages. Homepage doesn't link to blog. Case studies don't cross-link to services or related posts. PageRank is leaking instead of compounding.</p>
+        <div class="issue-fix"><strong>Fix</strong>Every blog post must include 2–3 contextual links to service pages. Add "Related Articles" at bottom of each post. Create a Resources/Hub page that centralizes all content.</div>
+      </div>
+      <div class="issue-impact">Crawl Depth<br>Page Authority<br>Time on Site</div>
+    </div>
+
+    <div class="issue-card">
+      <span class="issue-badge badge-high">High</span>
+      <div class="issue-body">
+        <h4>Case Study Slugs Are Generic and Unoptimised</h4>
+        <p><code>/case-studies/brand-x-3x-roas</code> wastes the URL. Real brand names + results keywords drive long-tail traffic. Second case study slug is good but first is anonymous.</p>
+        <div class="issue-fix"><strong>Fix</strong>Use real client names where allowed, or at minimum industry + result: <code>/case-studies/fashion-d2c-shopify-4-5x-roas-meta-ads</code>. Add CaseStudy schema with measuredValue fields.</div>
+      </div>
+      <div class="issue-impact">Long-Tail Rankings<br>EEAT Signals</div>
+    </div>
+
+    <div class="issue-card">
+      <span class="issue-badge badge-medium">Medium</span>
+      <div class="issue-body">
+        <h4>robots.txt & XML Sitemap Not Verified</h4>
+        <p>Site doesn't surface sitemap URL publicly and robots.txt wasn't accessible in crawl. This risks indexing gaps, especially as blog grows.</p>
+        <div class="issue-fix"><strong>Fix</strong>Ensure <code>/sitemap.xml</code> exists and is submitted in Google Search Console. robots.txt should be at <code>/robots.txt</code> with <code>Sitemap:</code> directive. Verify in GSC Coverage report.</div>
+      </div>
+      <div class="issue-impact">Indexation</div>
+    </div>
+
+    <div class="issue-card">
+      <span class="issue-badge badge-medium">Medium</span>
+      <div class="issue-body">
+        <h4>Blog Image Alt Tags Likely Empty</h4>
+        <p>Blog post featured images appear generic (og-default.jpg for all posts). No custom OG images and likely no descriptive alt text on inline images.</p>
+        <div class="issue-fix"><strong>Fix</strong>Create unique OG images per blog post (1200×630px). All inline images must have descriptive alt text including target keyword. Add <code>loading="lazy"</code> to below-fold images.</div>
+      </div>
+      <div class="issue-impact">Image Search<br>Core Web Vitals</div>
+    </div>
+
+    <div class="issue-card">
+      <span class="issue-badge badge-good">Good</span>
+      <div class="issue-body">
+        <h4>Meta Titles & Descriptions — Well Structured</h4>
+        <p>Homepage title is strong: includes brand, category, key services, and a differentiating stat. Meta description is benefit-led and specific. Twitter card + OG tags are properly configured.</p>
+        <div class="issue-fix"><strong>Maintain</strong>Ensure service pages and blog posts follow same structure: [Primary Keyword] | [Benefit/Stat] | Akestech Infotech. Keep meta descriptions 145–155 chars with a soft CTA.</div>
+      </div>
+      <div class="issue-impact">CTR from SERP</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 2: KEYWORD RESEARCH        -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="keywords">
+  <div class="section-eyebrow">02 — Keyword Strategy</div>
+  <h2 class="section-title">High-Intent Keyword Universe</h2>
+  <p class="section-desc">Curated keyword list focused on buyer intent, industry verticals, and comparison queries. Difficulty based on Indian SERP competition estimates.</p>
+
+  <h3 style="font-size:17px;font-weight:600;margin-bottom:14px;color:var(--accent3)">🔥 Bottom-of-Funnel — Transactional (Hire Intent)</h3>
+  <div class="table-wrap" style="margin-bottom:32px">
+    <table>
+      <thead><tr><th>Keyword</th><th>Intent</th><th>Difficulty</th><th>Volume Est.</th><th>Target Page</th></tr></thead>
+      <tbody>
+        <tr><td class="td-kw">Shopify growth agency India</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-low">Low</span></td><td>200–500/mo</td><td>Homepage</td></tr>
+        <tr><td class="td-kw">hire Shopify marketing agency</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-low">Low</span></td><td>100–300/mo</td><td>Homepage</td></tr>
+        <tr><td class="td-kw">Shopify performance marketing agency India</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-low">Low</span></td><td>100–250/mo</td><td>/services/performance-marketing</td></tr>
+        <tr><td class="td-kw">D2C brand scaling agency</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-med">Med</span></td><td>300–700/mo</td><td>Homepage</td></tr>
+        <tr><td class="td-kw">WhatsApp automation Shopify agency</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-low">Low</span></td><td>50–150/mo</td><td>/services/automation</td></tr>
+        <tr><td class="td-kw">reduce RTO Shopify India</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-low">Low</span></td><td>200–500/mo</td><td>/services/shopify-operations</td></tr>
+        <tr><td class="td-kw">Shopify CRO agency India</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-low">Low</span></td><td>150–350/mo</td><td>/services/shopify-growth</td></tr>
+        <tr><td class="td-kw">ecommerce growth agency Lucknow</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-low">Low</span></td><td>50–100/mo</td><td>Homepage + GMB</td></tr>
+        <tr><td class="td-kw">Shopify expert India</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-med">Med</span></td><td>500–1200/mo</td><td>About / Services</td></tr>
+        <tr><td class="td-kw">Meta ads agency for Shopify India</td><td class="intent-transactional">Transactional</td><td><span class="kd-pill kd-low">Low</span></td><td>100–250/mo</td><td>/services/performance-marketing</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size:17px;font-weight:600;margin-bottom:14px;color:var(--purple)">🔎 Middle-of-Funnel — Commercial Investigation</h3>
+  <div class="table-wrap" style="margin-bottom:32px">
+    <table>
+      <thead><tr><th>Keyword</th><th>Intent</th><th>Difficulty</th><th>Volume Est.</th><th>Target Page</th></tr></thead>
+      <tbody>
+        <tr><td class="td-kw">best Shopify agency in India</td><td class="intent-commercial">Commercial</td><td><span class="kd-pill kd-med">Med</span></td><td>300–800/mo</td><td>Homepage / About</td></tr>
+        <tr><td class="td-kw">Shopify agency vs freelancer India</td><td class="intent-commercial">Commercial</td><td><span class="kd-pill kd-low">Low</span></td><td>100–200/mo</td><td>Blog Comparison</td></tr>
+        <tr><td class="td-kw">Klaviyo vs WhatsApp for cart recovery</td><td class="intent-commercial">Commercial</td><td><span class="kd-pill kd-low">Low</span></td><td>150–350/mo</td><td>Blog Comparison</td></tr>
+        <tr><td class="td-kw">how to scale D2C brand India</td><td class="intent-commercial">Commercial</td><td><span class="kd-pill kd-med">Med</span></td><td>400–900/mo</td><td>Blog Pillar</td></tr>
+        <tr><td class="td-kw">Shopify store optimization checklist</td><td class="intent-commercial">Commercial</td><td><span class="kd-pill kd-med">Med</span></td><td>300–600/mo</td><td>Blog / Resource</td></tr>
+        <tr><td class="td-kw">Meta ads ROAS benchmarks India</td><td class="intent-commercial">Commercial</td><td><span class="kd-pill kd-low">Low</span></td><td>200–400/mo</td><td>Blog Data Post</td></tr>
+        <tr><td class="td-kw">COD vs prepaid Shopify India</td><td class="intent-commercial">Commercial</td><td><span class="kd-pill kd-low">Low</span></td><td>300–600/mo</td><td>Blog</td></tr>
+        <tr><td class="td-kw">Shopify abandoned cart recovery India</td><td class="intent-commercial">Commercial</td><td><span class="kd-pill kd-low">Low</span></td><td>250–500/mo</td><td>Blog / Service</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size:17px;font-weight:600;margin-bottom:14px;color:var(--blue)">📰 Top-of-Funnel — Informational (Awareness)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Keyword</th><th>Intent</th><th>Difficulty</th><th>Volume Est.</th><th>Target Page</th></tr></thead>
+      <tbody>
+        <tr><td class="td-kw">what is RTO in ecommerce</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-med">Med</span></td><td>1000–3000/mo</td><td>Blog</td></tr>
+        <tr><td class="td-kw">how to run Meta ads for Shopify India</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-med">Med</span></td><td>500–1200/mo</td><td>Blog</td></tr>
+        <tr><td class="td-kw">WhatsApp business API ecommerce India</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-med">Med</span></td><td>600–1500/mo</td><td>Blog</td></tr>
+        <tr><td class="td-kw">how to increase AOV on Shopify</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-med">Med</span></td><td>300–700/mo</td><td>Blog</td></tr>
+        <tr><td class="td-kw">D2C brand marketing strategy India</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-high">High</span></td><td>800–2000/mo</td><td>Blog Pillar</td></tr>
+        <tr><td class="td-kw">Shopify vs WooCommerce for India</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-med">Med</span></td><td>400–900/mo</td><td>Comparison Blog</td></tr>
+        <tr><td class="td-kw">fashion brand Shopify marketing India</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-low">Low</span></td><td>200–400/mo</td><td>Industry Blog</td></tr>
+        <tr><td class="td-kw">health supplement D2C Shopify India</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-low">Low</span></td><td>150–350/mo</td><td>Industry Blog</td></tr>
+        <tr><td class="td-kw">beauty brand ecommerce growth India</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-low">Low</span></td><td>200–500/mo</td><td>Industry Blog</td></tr>
+        <tr><td class="td-kw">Shopify store setup cost India</td><td class="intent-informational">Informational</td><td><span class="kd-pill kd-med">Med</span></td><td>400–800/mo</td><td>Blog</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 3: TOPICAL MAP             -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="topical">
+  <div class="section-eyebrow">03 — Content Architecture</div>
+  <h2 class="section-title">Topical Authority Map</h2>
+  <p class="section-desc">Pillar-cluster structure to build complete topical authority in the Shopify + D2C space. Each pillar page targets head terms; cluster posts target long-tail variations.</p>
+
+  <div class="pillar-block">
+    <div class="pillar-header">
+      <span class="pillar-icon">📊</span>
+      <span class="pillar-title">Pillar 1: Performance Marketing for Shopify</span>
+      <span class="pillar-count">10 cluster topics</span>
+    </div>
+    <div class="cluster-list">
+      <div class="cluster-item">Meta ads structure for Indian D2C brands</div>
+      <div class="cluster-item">Google Shopping for Shopify India</div>
+      <div class="cluster-item">ROAS benchmarks by industry India 2026</div>
+      <div class="cluster-item">Creative testing framework for Meta ads</div>
+      <div class="cluster-item">Retargeting strategy for Shopify stores</div>
+      <div class="cluster-item">Attribution models explained (Meta vs Google)</div>
+      <div class="cluster-item">How to structure a D2C ad funnel</div>
+      <div class="cluster-item">Scaling Meta ads from ₹50K to ₹5L/month</div>
+      <div class="cluster-item">Performance Max campaigns for Shopify</div>
+      <div class="cluster-item">UGC vs studio ads — what works in India</div>
+    </div>
+  </div>
+
+  <div class="pillar-block">
+    <div class="pillar-header">
+      <span class="pillar-icon">🛍</span>
+      <span class="pillar-title">Pillar 2: Shopify Store Optimisation & CRO</span>
+      <span class="pillar-count">10 cluster topics</span>
+    </div>
+    <div class="cluster-list">
+      <div class="cluster-item">Shopify CRO checklist for Indian brands</div>
+      <div class="cluster-item">How to increase Shopify conversion rate</div>
+      <div class="cluster-item">Product page optimisation for India</div>
+      <div class="cluster-item">Checkout abandonment fixes for COD markets</div>
+      <div class="cluster-item">Mobile UX for Indian Shopify stores</div>
+      <div class="cluster-item">Shopify theme speed optimisation</div>
+      <div class="cluster-item">Trust signals that convert Indian buyers</div>
+      <div class="cluster-item">Shopify A/B testing guide</div>
+      <div class="cluster-item">Payment gateways for Indian Shopify stores</div>
+      <div class="cluster-item">UPI vs COD vs prepaid — conversion data</div>
+    </div>
+  </div>
+
+  <div class="pillar-block">
+    <div class="pillar-header">
+      <span class="pillar-icon">💬</span>
+      <span class="pillar-title">Pillar 3: WhatsApp & Marketing Automation</span>
+      <span class="pillar-count">8 cluster topics</span>
+    </div>
+    <div class="cluster-list">
+      <div class="cluster-item">WhatsApp cart recovery for Shopify</div>
+      <div class="cluster-item">COD verification via WhatsApp — complete guide</div>
+      <div class="cluster-item">WhatsApp Business API setup for ecommerce</div>
+      <div class="cluster-item">Email vs WhatsApp for abandoned cart India</div>
+      <div class="cluster-item">Broadcast campaigns for D2C brands</div>
+      <div class="cluster-item">Order confirmation automation Shopify</div>
+      <div class="cluster-item">WhatsApp chatbot for Shopify — setup guide</div>
+      <div class="cluster-item">Post-purchase automation for repeat buyers</div>
+    </div>
+  </div>
+
+  <div class="pillar-block">
+    <div class="pillar-header">
+      <span class="pillar-icon">📦</span>
+      <span class="pillar-title">Pillar 4: Shopify Operations & RTO Reduction</span>
+      <span class="pillar-count">8 cluster topics</span>
+    </div>
+    <div class="cluster-list">
+      <div class="cluster-item">How to reduce RTO for Shopify stores India</div>
+      <div class="cluster-item">Inventory management for D2C brands</div>
+      <div class="cluster-item">Shipping partner comparison India 2026</div>
+      <div class="cluster-item">COD to prepaid conversion strategy</div>
+      <div class="cluster-item">Return policy that reduces refunds</div>
+      <div class="cluster-item">Fulfillment automation for Shopify India</div>
+      <div class="cluster-item">How to handle high RTO seasons (festive)</div>
+      <div class="cluster-item">NDR management for Indian courier partners</div>
+    </div>
+  </div>
+
+  <div class="pillar-block">
+    <div class="pillar-header">
+      <span class="pillar-icon">👗</span>
+      <span class="pillar-title">Pillar 5: Industry Verticals (Comparison + Niche)</span>
+      <span class="pillar-count">8 cluster topics</span>
+    </div>
+    <div class="cluster-list">
+      <div class="cluster-item">Shopify for fashion brands India — complete guide</div>
+      <div class="cluster-item">D2C beauty brand marketing strategy India</div>
+      <div class="cluster-item">Health supplement brand Shopify scaling</div>
+      <div class="cluster-item">Home decor D2C growth on Shopify</div>
+      <div class="cluster-item">Kids & baby products — D2C marketing India</div>
+      <div class="cluster-item">Food & nutrition brand Shopify ROAS guide</div>
+      <div class="cluster-item">Electronics accessories D2C brand India</div>
+      <div class="cluster-item">Ethnic wear Shopify brand growth case study</div>
+    </div>
+  </div>
+
+  <div class="pillar-block">
+    <div class="pillar-header">
+      <span class="pillar-icon">⚔️</span>
+      <span class="pillar-title">Pillar 6: Comparison Pages (High-Intent Converters)</span>
+      <span class="pillar-count">6 cluster topics</span>
+    </div>
+    <div class="cluster-list">
+      <div class="cluster-item">Shopify vs WooCommerce for India 2026</div>
+      <div class="cluster-item">Whatify vs Interakt vs AiSensy comparison</div>
+      <div class="cluster-item">Klaviyo vs WhatsApp for Indian D2C brands</div>
+      <div class="cluster-item">Shopify agency vs in-house team India</div>
+      <div class="cluster-item">Meta ads vs Google ads for Shopify India</div>
+      <div class="cluster-item">Delhivery vs Shiprocket vs Ecom Express India</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 4: 2-MONTH BLOG CALENDAR   -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="blog">
+  <div class="section-eyebrow">04 — Blog Content Calendar</div>
+  <h2 class="section-title">2-Month Blog Calendar</h2>
+  <p class="section-desc">32 blog posts across July–August 2026. Prioritised by high-intent search, industry verticals, comparisons, and AEO snippet opportunities. Publish 4 posts/week minimum.</p>
+
+  <!-- MONTH 1 -->
+  <div class="calendar-month">
+    <div class="month-header">
+      <span class="month-badge">July 2026</span>
+      <span class="month-title">Foundation + High-Intent Bottom-Funnel</span>
+    </div>
+    <div class="blog-entries">
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">1</span></div>
+        <div class="blog-content">
+          <h4>Best Shopify Marketing Agencies in India 2026 — Ranked & Reviewed</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔥 Transactional</span>
+            <span class="blog-tag tag-category">Agency Comparison</span>
+            <span class="blog-tag tag-type">Listicle</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>best shopify agency india, top shopify marketing agencies</span></div>
+          <div class="blog-notes">Include Akestech as #1 with detailed breakdown. Use genuine criteria (specialisation, case study proof, response time). Add FAQPage schema. This will rank AND build brand authority as THE authority on the topic.</div>
+        </div>
+        <span class="priority-badge pri-hot">🔥 HOT</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">1</span></div>
+        <div class="blog-content">
+          <h4>How to Scale a Shopify Store from ₹5L to ₹1Cr Monthly Revenue — The Exact Playbook</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">💰 Commercial</span>
+            <span class="blog-tag tag-category">D2C Strategy</span>
+            <span class="blog-tag tag-type">Pillar Post (3000+ words)</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>scale shopify store india, d2c brand growth india, ₹1cr shopify revenue</span></div>
+          <div class="blog-notes">Mega-guide covering ads, CRO, operations, WhatsApp automation. Embed the Akestech framework (Audit → Strategy → Foundation → Launch → Scale). Add internal links to all 5 service pages.</div>
+        </div>
+        <span class="priority-badge pri-hot">🔥 HOT</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">1</span></div>
+        <div class="blog-content">
+          <h4>Meta Ads ROAS Benchmarks for Indian D2C Brands in 2026 [Data Report]</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📊 Commercial</span>
+            <span class="blog-tag tag-category">Performance Marketing</span>
+            <span class="blog-tag tag-type">Data Report</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>meta ads roas india, facebook ads benchmark ecommerce india 2026</span></div>
+          <div class="blog-notes">Use Akestech's own ₹50Cr+ data to create proprietary benchmarks by category. This builds massive EEAT and will be cited/linked by other sites.</div>
+        </div>
+        <span class="priority-badge pri-hot">🔥 HOT</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">2</span></div>
+        <div class="blog-content">
+          <h4>Shopify vs WooCommerce for Indian D2C Brands in 2026 — Which Should You Choose?</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔎 Commercial</span>
+            <span class="blog-tag tag-category">Comparison</span>
+            <span class="blog-tag tag-type">Comparison Page</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>shopify vs woocommerce india, shopify vs woocommerce d2c</span></div>
+          <div class="blog-notes">Be definitive. Data-backed verdict in favour of Shopify (aligns with Akestech's positioning). Include COD support, UPI gateway, and Indian logistics integrations as criteria. Featured snippet bait: summary table.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">2</span></div>
+        <div class="blog-content">
+          <h4>WhatsApp vs Email for Abandoned Cart Recovery in India — Real Data Comparison</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔎 Commercial</span>
+            <span class="blog-tag tag-category">WhatsApp Automation</span>
+            <span class="blog-tag tag-type">Comparison</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>whatsapp vs email cart recovery india, abandoned cart whatsapp shopify</span></div>
+          <div class="blog-notes">Include Akestech's 22% recovery rate data. Compare open rates (WhatsApp ~98% vs email ~20%). Mention Whatify. Strong CTA to the WhatsApp automation service.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">2</span></div>
+        <div class="blog-content">
+          <h4>Shopify Fashion Brand Marketing Guide India 2026 — From Launch to ₹50L MRR</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">Industry: Fashion</span>
+            <span class="blog-tag tag-type">Industry Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>fashion brand shopify india, d2c fashion marketing india, shopify fashion agency</span></div>
+          <div class="blog-notes">Leverage the real case study (₹3L→₹12-15L MRR). Cover Meta ads creative for fashion, influencer strategy, return handling for apparel. Link to the women's apparel case study.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">3</span></div>
+        <div class="blog-content">
+          <h4>What Is RTO in Ecommerce? Causes, Costs & 10 Ways to Reduce It</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">Operations</span>
+            <span class="blog-tag tag-type">Explainer + Solutions</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>what is rto ecommerce, rto meaning ecommerce india, how to reduce rto</span></div>
+          <div class="blog-notes">Top-of-funnel entry point. High search volume. Keep intro tight (AEO snippet). Then expand into solutions linking to existing RTO guide and operations service page.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">3</span></div>
+        <div class="blog-content">
+          <h4>COD vs Prepaid — Which Should Your Indian Shopify Store Prioritise?</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔎 Commercial</span>
+            <span class="blog-tag tag-category">D2C Strategy</span>
+            <span class="blog-tag tag-type">Decision Guide</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>cod vs prepaid shopify india, prepaid conversion strategy d2c india</span></div>
+          <div class="blog-notes">Address the biggest operational challenge of Indian D2C. Use Akestech data: 90% prepaid achieved in case study. Include COD verification via WhatsApp as a solution. Link to WhatsApp service.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">3</span></div>
+        <div class="blog-content">
+          <h4>D2C Beauty Brand on Shopify — How to Build & Scale in India</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">Industry: Beauty</span>
+            <span class="blog-tag tag-type">Industry Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>beauty brand shopify india, d2c beauty marketing india, cosmetics ecommerce india</span></div>
+          <div class="blog-notes">Cover UGC ad strategy, influencer funnel, product page trust signals for beauty (ingredients, dermat-approved), WhatsApp replenishment reminders. Positions Akestech for beauty brand clients.</div>
+        </div>
+        <span class="priority-badge pri-med">● MED</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">4</span></div>
+        <div class="blog-content">
+          <h4>Shopify Agency vs Freelancer vs In-House Team — What's Best for Your D2C Brand?</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔎 Commercial</span>
+            <span class="blog-tag tag-category">Agency Comparison</span>
+            <span class="blog-tag tag-type">Decision Framework</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>shopify agency vs freelancer india, should I hire shopify agency</span></div>
+          <div class="blog-notes">Honest comparison that still concludes agencies (specifically full-stack ones like Akestech) win at scale. Include cost breakdown, speed of execution data, and tech/tool access arguments.</div>
+        </div>
+        <span class="priority-badge pri-hot">🔥 HOT</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">4</span></div>
+        <div class="blog-content">
+          <h4>How to Set Up WhatsApp Business API for Your Shopify Store — Step-by-Step Guide</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">WhatsApp Automation</span>
+            <span class="blog-tag tag-type">How-To Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>whatsapp business api shopify, whatsapp api setup ecommerce india</span></div>
+          <div class="blog-notes">Step-by-step setup. Feature Whatify as the simplest solution. Compare API providers briefly. Include real message templates. Strong Whatify install CTA at end.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">4</span></div>
+        <div class="blog-content">
+          <h4>Health & Supplement D2C Brand on Shopify India — Growth Playbook</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">Industry: Health</span>
+            <span class="blog-tag tag-type">Industry Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>health supplement d2c india, nutraceutical shopify brand india</span></div>
+          <div class="blog-notes">Cover FSSAI compliance, subscription model setup on Shopify, WhatsApp reorder reminders, Google YMYL content compliance. Highly specific vertical = low competition, high conversion.</div>
+        </div>
+        <span class="priority-badge pri-med">● MED</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">4</span></div>
+        <div class="blog-content">
+          <h4>Meta Ads vs Google Ads for Shopify India — Which Drives Better ROAS?</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔎 Commercial</span>
+            <span class="blog-tag tag-category">Comparison</span>
+            <span class="blog-tag tag-type">Comparison Page</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>meta ads vs google ads shopify india, facebook ads vs google ads d2c india</span></div>
+          <div class="blog-notes">Use Akestech's own managed spend data. Give clear verdict by category (fashion → Meta wins; search intent categories → Google wins). Recommend both with proper budget allocation.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+    </div><!-- end blog-entries Month 1 -->
+  </div><!-- end calendar-month -->
+
+  <!-- MONTH 2 -->
+  <div class="calendar-month">
+    <div class="month-header">
+      <span class="month-badge" style="background:var(--accent2);color:#000">August 2026</span>
+      <span class="month-title">Authority Building + Deep Industry Verticals + Comparison</span>
+    </div>
+    <div class="blog-entries">
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">5</span></div>
+        <div class="blog-content">
+          <h4>Whatify vs Interakt vs AiSensy vs Wati — Best WhatsApp Tool for Shopify India</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔥 Transactional</span>
+            <span class="blog-tag tag-category">Comparison</span>
+            <span class="blog-tag tag-type">Product Comparison</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>whatify vs interakt, best whatsapp tool shopify india, interakt alternative</span></div>
+          <div class="blog-notes">Head-to-head feature table. Objective tone builds trust. Whatify wins on Shopify-native features, price, and cart recovery. This page can capture high-intent product searches.</div>
+        </div>
+        <span class="priority-badge pri-hot">🔥 HOT</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">5</span></div>
+        <div class="blog-content">
+          <h4>How to Increase Average Order Value on Shopify — 12 Proven Strategies for India</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">CRO / Shopify Growth</span>
+            <span class="blog-tag tag-type">Listicle</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>increase aov shopify india, shopify average order value strategies</span></div>
+          <div class="blog-notes">Upsell/cross-sell apps, bundle strategies, minimum free shipping threshold, WhatsApp post-purchase upsell. Practical and India-specific (focus on UPI payment flow compatibility).</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">5</span></div>
+        <div class="blog-content">
+          <h4>Festive Season Shopify Strategy India 2026 — Diwali, Big Billion Days & Beyond</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔎 Commercial</span>
+            <span class="blog-tag tag-category">D2C Strategy</span>
+            <span class="blog-tag tag-type">Seasonal Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>shopify festive season india, diwali sale strategy d2c, big billion day shopify</span></div>
+          <div class="blog-notes">Publish in August to capture early festive planning searches. Cover inventory scaling, ad budget strategy, WhatsApp broadcast for Diwali, RTO spike management. Timely + high intent.</div>
+        </div>
+        <span class="priority-badge pri-hot">🔥 HOT</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">5</span></div>
+        <div class="blog-content">
+          <h4>Delhivery vs Shiprocket vs Ecom Express — Best Shipping Partner for Shopify India</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔎 Commercial</span>
+            <span class="blog-tag tag-category">Comparison</span>
+            <span class="blog-tag tag-type">Comparison Page</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>delhivery vs shiprocket shopify, best courier for shopify india, ecom express vs shiprocket</span></div>
+          <div class="blog-notes">Comparison table across: price, delivery time, RTO rate, COD remittance, Shopify integration. Massive informational query. Link to operations service page strongly.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">6</span></div>
+        <div class="blog-content">
+          <h4>How to Build a D2C Brand in India from Scratch — The 2026 Complete Guide</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">D2C Strategy</span>
+            <span class="blog-tag tag-type">Mega Pillar (4000+ words)</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>how to start d2c brand india, build d2c brand india, d2c brand 2026</span></div>
+          <div class="blog-notes">Top-of-funnel authority magnet. Covers product selection, Shopify setup, first 100 orders strategy, Meta ads launch, WhatsApp setup. Mentions Akestech as growth partner at the right stage.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">6</span></div>
+        <div class="blog-content">
+          <h4>Ethnic Wear & Kurti Brand Shopify Marketing India — What Works in 2026</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">Industry: Fashion/Ethnic</span>
+            <span class="blog-tag tag-type">Industry Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>ethnic wear shopify india, kurti brand ecommerce marketing, traditional wear d2c india</span></div>
+          <div class="blog-notes">Highly specific. Covers Meta ad creative for ethnic wear (regional targeting, vernacular ads), WhatsApp broadcast for festive drops, sizing guide trust signals. Very low competition keyword cluster.</div>
+        </div>
+        <span class="priority-badge pri-med">● MED</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">6</span></div>
+        <div class="blog-content">
+          <h4>Shopify Store Speed Optimization India — How to Get Under 3-Second Load Time</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">Shopify Growth</span>
+            <span class="blog-tag tag-type">Technical Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>shopify store speed optimization india, slow shopify store fix, shopify page speed india</span></div>
+          <div class="blog-notes">Cover image compression (WebP), app bloat, theme speed, CDN, mobile-first tips. Include Akestech's own store optimization service as solution. Highly actionable = high backlink potential.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">7</span></div>
+        <div class="blog-content">
+          <h4>Shopify Trust Signals That Convert Indian Buyers — Complete Checklist</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">CRO</span>
+            <span class="blog-tag tag-type">Checklist</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>shopify trust signals india, how to increase shopify trust, conversion rate shopify india</span></div>
+          <div class="blog-notes">Indian-specific trust signals: COD assurance, easy returns, cash-back via UPI, regional language support, WhatsApp support link. Highly shareable. Link to CRO service.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">7</span></div>
+        <div class="blog-content">
+          <h4>How to Run Google Shopping Ads for Your Shopify Store in India</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">Performance Marketing</span>
+            <span class="blog-tag tag-type">How-To Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>google shopping ads shopify india, performance max shopify india, google merchant center india</span></div>
+          <div class="blog-notes">Highly searched but underserved content for Indian market. Cover Merchant Center setup, INR feed, Performance Max campaign structure, and when to use Shopping vs Search.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">7</span></div>
+        <div class="blog-content">
+          <h4>Home Decor D2C Brand on Shopify India — Marketing & Operations Playbook</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">Industry: Home Decor</span>
+            <span class="blog-tag tag-type">Industry Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>home decor d2c india shopify, home decor brand ecommerce india</span></div>
+          <div class="blog-notes">Cover visual-first Instagram + Pinterest strategy, UGC styling photos, high-AOV product bundle strategy, fragile item shipping and returns. Low competition, high client relevance.</div>
+        </div>
+        <span class="priority-badge pri-med">● MED</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">8</span></div>
+        <div class="blog-content">
+          <h4>How to Build a High-ROAS Meta Ads Creative Strategy for Indian D2C Brands</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔎 Commercial</span>
+            <span class="blog-tag tag-category">Performance Marketing</span>
+            <span class="blog-tag tag-type">Strategy Guide</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>meta ads creative strategy india, facebook ad creative d2c india, ugc ads shopify india</span></div>
+          <div class="blog-notes">Cover UGC vs studio, hook formula, video length, regional language ad testing, DCO structure. Use Akestech data. Positions agency as creative strategists, not just media buyers.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">8</span></div>
+        <div class="blog-content">
+          <h4>Shopify Email Marketing vs WhatsApp — Where to Invest in 2026?</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">🔎 Commercial</span>
+            <span class="blog-tag tag-category">Comparison / Automation</span>
+            <span class="blog-tag tag-type">Comparison Guide</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>shopify email vs whatsapp india, klaviyo vs whatsapp marketing india</span></div>
+          <div class="blog-notes">Definitive comparison with open rate, click rate, and conversion data. Conclude: use both but WhatsApp for transactional/recovery, email for nurture. Feature Whatify prominently.</div>
+        </div>
+        <span class="priority-badge pri-high">↑ HIGH</span>
+      </div>
+
+      <div class="blog-entry">
+        <div class="blog-week"><span class="wk">Week</span><span class="wn">8</span></div>
+        <div class="blog-content">
+          <h4>State of D2C India 2026 — Key Stats, Trends & Opportunities Report</h4>
+          <div class="blog-meta">
+            <span class="blog-tag tag-intent">📰 Informational</span>
+            <span class="blog-tag tag-category">Industry Report</span>
+            <span class="blog-tag tag-type">Annual Data Report</span>
+            <span class="blog-tag tag-aeo">✦ AEO Target</span>
+          </div>
+          <div class="blog-kw">Target Keywords: <span>d2c india 2026 report, ecommerce india trends 2026, d2c market size india</span></div>
+          <div class="blog-notes">Anchor piece — cite public data, add Akestech's own insights from 200+ stores. This becomes the most-linked piece. Highly AEO-optimised with statistics AI engines love to cite. Publish as downloadable PDF too.</div>
+        </div>
+        <span class="priority-badge pri-hot">🔥 HOT</span>
+      </div>
+
+    </div><!-- end Month 2 entries -->
+  </div><!-- end calendar-month Month 2 -->
+
+</div><!-- end blog section -->
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 5: SOCIAL MEDIA CALENDAR   -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="social">
+  <div class="section-eyebrow">05 — Social Media Calendar</div>
+  <h2 class="section-title">2-Month Social Content Plan</h2>
+  <p class="section-desc">Platform-specific social calendar aligned with the blog content. Instagram for reach + brand, LinkedIn for agency positioning, Twitter/X for industry commentary.</p>
+
+  <div class="social-grid">
+
+    <!-- INSTAGRAM -->
+    <div class="social-card">
+      <div class="social-card-header">
+        <div class="platform-icon ig">📸</div>
+        <div>
+          <div class="social-platform">Instagram</div>
+          <div class="social-freq">5–6 posts/week + 10 stories/week</div>
+        </div>
+      </div>
+      <div class="social-card-body">
+
+        <div class="social-week">
+          <div class="social-week-label">Week 1 — July</div>
+          <div class="social-post">
+            <div class="post-type">Reel (Hook Content)</div>
+            <div class="post-copy">"₹5L to ₹1Cr in 90 days — here's the exact framework 🧵" — Founder-face Reel breaking down the Akestech 5-step scaling framework. End with "Follow for Shopify growth tips."</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">Data Carousel</div>
+            <div class="post-copy">"Meta Ads ROAS benchmarks for Indian D2C brands 2026 📊" — Swipe carousel with data from the blog report. 8-slide design with your own brand stats highlighted.</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">Client Win Post</div>
+            <div class="post-copy">"₹3L → ₹15L MRR in 4 months. Here's what changed 👇" — Tell the women's apparel case study visually. Before/after revenue chart + key tactics used.</div>
+          </div>
+        </div>
+
+        <div class="social-week">
+          <div class="social-week-label">Week 2 — July</div>
+          <div class="social-post">
+            <div class="post-type">Education Carousel</div>
+            <div class="post-copy">"5 reasons Indian Shopify stores have a 3–4% conversion rate when they should have 2X that 😬" — CRO issues carousel. Slide 8: "We fix all 5. DM 'AUDIT' for a free review."</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">Myth-buster Reel</div>
+            <div class="post-copy">"MYTH: WhatsApp automation is spammy. REALITY: 98% open rate and 22% cart recovery 🚀" — Fast-cut Reel format. Show the Whatify cart recovery demo.</div>
+          </div>
+        </div>
+
+        <div class="social-week">
+          <div class="social-week-label">Week 3-4 — Ongoing Formats</div>
+          <div class="social-post">
+            <div class="post-type">Weekly "Shopify Tip of the Week"</div>
+            <div class="post-copy">Single-image tips: quick actionable insight (COD verification script, checkout button copy, UPI badge placement). Consistent template. Builds habit-follow.</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">August: Festive Season Series</div>
+            <div class="post-copy">"Are you Diwali-ready? 🪔" — 4-week series covering inventory prep, WhatsApp broadcast setup, ad budget scaling, and RTO spike prevention for the festive season.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- LINKEDIN -->
+    <div class="social-card">
+      <div class="social-card-header">
+        <div class="platform-icon li">💼</div>
+        <div>
+          <div class="social-platform">LinkedIn</div>
+          <div class="social-freq">4–5 posts/week (Company + Founder)</div>
+        </div>
+      </div>
+      <div class="social-card-body">
+
+        <div class="social-week">
+          <div class="social-week-label">Week 1 — July</div>
+          <div class="social-post">
+            <div class="post-type">Thought Leadership</div>
+            <div class="post-copy">"Why most Shopify agencies in India fail their clients (and what we do differently)" — Founder post. Honest, specific. Cover vanity metrics vs unit economics. 1500 chars, hook in line 1.</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">Data Post</div>
+            <div class="post-copy">"We've managed ₹50Cr+ in Meta ad spend for Indian D2C brands. Here are 5 counterintuitive things we've learned 👇" — LinkedIn list post format. Each point with supporting data.</div>
+          </div>
+        </div>
+
+        <div class="social-week">
+          <div class="social-week-label">Week 2–4 — Ongoing</div>
+          <div class="social-post">
+            <div class="post-type">Case Study Breakdown (Weekly)</div>
+            <div class="post-copy">Every week: one mini case study. Category, problem, 3 interventions, results. Format: "Brand category: [X]. Problem: [Y]. What we did: 1, 2, 3. Results: [Z]." — 200 words max, sharp.</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">Newsletter Subscribe Push</div>
+            <div class="post-copy">Promote the LinkedIn newsletter subscription (already set up at entityUrn=7463124527053606912). Share 1 article from blog per week with a value-first teaser.</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">August: Industry Roundup</div>
+            <div class="post-copy">"State of D2C India 2026 — 10 stats every founder should know" — Data-rich LinkedIn article version of the blog report. Tag relevant industry publications.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TWITTER/X -->
+    <div class="social-card">
+      <div class="social-card-header">
+        <div class="platform-icon tw">𝕏</div>
+        <div>
+          <div class="social-platform">Twitter / X</div>
+          <div class="social-freq">2–3 tweets/day + 1 thread/week</div>
+        </div>
+      </div>
+      <div class="social-card-body">
+        <div class="social-week">
+          <div class="social-week-label">Weekly Thread Format</div>
+          <div class="social-post">
+            <div class="post-type">Monday Thread</div>
+            <div class="post-copy">"Shopify Growth Thread 🧵" — Weekly thread breaking down one tactic. Example: "How we took a fashion brand from 1.2% to 3.4% CVR in 30 days. Thread 👇" — 8–12 tweets, real tactics.</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">Daily Commentary</div>
+            <div class="post-copy">React to D2C industry news, Shopify announcements, Meta ads platform updates. Builds real-time credibility. Use @akestechinfotec. Target follows from D2C founders community.</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">Friday: Quick Tip</div>
+            <div class="post-copy">"1 Shopify growth tip for Friday:" — Short, pithy, saves to bookmarks. Example: "Your add-to-cart rate is fine. It's the cart-to-checkout step that's leaking. Add free shipping progress bar. CVR goes up 18%."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- YouTube/Shorts -->
+    <div class="social-card">
+      <div class="social-card-header">
+        <div class="platform-icon yt">▶</div>
+        <div>
+          <div class="social-platform">YouTube / Shorts</div>
+          <div class="social-freq">2 long-form/month + 2 Shorts/week</div>
+        </div>
+      </div>
+      <div class="social-card-body">
+        <div class="social-week">
+          <div class="social-week-label">July — Video Plan</div>
+          <div class="social-post">
+            <div class="post-type">Long-Form (July Wk 2)</div>
+            <div class="post-copy">"How I Scaled 200+ Shopify Stores in India — Behind the Scenes" — Founder interview format, 20–30 min. Covers the Akestech story, framework, results. SEO-optimised title and description for YouTube search.</div>
+          </div>
+          <div class="social-post">
+            <div class="post-type">Shorts (2/week)</div>
+            <div class="post-copy">Repurposed Reels/quick tips. "RTO above 30%? Do THIS 👆" — Under 60 seconds. Hook in first 2 seconds. Strong CTA: "Follow for Shopify growth tips."</div>
+          </div>
+        </div>
+        <div class="social-week">
+          <div class="social-week-label">August — Video Plan</div>
+          <div class="social-post">
+            <div class="post-type">Long-Form (Aug Wk 2)</div>
+            <div class="post-copy">"Shopify Festive Season Masterclass 2026 — How to 3X Your Diwali Sales" — Timely, high search volume. Companion to the blog post. Capture pre-festive planning intent on YouTube.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end social-grid -->
+
+  <!-- SOCIAL POST THEMES TABLE -->
+  <div style="margin-top:32px">
+    <h3 style="font-size:18px;font-weight:600;margin-bottom:16px;">Content Type Mix (Per Platform Per Month)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Content Type</th><th>Instagram</th><th>LinkedIn</th><th>Twitter/X</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Educational Carousel</td><td>8/month</td><td>4/month</td><td>—</td><td>AEO-aligned content → becomes blog post</td></tr>
+          <tr><td>Case Study / Win</td><td>4/month</td><td>6/month</td><td>2/month</td><td>EEAT signal. Link to full case study page.</td></tr>
+          <tr><td>Founder Thought Leadership</td><td>2/month</td><td>8/month</td><td>4/month</td><td>Builds personal brand + agency trust</td></tr>
+          <tr><td>Product Demo (Whatify)</td><td>2/month</td><td>1/month</td><td>—</td><td>App installs + awareness</td></tr>
+          <tr><td>Data / Stat Reveal</td><td>4/month</td><td>4/month</td><td>8/month</td><td>Highly shareable. Use Akestech's own data.</td></tr>
+          <tr><td>Behind-the-Scenes / Culture</td><td>4/month</td><td>2/month</td><td>—</td><td>Team photos, client meetings, process</td></tr>
+          <tr><td>Blog Amplification</td><td>4/month</td><td>8/month</td><td>8/month</td><td>Every blog post → social distribution</td></tr>
+          <tr><td>Festive/Seasonal Content</td><td>6/month (Aug)</td><td>4/month (Aug)</td><td>—</td><td>Diwali prep series starts August</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- end social section -->
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 6: GMB LOCAL OPTIMISATION  -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="gmb">
+  <div class="section-eyebrow">06 — Google Business Profile</div>
+  <h2 class="section-title">Local SEO & GMB Optimisation Plan</h2>
+  <p class="section-desc">Akestech Infotech currently has no verified Google Business Profile — this is a critical gap. Below is the complete setup and optimisation roadmap.</p>
+
+  <div class="gmb-grid">
+
+    <div class="gmb-card">
+      <div class="gmb-card-icon">🏢</div>
+      <h4>Step 1: Profile Setup & Verification</h4>
+      <p>Create the foundational GMB profile with all required fields for maximum local pack visibility.</p>
+      <ul class="gmb-steps">
+        <li>Business name: "Akestech Infotech" (exact match to website)</li>
+        <li>Primary category: "Marketing Agency"</li>
+        <li>Secondary categories: "E-Commerce Agency", "Advertising Agency"</li>
+        <li>NAP: Name, Address, Phone — ensure 100% match to website footer</li>
+        <li>WhatsApp number (+917275013628) as primary contact</li>
+        <li>Business hours: Mon–Sat 10AM–7PM IST</li>
+        <li>Website URL: https://www.akestech.com</li>
+        <li>Verify via postcard or phone call (Lucknow address)</li>
+      </ul>
+    </div>
+
+    <div class="gmb-card">
+      <div class="gmb-card-icon">📸</div>
+      <h4>Step 2: Visual Content Upload</h4>
+      <p>Profiles with 10+ photos get 35% more clicks. Upload a rich, high-quality photo library.</p>
+      <ul class="gmb-steps">
+        <li>Logo (transparent background, square format)</li>
+        <li>Cover photo: team photo or office/workspace</li>
+        <li>5 interior/workspace photos showing the team in action</li>
+        <li>3 result screenshots (ROAS dashboards, anonymised)</li>
+        <li>2 team photos (founder + key members)</li>
+        <li>Video: 30-sec agency intro video (Reel repurposed)</li>
+        <li>Update photos every 30 days for freshness signals</li>
+      </ul>
+    </div>
+
+    <div class="gmb-card">
+      <div class="gmb-card-icon">🛠</div>
+      <h4>Step 3: Services & Products Section</h4>
+      <p>Add every service as a GMB product/service. This creates additional indexed content and local keyword coverage.</p>
+      <ul class="gmb-steps">
+        <li>Service: "Performance Marketing" — ₹30,000 – ₹2,00,000/month</li>
+        <li>Service: "Shopify Store Optimisation" — ₹25,000 – ₹1,50,000</li>
+        <li>Service: "WhatsApp Automation Setup" — ₹15,000 – ₹75,000</li>
+        <li>Service: "Shopify Operations Management" — ₹20,000/month</li>
+        <li>Service: "Free Growth Audit" — ₹0</li>
+        <li>Product: "Whatify App" — Link to Shopify App Store</li>
+        <li>Write 150-char descriptions for each with keywords</li>
+      </ul>
+    </div>
+
+    <div class="gmb-card">
+      <div class="gmb-card-icon">⭐</div>
+      <h4>Step 4: Review Strategy</h4>
+      <p>Target 25+ reviews in month 1. Reviews are the #1 local ranking factor after proximity.</p>
+      <ul class="gmb-steps">
+        <li>Send GMB review link to all 200+ past/current clients</li>
+        <li>Create a WhatsApp template asking for review post-result</li>
+        <li>Respond to every review within 24 hours (shows engagement)</li>
+        <li>Negative reviews: respond professionally, offer resolution</li>
+        <li>Target: 4.8+ star rating, 50+ reviews by end of Month 2</li>
+        <li>Ask clients to mention specific services in reviews for keyword benefit</li>
+      </ul>
+    </div>
+
+    <div class="gmb-card">
+      <div class="gmb-card-icon">📝</div>
+      <h4>Step 5: GMB Posts (Weekly Cadence)</h4>
+      <p>GMB posts decay in 7 days. Publish weekly to stay active and capture browsing intent.</p>
+      <ul class="gmb-steps">
+        <li>Week 1: "New Blog Post" post linking to latest article</li>
+        <li>Week 2: "Offer" post — Free Growth Audit (no expiry)</li>
+        <li>Week 3: "Update" post — share a client result/case study snippet</li>
+        <li>Week 4: "Event" post — any webinar, LinkedIn live, or demo session</li>
+        <li>Include CTA button on every post: "Book Now" or "Learn More"</li>
+        <li>Use keywords naturally: "Shopify agency", "D2C growth", "Meta ads India"</li>
+      </ul>
+    </div>
+
+    <div class="gmb-card">
+      <div class="gmb-card-icon">❓</div>
+      <h4>Step 6: Q&A Section</h4>
+      <p>Seed your own Q&A to control the narrative and capture FAQ-style search intent.</p>
+      <ul class="gmb-steps">
+        <li>"What industries do you work with?" → D2C fashion, beauty, health, home</li>
+        <li>"How much does your agency charge?" → Retainers from ₹30,000/month</li>
+        <li>"Do you work with new Shopify stores?" → Yes, minimum ₹5L/month revenue</li>
+        <li>"How quickly will I see ROAS improvement?" → Most clients in 30–45 days</li>
+        <li>"Do you offer a free audit?" → Yes, book at akestech.com/contact</li>
+        <li>Answer all questions from the business account promptly</li>
+      </ul>
+    </div>
+
+    <div class="gmb-card">
+      <div class="gmb-card-icon">📍</div>
+      <h4>Step 7: Local Citation Building</h4>
+      <p>Consistent NAP across directories strengthens local authority and trust signals.</p>
+      <ul class="gmb-steps">
+        <li>Justdial — "Digital Marketing Agency Lucknow"</li>
+        <li>Sulekha — "Ecommerce Marketing Agency"</li>
+        <li>IndiaMart — "Shopify Development Services"</li>
+        <li>Clutch.co — Create agency profile with case studies</li>
+        <li>GoodFirms — Top Shopify development company listing</li>
+        <li>DesignRush — Verified agency profile</li>
+        <li>The Manifest — Agency listing with client reviews</li>
+        <li>Ensure NAP is identical across all platforms</li>
+      </ul>
+    </div>
+
+    <div class="gmb-card">
+      <div class="gmb-card-icon">🔑</div>
+      <h4>Local Keyword Targeting</h4>
+      <p>Local keyword clusters to rank in the local pack for Lucknow, Uttar Pradesh, and India-wide searches.</p>
+      <ul class="gmb-steps">
+        <li>"Shopify agency Lucknow" — Primary local term</li>
+        <li>"ecommerce marketing agency Lucknow"</li>
+        <li>"digital marketing agency for D2C brands Lucknow"</li>
+        <li>"Meta ads agency Uttar Pradesh"</li>
+        <li>"Shopify expert near me"</li>
+        <li>"WhatsApp automation agency India"</li>
+        <li>Use these in GMB description, posts, and Q&A naturally</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 7: AEO / AI ENGINES        -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="aeo">
+  <div class="section-eyebrow">07 — Answer Engine Optimisation</div>
+  <h2 class="section-title">AEO & AI Visibility Strategy</h2>
+  <p class="section-desc">Optimise akestech.com to appear in ChatGPT, Claude, Gemini, Perplexity, and Google AI Overviews — where a growing share of high-intent queries are answered without clicking.</p>
+
+  <div class="aeo-grid">
+
+    <div class="aeo-card">
+      <div class="aeo-engine">
+        <div class="aeo-engine-badge">🤖</div>
+        <div>
+          <div class="aeo-engine-name">Google AI Overviews</div>
+          <div class="aeo-engine-status">Highest Priority — Most Used in India</div>
+        </div>
+      </div>
+      <ul class="aeo-items">
+        <li>Add FAQPage JSON-LD to all service pages and blog posts</li>
+        <li>Answer questions in 40–60 word blocks at the top of blog posts</li>
+        <li>Use "What is / How to / Why / Best" heading structures</li>
+        <li>Include a TL;DR summary box at start of every blog post</li>
+        <li>Target PAA (People Also Ask) questions in every piece</li>
+        <li>Build E-E-A-T: Add author bio with credentials to every post</li>
+        <li>Use exact-match question H2s: "What is RTO in ecommerce?"</li>
+      </ul>
+    </div>
+
+    <div class="aeo-card">
+      <div class="aeo-engine">
+        <div class="aeo-engine-badge">💬</div>
+        <div>
+          <div class="aeo-engine-name">ChatGPT & Perplexity</div>
+          <div class="aeo-engine-status">Growing fast among D2C founders</div>
+        </div>
+      </div>
+      <ul class="aeo-items">
+        <li>Publish data-rich content that AI cites (stats, benchmarks, named examples)</li>
+        <li>Ensure site is crawlable: no JavaScript-only content blocks</li>
+        <li>Build backlinks from sites that Perplexity indexes heavily (Inc42, YourStory, Economic Times)</li>
+        <li>Create a structured "About Akestech" page with clear entity signals</li>
+        <li>Add Wikipedia-style structured facts: founded, location, clients served, metrics</li>
+        <li>Consistent brand mentions across the web (citations, PR, directories)</li>
+      </ul>
+    </div>
+
+    <div class="aeo-card">
+      <div class="aeo-engine">
+        <div class="aeo-engine-badge">♊</div>
+        <div>
+          <div class="aeo-engine-name">Google Gemini</div>
+          <div class="aeo-engine-status">Integrated into Search — critical</div>
+        </div>
+      </div>
+      <ul class="aeo-items">
+        <li>Schema markup is critical — Gemini reads structured data heavily</li>
+        <li>Strong internal linking helps Gemini understand site topical structure</li>
+        <li>Conversational long-form content outperforms bullet-only pages</li>
+        <li>Video content (YouTube) is indexed by Gemini — invest in video SEO</li>
+        <li>Add HowTo schema to tutorial-style blog posts</li>
+        <li>Keep content factually dense and current (2026 references)</li>
+      </ul>
+    </div>
+
+    <div class="aeo-card">
+      <div class="aeo-engine">
+        <div class="aeo-engine-badge">🦜</div>
+        <div>
+          <div class="aeo-engine-name">Claude (Anthropic)</div>
+          <div class="aeo-engine-status">Growing business user base in India</div>
+        </div>
+      </div>
+      <ul class="aeo-items">
+        <li>Claude uses web citations — strong backlink profile = more citations</li>
+        <li>Clear, well-structured content without fluff performs best</li>
+        <li>Authoritative entity associations (founder quotes, company history)</li>
+        <li>Build presence on sites Claude commonly references (LinkedIn, Clutch)</li>
+        <li>Case studies with specific numbers cited by Claude when answering "best agency" queries</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- AEO CONTENT RULES -->
+  <div style="margin-top:32px; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:28px;">
+    <h3 style="font-size:18px;font-weight:600;margin-bottom:16px;">Universal AEO Content Rules — Apply to Every Blog Post</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+      <div>
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent2);margin-bottom:10px">Structure</div>
+        <ul style="list-style:none;font-size:13px;color:var(--text2)">
+          <li style="padding:4px 0;border-bottom:1px solid var(--border)">→ Open with a 50-word direct answer to the title question</li>
+          <li style="padding:4px 0;border-bottom:1px solid var(--border)">→ Use H2s as exact questions, H3s as sub-answers</li>
+          <li style="padding:4px 0;border-bottom:1px solid var(--border)">→ Include a "Key Takeaways" box near the top</li>
+          <li style="padding:4px 0">→ Minimum 8 FAQ Q&As per post with FAQPage schema</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent2);margin-bottom:10px">Data</div>
+        <ul style="list-style:none;font-size:13px;color:var(--text2)">
+          <li style="padding:4px 0;border-bottom:1px solid var(--border)">→ Include 3+ proprietary data points per post</li>
+          <li style="padding:4px 0;border-bottom:1px solid var(--border)">→ Cite reputable external sources (Statista, Inc42, NASSCOM)</li>
+          <li style="padding:4px 0;border-bottom:1px solid var(--border)">→ Use numbered/bulleted lists — AI engines love these</li>
+          <li style="padding:4px 0">→ Include comparison tables where possible</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent2);margin-bottom:10px">Trust</div>
+        <ul style="list-style:none;font-size:13px;color:var(--text2)">
+          <li style="padding:4px 0;border-bottom:1px solid var(--border)">→ Author name + bio + LinkedIn link on every post</li>
+          <li style="padding:4px 0;border-bottom:1px solid var(--border)">→ Last updated date prominently visible</li>
+          <li style="padding:4px 0;border-bottom:1px solid var(--border)">→ Article schema with dateModified field</li>
+          <li style="padding:4px 0">→ Link to primary sources — don't be a dead-end</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 8: BACKLINK STRATEGY       -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="backlinks">
+  <div class="section-eyebrow">08 — Authority & Backlinks</div>
+  <h2 class="section-title">White-Hat Backlink Strategy</h2>
+  <p class="section-desc">Domain authority is the #1 off-page ranking factor. Akestech needs backlinks from Indian e-commerce publications, agency directories, and Shopify ecosystem sites.</p>
+
+  <div class="backlink-grid">
+
+    <div class="backlink-card">
+      <h4>🎯 Indian Tech & D2C Publications</h4>
+      <p>Guest posts and PR mentions from high-DA Indian media.</p>
+      <ul class="backlink-list">
+        <li>Inc42 — "How we scaled 200 Shopify stores" guest post</li>
+        <li>YourStory — Founder story / startup feature</li>
+        <li>Economic Times — D2C industry data contribution</li>
+        <li>The Ken — Ecommerce expert commentary</li>
+        <li>Business Insider India — Agency results feature</li>
+        <li>Mint — D2C India market analysis contribution</li>
+      </ul>
+    </div>
+
+    <div class="backlink-card">
+      <h4>🏆 Agency Directories</h4>
+      <p>Verified listings on global agency platforms drive referral + authority.</p>
+      <ul class="backlink-list">
+        <li>Clutch.co — Verified profile + 5 client reviews</li>
+        <li>GoodFirms — "Top Shopify Development Companies India"</li>
+        <li>DesignRush — Digital Marketing Agencies listing</li>
+        <li>The Manifest — Shopify expert listing</li>
+        <li>Sortlist — D2C growth agency profile</li>
+        <li>AgencySpotter — Ecommerce agency listing</li>
+      </ul>
+    </div>
+
+    <div class="backlink-card">
+      <h4>🛍 Shopify Ecosystem Links</h4>
+      <p>Links from within the Shopify world carry double weight — topical relevance + authority.</p>
+      <ul class="backlink-list">
+        <li>Shopify Partners Program — official partner profile</li>
+        <li>Shopify Community forums — helpful expert answers</li>
+        <li>Whatify app page on Shopify App Store (already exists)</li>
+        <li>Guest post on Shopify-focused blogs (LimeLight, Storetasker)</li>
+        <li>ECDB / DataFeedWatch partner directory</li>
+        <li>Ecommerce India Podcast — episode appearance</li>
+      </ul>
+    </div>
+
+    <div class="backlink-card">
+      <h4>🤝 Digital PR & HARO</h4>
+      <p>Reactive PR to earn natural media mentions and expert quote backlinks.</p>
+      <ul class="backlink-list">
+        <li>HARO (Help A Reporter Out) — respond to ecommerce queries daily</li>
+        <li>SourceBottle — register as D2C / Shopify expert source</li>
+        <li>ProfNet — Expert commentary on Indian ecommerce trends</li>
+        <li>Twitter/X journalist responses for ecommerce stories</li>
+        <li>Press release for "State of D2C India 2026" data report</li>
+        <li>Podcast circuit: Indian e-commerce, D2C, and startup podcasts</li>
+      </ul>
+    </div>
+
+    <div class="backlink-card">
+      <h4>✍️ Guest Posting Targets</h4>
+      <p>High-DA blogs accepting guest contributions in the marketing/ecommerce space.</p>
+      <ul class="backlink-list">
+        <li>Shopify Blog (India content team) — pitch case study</li>
+        <li>HubSpot Blog — ecommerce automation topic</li>
+        <li>Razorpay Blog — D2C payments & conversions</li>
+        <li>Shiprocket Blog — RTO reduction guide</li>
+        <li>Unicommerce Blog — Shopify operations</li>
+        <li>PayU Blog — ecommerce checkout optimisation</li>
+      </ul>
+    </div>
+
+    <div class="backlink-card">
+      <h4>🔗 Link Bait Content</h4>
+      <p>Create content so valuable others naturally link to it.</p>
+      <ul class="backlink-list">
+        <li>"State of D2C India 2026" annual report (primary link magnet)</li>
+        <li>Meta Ads ROAS Benchmarks data report (proprietary data)</li>
+        <li>Free Shopify Growth Checklist (downloadable, linkable resource)</li>
+        <li>RTO Rate Calculator tool (interactive, embeddable)</li>
+        <li>Shipping partner comparison table (widely searched)</li>
+        <li>Whatify vs competitors page (product category leader content)</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ -->
+<!-- SECTION 9: QUICK WINS              -->
+<!-- ═══════════════════════════════════ -->
+<div class="section" id="quickwins">
+  <div class="section-eyebrow">09 — Priority Action Plan</div>
+  <h2 class="section-title">Quick Wins — Do These This Week</h2>
+  <p class="section-desc">These are the highest ROI, lowest effort changes. Execute in order. Most can be done within 2–5 days.</p>
+
+  <div class="qw-grid">
+
+    <div class="qw-item">
+      <div class="qw-number">01</div>
+      <div class="qw-body">
+        <h4>Create & Verify Google Business Profile</h4>
+        <p>Zero GMB = zero local pack presence. Create today at business.google.com. Verification takes 3–14 days — start immediately.</p>
+      </div>
+      <div class="qw-effort">⏱ 2 hours setup<br>📈 Impact: Critical</div>
+    </div>
+
+    <div class="qw-item">
+      <div class="qw-number">02</div>
+      <div class="qw-body">
+        <h4>Add Organization + LocalBusiness JSON-LD Schema to Homepage</h4>
+        <p>Copy-paste schema code. Immediately improves how Google and AI engines understand and categorise the business. Enables Knowledge Panel.</p>
+      </div>
+      <div class="qw-effort">⏱ 1 hour dev<br>📈 Impact: High</div>
+    </div>
+
+    <div class="qw-item">
+      <div class="qw-number">03</div>
+      <div class="qw-body">
+        <h4>Add FAQPage Schema + 8 Q&As to Every Service Page</h4>
+        <p>Each service page needs structured FAQs with JSON-LD. This is the single biggest driver of AI Overview inclusions and featured snippets.</p>
+      </div>
+      <div class="qw-effort">⏱ 3 hours content<br>📈 Impact: High</div>
+    </div>
+
+    <div class="qw-item">
+      <div class="qw-number">04</div>
+      <div class="qw-body">
+        <h4>Submit sitemap.xml to Google Search Console</h4>
+        <p>Ensure GSC is connected, sitemap submitted, and no crawl errors. Check coverage for all blog posts. This is table stakes.</p>
+      </div>
+      <div class="qw-effort">⏱ 30 mins<br>📈 Impact: High</div>
+    </div>
+
+    <div class="qw-item">
+      <div class="qw-number">05</div>
+      <div class="qw-body">
+        <h4>Publish "Best Shopify Agencies India 2026" — Your First High-Intent Blog</h4>
+        <p>This post ranks for direct hire-intent searches and positions Akestech as the authority in the space. Write 2000+ words, include FAQPage schema.</p>
+      </div>
+      <div class="qw-effort">⏱ 4–6 hours write<br>📈 Impact: Critical</div>
+    </div>
+
+    <div class="qw-item">
+      <div class="qw-number">06</div>
+      <div class="qw-body">
+        <h4>Create Author Bio Page for Founder — Link to All Blog Posts</h4>
+        <p>EEAT (Experience, Expertise, Authority, Trust) is a ranking factor. A linked author page with LinkedIn URL, title, credentials boosts every blog post.</p>
+      </div>
+      <div class="qw-effort">⏱ 1 hour<br>📈 Impact: Medium-High</div>
+    </div>
+
+    <div class="qw-item">
+      <div class="qw-number">07</div>
+      <div class="qw-body">
+        <h4>Add Internal Links from All Blog Posts to Relevant Service Pages</h4>
+        <p>The existing 4 blog posts have zero contextual links to service pages. Add 2–3 internal links per post in the next edit session.</p>
+      </div>
+      <div class="qw-effort">⏱ 1 hour<br>📈 Impact: Medium</div>
+    </div>
+
+    <div class="qw-item">
+      <div class="qw-number">08</div>
+      <div class="qw-body">
+        <h4>Create Clutch.co and GoodFirms Agency Profiles</h4>
+        <p>These are high-DA directories that rank for "Shopify agency India" and provide direct referral leads. Add 3+ client reviews to each within 2 weeks.</p>
+      </div>
+      <div class="qw-effort">⏱ 2 hours<br>📈 Impact: Medium-High</div>
+    </div>
+
+    <div class="qw-item">
+      <div class="qw-number">09</div>
+      <div class="qw-body">
+        <h4>Set Up a Blog Publishing Cadence — Minimum 3 Posts/Week</h4>
+        <p>Consistency is critical for Google to crawl and index regularly. Create a content calendar document and assign ownership for each post from this calendar.</p>
+      </div>
+      <div class="qw-effort">⏱ Ongoing<br>📈 Impact: Critical (long-term)</div>
+    </div>
+
+    <div class="qw-item">
+      <div class="qw-number">10</div>
+      <div class="qw-body">
+        <h4>Reach Out to 20 Past Clients for a Google Review</h4>
+        <p>Send a WhatsApp message with the direct GMB review link. Aim for 20 reviews in the first 30 days. Reviews significantly impact both local pack ranking and conversion.</p>
+      </div>
+      <div class="qw-effort">⏱ 2 hours outreach<br>📈 Impact: Critical (local)</div>
+    </div>
+
+  </div>
+
+  <!-- 90-DAY ROADMAP TABLE -->
+  <div style="margin-top:48px">
+    <h3 style="font-size:20px;font-weight:700;font-family:'Syne',sans-serif;margin-bottom:16px;">90-Day SEO Roadmap</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Phase</th><th>Timeframe</th><th>Key Actions</th><th>Expected Outcome</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Phase 1: Foundation</strong></td>
+            <td>Days 1–14</td>
+            <td>GMB setup, schema implementation, GSC verification, author pages, internal linking audit</td>
+            <td>Technical SEO score improves to 75+. Crawling normalised.</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 2: Content Launch</strong></td>
+            <td>Days 15–45</td>
+            <td>Publish 3 posts/week from this calendar. Start with high-intent and comparison posts. Launch GMB posts weekly.</td>
+            <td>First rankings for long-tail keywords. Blog traffic begins.</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 3: Authority</strong></td>
+            <td>Days 46–75</td>
+            <td>Guest post outreach, Clutch/GoodFirms profiles live, data report published, 25+ GMB reviews secured</td>
+            <td>Domain authority building. Top 10 for 5+ target keywords.</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 4: Scale</strong></td>
+            <td>Days 76–90</td>
+            <td>Content gap analysis, competitor comparison pages live, YouTube SEO, AEO FAQ implementation complete</td>
+            <td>300–1000 organic visits/month. Leads from organic channel begin.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- end quick wins section -->
+
+</div><!-- end container -->
+
+<div class="report-footer">
+  <p>SEO & AEO Strategy Report for <strong>akestech.com</strong> · Prepared June 2026 · <strong>Mannatt Gupta Team × Claude</strong></p>
+  <p style="margin-top:8px;font-size:12px;">For implementation support, refer to the blog calendar and begin with Quick Win #1–5. Estimated organic traffic impact: 300–1000 visits/month within 90 days of consistent execution.</p>
+</div>
+
+<script>
+// Active nav tab on scroll
+const sections = document.querySelectorAll('[id]');
+const tabs = document.querySelectorAll('.nav-tab');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tabs.forEach(tab => tab.classList.remove('active'));
+      const active = document.querySelector(`.nav-tab[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

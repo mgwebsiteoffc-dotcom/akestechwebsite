@@ -1,0 +1,240 @@
+{
+  "seo_strategy": {
+    "version": "1.0",
+    "date": "2026-06-19",
+    "site": "akestech.com",
+    "target_market": "India (Primary) + SEA",
+    "niche": "Shopify Agency · D2C Growth",
+    "primary_keywords": {
+      "homepage": {
+        "primary": "Shopify growth agency India",
+        "secondary": [
+          "hire Shopify marketing agency",
+          "Shopify performance marketing agency",
+          "D2C brand scaling agency",
+          "ecommerce growth agency Lucknow"
+        ],
+        "long_tail": [
+          "best Shopify agency in India",
+          "Shopify expert India",
+          "Shopify CRO agency India"
+        ]
+      }
+    },
+    "service_pages": {
+      "performance-marketing": {
+        "url": "/services/performance-marketing",
+        "primary_keywords": [
+          "Shopify performance marketing agency India",
+          "Meta ads agency for Shopify India"
+        ],
+        "secondary_keywords": [
+          "how to run Meta ads for Shopify India",
+          "Google Shopping for Shopify India",
+          "Performance Max campaigns for Shopify",
+          "ROAS benchmarks by industry India",
+          "how to structure a D2C ad funnel"
+        ],
+        "long_tail": [
+          "facebook ads for shopify stores india",
+          "shopify ads strategy",
+          "d2c brand advertising",
+          "ecommerce ppc campaigns"
+        ],
+        "intent": "transactional",
+        "faq_topics": [
+          "What is a good ROAS for Shopify ads in India?",
+          "How much should I spend on Meta ads for my Shopify store?",
+          "What's the difference between Meta ads and Google ads for e-commerce?",
+          "How do I set up proper tracking for Shopify ads?",
+          "What's the best audience targeting for Indian D2C brands?",
+          "How often should I refresh my ad creatives?",
+          "What's the minimum budget to start Shopify ads?"
+        ]
+      },
+      "shopify-growth": {
+        "url": "/services/shopify-growth",
+        "primary_keywords": [
+          "Shopify CRO agency India",
+          "how to increase Shopify conversion rate"
+        ],
+        "secondary_keywords": [
+          "Shopify store optimization checklist",
+          "how to increase AOV on Shopify",
+          "Shopify trust signals India",
+          "checkout abandonment fixes for COD markets"
+        ],
+        "long_tail": [
+          "shopify conversion rate optimization",
+          "increase shopify sales",
+          "shopify store speed optimization",
+          "shopify theme customization"
+        ],
+        "intent": "commercial",
+        "faq_topics": [
+          "What's a good conversion rate for Shopify stores in India?",
+          "How can I reduce cart abandonment on my Shopify store?",
+          "What are the best Shopify apps for conversion optimization?",
+          "How do I set up upsells and cross-sells on Shopify?",
+          "What trust signals matter most for Indian buyers?",
+          "How do I optimize product pages for conversions?",
+          "What's the impact of page speed on conversion rates?"
+        ]
+      },
+      "shopify-operations": {
+        "url": "/services/shopify-operations",
+        "primary_keywords": [
+          "reduce RTO Shopify India",
+          "how to reduce RTO for Shopify stores India"
+        ],
+        "secondary_keywords": [
+          "RTO meaning ecommerce India",
+          "what is RTO in ecommerce",
+          "Shopify abandoned cart recovery India",
+          "fulfillment automation for Shopify India"
+        ],
+        "long_tail": [
+          "COD verification Shopify",
+          "inventory management Shopify",
+          "shipping partner comparison India",
+          "return policy ecommerce"
+        ],
+        "intent": "transactional",
+        "faq_topics": [
+          "What is RTO and how does it affect my business?",
+          "What's an acceptable RTO rate for Shopify stores?",
+          "How can I reduce RTO without increasing prepaid?",
+          "Which shipping partner has the lowest RTO?",
+          "How do I verify COD orders on Shopify?",
+          "What's the best return policy for D2C brands?",
+          "How do I handle high RTO seasons?"
+        ]
+      },
+      "automation": {
+        "url": "/services/automation",
+        "primary_keywords": [
+          "WhatsApp automation Shopify agency",
+          "WhatsApp Business API ecommerce India"
+        ],
+        "secondary_keywords": [
+          "WhatsApp cart recovery for Shopify",
+          "Email vs WhatsApp for abandoned cart India",
+          "WhatsApp chatbot for Shopify",
+          "Post-purchase automation for repeat buyers"
+        ],
+        "long_tail": [
+          "whatsapp marketing for ecommerce",
+          "COD verification WhatsApp",
+          "Whatify alternative",
+          "whatsapp broadcast campaigns"
+        ],
+        "intent": "transactional",
+        "faq_topics": [
+          "What's the difference between WhatsApp and email for cart recovery?",
+          "How do I set up WhatsApp Business API for Shopify?",
+          "What's the best WhatsApp automation tool for Shopify?",
+          "How can I use WhatsApp for COD verification?",
+          "What's the message open rate for WhatsApp vs email?",
+          "How do I automate WhatsApp order confirmations?",
+          "Is WhatsApp automation better than email marketing?"
+        ]
+      },
+      "technology": {
+        "url": "/services/technology",
+        "primary_keywords": [
+          "Shopify store setup and customization",
+          "custom shopify development India"
+        ],
+        "secondary_keywords": [
+          "Shopify theme optimization",
+          "Shopify app development",
+          "server-side tracking Shopify",
+          "Shopify integration services"
+        ],
+        "long_tail": [
+          "shopify custom code",
+          "shopify liquid development",
+          "shopify pixel setup",
+          "shopify API integration"
+        ],
+        "intent": "informational",
+        "faq_topics": [
+          "Do I need custom development for my Shopify store?",
+          "What's the difference between Shopify Plus and regular Shopify?",
+          "How do I set up server-side tracking on Shopify?",
+          "What's the cost of custom Shopify development?",
+          "Can I integrate my ERP with Shopify?",
+          "How do I add custom functionality to Shopify?",
+          "What's the best Shopify tracking setup for ads?"
+        ]
+      }
+    },
+    "content_pillars": {
+      "pillar_1": {
+        "name": "Performance Marketing for Shopify",
+        "topics": 10,
+        "focus": "Meta ads, Google ads, creative testing, ROAS optimization"
+      },
+      "pillar_2": {
+        "name": "Shopify Store Optimization & CRO",
+        "topics": 10,
+        "focus": "Conversion rate, AOV, trust signals, checkout optimization"
+      },
+      "pillar_3": {
+        "name": "WhatsApp & Marketing Automation",
+        "topics": 8,
+        "focus": "WhatsApp Business API, automation workflows, cart recovery"
+      },
+      "pillar_4": {
+        "name": "Shopify Operations & RTO Reduction",
+        "topics": 8,
+        "focus": "RTO, fulfillment, logistics, COD, prepaid strategy"
+      },
+      "pillar_5": {
+        "name": "Industry Verticals",
+        "topics": 8,
+        "focus": "Fashion, beauty, health, home decor, niche ecommerce"
+      },
+      "pillar_6": {
+        "name": "Comparison Pages",
+        "topics": 6,
+        "focus": "Agency vs freelancer, tools comparisons, platforms"
+      }
+    },
+    "aeo_targets": [
+      "best shopify agency india",
+      "shopify vs woocommerce india",
+      "what is rto in ecommerce",
+      "whatsapp vs email cart recovery",
+      "how to scale d2c brand india",
+      "meta ads roas benchmarks india",
+      "shopify agency vs freelancer india",
+      "delhivery vs shiprocket vs ecom express",
+      "cod vs prepaid shopify india",
+      "how to reduce rto ecommerce"
+    ],
+    "local_seo": {
+      "business_name": "Akestech Infotech",
+      "location": "Lucknow, Uttar Pradesh, India",
+      "service_areas": [
+        "Lucknow",
+        "Uttar Pradesh",
+        "India"
+      ],
+      "local_keywords": [
+        "Shopify agency Lucknow",
+        "ecommerce marketing agency Lucknow",
+        "Shopify expert in UP",
+        "D2C agency India"
+      ]
+    },
+    "backlink_opportunities": [
+      "Industry blogs (Shopify, e-commerce publications)",
+      "D2C community forums and groups",
+      "Indian business directories",
+      "Case study features in tech publications",
+      "Industry awards and recognition",
+      "Guest post opportunities on Shopify-related blogs"
+    ]
+  }
+}

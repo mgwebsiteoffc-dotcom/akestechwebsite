@@ -1,0 +1,10 @@
+# Protect admin directory
+RewriteEngine On
+RewriteBase /admin/
+
+# Don't rewrite real files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Route admin pages
+RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]

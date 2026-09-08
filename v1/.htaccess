@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /akestech1906/
+
+    # ✅ SITEMAP FIRST (VERY IMPORTANT)
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+    # Skip real files/folders
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Main router
+    RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+</IfModule>
