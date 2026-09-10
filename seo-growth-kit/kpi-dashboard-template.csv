@@ -1,0 +1,45 @@
+Area,KPI,Definition/Source,Cadence,"Tag (M=measured, P=proxy)",Baseline,Target (90d)
+SEO,Organic clicks,GSC clicks,Monthly,[M],TBD (wk1 GSC export),+60-100% vs baseline
+SEO,Organic impressions,GSC impressions,Monthly,[M],TBD,+80%
+SEO,Average CTR,Clicks/impressions,Monthly,[M],TBD,+0.5pp
+SEO,Average position,GSC query-weighted,Monthly,[M],TBD,Improving trend
+SEO,Keywords in top 3,Rank-tracked set,Monthly,[M],0 baseline,3
+SEO,Keywords in top 10,Rank-tracked set,Monthly,[M],0 baseline,10
+SEO,Keywords in top 20,Rank-tracked set,Monthly,[M],0 baseline,20
+SEO,New ranking keywords,Queries entering top 100,Monthly,[M],—,+30/mo
+SEO,Lost/declining keywords,90d declines >=5,Monthly,[M],—,Actioned <=2 wks
+SEO,Organic conversions,GA4 key events from organic,Monthly,[M],TBD,+50%
+SEO,Organic leads (CRM),CRM source=organic,Monthly,[M],TBD,+50%
+AEO/GEO,Featured snippets owned,"Weekly check, 50-question set",Weekly,[M],0,5+
+AEO/GEO,PAA ownership,Weekly check,Weekly,[M],0,5+
+AEO/GEO,Google AI Overview presence,Weekly log of priority queries,Weekly,[M->P],TBD,Cited on >=3 queries
+AEO/GEO,ChatGPT mentions,15-prompt monthly panel,Monthly,[P],TBD (baseline month 1),Trending up
+AEO/GEO,Perplexity mentions,15-prompt monthly panel,Monthly,[P],TBD,Trending up
+AEO/GEO,Gemini mentions,15-prompt monthly panel,Monthly,[P],TBD,Trending up
+AEO/GEO,Question-query visibility,GSC question-word filter,Monthly,[M],TBD,+50%
+AEO/GEO,Branded search volume,GSC brand queries,Monthly,[M],TBD,Trending up
+AEO/GEO,Share of AI voice,Panel: our mentions vs competitors,Monthly,[P],TBD,Top-3 mention rate
+AEO/GEO,Third-party corroborations,Listicles/press placements,Monthly,[M],~0,8+ in 90d
+Local,GBP views (search/maps),GBP insights,Monthly,[M],TBD,Trending up
+Local,GBP calls,GBP insights,Monthly,[M],TBD,Trending up
+Local,GBP direction requests,GBP insights,Monthly,[M],TBD,Trending up
+Local,GBP website clicks,GBP insights,Monthly,[M],TBD,Trending up
+Local,Review count (Google),GBP,Monthly,[M],TBD (verify wk1),+6-10/mo
+Local,Average rating,GBP,Monthly,[M],>=4.5 target,Maintain >=4.5
+Local,Map-pack rank (10 terms),Geo-grid check,Monthly,[M],TBD,Top 3 on >=4 terms
+Local,Local keyword rankings,Doc 03 local set,Monthly,[M],TBD,Top 10 on >=6 terms
+Local,Citation consistency,Quarterly NAP sweep,Quarterly,[M],Conflicts known,100% canonical
+Instagram,Reach,IG Insights,Monthly,[M],TBD,+100%
+Instagram,Impressions,IG Insights,Monthly,[M],TBD,Trending up
+Instagram,Engagement rate,(L+C+saves+shares)/reach,Monthly,[M],TBD,>=4-5%
+Instagram,Profile visits,IG Insights,Monthly,[M],TBD,Trending up
+Instagram,Website clicks,IG Insights,Monthly,[M],TBD,3x baseline
+Instagram,Followers,IG Insights,Monthly,[M],TBD,Lagging KPI
+Instagram,Median reel views,IG Insights,Monthly,[M],TBD,Trending up
+Instagram,Saves + shares,IG Insights,Monthly,[M],TBD,Weighted priority
+Instagram,IG-attributed leads,UTM + survey field,Monthly,[M],0 baseline,>=10/mo by day 90
+Business,Total organic leads,CRM,Monthly,[M],TBD,Trending up
+Business,Cost per organic lead,Agency cost / organic leads,Monthly,[M],TBD,Declining
+Business,MQLs by source,CRM segmentation,Monthly,[M],TBD,Organic share rising
+Business,Revenue influenced by organic,CRM/order data,Monthly,[M],TBD,Trending up
+Business,Tool-lead conversions,"GA4 events (ROAS calc, speed analyzer)",Monthly,[M],TBD,Trending up
